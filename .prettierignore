@@ -1,0 +1,6 @@
+node_modules
+reports
+public-report
+logs
+dist
+package-lock.json
