@@ -1,0 +1,6 @@
+[2026-07-08 06:00:02] [INFO] Precondition login status: 200
+[2026-07-08 06:00:02] [INFO] precondition-create-course status: 200
+[2026-07-08 06:00:02] [INFO] Precondition created course: MKH1783515602739155
+[2026-07-08 06:00:02] [INFO] get-course-info-success status: 200
+[2026-07-08 06:00:02] [PASS] Get Course Info API passed for course: MKH1783515602739155
+[2026-07-08 06:00:02] [INFO] Cleanup deleted course: MKH1783515602739155

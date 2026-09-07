@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259315928274","biDanh":"bi-danh-mkh1783259315928274","tenKhoaHoc":"Auto Course Licensed Wooden Pizza","moTa":"Commemoro deinde surculus.","luotXem":50,"danhGia":10,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"23/07/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

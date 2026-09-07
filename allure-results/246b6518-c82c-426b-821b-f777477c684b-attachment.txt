@@ -1,0 +1,8 @@
+[2026-07-05 06:47:01] [INFO] precondition-register-user status: 200
+[2026-07-05 06:47:01] [INFO] Precondition registered account: taikhoan1783259221236033
+[2026-07-05 06:47:01] [INFO] Precondition login status: 200
+[2026-07-05 06:47:01] [INFO] update-user-group-success status: 200
+[2026-07-05 06:47:01] [WARN] maNhom response khác request. Request: GP02, Response: GP01
+[2026-07-05 06:47:01] [PASS] Update maNhom API returned success for account: taikhoan1783259221236033
+[2026-07-05 06:47:01] [INFO] Cleanup login status: 200
+[2026-07-05 06:47:01] [INFO] Cleanup deleted account: taikhoan1783259221236033

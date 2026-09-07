@@ -1,0 +1,463 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: ui/home/registerFooterHomePage.ui.spec.ts >> Register Footer Home Page UI >> REGISTER_FOOTER_HOME_PAGE_UI_002 - should not register consultation with invalid phone
+- Location: tests/ui/home/registerFooterHomePage.ui.spec.ts:36:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Số điện thoại không hợp lệ')
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 10000ms
+  - waiting for getByText('Số điện thoại không hợp lệ')
+
+```
+
+```yaml
+- link "...":
+  - /url: /
+  - img "..."
+- textbox "Tìm kiếm"
+- list:
+  - listitem:
+    - text: 
+    - link "Danh mục":
+      - /url: /trangchu
+    - list:
+      - listitem:
+        - link "Lập trình Backend":
+          - /url: /danhmuckhoahoc/BackEnd
+      - listitem:
+        - link "Thiết kế Web":
+          - /url: /danhmuckhoahoc/Design
+      - listitem:
+        - link "Lập trình di động":
+          - /url: /danhmuckhoahoc/DiDong
+      - listitem:
+        - link "Lập trình Front end":
+          - /url: /danhmuckhoahoc/FrontEnd
+      - listitem:
+        - link "Lập trình Full Stack":
+          - /url: /danhmuckhoahoc/FullStack
+      - listitem:
+        - link "Tư duy lập trình":
+          - /url: /danhmuckhoahoc/TuDuy
+  - listitem:
+    - link "Khóa học":
+      - /url: /khoahoc
+  - listitem:
+    - link "Blog":
+      - /url: /blog
+  - listitem:
+    - link "Sự kiện":
+      - /url: /sukien
+    - list:
+      - listitem:
+        - link "Sự kiện Sale Cuối Năm":
+          - /url: /sukien/lastYear
+      - listitem:
+        - link "Sự kiện Giáng sinh":
+          - /url: /sukien/Noel
+      - listitem:
+        - link "Sự kiện Noel":
+          - /url: /sukien/Noel
+  - listitem:
+    - link "Thông tin":
+      - /url: /thongtin
+- button "Đăng nhập":
+  - link "Đăng nhập":
+    - /url: /login
+- heading "Chào mừng" [level=1]
+- heading "đến với môi trường" [level=1]
+- heading "Vlearning" [level=1]
+- button "Bắt đâu nào"
+- heading "Khóa học" [level=3]
+- paragraph: Học qua dự án thực tế, học đi đôi với hành, không lý thuyết lan man, phân tích cội nguồn của vấn đề, xây dựng từ các ví dụ nhỏ đến thực thi một dự án lớn ngoài thực tế để học viên học xong làm được ngay
+- list:
+  - listitem:  Hơn 1000 bài tập và dự án thực tế
+  - listitem:  Công nghệ cập nhật mới nhất
+  - listitem:  Hình ảnh, ví dụ, bài giảng sinh động trực quan
+  - listitem:  Tư duy phân tích, giải quyết vấn đề trong dự án
+  - listitem:  Học tập kinh nghiệm, qui trình làm dự án, các qui chuẩn trong dự án
+  - listitem:  Cơ hội thực tập tại các công ty lớn như FPT, Microsoft
+- heading "Lộ trình phù hợp" [level=3]
+- list:
+  - listitem:  Lộ trình bài bản từ zero tới chuyên nghiệp, nâng cao
+  - listitem:  Học, luyện tập code, kỹ thuật phân tích, soft skill
+  - listitem:  Huấn luyện để phát triển năng lực và niềm đam mê lập trình
+- heading "Hệ thống học tập" [level=3]
+- list:
+  - listitem:  Tự động chấm điểm trắc nghiệm và đưa câu hỏi tùy theo mức độ học viên
+  - listitem:  Thống kê lượt xem video, làm bài, điểm số theo chu kỳ
+  - listitem:  Thống kê, so sánh khả năng học của các học viên cùng level để đưa ra mục tiêu học tập
+- heading "Giảng viên" [level=3]
+- list:
+  - listitem:  Tương tác cùng mentor và giảng viên qua phần thảo luận
+  - listitem:  Review code và đưa ra các nhận xét góp ý
+  - listitem:  Chấm điểm tương tác thảo luận giữa các học viên
+- heading "Chứng nhận" [level=3]
+- list:
+  - listitem:  Chấm bài và có thể vấn đáp trực tuyến để review
+  - listitem:  Hệ thống của chúng tôi cũng tạo ra cho bạn một CV trực tuyến độc đáo
+  - listitem:  Kết nối CV của bạn đến với các đối tác của V learning
+- heading "Khóa học phổ biến" [level=6]:
+  - link "Khóa học phổ biến":
+    - /url: ""
+- link "Javascriptt12 Lập trình hiện đang là xu hướng trên toàn thế giới... Elon Musk 800.000đ 400.000đ  4.9(7840)":
+  - /url: /chitiet/
+  - text: Javascriptt12
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text: Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+  - text:  4.9(7840)
+- link "Lập trình web Lập trình hiện đang là xu hướng trên toàn thế giới... Elon Musk 800.000đ 400.000đ  4.9(7840)":
+  - /url: /chitiet/.100
+  - text: Lập trình web
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text: Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+  - text:  4.9(7840)
+- link "Lập trình web Lập trình hiện đang là xu hướng trên toàn thế giới... Elon Musk 800.000đ 400.000đ  4.9(7840)":
+  - /url: /chitiet/000
+  - text: Lập trình web
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text: Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+  - text:  4.9(7840)
+- link "Khóa học mới 2026 Lập trình hiện đang là xu hướng trên toàn thế giới... Elon Musk 800.000đ 400.000đ  4.9(7840)":
+  - /url: /chitiet/000123456
+  - text: Khóa học mới 2026
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text: Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+  - text:  4.9(7840)
+- heading "Khóa học tham khảo" [level=6]:
+  - link "Khóa học tham khảo":
+    - /url: ""
+- link "Lập trình web Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/09876788
+  - text: Lập trình web
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- link "Lập trình web Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/100999
+  - text: Lập trình web
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- link "tai Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/1009991
+  - text: tai
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- link "Lập trình web Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/10099922
+  - text: Lập trình web
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- heading "Khóa học Front End React Js" [level=6]:
+  - link "Khóa học Front End React Js":
+    - /url: ""
+- link "tai Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/1009991
+  - text: tai
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- link "Lập trình web Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/10099922
+  - text: Lập trình web
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- link "Doraemon Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/100999999
+  - text: Doraemon
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- link "Toán Lập trình hiện đang là xu hướng trên toàn thế giới...  8 giờ  4 tuần  Tất cả Elon Musk 800.000đ 400.000đ  Yêu thích":
+  - /url: /chitiet/1111111111
+  - text: Toán
+  - heading "Lập trình hiện đang là xu hướng trên toàn thế giới..." [level=6]
+  - text:  8 giờ  4 tuần  Tất cả Elon Musk
+  - paragraph:
+    - text: "800.000"
+    - superscript: đ
+  - paragraph:
+    - text: "400.000"
+    - superscript: đ
+    - text: 
+  - text: Yêu thích
+- text: "0"
+- paragraph: Học viên
+- text: "0"
+- paragraph: Khóa học
+- text: "0"
+- paragraph: Giờ học
+- text: "0"
+- paragraph: Giảng viên
+- heading "Giảng viên hàng đầu" [level=6]:
+  - link "Giảng viên hàng đầu":
+    - /url: ""
+- heading "Big DadMoon" [level=6]
+- paragraph: Chuyên gia lĩnh vực
+- paragraph: lập trình
+- paragraph:      4.9
+- text: 100 Đánh giá
+- heading "IcarDi MenBor" [level=6]
+- paragraph: Chuyên gia ngôn ngữ
+- paragraph: Vue Js
+- paragraph:      4.9
+- text: 100 Đánh giá
+- heading "Bladin Slaham" [level=6]
+- paragraph: Chuyên gia hệ thống
+- paragraph: máy tính
+- paragraph:      4.9
+- text: 100 Đánh giá
+- heading "Chris Andersan" [level=6]
+- paragraph: Chuyên gia lĩnh vực
+- paragraph: Full Skill
+- paragraph:      4.9
+- text: 100 Đánh giá
+- heading "VueLo Gadi" [level=6]
+- paragraph: Chuyên gia lĩnh vực
+- paragraph: Phân tích
+- paragraph:      4.9
+- text: 100 Đánh giá
+- heading "Hoàng Nam" [level=6]
+- paragraph: Chuyên gia lĩnh vực
+- paragraph: PHP
+- paragraph:      4.9
+- text: 100 Đánh giá
+- heading "David Ngô Savani" [level=6]
+- paragraph: Chuyên gia lĩnh vực
+- paragraph: Front End
+- paragraph:      4.9
+- text: 100 Đánh giá
+- blockquote: Chương trình giảng dạy được biên soạn dành riêng cho các bạn Lập trình từ trái ngành hoặc đã có kiến thức theo cường độ cao, luôn được tinh chỉnh và tối ưu hóa theo thời gian bởi các thành viên sáng lập và giảng viên dày kinh nghiệm.Thực sự rất hay và hấp dẫn
+- paragraph: Nhi Dev
+- text: Học viên xuất sắc 
+- link "V learning ":
+  - /url: ""
+- list:
+  - listitem:  1800-123-4567
+  - listitem:  devit@gmail.com
+  - listitem:  Đà Nẵng
+- heading "Liên kết" [level=3]
+- list:
+  - listitem:  Trang chủ
+  - listitem:  Dịch vụ
+  - listitem:  Nhóm
+  - listitem:  Blog
+- heading "Khóa học" [level=3]
+- list:
+  - listitem:  Front End
+  - listitem:  Back End
+  - listitem:  Full stack
+  - listitem:  Node Js
+- heading "Đăng kí tư vấn" [level=3]
+- textbox "Họ và tên": Auto Test User
+- textbox "Email": consmrdcekts883_8476@gmail.com
+- textbox "Số điện thoại": abc123
+- button "Đăng kí"
+- paragraph: Copyright © 2021. All rights reserved.
+- text:   
+```
+
+# Test source
+
+```ts
+  1   | import { expect, test } from '../../../src/fixtures/ui.fixture';
+  2   | import {
+  3   |   createInvalidEmailRegisterFooterHomePageData,
+  4   |   createInvalidFullNameRegisterFooterHomePageData,
+  5   |   createInvalidPhoneRegisterFooterHomePageData,
+  6   |   createValidRegisterFooterHomePageData
+  7   | } from '../../../src/data/registerFooterHomePage.data';
+  8   | import { HomePageUiEndpoint } from '../../../src/endpoints/ui-endpoints/homePage.ui.endpoint';
+  9   | import { logger } from '../../../src/helpers/logger.helper';
+  10  | 
+  11  | test.describe('Register Footer Home Page UI', () => {
+  12  |   test('REGISTER_FOOTER_HOME_PAGE_UI_001 - should register consultation successfully', async ({
+  13  |     page,
+  14  |     registerFooterHomePage
+  15  |   }) => {
+  16  |     // Arrange: Prepare valid consultation data.
+  17  |     const registerData = createValidRegisterFooterHomePageData();
+  18  | 
+  19  |     // Act: Navigate to home page.
+  20  |     await registerFooterHomePage.gotoHomePage();
+  21  | 
+  22  |     // Assert: Home page should be loaded successfully.
+  23  |     await expect(page).toHaveURL(HomePageUiEndpoint.homePage);
+  24  | 
+  25  |     // Act: Submit register consultation form with valid data.
+  26  |     await registerFooterHomePage.registerConsultation(registerData);
+  27  | 
+  28  |     // Assert: Success message should be displayed.
+  29  |     await expect(
+  30  |       registerFooterHomePage.button.getMessageByText('Đăng ký thành công')
+  31  |     ).toBeVisible({ timeout: 10_000 });
+  32  | 
+  33  |     logger.pass(`Register consultation successfully with email: ${registerData.email}`);
+  34  |   });
+  35  | 
+  36  |   test('REGISTER_FOOTER_HOME_PAGE_UI_002 - should not register consultation with invalid phone', async ({
+  37  |     page,
+  38  |     registerFooterHomePage
+  39  |   }) => {
+  40  |     // Arrange: Prepare invalid phone consultation data.
+  41  |     const registerData = createInvalidPhoneRegisterFooterHomePageData();
+  42  | 
+  43  |     // Act: Navigate to home page.
+  44  |     await registerFooterHomePage.gotoHomePage();
+  45  | 
+  46  |     // Assert: Home page should be loaded successfully.
+  47  |     await expect(page).toHaveURL(HomePageUiEndpoint.homePage);
+  48  | 
+  49  |     // Act: Submit register consultation form with invalid phone.
+  50  |     await registerFooterHomePage.registerConsultation(registerData);
+  51  | 
+  52  |     // Assert: Invalid phone message should be displayed.
+  53  |     await expect(
+  54  |       registerFooterHomePage.button.getMessageByText('Số điện thoại không hợp lệ')
+> 55  |     ).toBeVisible({ timeout: 10_000 });
+      |       ^ Error: expect(locator).toBeVisible() failed
+  56  | 
+  57  |     logger.pass(`Register consultation rejected invalid phone: ${registerData.phone}`);
+  58  |   });
+  59  | 
+  60  |   test('REGISTER_FOOTER_HOME_PAGE_UI_003 - should not register consultation with invalid full name', async ({
+  61  |     page,
+  62  |     registerFooterHomePage
+  63  |   }) => {
+  64  |     // Arrange: Prepare invalid full name consultation data.
+  65  |     const registerData = createInvalidFullNameRegisterFooterHomePageData();
+  66  | 
+  67  |     // Act: Navigate to home page.
+  68  |     await registerFooterHomePage.gotoHomePage();
+  69  | 
+  70  |     // Assert: Home page should be loaded successfully.
+  71  |     await expect(page).toHaveURL(HomePageUiEndpoint.homePage);
+  72  | 
+  73  |     // Act: Submit register consultation form with invalid full name.
+  74  |     await registerFooterHomePage.registerConsultation(registerData);
+  75  | 
+  76  |     // Assert: Invalid full name message should be displayed.
+  77  |     await expect(
+  78  |       registerFooterHomePage.button.getMessageByText('Họ và tên không hợp lệ')
+  79  |     ).toBeVisible({ timeout: 10_000 });
+  80  | 
+  81  |     logger.pass(`Register consultation rejected invalid full name: ${registerData.fullName}`);
+  82  |   });
+  83  | 
+  84  |   test('REGISTER_FOOTER_HOME_PAGE_UI_004 - should not register consultation with invalid email', async ({
+  85  |     page,
+  86  |     registerFooterHomePage
+  87  |   }) => {
+  88  |     // Arrange: Prepare invalid email consultation data.
+  89  |     const registerData = createInvalidEmailRegisterFooterHomePageData();
+  90  | 
+  91  |     // Act: Navigate to home page.
+  92  |     await registerFooterHomePage.gotoHomePage();
+  93  | 
+  94  |     // Assert: Home page should be loaded successfully.
+  95  |     await expect(page).toHaveURL(HomePageUiEndpoint.homePage);
+  96  | 
+  97  |     // Act: Submit register consultation form with invalid email.
+  98  |     await registerFooterHomePage.registerConsultation(registerData);
+  99  | 
+  100 |     // Assert: Invalid email message should be displayed.
+  101 |     await expect(
+  102 |       registerFooterHomePage.button.getMessageByText('Email không hợp lệ')
+  103 |     ).toBeVisible({ timeout: 10_000 });
+  104 | 
+  105 |     logger.pass(`Register consultation rejected invalid email: ${registerData.email}`);
+  106 |   });
+  107 | });
+```

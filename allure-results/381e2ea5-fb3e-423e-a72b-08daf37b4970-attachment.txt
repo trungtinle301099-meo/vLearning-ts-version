@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783258115536216","biDanh":"bi-danh-mkh1783258115582851","tenKhoaHoc":"Auto Course Electronic Metal Chips","moTa":"Demoror cuius defluo caute.","luotXem":19,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"04/01/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

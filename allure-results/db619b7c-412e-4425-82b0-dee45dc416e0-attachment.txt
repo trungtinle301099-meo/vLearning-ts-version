@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783181730054915","matKhau":"@Ofiry4232","hoTen":"Auto Test Astrid Bernhard","soDt":"0993341063","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783181730054915_3625@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

@@ -1,0 +1,4 @@
+[2026-07-08 14:07:24] [INFO] precondition-existing-username status: 200
+[2026-07-08 14:07:26] [PASS] Register UI rejected existing username: taikmrckjtam595
+[2026-07-08 14:07:26] [INFO] Cleanup login status: 200
+[2026-07-08 14:07:26] [INFO] Cleanup deleted account: taikmrckjtam595

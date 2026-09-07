@@ -1,0 +1,7 @@
+[2026-07-04 09:09:06] [INFO] precondition-register-user status: 200
+[2026-07-04 09:09:06] [INFO] Precondition registered account: taikhoan1783181346237829
+[2026-07-04 09:09:06] [INFO] Precondition login status: 200
+[2026-07-04 09:09:06] [INFO] update-user-password-success status: 200
+[2026-07-04 09:09:06] [PASS] Update matKhau passed for account: taikhoan1783181346237829
+[2026-07-04 09:09:06] [INFO] Cleanup login status: 200
+[2026-07-04 09:09:06] [INFO] Cleanup deleted account: taikhoan1783181346237829

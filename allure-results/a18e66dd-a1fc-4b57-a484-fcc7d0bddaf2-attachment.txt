@@ -1,0 +1,1 @@
+{"taiKhoan":"taikmre1256r025","matKhau":"@Dctps3178","hoTen":"Auto Test Saul ","soDt":"0977431903","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmre1256r025_0365@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

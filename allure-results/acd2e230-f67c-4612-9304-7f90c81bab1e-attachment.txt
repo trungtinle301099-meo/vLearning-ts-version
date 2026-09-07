@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783239499409409","biDanh":"bi-danh-mkh1783239499409409","tenKhoaHoc":"Auto Course Recycled Silk Chicken","moTa":"Cado maxime comptus consequuntur magni.","luotXem":70,"danhGia":10,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"13/07/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

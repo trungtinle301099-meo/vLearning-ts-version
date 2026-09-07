@@ -1,0 +1,12 @@
+[2026-07-05 05:21:14] [INFO] Precondition login status: 200
+[2026-07-05 05:21:14] [INFO] precondition-register-user status: 200
+[2026-07-05 05:21:14] [INFO] Precondition registered account: taikhoan1783254074254032
+[2026-07-05 05:21:14] [INFO] precondition-create-course status: 200
+[2026-07-05 05:21:14] [INFO] Precondition registered account: taikhoan1783254074254032
+[2026-07-05 05:21:14] [INFO] Precondition created course: MKH1783254074280800
+[2026-07-05 05:21:14] [INFO] register-course-success status: 200
+[2026-07-05 05:21:14] [PASS] Register Course API passed for course: MKH1783254074280800, account: taikhoan1783254074254032
+[2026-07-05 05:21:14] [INFO] Cleanup canceled course registration: MKH1783254074280800 - taikhoan1783254074254032
+[2026-07-05 05:21:14] [INFO] Cleanup login status: 200
+[2026-07-05 05:21:14] [INFO] Cleanup deleted account: taikhoan1783254074254032
+[2026-07-05 05:21:14] [INFO] Cleanup deleted course: MKH1783254074280800

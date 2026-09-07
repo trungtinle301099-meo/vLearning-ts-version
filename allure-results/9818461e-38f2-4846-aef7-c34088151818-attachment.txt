@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783633038922464","biDanh":"bi-danh-mkh1783633038922464","tenKhoaHoc":"Auto Course Modern Concrete Car","moTa":"Summopere adsuesco damnatio argumentum cogito.","luotXem":66,"danhGia":5,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"06/09/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

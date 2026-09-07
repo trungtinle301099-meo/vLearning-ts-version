@@ -1,0 +1,6 @@
+[2026-07-05 06:48:35] [INFO] Precondition login status: 200
+[2026-07-05 06:48:35] [INFO] precondition-create-course status: 200
+[2026-07-05 06:48:35] [INFO] Precondition created course: MKH1783259315910922
+[2026-07-05 06:48:35] [INFO] update-course-name-success status: 200
+[2026-07-05 06:48:35] [PASS] Update tenKhoaHoc passed for course: MKH1783259315910922
+[2026-07-05 06:48:35] [INFO] Cleanup deleted course: MKH1783259315910922

@@ -1,0 +1,4 @@
+[2026-07-08 13:47:05] [INFO] Precondition login status: 200
+[2026-07-08 13:47:05] [INFO] create-course-hv-creator status: 500
+[2026-07-08 13:47:05] [INFO] create-course-hv-creator error response: Người tạo phải là tài khoản giảng viên!
+[2026-07-08 13:47:05] [PASS] Create Course API rejected HV creator account: hocvien01

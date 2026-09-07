@@ -1,0 +1,6 @@
+[2026-07-04 10:58:25] [INFO] precondition-existing-email status: 200
+[2026-07-04 10:58:25] [INFO] register-existing-email status: 500
+[2026-07-04 10:58:25] [INFO] register-existing-email error response: Email đã tồn tại!
+[2026-07-04 10:58:25] [PASS] Register API rejected existing email: taikhoan1783187905335822_4191@gmail.com
+[2026-07-04 10:58:25] [INFO] Cleanup login status: 200
+[2026-07-04 10:58:25] [INFO] Cleanup deleted account: taikhoan1783187905335822

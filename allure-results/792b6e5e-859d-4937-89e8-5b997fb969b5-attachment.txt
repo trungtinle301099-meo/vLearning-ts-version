@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783255752962085","biDanh":"bi-danh-mkh1783255752962085","tenKhoaHoc":"Auto Course Oriental Gold Computer","moTa":"Cognomen adipiscor alias vos amoveo.","luotXem":81,"danhGia":1,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"23/08/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

@@ -1,0 +1,7 @@
+[2026-07-05 06:47:17] [INFO] precondition-register-user status: 200
+[2026-07-05 06:47:17] [INFO] Precondition registered account: taikhoan1783259237314432
+[2026-07-05 06:47:17] [INFO] Precondition login status: 200
+[2026-07-05 06:47:17] [INFO] update-user-fullname-success status: 200
+[2026-07-05 06:47:17] [PASS] Update hoTen passed for account: taikhoan1783259237314432
+[2026-07-05 06:47:17] [INFO] Cleanup login status: 200
+[2026-07-05 06:47:17] [INFO] Cleanup deleted account: taikhoan1783259237314432

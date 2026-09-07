@@ -1,0 +1,7 @@
+[2026-07-08 13:47:06] [INFO] precondition-register-user status: 200
+[2026-07-08 13:47:06] [INFO] Precondition registered account: taikhoan1783543626481365
+[2026-07-08 13:47:06] [INFO] Precondition login status: 200
+[2026-07-08 13:47:06] [INFO] update-user-phone-success status: 200
+[2026-07-08 13:47:06] [PASS] Update soDT passed for account: taikhoan1783543626481365
+[2026-07-08 13:47:06] [INFO] Cleanup login status: 200
+[2026-07-08 13:47:06] [INFO] Cleanup deleted account: taikhoan1783543626481365

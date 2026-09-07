@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783632958010945","biDanh":"bi-danh-mkh1783632958010945","tenKhoaHoc":"Auto Course Refined Concrete Car","moTa":"Commodi apparatus volup combibo cupio atqui vereor.","luotXem":31,"danhGia":4,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"31/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

@@ -1,0 +1,5 @@
+[2026-07-09 14:35:58] [INFO] precondition-register-user status: 200
+[2026-07-09 14:35:58] [INFO] Precondition registered account: taikmre10emv042
+[2026-07-09 14:35:58] [INFO] Precondition login status: 200
+[2026-07-09 14:35:58] [INFO] delete-user-success status: 200
+[2026-07-09 14:35:58] [PASS] Delete User API passed for account: taikmre10emv042

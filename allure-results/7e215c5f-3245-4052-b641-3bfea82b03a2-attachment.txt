@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259404880715","biDanh":"bi-danh-mkh1783259404880715","tenKhoaHoc":"Auto Course Ergonomic Ceramic Car","moTa":"Nemo villa adulescens.","luotXem":5,"danhGia":5,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"27/08/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

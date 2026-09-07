@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783259430592526","matKhau":"@Xcgew7994","hoTen":"Auto Test Elvis Pagac","soDt":"0986554416","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783259430592526_8518@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

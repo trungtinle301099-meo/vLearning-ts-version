@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783632958016600","biDanh":"bi-danh-mkh1783632958016600","tenKhoaHoc":"Auto Course Elegant Ceramic Fish","moTa":"Ara tergiversatio carbo torrens caste vix.","luotXem":50,"danhGia":7,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"23/01/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

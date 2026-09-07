@@ -1,0 +1,6 @@
+[2026-07-05 06:47:16] [INFO] Precondition login status: 200
+[2026-07-05 06:47:17] [INFO] precondition-create-course status: 200
+[2026-07-05 06:47:17] [INFO] Precondition created course: MKH1783259236977124
+[2026-07-05 06:47:17] [INFO] update-course-view-success status: 200
+[2026-07-05 06:47:17] [PASS] Update luotXem passed for course: MKH1783259236977124
+[2026-07-05 06:47:17] [INFO] Cleanup deleted course: MKH1783259236977124

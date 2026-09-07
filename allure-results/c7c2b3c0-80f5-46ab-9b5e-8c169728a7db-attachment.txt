@@ -1,0 +1,6 @@
+[2026-07-09 14:35:58] [INFO] Precondition login status: 200
+[2026-07-09 14:35:58] [INFO] precondition-create-course status: 200
+[2026-07-09 14:35:58] [INFO] Precondition created course: MKH1783632958010945
+[2026-07-09 14:35:58] [INFO] update-course-alias-success status: 200
+[2026-07-09 14:35:58] [PASS] Update biDanh passed for course: MKH1783632958010945
+[2026-07-09 14:35:58] [INFO] Cleanup deleted course: MKH1783632958010945

@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783251727170495","biDanh":"bi-danh-mkh1783251727170495","tenKhoaHoc":"Auto Course Refined Metal Sausages","moTa":"Cicuta patrocinor degero.","luotXem":77,"danhGia":6,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"22/04/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

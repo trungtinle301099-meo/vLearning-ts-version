@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259315804174","biDanh":"bi-danh-mkh1783259315804174","tenKhoaHoc":"Auto Course Practical Steel Computer","moTa":"Stillicidium cribro caritas aestas torqueo ab.","luotXem":57,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"17/08/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

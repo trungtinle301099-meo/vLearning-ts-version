@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259236850416","biDanh":"bi-danh-mkh1783259236850416","tenKhoaHoc":"Auto Course Rustic Steel Table","moTa":"Theca incidunt crudelis custodia cribro at alii.","luotXem":77,"danhGia":7,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"17/02/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

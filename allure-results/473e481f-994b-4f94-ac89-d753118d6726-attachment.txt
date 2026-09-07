@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259236976940","biDanh":"bi-danh-mkh1783259236976940","tenKhoaHoc":"Auto Course Fantastic Marble Fish","moTa":"Tonsor ipsa vae solum non bestia nesciunt desolo cubicularis.","luotXem":81,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"22/10/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

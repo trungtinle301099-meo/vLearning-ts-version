@@ -1,0 +1,6 @@
+[2026-07-04 08:54:03] [INFO] precondition-register-user status: 200
+[2026-07-04 08:54:03] [INFO] Precondition registered account: taikhoan1783180443887514
+[2026-07-04 08:54:03] [INFO] Precondition login status: 200
+[2026-07-04 08:54:04] [INFO] update-user-type-success status: 200
+[2026-07-04 08:54:04] [INFO] Cleanup login status: 200
+[2026-07-04 08:54:04] [INFO] Cleanup deleted account: taikhoan1783180443887514

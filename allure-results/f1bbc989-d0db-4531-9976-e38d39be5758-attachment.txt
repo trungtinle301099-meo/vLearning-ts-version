@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783182542648098","matKhau":"@Knfcs7889","hoTen":"Updated User Ally Witting","soDt":"0964080400","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783182542648098_1164@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

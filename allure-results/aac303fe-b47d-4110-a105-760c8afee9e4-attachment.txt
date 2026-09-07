@@ -1,0 +1,1 @@
+[2026-07-09 03:41:40] [PASS] Information page opened successfully after clicking Thông tin link.

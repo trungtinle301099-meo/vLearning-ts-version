@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "query": {
+    "MaNhom": "GP01",
+    "tuKhoa": "",
+    "page": 1,
+    "pageSize": 20
+  }
+}

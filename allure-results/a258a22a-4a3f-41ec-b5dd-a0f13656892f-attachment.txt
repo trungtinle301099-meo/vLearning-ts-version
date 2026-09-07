@@ -1,0 +1,7 @@
+[2026-07-05 06:50:30] [INFO] precondition-register-user status: 200
+[2026-07-05 06:50:30] [INFO] Precondition registered account: taikhoan1783259430423565
+[2026-07-05 06:50:30] [INFO] login-invalid-username status: 500
+[2026-07-05 06:50:30] [INFO] login-invalid-username error response: Tài khoản hoặc mật khẩu không đúng!
+[2026-07-05 06:50:30] [PASS] Login API rejected invalid username: taikhoan1783259430423565_invalid
+[2026-07-05 06:50:30] [INFO] Cleanup login status: 200
+[2026-07-05 06:50:30] [INFO] Cleanup deleted account: taikhoan1783259430423565

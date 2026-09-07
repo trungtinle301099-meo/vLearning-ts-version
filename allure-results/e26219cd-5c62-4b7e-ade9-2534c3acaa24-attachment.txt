@@ -1,0 +1,12 @@
+[2026-07-04 09:20:45] [INFO] precondition-existing-username status: 200
+[2026-07-04 09:20:45] [CHANGE] taiKhoan: undefined -> taikhoan1783182045060572
+[2026-07-04 09:20:45] [CHANGE] matKhau: undefined -> @Wxflp8402
+[2026-07-04 09:20:45] [CHANGE] hoTen: undefined -> Auto Test Santiago White
+[2026-07-04 09:20:45] [CHANGE] soDT: undefined -> 0983331484
+[2026-07-04 09:20:45] [CHANGE] maNhom: undefined -> GP01
+[2026-07-04 09:20:45] [CHANGE] email: undefined -> taikhoan1783182045060572_2082@gmail.com
+[2026-07-04 09:20:45] [INFO] register-existing-username status: 500
+[2026-07-04 09:20:45] [INFO] register-existing-username error response: Tài khoản đã tồn tại!
+[2026-07-04 09:20:45] [PASS] Register API rejected existing username: taikhoan1783182045060572
+[2026-07-04 09:20:45] [INFO] Cleanup login status: 200
+[2026-07-04 09:20:45] [INFO] Cleanup deleted account: taikhoan1783182045060572

@@ -1,0 +1,8 @@
+[2026-07-04 05:58:59] [INFO] register-success status: 200
+[2026-07-04 05:58:59] [INFO] register-success request: {"taiKhoan":"taikhoan1783169939837239","matKhau":"@Nuryc5890","hoTen":"Auto Test Celia Donnelly","soDT":"0916579910","maNhom":"GP01","email":"taikhoan1783169939837239_1664@gmail.com"}
+[2026-07-04 05:58:59] [INFO] register-success response: {"taiKhoan":"taikhoan1783169939837239","matKhau":"@Nuryc5890","hoTen":"Auto Test Celia Donnelly","soDT":"0916579910","maNhom":"GP01","email":"taikhoan1783169939837239_1664@gmail.com"}
+[2026-07-04 05:58:59] [PASS] Register API passed for account: taikhoan1783169939837239
+[2026-07-04 05:59:00] [INFO] Cleanup login status: 200
+[2026-07-04 05:59:00] [INFO] Cleanup login response: {"taiKhoan":"Adm08","email":"TEST","soDT":"0909999999","maNhom":"GP01","maLoaiNguoiDung":"GV","hoTen":"đổi lần 1","accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtMDgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJHViIsIm5iZiI6MTc4MzE2OTkzNywiZXhwIjoxNzgzMTczNTM3fQ.PdLztTx70CKKsyGsXJZdS6Y7V3cahhUa40qpTWAYXdY"}
+[2026-07-04 05:59:00] [INFO] Cleanup delete account taikhoan1783169939837239 status: 200
+[2026-07-04 05:59:00] [INFO] Cleanup delete account taikhoan1783169939837239 response: "Xóa thành công!"

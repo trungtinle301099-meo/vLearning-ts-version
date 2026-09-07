@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783515603063794","biDanh":"bi-danh-mkh1783515603063794","tenKhoaHoc":"Auto Course Recycled Marble Chips","moTa":"Thermae vado subnecto votum veritatis.","luotXem":63,"danhGia":3,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"29/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

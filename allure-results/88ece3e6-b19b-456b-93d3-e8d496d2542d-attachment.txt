@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783180442799348","matKhau":"@Bgrmt2876","hoTen":"Updated User Justin Tillman","soDt":"0901667360","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783180442799348_6144@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

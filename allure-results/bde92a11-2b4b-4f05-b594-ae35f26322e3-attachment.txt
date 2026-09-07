@@ -1,0 +1,6 @@
+[2026-07-09 14:37:19] [INFO] precondition-register-user status: 200
+[2026-07-09 14:37:19] [INFO] Precondition registered account: taikmre1252s179
+[2026-07-09 14:37:19] [INFO] login-success status: 200
+[2026-07-09 14:37:19] [PASS] Login API passed for account: taikmre1252s179
+[2026-07-09 14:37:19] [INFO] Cleanup login status: 200
+[2026-07-09 14:37:19] [INFO] Cleanup deleted account: taikmre1252s179

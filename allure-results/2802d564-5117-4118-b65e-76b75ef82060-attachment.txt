@@ -1,0 +1,1 @@
+{"taiKhoan":"taikmre10ez7545","matKhau":"@Vwooj6442","hoTen":"Auto Test Summe","soDt":"0930858534","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmre10ez7545_2932@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

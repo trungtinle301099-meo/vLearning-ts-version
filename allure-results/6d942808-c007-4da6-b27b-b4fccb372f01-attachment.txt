@@ -1,0 +1,14 @@
+[2026-07-04 09:27:38] [INFO] precondition-register-user status: 200
+[2026-07-04 09:27:38] [CHANGE] taiKhoan: undefined -> taikhoan1783182458319446
+[2026-07-04 09:27:38] [CHANGE] matKhau: undefined -> @Zpqpg4394
+[2026-07-04 09:27:38] [CHANGE] hoTen: undefined -> Auto Test Amber O'Reilly
+[2026-07-04 09:27:38] [CHANGE] soDT: undefined -> 0966331138
+[2026-07-04 09:27:38] [CHANGE] maNhom: undefined -> GP01
+[2026-07-04 09:27:38] [CHANGE] email: undefined -> taikhoan1783182458319446_4201@gmail.com
+[2026-07-04 09:27:38] [INFO] Precondition registered account: taikhoan1783182458319446
+[2026-07-04 09:27:38] [INFO] Precondition login status: 200
+[2026-07-04 09:27:38] [INFO] update-user-password-success status: 200
+[2026-07-04 09:27:38] [CHANGE] matKhau: @Zpqpg4394 -> @Lbayf1274
+[2026-07-04 09:27:38] [PASS] Update matKhau passed for account: taikhoan1783182458319446
+[2026-07-04 09:27:38] [INFO] Cleanup login status: 200
+[2026-07-04 09:27:38] [INFO] Cleanup deleted account: taikhoan1783182458319446

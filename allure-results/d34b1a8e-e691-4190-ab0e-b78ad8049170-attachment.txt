@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783251944740339","biDanh":"bi-danh-mkh1783251944740339","tenKhoaHoc":"Auto Course Soft Marble Bike","moTa":"Saepe acquiro calamitas corrigo curia.","luotXem":42,"danhGia":7,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"10/04/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

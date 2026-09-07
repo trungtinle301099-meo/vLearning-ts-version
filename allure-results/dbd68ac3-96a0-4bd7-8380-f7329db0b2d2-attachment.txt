@@ -1,0 +1,1 @@
+{"taiKhoan":"taikmre10ex3733","matKhau":"@Urard8080","hoTen":"Auto Test Lea D","soDt":"0975508799","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmre10ex3733_5938@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

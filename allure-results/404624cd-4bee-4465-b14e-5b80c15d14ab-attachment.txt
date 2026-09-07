@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783633039018269","biDanh":"bi-danh-mkh1783633039039684","tenKhoaHoc":"Auto Course Ergonomic Bronze Salad","moTa":"Advenio tergo certus tepidus.","luotXem":32,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"13/11/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

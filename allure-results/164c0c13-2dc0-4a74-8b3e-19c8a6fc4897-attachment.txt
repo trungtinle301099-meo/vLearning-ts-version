@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783182075526593","matKhau":"@Mxqjg3546","hoTen":"Auto Test Clint Rice","soDt":"0940507330","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783182075526593_8581@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783543625954254","biDanh":"bi-danh-mkh1783543625954254","tenKhoaHoc":"Auto Course Small Metal Chips","moTa":"Tamen tenuis adicio corrigo.","luotXem":41,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"01/04/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

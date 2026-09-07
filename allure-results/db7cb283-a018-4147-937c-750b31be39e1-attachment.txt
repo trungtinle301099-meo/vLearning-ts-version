@@ -1,0 +1,11 @@
+[2026-07-04 05:58:02] [INFO] precondition-existing-username status: 200
+[2026-07-04 05:58:02] [INFO] precondition-existing-username request: {"taiKhoan":"taikhoan1783169882658856","matKhau":"@Icokx2174","hoTen":"Auto Test Bert Haag","soDT":"0936448711","maNhom":"GP01","email":"taikhoan1783169882658856_2256@gmail.com"}
+[2026-07-04 05:58:02] [INFO] precondition-existing-username response: {"taiKhoan":"taikhoan1783169882658856","matKhau":"@Icokx2174","hoTen":"Auto Test Bert Haag","soDT":"0936448711","maNhom":"GP01","email":"taikhoan1783169882658856_2256@gmail.com"}
+[2026-07-04 05:58:02] [INFO] register-existing-username status: 500
+[2026-07-04 05:58:02] [INFO] register-existing-username request: {"taiKhoan":"taikhoan1783169882658856","matKhau":"@Irckv2387","hoTen":"Auto Test Lionel Murphy","soDT":"0959753357","maNhom":"GP01","email":"taikhoan1783169882659169_1112@gmail.com"}
+[2026-07-04 05:58:02] [INFO] register-existing-username response: Tài khoản đã tồn tại!
+[2026-07-04 05:58:02] [PASS] Register API rejected existing username: taikhoan1783169882658856
+[2026-07-04 05:58:02] [INFO] Cleanup login status: 200
+[2026-07-04 05:58:02] [INFO] Cleanup login response: {"taiKhoan":"Adm08","email":"TEST","soDT":"0909999999","maNhom":"GP01","maLoaiNguoiDung":"GV","hoTen":"đổi lần 1","accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtMDgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJHViIsIm5iZiI6MTc4MzE2OTg3OSwiZXhwIjoxNzgzMTczNDc5fQ.KcwKjhFmXOmpy_W5_2UskCtfIaS_L7Y9eCTV7vwMYt8"}
+[2026-07-04 05:58:02] [INFO] Cleanup delete account taikhoan1783169882658856 status: 200
+[2026-07-04 05:58:02] [INFO] Cleanup delete account taikhoan1783169882658856 response: "Xóa thành công!"

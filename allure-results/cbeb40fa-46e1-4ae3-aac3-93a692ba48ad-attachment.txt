@@ -1,0 +1,11 @@
+[2026-07-04 05:59:59] [INFO] precondition-existing-email status: 200
+[2026-07-04 05:59:59] [INFO] precondition-existing-email request: {"taiKhoan":"taikhoan1783169999951600","matKhau":"@Nnkhv5484","hoTen":"Auto Test Michale Walsh","soDT":"0904936398","maNhom":"GP01","email":"taikhoan1783169999951600_8884@gmail.com"}
+[2026-07-04 05:59:59] [INFO] precondition-existing-email response: {"taiKhoan":"taikhoan1783169999951600","matKhau":"@Nnkhv5484","hoTen":"Auto Test Michale Walsh","soDT":"0904936398","maNhom":"GP01","email":"taikhoan1783169999951600_8884@gmail.com"}
+[2026-07-04 05:59:59] [INFO] register-existing-email status: 500
+[2026-07-04 05:59:59] [INFO] register-existing-email request: {"taiKhoan":"taikhoan1783169999951716","matKhau":"@Ymnuz0523","hoTen":"Auto Test Hope Nikolaus-Witting","soDT":"0980780063","maNhom":"GP01","email":"taikhoan1783169999951600_8884@gmail.com"}
+[2026-07-04 05:59:59] [INFO] register-existing-email response: Email đã tồn tại!
+[2026-07-04 05:59:59] [PASS] Register API rejected existing email: taikhoan1783169999951600_8884@gmail.com
+[2026-07-04 05:59:59] [INFO] Cleanup login status: 200
+[2026-07-04 05:59:59] [INFO] Cleanup login response: {"taiKhoan":"Adm08","email":"TEST","soDT":"0909999999","maNhom":"GP01","maLoaiNguoiDung":"GV","hoTen":"đổi lần 1","accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtMDgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJHViIsIm5iZiI6MTc4MzE2OTk5NywiZXhwIjoxNzgzMTczNTk3fQ.sRI0DXaN4gfR1X0r0vhqa574-6xtb2rOhxJYVUxPbKc"}
+[2026-07-04 06:00:00] [INFO] Cleanup delete account taikhoan1783169999951600 status: 200
+[2026-07-04 06:00:00] [INFO] Cleanup delete account taikhoan1783169999951600 response: "Xóa thành công!"

@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783187581051758","matKhau":"@Yppsh0680","hoTen":"Auto Test Alyce Wintheiser","soDt":"0985657264","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783187581051758_0197@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

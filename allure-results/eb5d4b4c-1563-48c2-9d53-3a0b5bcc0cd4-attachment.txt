@@ -1,0 +1,15 @@
+[2026-07-04 09:27:39] [INFO] precondition-register-user status: 200
+[2026-07-04 09:27:39] [CHANGE] taiKhoan: undefined -> taikhoan1783182459154457
+[2026-07-04 09:27:39] [CHANGE] matKhau: undefined -> @Focat8884
+[2026-07-04 09:27:39] [CHANGE] hoTen: undefined -> Auto Test Marcella Denesik
+[2026-07-04 09:27:39] [CHANGE] soDT: undefined -> 0998211662
+[2026-07-04 09:27:39] [CHANGE] maNhom: undefined -> GP01
+[2026-07-04 09:27:39] [CHANGE] email: undefined -> taikhoan1783182459154457_7122@gmail.com
+[2026-07-04 09:27:39] [INFO] Precondition registered account: taikhoan1783182459154457
+[2026-07-04 09:27:39] [INFO] Precondition login status: 200
+[2026-07-04 09:27:39] [INFO] update-user-group-success status: 200
+[2026-07-04 09:27:39] [CHANGE] maNhom: GP01 -> GP02
+[2026-07-04 09:27:39] [WARN] maNhom response khác request. Request: GP02, Response: GP01
+[2026-07-04 09:27:39] [PASS] Update maNhom API returned success for account: taikhoan1783182459154457
+[2026-07-04 09:27:39] [INFO] Cleanup login status: 200
+[2026-07-04 09:27:39] [INFO] Cleanup deleted account: taikhoan1783182459154457

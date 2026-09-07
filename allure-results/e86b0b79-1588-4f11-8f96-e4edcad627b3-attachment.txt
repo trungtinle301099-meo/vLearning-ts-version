@@ -1,0 +1,4 @@
+[2026-07-05 06:50:30] [INFO] register-success status: 200
+[2026-07-05 06:50:30] [PASS] Register API passed for account: taikhoan1783259430500389
+[2026-07-05 06:50:30] [INFO] Cleanup login status: 200
+[2026-07-05 06:50:30] [INFO] Cleanup deleted account: taikhoan1783259430500389

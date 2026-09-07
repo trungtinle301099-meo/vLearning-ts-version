@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783515603845069","matKhau":"@Ajhdr3549","hoTen":"Auto Test Stefan Buckridge","soDt":"0902658495","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783515603845069_5460@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

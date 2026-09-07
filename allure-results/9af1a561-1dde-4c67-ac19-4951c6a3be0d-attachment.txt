@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259429984546","biDanh":"bi-danh-mkh1783259429984546","tenKhoaHoc":"Auto Course Generic Steel Salad","moTa":"Itaque creta coepi verumtamen.","luotXem":95,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"13/06/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

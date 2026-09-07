@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783249810696779","biDanh":"bi-danh-mkh1783249810696779","tenKhoaHoc":"Auto Course Sleek Marble Ball","moTa":"Talio templum subseco.","luotXem":31,"danhGia":5,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"12/05/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

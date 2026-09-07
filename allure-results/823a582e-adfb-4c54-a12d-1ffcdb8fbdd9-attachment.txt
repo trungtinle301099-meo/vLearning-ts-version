@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259315797068","biDanh":"bi-danh-mkh1783259315828921","tenKhoaHoc":"Auto Course Elegant Wooden Computer","moTa":"Depulso cattus adipisci amplexus defleo.","luotXem":77,"danhGia":5,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"06/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

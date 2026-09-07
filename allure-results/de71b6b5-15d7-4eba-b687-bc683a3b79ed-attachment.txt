@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783633038826574","biDanh":"bi-danh-mkh1783633038826574","tenKhoaHoc":"Auto Course Handmade Plastic Chips","moTa":"Ipsa conforto placeat tergum.","luotXem":67,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"07/05/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

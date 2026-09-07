@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259391105050","biDanh":"bi-danh-mkh1783259391105050","tenKhoaHoc":"Auto Course Handcrafted Wooden Ball","moTa":"Cogito denique demergo vinum demens ante super sordeo.","luotXem":55,"danhGia":7,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"14/07/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

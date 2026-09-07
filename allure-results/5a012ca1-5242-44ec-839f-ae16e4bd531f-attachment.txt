@@ -1,0 +1,5 @@
+[2026-07-08 13:47:06] [INFO] precondition-register-user status: 200
+[2026-07-08 13:47:06] [INFO] Precondition registered account: taikhoan1783543626293305
+[2026-07-08 13:47:06] [INFO] Precondition login status: 200
+[2026-07-08 13:47:06] [INFO] delete-user-success status: 200
+[2026-07-08 13:47:06] [PASS] Delete User API passed for account: taikhoan1783543626293305

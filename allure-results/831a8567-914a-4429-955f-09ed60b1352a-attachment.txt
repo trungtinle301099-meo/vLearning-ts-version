@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783515602739155","biDanh":"bi-danh-mkh1783515602739155","tenKhoaHoc":"Auto Course Incredible Metal Chair","moTa":"Angulus sortitus fugit verumtamen quos carmen.","luotXem":45,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"11/04/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

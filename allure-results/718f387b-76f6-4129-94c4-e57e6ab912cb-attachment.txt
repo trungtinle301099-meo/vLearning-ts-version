@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259395639986","biDanh":"bi-danh-mkh1783259395639986","tenKhoaHoc":"Auto Course Gorgeous Gold Chips","moTa":"Cariosus ante vae ea corrumpo peior dens tunc curso.","luotXem":61,"danhGia":6,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"11/07/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

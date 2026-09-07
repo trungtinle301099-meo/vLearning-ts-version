@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259430043264","biDanh":"bi-danh-mkh1783259430043264","tenKhoaHoc":"Auto Course Gorgeous Silk Fish","moTa":"Amiculum cribro ara ante conforto texo demo spiculum.","luotXem":86,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"14/09/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

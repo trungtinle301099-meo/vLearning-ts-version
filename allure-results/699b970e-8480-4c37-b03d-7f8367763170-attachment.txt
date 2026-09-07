@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783182543220042","matKhau":"@Rsmfd6629","hoTen":"Auto Test Rhianna Prosacco","soDt":"0972882526","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783182543220042_5764@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

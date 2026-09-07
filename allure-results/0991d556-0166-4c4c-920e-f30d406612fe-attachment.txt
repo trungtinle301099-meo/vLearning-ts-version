@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259315768342","biDanh":"bi-danh-mkh1783259315768342","tenKhoaHoc":"Auto Course Gorgeous Silk Car","moTa":"Ventus solum animus cunae.","luotXem":12,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"12/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

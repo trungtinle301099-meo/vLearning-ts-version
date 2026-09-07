@@ -1,0 +1,7 @@
+[2026-07-04 09:09:07] [INFO] precondition-register-user status: 200
+[2026-07-04 09:09:07] [INFO] Precondition registered account: taikhoan1783181347043156
+[2026-07-04 09:09:07] [INFO] Precondition login status: 200
+[2026-07-04 09:09:07] [INFO] update-user-type-success status: 200
+[2026-07-04 09:09:07] [PASS] Update maLoaiNguoiDung passed for account: taikhoan1783181347043156
+[2026-07-04 09:09:07] [INFO] Cleanup login status: 200
+[2026-07-04 09:09:07] [INFO] Cleanup deleted account: taikhoan1783181347043156

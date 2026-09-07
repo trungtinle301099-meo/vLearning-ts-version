@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783632958003883","biDanh":"bi-danh-mkh1783632958037339","tenKhoaHoc":"Auto Course Fantastic Wooden Shirt","moTa":"Apud tui voro comedo advoco non.","luotXem":78,"danhGia":6,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"26/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

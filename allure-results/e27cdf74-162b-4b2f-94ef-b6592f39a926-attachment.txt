@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783632958169974","biDanh":"bi-danh-mkh1783632958169974","tenKhoaHoc":"Auto Course Generic Granite Bacon","moTa":"Amplitudo triumphus voluptas tepidus rerum dapifer.","luotXem":66,"danhGia":7,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"01/01/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

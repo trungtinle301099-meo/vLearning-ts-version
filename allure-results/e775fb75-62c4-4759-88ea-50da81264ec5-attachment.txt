@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783254074457283","biDanh":"bi-danh-mkh1783254074457283","tenKhoaHoc":"Auto Course Generic Aluminum Keyboard","moTa":"Varius articulus fugiat communis triduana.","luotXem":11,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"11/06/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

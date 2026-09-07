@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783182542950723","matKhau":"@Fymlk5872","hoTen":"Auto Test Saul Walsh","soDt":"0911534757","maLoaiNguoiDung":"GV","maNhom":"GP01","email":"taikhoan1783182542950723_1815@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

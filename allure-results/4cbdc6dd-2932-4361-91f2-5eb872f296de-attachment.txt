@@ -1,0 +1,6 @@
+[2026-07-09 14:37:19] [INFO] precondition-register-user status: 200
+[2026-07-09 14:37:19] [INFO] Precondition registered account: taikmre12528181
+[2026-07-09 14:37:19] [INFO] find-user-account-success status: 200
+[2026-07-09 14:37:19] [PASS] Find User Account API found registered account: taikmre12528181
+[2026-07-09 14:37:19] [INFO] Cleanup login status: 200
+[2026-07-09 14:37:19] [INFO] Cleanup deleted account: taikmre12528181

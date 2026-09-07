@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259430279757","biDanh":"bi-danh-mkh1783259430279757","tenKhoaHoc":"Auto Course Fresh Steel Towels","moTa":"Officiis crastinus contabesco adimpleo animi cura summisse.","luotXem":97,"danhGia":5,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"27/10/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

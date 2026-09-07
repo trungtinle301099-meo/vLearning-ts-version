@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783251944586002","biDanh":"bi-danh-mkh1783251944586002","tenKhoaHoc":"Auto Course Frozen Marble Chair","moTa":"Terga cui sodalitas atqui credo tergo confero.","luotXem":44,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"07/11/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

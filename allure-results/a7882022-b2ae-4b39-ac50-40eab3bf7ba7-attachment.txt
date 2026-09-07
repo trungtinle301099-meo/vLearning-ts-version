@@ -1,0 +1,4 @@
+[2026-07-08 13:47:05] [INFO] Precondition login status: 200
+[2026-07-08 13:47:05] [INFO] create-course-invalid-category status: 500
+[2026-07-08 13:47:05] [INFO] create-course-invalid-category error response: Danh mục khóa học không hợp lệ!
+[2026-07-08 13:47:05] [PASS] Create Course API rejected invalid maDanhMucKhoaHoc: INVALID_CATEGORY

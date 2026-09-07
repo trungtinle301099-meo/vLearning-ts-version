@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259236754808","biDanh":"bi-danh-mkh1783259236754808","tenKhoaHoc":"Auto Course Refined Wooden Ball","moTa":"Sui tremo adhuc.","luotXem":89,"danhGia":4,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"30/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

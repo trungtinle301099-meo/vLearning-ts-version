@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259220696327","biDanh":"bi-danh-mkh1783259220736193","tenKhoaHoc":"Auto Course Oriental Marble Chicken","moTa":"Demens aptus appono contego tabernus.","luotXem":71,"danhGia":3,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"08/10/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

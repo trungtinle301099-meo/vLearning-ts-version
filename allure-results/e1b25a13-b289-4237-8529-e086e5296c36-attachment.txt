@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259220564270","biDanh":"bi-danh-mkh1783259220564270","tenKhoaHoc":"Auto Course Incredible Plastic Hat","moTa":"Blandior tam super repudiandae possimus.","luotXem":1,"danhGia":1,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"16/09/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

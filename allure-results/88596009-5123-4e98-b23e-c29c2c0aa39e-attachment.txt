@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783187580943514","matKhau":"@Qcpis2435","hoTen":"Updated User Carlotta Hoppe","soDt":"0919800103","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783187580943514_5758@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

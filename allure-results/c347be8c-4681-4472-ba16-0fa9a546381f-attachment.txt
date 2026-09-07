@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783633039067163","biDanh":"bi-danh-mkh1783633039067163","tenKhoaHoc":"Auto Course Fresh Silk Chair","moTa":"Condico theca terra attero temeritas universe cur deprimo cursim.","luotXem":78,"danhGia":4,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"18/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

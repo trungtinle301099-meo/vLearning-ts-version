@@ -1,0 +1,1 @@
+{"taiKhoan":"taikmre10etp083","matKhau":"@Loqzp8680","hoTen":"Updated User Ky","soDt":"0944894332","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmre10etp083_5837@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

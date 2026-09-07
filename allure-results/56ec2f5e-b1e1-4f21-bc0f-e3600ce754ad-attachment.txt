@@ -1,0 +1,6 @@
+[2026-07-05 06:48:35] [INFO] Precondition login status: 200
+[2026-07-05 06:48:36] [INFO] precondition-create-course status: 200
+[2026-07-05 06:48:36] [INFO] Precondition created course: MKH1783259316001297
+[2026-07-05 06:48:36] [INFO] update-course-created-date-success status: 200
+[2026-07-05 06:48:36] [PASS] Update ngayTao passed for course: MKH1783259316001297
+[2026-07-05 06:48:36] [INFO] Cleanup deleted course: MKH1783259316001297

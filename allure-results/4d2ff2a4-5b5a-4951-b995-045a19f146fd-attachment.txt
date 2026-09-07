@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783259220659241","matKhau":"@Ilpwi4584","hoTen":"Auto Test Genesis Kuphal","soDT":"0939546543","maNhom":"GP01","email":"taikhoan1783259220659241_1256@gmail.com"}

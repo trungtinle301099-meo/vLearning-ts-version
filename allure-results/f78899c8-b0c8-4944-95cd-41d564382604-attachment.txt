@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783633038921938","biDanh":"bi-danh-mkh1783633038921938","tenKhoaHoc":"Auto Course Oriental Gold Hat","moTa":"Quisquam talus animi curiositas suasoria delectatio aro ventus.","luotXem":4,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"14/05/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

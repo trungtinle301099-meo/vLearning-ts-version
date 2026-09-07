@@ -1,0 +1,12 @@
+[2026-07-05 04:45:44] [INFO] Precondition login status: 200
+[2026-07-05 04:45:44] [INFO] precondition-register-user status: 200
+[2026-07-05 04:45:44] [INFO] Precondition registered account: taikhoan1783251944719363
+[2026-07-05 04:45:44] [INFO] precondition-create-course status: 200
+[2026-07-05 04:45:44] [INFO] Precondition registered account: taikhoan1783251944719363
+[2026-07-05 04:45:44] [INFO] Precondition created course: MKH1783251944740339
+[2026-07-05 04:45:44] [INFO] register-course-non-existing-course-id status: 500
+[2026-07-05 04:45:44] [INFO] register-course-non-existing-course-id error response: Mã khóa học không hợp lệ!
+[2026-07-05 04:45:44] [PASS] Register Course API rejected non-existing course id: MKH1783251944740339_NOT_EXIST
+[2026-07-05 04:45:44] [INFO] Cleanup login status: 200
+[2026-07-05 04:45:44] [INFO] Cleanup deleted account: taikhoan1783251944719363
+[2026-07-05 04:45:44] [INFO] Cleanup deleted course: MKH1783251944740339

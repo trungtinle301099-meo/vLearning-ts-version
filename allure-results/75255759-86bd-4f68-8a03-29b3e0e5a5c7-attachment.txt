@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783259316182229","matKhau":"@Mvyca8207","hoTen":"Auto Test Amina Thompson","soDT":"0909867334","maNhom":"GP01","email":"taikhoan1783259316182229_1967@gmail.com"}

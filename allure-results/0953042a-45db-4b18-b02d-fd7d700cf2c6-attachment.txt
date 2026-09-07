@@ -1,0 +1,1 @@
+[2026-07-09 03:58:32] [PASS] Event page opened successfully after clicking Sự kiện link.

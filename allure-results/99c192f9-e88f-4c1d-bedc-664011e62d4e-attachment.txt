@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259404493177","biDanh":"bi-danh-mkh1783259404493177","tenKhoaHoc":"Auto Course Bespoke Granite Bacon","moTa":"Adulescens decipio tempora.","luotXem":11,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"22/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

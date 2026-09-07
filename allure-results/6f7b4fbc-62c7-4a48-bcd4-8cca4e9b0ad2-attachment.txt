@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259395732869","biDanh":"bi-danh-mkh1783259395732869","tenKhoaHoc":"Auto Course Recycled Gold Car","moTa":"Altus canis vomer cubo vaco atrocitas verecundia.","luotXem":35,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"04/05/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

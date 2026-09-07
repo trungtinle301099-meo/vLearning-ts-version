@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259315910922","biDanh":"bi-danh-mkh1783259315910922","tenKhoaHoc":"Auto Course Intelligent Cotton Mouse","moTa":"Corrumpo carcer culpo conatus.","luotXem":64,"danhGia":6,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"07/05/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259315933172","biDanh":"bi-danh-mkh1783259315933172","tenKhoaHoc":"Auto Course Practical Silk Keyboard","moTa":"Ascisco tenax delectatio.","luotXem":25,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"06/02/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

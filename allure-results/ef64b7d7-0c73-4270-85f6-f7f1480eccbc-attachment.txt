@@ -1,0 +1,13 @@
+[2026-07-05 04:37:03] [INFO] Precondition login status: 200
+[2026-07-05 04:37:05] [INFO] precondition-register-user status: 200
+[2026-07-05 04:37:05] [INFO] Precondition registered account: taikhoan1783251423832903
+[2026-07-05 04:37:05] [INFO] precondition-create-course status: 200
+[2026-07-05 04:37:05] [INFO] Precondition registered account: taikhoan1783251423832903
+[2026-07-05 04:37:05] [INFO] Precondition created course: MKH1783251425035335
+[2026-07-05 04:37:05] [INFO] register-course-success status: 200
+[2026-07-05 04:37:05] [PASS] Register Course API passed for course: MKH1783251425035335, account: taikhoan1783251423832903
+[2026-07-05 04:37:05] [WARN] Cleanup delete course failed: MKH1783251425035335
+[2026-07-05 04:37:05] [WARN] Cleanup course response: Khóa học đã ghi danh học viên không thể xóa!
+[2026-07-05 04:37:05] [INFO] Cleanup login status: 200
+[2026-07-05 04:37:06] [INFO] Cleanup delete failed for taikhoan1783251423832903. Status: 500
+[2026-07-05 04:37:06] [INFO] Cleanup delete response: Người dùng đã được ghi danh không thể xóa!

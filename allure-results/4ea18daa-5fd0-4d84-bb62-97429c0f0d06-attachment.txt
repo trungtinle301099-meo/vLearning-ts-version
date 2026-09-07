@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783632958003883","biDanh":"bi-danh-mkh1783632958003883","tenKhoaHoc":"Auto Course Awesome Aluminum Gloves","moTa":"Combibo auctor appositus decumbo vigor aveho quo.","luotXem":46,"danhGia":5,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"06/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

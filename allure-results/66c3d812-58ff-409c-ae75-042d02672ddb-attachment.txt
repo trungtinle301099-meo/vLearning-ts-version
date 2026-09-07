@@ -1,0 +1,6 @@
+[2026-07-05 06:50:30] [INFO] Precondition login status: 200
+[2026-07-05 06:50:30] [INFO] precondition-create-course status: 200
+[2026-07-05 06:50:30] [INFO] Precondition created course: MKH1783259430279757
+[2026-07-05 06:50:30] [INFO] update-course-rating-success status: 200
+[2026-07-05 06:50:30] [PASS] Update danhGia passed for course: MKH1783259430279757
+[2026-07-05 06:50:30] [INFO] Cleanup deleted course: MKH1783259430279757

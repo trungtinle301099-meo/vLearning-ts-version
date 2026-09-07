@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259308249764","biDanh":"bi-danh-mkh1783259308249764","tenKhoaHoc":"Auto Course Oriental Granite Computer","moTa":"Vetus cicuta pel capio.","luotXem":98,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"24/11/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

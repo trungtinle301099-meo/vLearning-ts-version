@@ -1,0 +1,2 @@
+[2026-07-05 06:47:17] [INFO] get-user-type-list-success status: 200
+[2026-07-05 06:47:17] [PASS] Get User Type List API returned GV and HV successfully.

@@ -1,0 +1,1 @@
+[2026-07-09 14:37:26] [PASS] Course category links are displayed after hovering Danh mục link.

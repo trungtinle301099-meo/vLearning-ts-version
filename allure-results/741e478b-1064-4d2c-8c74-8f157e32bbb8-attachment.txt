@@ -1,0 +1,7 @@
+[2026-07-09 14:37:19] [INFO] precondition-register-user status: 200
+[2026-07-09 14:37:19] [INFO] Precondition registered account: taikmre1257e510
+[2026-07-09 14:37:19] [INFO] Precondition login status: 200
+[2026-07-09 14:37:19] [INFO] update-user-type-success status: 200
+[2026-07-09 14:37:19] [PASS] Update maLoaiNguoiDung passed for account: taikmre1257e510
+[2026-07-09 14:37:19] [INFO] Cleanup login status: 200
+[2026-07-09 14:37:19] [INFO] Cleanup deleted account: taikmre1257e510

@@ -1,0 +1,7 @@
+{
+  "method": "GET",
+  "query": {
+    "MaNhom": "GP01",
+    "tuKhoa": "taikhoan1783259237146255"
+  }
+}

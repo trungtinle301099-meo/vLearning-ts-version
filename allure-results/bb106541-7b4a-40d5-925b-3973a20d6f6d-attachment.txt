@@ -1,0 +1,3 @@
+[2026-07-04 07:50:26] [INFO] Login API status: 200
+[2026-07-04 07:50:26] [INFO] Login API response: {"taiKhoan":"Adm08","email":"TEST","soDT":"0909999999","maNhom":"GP01","maLoaiNguoiDung":"GV","hoTen":"đổi lần 1","accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtMDgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJHViIsIm5iZiI6MTc4MzE3NjYyMywiZXhwIjoxNzgzMTgwMjIzfQ.xxT46yZn03JYVcPkzn-FKuDT7K9RrvmXeivlDQMFy7g"}
+[2026-07-04 07:50:26] [PASS] Login API returned accessToken successfully.

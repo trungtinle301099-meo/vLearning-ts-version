@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259384134666","biDanh":"bi-danh-mkh1783259384164389","tenKhoaHoc":"Auto Course Oriental Bronze Pants","moTa":"Communis acsi aranea cupressus surculus cui.","luotXem":17,"danhGia":6,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"22/10/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}

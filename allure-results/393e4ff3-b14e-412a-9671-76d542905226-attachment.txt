@@ -1,0 +1,6 @@
+[2026-07-08 14:07:40] [INFO] precondition-existing-email status: 200
+[2026-07-08 14:07:41] [PASS] Register UI rejected existing email: taikmrckk5yz665_6241@gmail.com
+[2026-07-08 14:07:41] [INFO] Cleanup login status: 200
+[2026-07-08 14:07:41] [INFO] Cleanup deleted account: taikmrckk5yz665
+[2026-07-08 14:07:41] [INFO] Cleanup delete failed for taikmrckk5z0799. Status: 500
+[2026-07-08 14:07:41] [INFO] Cleanup delete response: Tài khoản không tồn tại!

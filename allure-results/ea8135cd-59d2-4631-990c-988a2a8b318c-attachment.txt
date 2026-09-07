@@ -1,0 +1,4 @@
+[2026-07-08 12:50:45] [STEP] Navigate to login page
+[2026-07-08 12:50:47] [STEP] Login with username: Adm08
+[2026-07-08 12:50:47] [STEP] Verify login success
+[2026-07-08 12:50:49] [PASS] Auth state saved at: playwright/.auth/admin.json

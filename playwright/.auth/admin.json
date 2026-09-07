@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://demo2.cybersoft.edu.vn",
+      "localStorage": [
+        {
+          "name": "credentials",
+          "value": "{\"taiKhoan\":\"Adm08\",\"email\":\"test11111@gmail.com\",\"soDT\":\"00000\",\"maNhom\":\"GP01\",\"maLoaiNguoiDung\":\"GV\",\"hoTen\":\"test\",\"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQWRtMDgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJHViIsIm5iZiI6MTc4MzYzMzAxNiwiZXhwIjoxNzgzNjM2NjE2fQ.gtcnmHL6mLjpmA51MZ9Nr6q11k5DsuLXybQkrVSftsk\",\"hinhAnh\":\"https://cdn.dribbble.com/users/2364329/screenshots/6676961/02.jpg?compress=1&resize=800x600\"}"
+        }
+      ]
+    }
+  ]
+}

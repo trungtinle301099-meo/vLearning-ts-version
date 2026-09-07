@@ -1,0 +1,1 @@
+{"taiKhoan":"taikhoan1783180444433559","matKhau":"@Bewpf2753","hoTen":"Auto Test Sammy Mann","soDt":"0933000018","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikhoan1783180444433559_3918@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

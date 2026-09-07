@@ -1,0 +1,4 @@
+[2026-07-04 04:09:42] [INFO] Register API status: 200
+[2026-07-04 04:09:42] [INFO] Register request: {"taiKhoan":"taikhoan1783163382548341","matKhau":"@Tljwj2983","hoTen":"Auto Test Obie McClure","soDT":"0922146839","maNhom":"GP01","email":"taikhoan1783163382548341_8805@gmail.com"}
+[2026-07-04 04:09:42] [INFO] Register response: {"taiKhoan":"taikhoan1783163382548341","matKhau":"@Tljwj2983","hoTen":"Auto Test Obie McClure","soDT":"0922146839","maNhom":"GP01","email":"taikhoan1783163382548341_8805@gmail.com"}
+[2026-07-04 04:09:42] [PASS] Register API passed for account: taikhoan1783163382548341

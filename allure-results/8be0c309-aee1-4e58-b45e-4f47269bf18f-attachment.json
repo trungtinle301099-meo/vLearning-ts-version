@@ -1,0 +1,14 @@
+[
+  {
+    "fieldName": "method",
+    "to": "GET"
+  },
+  {
+    "fieldName": "body",
+    "to": null
+  },
+  {
+    "fieldName": "query",
+    "to": null
+  }
+]

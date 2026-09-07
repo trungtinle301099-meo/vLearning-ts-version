@@ -1,0 +1,10 @@
+[2026-07-04 09:20:44] [INFO] register-success status: 200
+[2026-07-04 09:20:44] [CHANGE] taiKhoan: undefined -> taikhoan1783182044341515
+[2026-07-04 09:20:44] [CHANGE] matKhau: undefined -> @Swgtf6291
+[2026-07-04 09:20:44] [CHANGE] hoTen: undefined -> Auto Test Jammie McDermott
+[2026-07-04 09:20:44] [CHANGE] soDT: undefined -> 0993036920
+[2026-07-04 09:20:44] [CHANGE] maNhom: undefined -> GP01
+[2026-07-04 09:20:44] [CHANGE] email: undefined -> taikhoan1783182044341515_7351@gmail.com
+[2026-07-04 09:20:44] [PASS] Register API passed for account: taikhoan1783182044341515
+[2026-07-04 09:20:44] [INFO] Cleanup login status: 200
+[2026-07-04 09:20:45] [INFO] Cleanup deleted account: taikhoan1783182044341515

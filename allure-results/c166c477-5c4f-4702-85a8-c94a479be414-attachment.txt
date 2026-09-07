@@ -1,0 +1,7 @@
+[2026-07-09 14:37:19] [INFO] precondition-register-user status: 200
+[2026-07-09 14:37:19] [INFO] Precondition registered account: taikmre1256r025
+[2026-07-09 14:37:19] [INFO] Precondition login status: 200
+[2026-07-09 14:37:19] [INFO] update-user-phone-success status: 200
+[2026-07-09 14:37:19] [PASS] Update soDT passed for account: taikmre1256r025
+[2026-07-09 14:37:19] [INFO] Cleanup login status: 200
+[2026-07-09 14:37:19] [INFO] Cleanup deleted account: taikmre1256r025

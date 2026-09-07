@@ -1,0 +1,1 @@
+[2026-07-08 13:47:05] [PASS] Course list API returned array for group GP01.

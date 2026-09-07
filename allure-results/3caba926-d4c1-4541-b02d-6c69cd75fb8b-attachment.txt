@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1783259303623981","biDanh":"bi-danh-mkh1783259303623981","tenKhoaHoc":"Auto Course Sleek Silk Ball","moTa":"Communis considero doloribus crepusculum amor surgo verus.","luotXem":47,"danhGia":10,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"10/08/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"Adm08"}
