@@ -5,6 +5,7 @@ import { RegisterAuthPage } from '../pages/authPage/registerAuthPage/registerAut
 import { HomeHeaderHomePage } from '../pages/homePage/homeHeaderHomePage/homeHeaderHomePage.index';
 import { RegisterFooterHomePage } from '../pages/homePage/registerFooterHomePage/registerFooterHomePage.index';
 import { DanhMucHomePage } from '../pages/homePage/danhMucHomePage/danhMucHomePage.index';
+import { SearchPage } from '../pages/homePage/searchPage/searchPage.index';
 
 type UiFixtures = {
   basePage: BasePage;
@@ -13,6 +14,7 @@ type UiFixtures = {
   homeHeaderHomePage: HomeHeaderHomePage;
   registerFooterHomePage: RegisterFooterHomePage;
   danhMucHomePage: DanhMucHomePage;
+  searchPage: SearchPage;
 };
 
 export const test = apiTest.extend<UiFixtures>({
@@ -38,6 +40,10 @@ export const test = apiTest.extend<UiFixtures>({
 
   danhMucHomePage: async ({ page }, use) => {
     await use(new DanhMucHomePage(page));
+  },
+
+  searchPage: async ({ page }, use) => {
+    await use(new SearchPage(page));
   },
 });
 

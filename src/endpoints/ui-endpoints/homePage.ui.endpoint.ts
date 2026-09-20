@@ -11,4 +11,5 @@ export const HomePageUiEndpoint = {
   frontendCourseCategory: '/danhmuckhoahoc/FrontEnd',
   fullStackCourseCategory: '/danhmuckhoahoc/FullStack',
   thinkingCourseCategory: '/danhmuckhoahoc/TuDuy',
+  search: '/timkiem',
 } as const;
