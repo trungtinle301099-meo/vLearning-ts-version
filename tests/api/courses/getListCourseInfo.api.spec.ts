@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { setupCreatedCoursePreconditionForTest } from '../../../src/helpers/common.helper';
 import { logger } from '../../../src/helpers/logger.helper';
@@ -13,33 +16,33 @@ let isDeleted = false;
 
 test.describe('Get Course Info API', () => {
   test.beforeEach(async ({ authService, courseService }, testInfo) => {
-  // Setup: Reset delete flag before each test.
-  isDeleted = false;
+    // Setup: Reset delete flag before each test.
+    isDeleted = false;
 
-  // Precondition: Prepare created course for get course info API test.
-  const precondition = await setupCreatedCoursePreconditionForTest({
-    authService,
-    courseService,
-    testInfo
+    // Precondition: Prepare created course for get course info API test.
+    const precondition = await setupCreatedCoursePreconditionForTest({
+      authService,
+      courseService,
+      testInfo
+    });
+
+    accessToken = precondition.accessToken;
+    createdCourse = precondition.createdCourse;
   });
-
-  accessToken = precondition.accessToken;
-  createdCourse = precondition.createdCourse;
-});
 
   test.afterEach(async ({ courseService }) => {
-  // Cleanup: Delete course created in beforeEach.
-  const courseDeleted = await cleanupCreatedCourse({
-    courseService,
-    courseId: createdCourse?.maKhoaHoc,
-    accessToken,
-    shouldDelete: !isDeleted
-  });
+    // Cleanup: Delete course created in beforeEach.
+    const courseDeleted = await cleanupCreatedCourse({
+      courseService,
+      courseId: createdCourse?.maKhoaHoc,
+      accessToken,
+      shouldDelete: !isDeleted
+    });
 
-  if (courseDeleted) {
-    isDeleted = true;
-  }
-});
+    if (courseDeleted) {
+      isDeleted = true;
+    }
+  });
 
   test('GET_COURSE_INFO_API_001 - should get course info successfully', async ({
     courseService

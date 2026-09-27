@@ -74,7 +74,7 @@ test.describe('Login UI', () => {
     );
   });
 
-   test('LOGIN_UI_004 - should show error message when email is incorrect', async ({
+  test('LOGIN_UI_004 - should show error message when email is incorrect', async ({
     page,
     loginAuthPage
   }) => {

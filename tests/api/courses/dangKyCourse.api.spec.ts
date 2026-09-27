@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import {
   cleanupCourseRegistration,

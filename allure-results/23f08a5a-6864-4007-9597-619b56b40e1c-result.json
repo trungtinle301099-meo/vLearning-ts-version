@@ -1,1 +1,360 @@
-{"uuid":"23f08a5a-6864-4007-9597-619b56b40e1c","name":"LOGIN_UI_006 - should show error message when password is empty","historyId":"6d32d990477605a863c00370dae57847:6d2c2bbdaff7c1375d648e416be0df72","status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Launch browser","start":1790518271864,"uuid":"0b380bdc-7362-44a2-b7f4-b80a70b74576","stop":1790518272026}],"attachments":[],"parameters":[],"name":"Fixture \"browser\"","start":1790518271862,"uuid":"02a5c4fb-ce4d-4096-b70c-bb87a1eb074a","stop":1790518272026},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create context","start":1790518272030,"uuid":"4b37ef44-13d6-4ab2-84f7-5d18b6eab378","stop":1790518272041}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518272028,"uuid":"32513eaf-04f8-4bd3-8bed-daaf3108eb3c","stop":1790518272045},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create page","start":1790518272047,"uuid":"0d2728bc-39f4-4ada-9dc1-73b55ef54aed","stop":1790518272096}],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518272045,"uuid":"11057f74-8523-4f5a-aa65-5736215205a5","stop":1790518272096},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"loginAuthPage\"","start":1790518272097,"uuid":"3a079aa7-4738-49b5-81fd-6ac2c2f69941","stop":1790518272097}],"attachments":[],"parameters":[],"name":"Before Hooks","start":1790518271854,"uuid":"4febded6-0651-46da-975b-9a5639151ff7","stop":1790518272097},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272098,"name":"Navigate to \"/login\"","uuid":"8c8972f5-9887-49e6-8e36-cc340279f70b","stop":1790518272482},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272483,"name":"Wait for load state \"domcontentloaded\"","uuid":"382254af-f693-406d-8278-05eff6fb6847","stop":1790518272483},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272484,"name":"Wait for load state \"load\"","uuid":"f5083430-94e0-4cb7-b247-026d7f7554cc","stop":1790518272866},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272872,"name":"Expect \"toBeVisible\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')","uuid":"d8dd3bad-eb56-4c3a-94f5-6accebf0cdce","stop":1790518272891},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272892,"name":"Expect \"toBeVisible\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')","uuid":"ee982d4f-fbec-4223-b078-ac56a66e83ed","stop":1790518272896},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272897,"name":"Expect \"toBeVisible\" locator('div.sign-in-container').locator('form.formLoginUser').getByRole('button')","uuid":"58b9bc80-4a9f-4a71-b60a-ae032ea7a7f9","stop":1790518272901},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272902,"name":"Clear locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')","uuid":"5674e253-2b6f-4840-b09f-e960fc2948e4","stop":1790518272922},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272922,"name":"Fill \"testadmin1\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')","uuid":"63160dd0-f9cf-4f0b-a42a-2cba0962796d","stop":1790518272939},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272940,"name":"Clear locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')","uuid":"85683d36-0273-4159-8467-4c32eb6f9299","stop":1790518272981},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272982,"name":"Fill \"\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')","uuid":"faac81c0-269f-4d7d-a115-57592a4dd9bc","stop":1790518272987},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272988,"name":"Click locator('div.sign-in-container').locator('form.formLoginUser').getByRole('button')","uuid":"7360145c-b2ec-4944-a57a-a0c2e9642485","stop":1790518273016},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518273016,"name":"Expect \"toBeVisible\" getByText('Tài khoản hoặc mật khẩu không đúng!', { exact: true })","uuid":"b8812e96-9312-49f5-8505-14973a25e958","stop":1790518273202},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518273202,"name":"Expect \"toHaveURL\"","uuid":"87539b1a-6b84-462c-9aa0-eddfab315590","stop":1790518273206},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"loginAuthPage\"","start":1790518273207,"uuid":"93e6257a-c1a7-442c-a4d6-32b11427a445","stop":1790518273207},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518273207,"uuid":"9cdd33ed-3091-4769-b05a-63f8270bf6ea","stop":1790518273207},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Close context","start":1790518273243,"uuid":"5409a49d-7998-4232-b5b4-d7d16f7c566d","stop":1790518273246}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518273207,"uuid":"6d66d8ae-58fb-49f1-8617-44fa1e4947e3","stop":1790518273246}],"attachments":[],"parameters":[],"name":"After Hooks","start":1790518273206,"uuid":"3afb406b-e4ca-4672-923a-346993e54e53","stop":1790518273248}],"attachments":[{"name":"stdout","source":"272f8ade-432b-4b06-b70f-54076be82a72-attachment.txt","type":"text/plain"}],"parameters":[{"name":"Project","value":"ui"}],"labels":[{"name":"language","value":"javascript"},{"name":"framework","value":"playwright"},{"name":"package","value":"vlearningts.login.login.ui.spec.ts"},{"name":"_fallbackTestCaseId","value":"2035e47d7fb1469667592b11b5d575c9"},{"name":"titlePath","value":" > ui > ui/login/login.ui.spec.ts > Login UI"},{"name":"host","value":"MacBookPro.lan"},{"name":"thread","value":"pid-87368-worker-2"},{"name":"parentSuite","value":"ui"},{"name":"suite","value":"ui/login/login.ui.spec.ts"},{"name":"subSuite","value":"Login UI"}],"links":[],"start":1790518271841,"testCaseId":"6d32d990477605a863c00370dae57847","fullName":"login/login.ui.spec.ts:131:7","titlePath":["vlearningts","login","login.ui.spec.ts","ui/login/login.ui.spec.ts","Login UI"],"stop":1790518273059}
+{
+  "uuid": "23f08a5a-6864-4007-9597-619b56b40e1c",
+  "name": "LOGIN_UI_006 - should show error message when password is empty",
+  "historyId": "6d32d990477605a863c00370dae57847:6d2c2bbdaff7c1375d648e416be0df72",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Launch browser",
+              "start": 1790518271864,
+              "uuid": "0b380bdc-7362-44a2-b7f4-b80a70b74576",
+              "stop": 1790518272026
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"browser\"",
+          "start": 1790518271862,
+          "uuid": "02a5c4fb-ce4d-4096-b70c-bb87a1eb074a",
+          "stop": 1790518272026
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create context",
+              "start": 1790518272030,
+              "uuid": "4b37ef44-13d6-4ab2-84f7-5d18b6eab378",
+              "stop": 1790518272041
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518272028,
+          "uuid": "32513eaf-04f8-4bd3-8bed-daaf3108eb3c",
+          "stop": 1790518272045
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create page",
+              "start": 1790518272047,
+              "uuid": "0d2728bc-39f4-4ada-9dc1-73b55ef54aed",
+              "stop": 1790518272096
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518272045,
+          "uuid": "11057f74-8523-4f5a-aa65-5736215205a5",
+          "stop": 1790518272096
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"loginAuthPage\"",
+          "start": 1790518272097,
+          "uuid": "3a079aa7-4738-49b5-81fd-6ac2c2f69941",
+          "stop": 1790518272097
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790518271854,
+      "uuid": "4febded6-0651-46da-975b-9a5639151ff7",
+      "stop": 1790518272097
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272098,
+      "name": "Navigate to \"/login\"",
+      "uuid": "8c8972f5-9887-49e6-8e36-cc340279f70b",
+      "stop": 1790518272482
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272483,
+      "name": "Wait for load state \"domcontentloaded\"",
+      "uuid": "382254af-f693-406d-8278-05eff6fb6847",
+      "stop": 1790518272483
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272484,
+      "name": "Wait for load state \"load\"",
+      "uuid": "f5083430-94e0-4cb7-b247-026d7f7554cc",
+      "stop": 1790518272866
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272872,
+      "name": "Expect \"toBeVisible\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')",
+      "uuid": "d8dd3bad-eb56-4c3a-94f5-6accebf0cdce",
+      "stop": 1790518272891
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272892,
+      "name": "Expect \"toBeVisible\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')",
+      "uuid": "ee982d4f-fbec-4223-b078-ac56a66e83ed",
+      "stop": 1790518272896
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272897,
+      "name": "Expect \"toBeVisible\" locator('div.sign-in-container').locator('form.formLoginUser').getByRole('button')",
+      "uuid": "58b9bc80-4a9f-4a71-b60a-ae032ea7a7f9",
+      "stop": 1790518272901
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272902,
+      "name": "Clear locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')",
+      "uuid": "5674e253-2b6f-4840-b09f-e960fc2948e4",
+      "stop": 1790518272922
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272922,
+      "name": "Fill \"testadmin1\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')",
+      "uuid": "63160dd0-f9cf-4f0b-a42a-2cba0962796d",
+      "stop": 1790518272939
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272940,
+      "name": "Clear locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')",
+      "uuid": "85683d36-0273-4159-8467-4c32eb6f9299",
+      "stop": 1790518272981
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272982,
+      "name": "Fill \"\" locator('div.sign-in-container').locator('form.formLoginUser').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')",
+      "uuid": "faac81c0-269f-4d7d-a115-57592a4dd9bc",
+      "stop": 1790518272987
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272988,
+      "name": "Click locator('div.sign-in-container').locator('form.formLoginUser').getByRole('button')",
+      "uuid": "7360145c-b2ec-4944-a57a-a0c2e9642485",
+      "stop": 1790518273016
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518273016,
+      "name": "Expect \"toBeVisible\" getByText('Tài khoản hoặc mật khẩu không đúng!', { exact: true })",
+      "uuid": "b8812e96-9312-49f5-8505-14973a25e958",
+      "stop": 1790518273202
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518273202,
+      "name": "Expect \"toHaveURL\"",
+      "uuid": "87539b1a-6b84-462c-9aa0-eddfab315590",
+      "stop": 1790518273206
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"loginAuthPage\"",
+          "start": 1790518273207,
+          "uuid": "93e6257a-c1a7-442c-a4d6-32b11427a445",
+          "stop": 1790518273207
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518273207,
+          "uuid": "9cdd33ed-3091-4769-b05a-63f8270bf6ea",
+          "stop": 1790518273207
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Close context",
+              "start": 1790518273243,
+              "uuid": "5409a49d-7998-4232-b5b4-d7d16f7c566d",
+              "stop": 1790518273246
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518273207,
+          "uuid": "6d66d8ae-58fb-49f1-8617-44fa1e4947e3",
+          "stop": 1790518273246
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790518273206,
+      "uuid": "3afb406b-e4ca-4672-923a-346993e54e53",
+      "stop": 1790518273248
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "272f8ade-432b-4b06-b70f-54076be82a72-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "ui" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.login.login.ui.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "2035e47d7fb1469667592b11b5d575c9" },
+    { "name": "titlePath", "value": " > ui > ui/login/login.ui.spec.ts > Login UI" },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-87368-worker-2" },
+    { "name": "parentSuite", "value": "ui" },
+    { "name": "suite", "value": "ui/login/login.ui.spec.ts" },
+    { "name": "subSuite", "value": "Login UI" }
+  ],
+  "links": [],
+  "start": 1790518271841,
+  "testCaseId": "6d32d990477605a863c00370dae57847",
+  "fullName": "login/login.ui.spec.ts:131:7",
+  "titlePath": [
+    "vlearningts",
+    "login",
+    "login.ui.spec.ts",
+    "ui/login/login.ui.spec.ts",
+    "Login UI"
+  ],
+  "stop": 1790518273059
+}

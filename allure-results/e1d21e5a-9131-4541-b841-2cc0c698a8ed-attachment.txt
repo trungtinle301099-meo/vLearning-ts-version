@@ -1,0 +1,1 @@
+{"taiKhoan":"taikmujxeagl321","matKhau":"@Wokcl0827","hoTen":"Auto Test Kirk ","soDt":"0905824400","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmujxeagl321_9093@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

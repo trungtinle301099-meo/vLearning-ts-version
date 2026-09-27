@@ -1,0 +1,1 @@
+{"taiKhoan":"taikmujxeaic199","matKhau":"@Zzcdj1598","hoTen":"Auto Test Ethel","soDt":"0957001829","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmujxeaic199_5458@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

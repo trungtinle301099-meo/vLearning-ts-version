@@ -47,7 +47,6 @@ export const createCourseResponseSchema = z.object({
 
 export const updateCourseResponseSchema = createCourseResponseSchema;
 
-
 export const courseInfoResponseSchema = z
   .object({
     maKhoaHoc: z.string(),

@@ -1,7 +1,10 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { env } from '../../../src/config/env.config';
 import { createUpdateUserInfoData } from '../../../src/data/user.data';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { updateUserInfoResponseSchema } from '../../../src/schemas/user.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { cleanupRegisteredAccounts } from '../../../src/helpers/cleanup.helper';

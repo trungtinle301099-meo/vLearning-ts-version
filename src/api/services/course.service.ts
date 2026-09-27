@@ -41,7 +41,6 @@ export class CourseService {
     });
   }
 
-
   updateCourse(data: CreateCourseRequest): Promise<APIResponse> {
     return this.apiClient.put(CourseEndpoint.updateCourse, {
       headers: {
@@ -52,7 +51,7 @@ export class CourseService {
     });
   }
 
-    registerCourse(data: RegisterCourseRequest, accessToken: string): Promise<APIResponse> {
+  registerCourse(data: RegisterCourseRequest, accessToken: string): Promise<APIResponse> {
     return this.apiClient.post(CourseEndpoint.registerCourse, {
       headers: {
         Authorization: `bearer ${accessToken}`,
@@ -63,10 +62,7 @@ export class CourseService {
     });
   }
 
-    dangKyCourse(
-    data: RegisterCourseRequest,
-    accessToken: string
-  ): Promise<APIResponse> {
+  dangKyCourse(data: RegisterCourseRequest, accessToken: string): Promise<APIResponse> {
     return this.apiClient.post(CourseEndpoint.dangKyCourse, {
       headers: {
         Authorization: `bearer ${accessToken}`,
@@ -76,17 +72,17 @@ export class CourseService {
       failOnStatusCode: false
     });
   }
-  
+
   cancelCourseRegistration(data: RegisterCourseRequest, accessToken: string): Promise<APIResponse> {
-  return this.apiClient.post(CourseEndpoint.cancelCourseRegistration, {
-    headers: {
-      Authorization: `bearer ${accessToken}`,
-      'Content-Type': 'application/json-patch+json'
-    },
-    data,
-    failOnStatusCode: false
-  });
-}
+    return this.apiClient.post(CourseEndpoint.cancelCourseRegistration, {
+      headers: {
+        Authorization: `bearer ${accessToken}`,
+        'Content-Type': 'application/json-patch+json'
+      },
+      data,
+      failOnStatusCode: false
+    });
+  }
 
   deleteCourse(courseId: string, accessToken: string): Promise<APIResponse> {
     return this.apiClient.delete(CourseEndpoint.deleteCourse, {
@@ -100,5 +96,3 @@ export class CourseService {
     });
   }
 }
-
-

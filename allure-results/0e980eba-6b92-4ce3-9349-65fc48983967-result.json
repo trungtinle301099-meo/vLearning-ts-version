@@ -1,0 +1,362 @@
+{
+  "uuid": "0e980eba-6b92-4ce3-9349-65fc48983967",
+  "name": "REGISTER_FOOTER_HOME_PAGE_UI_002 - should not register consultation with invalid phone",
+  "historyId": "9d303166a496af4f8e4628e320ed5ffc:6d2c2bbdaff7c1375d648e416be0df72",
+  "status": "failed",
+  "statusDetails": {
+    "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Số điện thoại không hợp lệ')\nExpected: visible\nTimeout: 200ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 200ms\n  - waiting for getByText('Số điện thoại không hợp lệ')\n",
+    "trace": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Số điện thoại không hợp lệ')\nExpected: visible\nTimeout: 200ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 200ms\n  - waiting for getByText('Số điện thoại không hợp lệ')\n\n    at /Users/tinle/Documents/vLearning-ts-version/tests/ui/home/registerFooterHomePage.ui.spec.ts:55:7"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create context",
+              "start": 1790520037237,
+              "uuid": "5803c51e-e0d5-487b-9e87-fd6a83a242ce",
+              "stop": 1790520037239
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790520037237,
+          "uuid": "895b5c3b-8834-4b8f-984a-6424ff5b2f18",
+          "stop": 1790520037240
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create page",
+              "start": 1790520037240,
+              "uuid": "179a4ea4-9a39-43e2-83b2-7b3e3c156ead",
+              "stop": 1790520037294
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790520037240,
+          "uuid": "253546ac-4348-428c-a872-8205fd4191bc",
+          "stop": 1790520037294
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"registerFooterHomePage\"",
+          "start": 1790520037294,
+          "uuid": "c1c355b6-1ddd-4dbc-bc9c-3d9e5aace269",
+          "stop": 1790520037295
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790520037236,
+      "uuid": "49212560-39e8-4d7b-9697-ed49d5025bae",
+      "stop": 1790520037295
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520037296,
+      "name": "Navigate to \"/trangchu\"",
+      "uuid": "e42a574c-8606-4537-a58d-1a78762e6773",
+      "stop": 1790520038263
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038264,
+      "name": "Expect \"toHaveURL\"",
+      "uuid": "21baff41-bdb6-408a-91b0-22de20ca6410",
+      "stop": 1790520038312
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038325,
+      "name": "Scroll into view getByRole('textbox', { name: 'Họ và tên' })",
+      "uuid": "1023f2b6-2535-4b57-90d7-7d13ab92721c",
+      "stop": 1790520038432
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038434,
+      "name": "Clear getByRole('textbox', { name: 'Họ và tên' })",
+      "uuid": "c379c4d7-90e9-44b4-b0a0-765c16e32541",
+      "stop": 1790520038517
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038520,
+      "name": "Fill \"Auto Test User\" getByRole('textbox', { name: 'Họ và tên' })",
+      "uuid": "b3403fcb-2e17-422b-b18c-76511141e601",
+      "stop": 1790520038529
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038530,
+      "name": "Clear getByRole('textbox', { name: 'Email' })",
+      "uuid": "6baf6e8d-9fde-4f3f-8587-4e6170b3245f",
+      "stop": 1790520038539
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038540,
+      "name": "Fill \"consmujxeeun408_6495@gmail.com\" getByRole('textbox', { name: 'Email' })",
+      "uuid": "bd6ce2cc-2c44-4e4d-b4ad-9a0a5c36e396",
+      "stop": 1790520038546
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038547,
+      "name": "Clear getByRole('textbox', { name: 'Số điện thoại' })",
+      "uuid": "70eb615c-f779-4e2c-b249-c6d35e147efe",
+      "stop": 1790520038555
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038557,
+      "name": "Fill \"abc123\" getByRole('textbox', { name: 'Số điện thoại' })",
+      "uuid": "af0a8d20-5fa0-423f-8eb8-739a7e722db0",
+      "stop": 1790520038703
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038704,
+      "name": "Click getByRole('button', { name: 'Đăng kí' })",
+      "uuid": "5959e3a5-abde-4c24-8ff1-07e4a0e0bb3f",
+      "stop": 1790520038900
+    },
+    {
+      "status": "failed",
+      "statusDetails": {
+        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Số điện thoại không hợp lệ')\nExpected: visible\nTimeout: 200ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 200ms\n  - waiting for getByText('Số điện thoại không hợp lệ')\n",
+        "trace": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('Số điện thoại không hợp lệ')\nExpected: visible\nTimeout: 200ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 200ms\n  - waiting for getByText('Số điện thoại không hợp lệ')\n\n    at /Users/tinle/Documents/vLearning-ts-version/tests/ui/home/registerFooterHomePage.ui.spec.ts:55:7"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520038901,
+      "name": "Expect \"toBeVisible\" getByText('Số điện thoại không hợp lệ')",
+      "uuid": "639342ef-90f7-4a62-b229-544cac6f0cbd",
+      "stop": 1790520039164
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "screenshot",
+          "source": "53693b34-800d-4e30-9979-e4f2b833af1b-attachment.png",
+          "type": "image/png"
+        }
+      ],
+      "parameters": [],
+      "start": 1790520040046,
+      "name": "screenshot",
+      "stop": 1790520040046
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "error-context",
+          "source": "5c4ab9c8-1f4f-4edc-bf67-017e2e729e25-attachment.md",
+          "type": "text/markdown"
+        }
+      ],
+      "parameters": [],
+      "start": 1790520040047,
+      "name": "error-context",
+      "stop": 1790520040047
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "trace",
+          "source": "bacd4876-6df5-46c5-b8de-f3fda159a97e-attachment.zip",
+          "type": "application/vnd.allure.playwright-trace"
+        }
+      ],
+      "parameters": [],
+      "start": 1790520040047,
+      "name": "trace",
+      "stop": 1790520040047
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"registerFooterHomePage\"",
+          "start": 1790520039215,
+          "uuid": "cf18f8e1-ee2f-4ac2-9244-a64a00812c60",
+          "stop": 1790520039216
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790520039217,
+          "uuid": "16b3fd16-227a-4e61-9ca7-88a37d5493b1",
+          "stop": 1790520039217
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Close context",
+              "start": 1790520039634,
+              "uuid": "43b77457-7319-45fa-9bed-d661e594d88c",
+              "stop": 1790520039640
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790520039217,
+          "uuid": "f92360bb-12ff-433a-b142-ffea00971953",
+          "stop": 1790520039640
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790520039164,
+      "uuid": "b0b2a6b0-b722-4775-a838-c0d32f935310",
+      "stop": 1790520039649
+    }
+  ],
+  "attachments": [],
+  "parameters": [{ "name": "Project", "value": "ui" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.home.registerFooterHomePage.ui.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "56b16f5aa2e846c9ff6d8954a0db5ce1" },
+    {
+      "name": "titlePath",
+      "value": " > ui > ui/home/registerFooterHomePage.ui.spec.ts > Register Footer Home Page UI"
+    },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-89596-worker-2" },
+    { "name": "parentSuite", "value": "ui" },
+    { "name": "suite", "value": "ui/home/registerFooterHomePage.ui.spec.ts" },
+    { "name": "subSuite", "value": "Register Footer Home Page UI" }
+  ],
+  "links": [],
+  "start": 1790520037234,
+  "testCaseId": "9d303166a496af4f8e4628e320ed5ffc",
+  "fullName": "home/registerFooterHomePage.ui.spec.ts:36:7",
+  "titlePath": [
+    "vlearningts",
+    "home",
+    "registerFooterHomePage.ui.spec.ts",
+    "ui/home/registerFooterHomePage.ui.spec.ts",
+    "Register Footer Home Page UI"
+  ],
+  "stop": 1790520039635
+}

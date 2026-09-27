@@ -1,0 +1,12 @@
+[2026-09-27 07:40:45] [INFO] Precondition login status: 200
+[2026-09-27 07:40:45] [INFO] precondition-register-user status: 200
+[2026-09-27 07:40:45] [INFO] Precondition registered account: taikmujxeku0143
+[2026-09-27 07:40:45] [INFO] precondition-create-course status: 200
+[2026-09-27 07:40:45] [INFO] Precondition registered account: taikmujxeku0143
+[2026-09-27 07:40:45] [INFO] Precondition created course: MKH1790520045088536
+[2026-09-27 07:40:45] [INFO] Registered course: MKH1790520045088536 for account: taikmujxeku0143
+[2026-09-27 07:40:46] [PASS] Popup opened successfully after clicking "Thêm khóa học" button.
+[2026-09-27 07:40:46] [INFO] Cleanup canceled course registration: MKH1790520045088536 - taikmujxeku0143
+[2026-09-27 07:40:46] [INFO] Cleanup login status: 200
+[2026-09-27 07:40:46] [INFO] Cleanup deleted account: taikmujxeku0143
+[2026-09-27 07:40:46] [INFO] Cleanup deleted course: MKH1790520045088536

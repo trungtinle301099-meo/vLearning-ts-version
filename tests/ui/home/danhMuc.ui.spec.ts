@@ -6,7 +6,7 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_001 - should navigate to Backend course category page when clicking Lập trình Backend', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     // Define the target course category.
     const category: CourseCategory = 'Lập trình Backend';
@@ -33,7 +33,7 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_002 - should navigate to Design course category page when clicking Thiết kế web', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     // Define the target course category.
     const category: CourseCategory = 'Thiết kế Web';
@@ -57,10 +57,10 @@ test.describe('Home - Danh mục khóa học', () => {
     await expect(danhMucHomePage.button.selectedCategoryButton(category)).toHaveText(category);
   });
 
-    test('DANH_MUC_UI_003 - should navigate to Mobile course category page when clicking Lập trình di động', async ({
+  test('DANH_MUC_UI_003 - should navigate to Mobile course category page when clicking Lập trình di động', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     // Define the target course category.
     const category: CourseCategory = 'Lập trình di động';
@@ -87,7 +87,7 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_004 - should navigate to Frontend course category page when clicking Lập trình Front end', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     // Define the target course category.
     const category: CourseCategory = 'Lập trình Front end';
@@ -114,7 +114,7 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_005 - should navigate to Full Stack course category page when clicking Lập trình Full Stack', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     // Define the target course category.
     const category: CourseCategory = 'Lập trình Full Stack';
@@ -141,7 +141,7 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_006 - should navigate to Thinking course category page when clicking Tư duy lập trình', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     // Define the target course category.
     const category: CourseCategory = 'Tư duy lập trình';

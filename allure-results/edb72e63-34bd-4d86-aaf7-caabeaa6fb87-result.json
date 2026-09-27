@@ -1,0 +1,570 @@
+{
+  "uuid": "edb72e63-34bd-4d86-aaf7-caabeaa6fb87",
+  "name": "REGISTER_COURSE_API_001 - should register course successfully",
+  "historyId": "03f943d7b08de61205c61391708c05b3:259864bbb84e0941359ea9e4c0db04ac",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [
+                {
+                  "status": "passed",
+                  "statusDetails": {},
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "name": "Create request context",
+                  "start": 1790520030944,
+                  "uuid": "552a7233-0eb8-4c7e-9bf0-1726bd7ef635",
+                  "stop": 1790520030944
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"apiClient\"",
+              "start": 1790520030943,
+              "uuid": "a54be0b5-1793-4e4b-86aa-c4a628366331",
+              "stop": 1790520030945
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"authService\"",
+              "start": 1790520030945,
+              "uuid": "c8e7df28-8433-4107-b73c-dac1189a0805",
+              "stop": 1790520030945
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"userService\"",
+              "start": 1790520030945,
+              "uuid": "bcf90018-9484-4d0c-9043-0b4be60da9a5",
+              "stop": 1790520030945
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"courseService\"",
+              "start": 1790520030945,
+              "uuid": "3eee8397-f6fe-4669-902f-5cdd606f16b2",
+              "stop": 1790520030945
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyNguoiDung/DangNhap\"",
+              "start": 1790520030947,
+              "uuid": "6cf80c98-a186-4720-8f5d-9ef5dae706ac",
+              "stop": 1790520030962
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expected status 200",
+              "start": 1790520030963,
+              "uuid": "a5b7a7c5-167a-4520-8dd6-408ab3910029",
+              "stop": 1790520030963
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toContain\"",
+              "start": 1790520030963,
+              "uuid": "da561505-ce2c-4e0b-8774-61d9e80c45bc",
+              "stop": 1790520030963
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBeTruthy\"",
+              "start": 1790520030965,
+              "uuid": "fbc547e3-cd50-42c6-be85-b0b37fb9020a",
+              "stop": 1790520030965
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyNguoiDung/DangKy\"",
+              "start": 1790520030967,
+              "uuid": "0e88622b-642d-4b72-8249-32b450da12ba",
+              "stop": 1790520031009
+            },
+            {
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [
+                {
+                  "name": "precondition-register-user-request",
+                  "type": "application/json",
+                  "source": "5efcff5c-4327-4c99-981d-11c5dbf03067-attachment.json"
+                }
+              ],
+              "parameters": [],
+              "name": "precondition-register-user-request",
+              "start": 1790520031010,
+              "uuid": "2e4ff4ff-88eb-45fc-b2ae-e63753ca5c37",
+              "stop": 1790520031010
+            },
+            {
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [
+                {
+                  "name": "precondition-register-user-response",
+                  "type": "text/plain",
+                  "source": "21a46102-c597-4c40-adf7-bdfbed8312b4-attachment.txt"
+                }
+              ],
+              "parameters": [],
+              "name": "precondition-register-user-response",
+              "start": 1790520031010,
+              "uuid": "a18473c2-9a65-4b1b-9d0c-e048740abad0",
+              "stop": 1790520031010
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expected status 200",
+              "start": 1790520031011,
+              "uuid": "fc93215c-299c-4ae8-9290-664b40a7ad63",
+              "stop": 1790520031011
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toContain\"",
+              "start": 1790520031011,
+              "uuid": "4c94be65-5695-425e-b4ae-fe4b035b43ce",
+              "stop": 1790520031011
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBe\"",
+              "start": 1790520031012,
+              "uuid": "e58a64b8-f281-4dfd-b6a3-2a7ee88dfdf9",
+              "stop": 1790520031012
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBe\"",
+              "start": 1790520031012,
+              "uuid": "2e83ee4c-f8e9-4497-bce1-11ba731adcba",
+              "stop": 1790520031012
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyKhoaHoc/ThemKhoaHoc\"",
+              "start": 1790520031013,
+              "uuid": "acc5e031-1a79-4b93-8494-c3a32d63bbf2",
+              "stop": 1790520031059
+            },
+            {
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [
+                {
+                  "name": "precondition-create-course-request",
+                  "type": "application/json",
+                  "source": "4b8f25fb-7a00-42a3-89e0-7d29b4718987-attachment.json"
+                }
+              ],
+              "parameters": [],
+              "name": "precondition-create-course-request",
+              "start": 1790520031060,
+              "uuid": "f9f2a1fd-b70c-429f-8f6c-e031c56675de",
+              "stop": 1790520031060
+            },
+            {
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [
+                {
+                  "name": "precondition-create-course-response",
+                  "type": "text/plain",
+                  "source": "e5a25d3b-5554-4e22-bfff-0d6ab9cbdc06-attachment.txt"
+                }
+              ],
+              "parameters": [],
+              "name": "precondition-create-course-response",
+              "start": 1790520031060,
+              "uuid": "fbc326e4-3807-4063-b7ff-eec89128d5cf",
+              "stop": 1790520031060
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expected status 200",
+              "start": 1790520031060,
+              "uuid": "6d038021-96b0-4f4e-af58-143e5128ca56",
+              "stop": 1790520031060
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toContain\"",
+              "start": 1790520031060,
+              "uuid": "cc611e28-59f9-425e-9548-91cc2c06fe98",
+              "stop": 1790520031060
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBe\"",
+              "start": 1790520031061,
+              "uuid": "37c22b2a-984b-4784-a547-ba7bafd933c6",
+              "stop": 1790520031061
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBe\"",
+              "start": 1790520031061,
+              "uuid": "562b8280-b27e-47a3-9daa-a3dd6df91b1a",
+              "stop": 1790520031061
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "beforeEach hook",
+          "start": 1790520030940,
+          "uuid": "d81af25b-1175-4af3-a4be-25492890ecfb",
+          "stop": 1790520031061
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790520030940,
+      "uuid": "999dc3f6-ad2e-4828-9370-defa8c0ea56f",
+      "stop": 1790520031062
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031062,
+      "name": "POST \"/api/QuanLyKhoaHoc/GhiDanhKhoaHoc\"",
+      "uuid": "d7321cea-1d60-4c3a-ad45-c1023526843e",
+      "stop": 1790520031084
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031085,
+      "name": "Expected status 200",
+      "uuid": "d6deba1f-f76e-4ad4-8df2-eab698ca4f53",
+      "stop": 1790520031085
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031085,
+      "name": "Expect \"toContain\"",
+      "uuid": "3986205f-6546-4cc8-aa56-19ca9f702ca0",
+      "stop": 1790520031085
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031085,
+      "name": "Expect \"toBe\"",
+      "uuid": "b09d9568-797f-465f-a9be-3e82eb0f80ae",
+      "stop": 1790520031085
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "register-course-success-request",
+          "source": "d184741f-d2fd-490b-9cec-c1a07ba2e9af-attachment.json",
+          "type": "application/json"
+        }
+      ],
+      "parameters": [],
+      "start": 1790520031209,
+      "name": "register-course-success-request",
+      "stop": 1790520031209
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "register-course-success-response",
+          "source": "fac503bb-724d-4d19-a453-38c12f723499-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1790520031209,
+      "name": "register-course-success-response",
+      "stop": 1790520031209
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyKhoaHoc/HuyGhiDanh\"",
+              "start": 1790520031087,
+              "uuid": "c7618823-dd3e-470b-a2c2-3a046109af53",
+              "stop": 1790520031117
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyNguoiDung/DangNhap\"",
+              "start": 1790520031118,
+              "uuid": "3c890d06-fad5-48d2-a15c-2c4d70adead4",
+              "stop": 1790520031133
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "DELETE \"/api/QuanLyNguoiDung/XoaNguoiDung\"",
+              "start": 1790520031134,
+              "uuid": "9f0a5454-2de1-4739-b68e-e86172d60cda",
+              "stop": 1790520031173
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "DELETE \"/api/QuanLyKhoaHoc/XoaKhoaHoc\"",
+              "start": 1790520031179,
+              "uuid": "a58645e4-ed72-4897-8186-bcf4459d11a0",
+              "stop": 1790520031202
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "afterEach hook",
+          "start": 1790520031085,
+          "uuid": "bc7b935a-1c8b-4771-b723-aa7149bada7e",
+          "stop": 1790520031202
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"courseService\"",
+          "start": 1790520031202,
+          "uuid": "f4a70859-d5c9-46b7-b583-ac95ef2508e1",
+          "stop": 1790520031203
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"userService\"",
+          "start": 1790520031203,
+          "uuid": "d7ba8b0e-6f10-4545-afeb-6b23efa89543",
+          "stop": 1790520031203
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"authService\"",
+          "start": 1790520031203,
+          "uuid": "ee415aba-98db-4866-9bd7-093d6553f7d7",
+          "stop": 1790520031203
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"apiClient\"",
+          "start": 1790520031203,
+          "uuid": "188ce3d0-5c9d-449e-879c-943aace35232",
+          "stop": 1790520031204
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790520031085,
+      "uuid": "20115122-97cd-4054-b9c7-20d9ad82b947",
+      "stop": 1790520031206
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "fb711b44-c5b2-418b-80aa-5ca1109bf2b7-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "api" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.courses.ghiDanhCourse.api.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "5eedae887441fb22e63663ddee0b6290" },
+    {
+      "name": "titlePath",
+      "value": " > api > api/courses/ghiDanhCourse.api.spec.ts > Register Course API"
+    },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-89596-worker-2" },
+    { "name": "parentSuite", "value": "api" },
+    { "name": "suite", "value": "api/courses/ghiDanhCourse.api.spec.ts" },
+    { "name": "subSuite", "value": "Register Course API" }
+  ],
+  "links": [],
+  "start": 1790520030943,
+  "testCaseId": "03f943d7b08de61205c61391708c05b3",
+  "fullName": "courses/ghiDanhCourse.api.spec.ts:76:7",
+  "titlePath": [
+    "vlearningts",
+    "courses",
+    "ghiDanhCourse.api.spec.ts",
+    "api/courses/ghiDanhCourse.api.spec.ts",
+    "Register Course API"
+  ],
+  "stop": 1790520031202
+}

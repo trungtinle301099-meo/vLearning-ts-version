@@ -1,6 +1,9 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { env, isConfigured } from '../../../src/config/env.config';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { logger } from '../../../src/helpers/logger.helper';
 
 test.describe('Course API', () => {

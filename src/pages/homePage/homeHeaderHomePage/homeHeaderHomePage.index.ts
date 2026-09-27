@@ -38,35 +38,35 @@ export class HomeHeaderHomePage extends BasePage {
   }
 
   async hoverAvatarIcon(): Promise<void> {
-  await this.hover(this.button.avatarIcon);
+    await this.hover(this.button.avatarIcon);
 
-  await expect(this.button.logoutButton).toBeVisible();
+    await expect(this.button.logoutButton).toBeVisible();
 
-  await expect
-    .poll(
-      async () => {
-        const avatarBox = await this.button.avatarIcon.boundingBox();
-        const logoutBox = await this.button.logoutButton.boundingBox();
+    await expect
+      .poll(
+        async () => {
+          const avatarBox = await this.button.avatarIcon.boundingBox();
+          const logoutBox = await this.button.logoutButton.boundingBox();
 
-        if (!avatarBox || !logoutBox) {
-          return false;
+          if (!avatarBox || !logoutBox) {
+            return false;
+          }
+
+          const isOverlapping =
+            logoutBox.x < avatarBox.x + avatarBox.width &&
+            logoutBox.x + logoutBox.width > avatarBox.x &&
+            logoutBox.y < avatarBox.y + avatarBox.height &&
+            logoutBox.y + logoutBox.height > avatarBox.y;
+
+          return !isOverlapping;
+        },
+        {
+          timeout: 10000,
+          message: 'Wait until logout button is not overlapped with avatar icon'
         }
-
-        const isOverlapping =
-          logoutBox.x < avatarBox.x + avatarBox.width &&
-          logoutBox.x + logoutBox.width > avatarBox.x &&
-          logoutBox.y < avatarBox.y + avatarBox.height &&
-          logoutBox.y + logoutBox.height > avatarBox.y;
-
-        return !isOverlapping;
-      },
-      {
-        timeout: 10000,
-        message: 'Wait until logout button is not overlapped with avatar icon'
-      }
-    )
-    .toBe(true);
-}
+      )
+      .toBe(true);
+  }
 
   async clickLogoutButton(): Promise<void> {
     await this.click(this.button.logoutButton);

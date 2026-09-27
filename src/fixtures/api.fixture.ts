@@ -12,7 +12,6 @@ type ApiFixtures = {
   userService: UserService;
 };
 
-
 export const test = base.extend<ApiFixtures>({
   apiClient: async ({ playwright }, use) => {
     const apiContext = await playwright.request.newContext({
@@ -23,7 +22,6 @@ export const test = base.extend<ApiFixtures>({
 
     await apiContext.dispose();
   },
-
 
   authService: async ({ apiClient }, use) => {
     await use(new AuthService(apiClient));
@@ -37,7 +35,5 @@ export const test = base.extend<ApiFixtures>({
     await use(new UserService(apiClient));
   }
 });
-
-
 
 export { expect };

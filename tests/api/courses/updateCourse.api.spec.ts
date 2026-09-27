@@ -1,6 +1,9 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { createRandomCourseData } from '../../../src/data/course.data';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { updateCourseResponseSchema } from '../../../src/schemas/course.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { setupCreatedCoursePreconditionForTest } from '../../../src/helpers/common.helper';
@@ -11,29 +14,28 @@ import type { CreateCourseRequest } from '../../../src/types/course.type';
 let accessToken = '';
 let createdCourse: CreateCourseRequest;
 
-
 test.describe('Update Course API', () => {
   test.beforeEach(async ({ authService, courseService }, testInfo) => {
-  // Precondition: Prepare created course for update course API test.
-  const precondition = await setupCreatedCoursePreconditionForTest({
-    authService,
-    courseService,
-    testInfo
-  });
+    // Precondition: Prepare created course for update course API test.
+    const precondition = await setupCreatedCoursePreconditionForTest({
+      authService,
+      courseService,
+      testInfo
+    });
 
-  accessToken = precondition.accessToken;
-  createdCourse = precondition.createdCourse;
-});
+    accessToken = precondition.accessToken;
+    createdCourse = precondition.createdCourse;
+  });
 
   test.afterEach(async ({ courseService }) => {
-  // Cleanup: Delete course created in beforeEach.
-  await cleanupCreatedCourse({
-    courseService,
-    courseId: createdCourse?.maKhoaHoc,
-    accessToken,
-    shouldDelete: true
+    // Cleanup: Delete course created in beforeEach.
+    await cleanupCreatedCourse({
+      courseService,
+      courseId: createdCourse?.maKhoaHoc,
+      accessToken,
+      shouldDelete: true
+    });
   });
-});
 
   test('UPDATE_COURSE_API_001 - should update course successfully', async ({ courseService }) => {
     // Arrange: Generate new random update data but keep maKhoaHoc of created course.
@@ -96,7 +98,9 @@ test.describe('Update Course API', () => {
     logger.pass(`Update biDanh passed for course: ${createdCourse.maKhoaHoc}`);
   });
 
-  test('UPDATE_COURSE_API_003 - should update tenKhoaHoc successfully', async ({ courseService }) => {
+  test('UPDATE_COURSE_API_003 - should update tenKhoaHoc successfully', async ({
+    courseService
+  }) => {
     // Arrange: Generate random data, only use random tenKhoaHoc for update.
     const randomData = createRandomCourseData();
 

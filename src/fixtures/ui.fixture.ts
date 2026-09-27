@@ -51,7 +51,6 @@ export const test = apiTest.extend<UiFixtures>({
   adminPage: async ({ page }, use) => {
     await use(new AdminPage(page));
   }
-
 });
 
 export { expect };

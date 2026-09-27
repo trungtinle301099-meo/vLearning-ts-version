@@ -1,0 +1,440 @@
+{
+  "uuid": "ca99c36a-9e10-4bd4-a024-bc4fb70d5c36",
+  "name": "UPDATE_API_004 - should update maLoaiNguoiDung successfully",
+  "historyId": "62dbe37787f0ff52bf6bf7eb05914022:259864bbb84e0941359ea9e4c0db04ac",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [
+                {
+                  "status": "passed",
+                  "statusDetails": {},
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "name": "Create request context",
+                  "start": 1790520031677,
+                  "uuid": "745a3e7d-f00d-4295-a341-fea17f0154d9",
+                  "stop": 1790520031677
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"apiClient\"",
+              "start": 1790520031676,
+              "uuid": "166626bb-c380-4260-8be8-a2ddd872d89b",
+              "stop": 1790520031679
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"authService\"",
+              "start": 1790520031680,
+              "uuid": "17c86410-9b2b-4aca-a3f5-2843cd4034fa",
+              "stop": 1790520031680
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"userService\"",
+              "start": 1790520031680,
+              "uuid": "bdcc08b8-bcbc-4773-aa30-84913a5418c5",
+              "stop": 1790520031680
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyNguoiDung/DangKy\"",
+              "start": 1790520031686,
+              "uuid": "9efe8202-185f-4294-9e13-acfc6da09ab9",
+              "stop": 1790520031710
+            },
+            {
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [
+                {
+                  "name": "precondition-register-user-request",
+                  "type": "application/json",
+                  "source": "d4ea490b-a351-4f07-be9b-93ea225c34ab-attachment.json"
+                }
+              ],
+              "parameters": [],
+              "name": "precondition-register-user-request",
+              "start": 1790520031717,
+              "uuid": "6d584e71-37b4-4ec8-948b-a2e586cf5219",
+              "stop": 1790520031717
+            },
+            {
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [
+                {
+                  "name": "precondition-register-user-response",
+                  "type": "text/plain",
+                  "source": "1995d221-9b70-44f8-8c5f-5218a9a4aa4e-attachment.txt"
+                }
+              ],
+              "parameters": [],
+              "name": "precondition-register-user-response",
+              "start": 1790520031718,
+              "uuid": "80041749-427b-457d-8dfe-bcbf59cb30b1",
+              "stop": 1790520031718
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expected status 200",
+              "start": 1790520031719,
+              "uuid": "43a4bf7b-baa0-4f81-8f6a-6132b8ebfcca",
+              "stop": 1790520031719
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toContain\"",
+              "start": 1790520031720,
+              "uuid": "ebebcbf9-e0f7-4b28-9e50-0c339724143c",
+              "stop": 1790520031720
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBe\"",
+              "start": 1790520031720,
+              "uuid": "7cb62215-4f7f-4e86-b6a3-23789c166ceb",
+              "stop": 1790520031720
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBe\"",
+              "start": 1790520031721,
+              "uuid": "e98b1517-2755-4f83-a6c0-c37811f5e0d9",
+              "stop": 1790520031721
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyNguoiDung/DangNhap\"",
+              "start": 1790520031721,
+              "uuid": "e73a29e7-30b9-4c92-add3-c68827565c58",
+              "stop": 1790520031735
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expected status 200",
+              "start": 1790520031736,
+              "uuid": "1e105ffc-d8eb-40a5-93b1-db49e7d75993",
+              "stop": 1790520031736
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toContain\"",
+              "start": 1790520031736,
+              "uuid": "1d19ad66-cdd1-4003-bf85-10bffac46543",
+              "stop": 1790520031736
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Expect \"toBeTruthy\"",
+              "start": 1790520031737,
+              "uuid": "5672190d-b158-4462-96aa-55a12ed190c3",
+              "stop": 1790520031737
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "beforeEach hook",
+          "start": 1790520031673,
+          "uuid": "0b574a11-31d6-46b8-9ae1-919d6b1bbc90",
+          "stop": 1790520031737
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790520031673,
+      "uuid": "8fd1dc46-86a0-453a-b92c-3840d6e57fce",
+      "stop": 1790520031737
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031738,
+      "name": "PUT \"/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung\"",
+      "uuid": "868e3429-ef1f-465f-a5c7-ea4d7c31c241",
+      "stop": 1790520031777
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031778,
+      "name": "Expected status 200",
+      "uuid": "4361989f-cc83-409b-aded-e295efcffed6",
+      "stop": 1790520031779
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031779,
+      "name": "Expect \"toContain\"",
+      "uuid": "1e060cb0-030d-41b6-adb9-d53a8db7f487",
+      "stop": 1790520031779
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031779,
+      "name": "Expect \"toBe\"",
+      "uuid": "eb5dde00-dc16-43aa-8dff-d8e5459c2587",
+      "stop": 1790520031779
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520031780,
+      "name": "Expect \"toBe\"",
+      "uuid": "c49e1f7a-b683-4d94-b781-17f76f8dd714",
+      "stop": 1790520031780
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "update-user-type-success-request",
+          "source": "8c756ea9-67ff-44ed-af68-c28a725af850-attachment.json",
+          "type": "application/json"
+        }
+      ],
+      "parameters": [],
+      "start": 1790520031835,
+      "name": "update-user-type-success-request",
+      "stop": 1790520031835
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "update-user-type-success-response",
+          "source": "2d3bd0b5-0e3f-4fcc-a603-c835d3e39090-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1790520031835,
+      "name": "update-user-type-success-response",
+      "stop": 1790520031835
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyNguoiDung/DangNhap\"",
+              "start": 1790520031780,
+              "uuid": "65c8c26e-00e4-43b8-ad58-79711ab9c82c",
+              "stop": 1790520031797
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "DELETE \"/api/QuanLyNguoiDung/XoaNguoiDung\"",
+              "start": 1790520031798,
+              "uuid": "a3bad27f-3da5-4f44-9a69-8b856692b66b",
+              "stop": 1790520031827
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "afterEach hook",
+          "start": 1790520031780,
+          "uuid": "9c9cf696-c63a-4877-8ef7-c516b6ac45b7",
+          "stop": 1790520031827
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"userService\"",
+          "start": 1790520031827,
+          "uuid": "04e5fb72-dd70-415c-ab16-ce01d45093ec",
+          "stop": 1790520031827
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"authService\"",
+          "start": 1790520031828,
+          "uuid": "e9c3b1c6-32e0-47f0-8700-7a68f42a7156",
+          "stop": 1790520031828
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"apiClient\"",
+          "start": 1790520031828,
+          "uuid": "827f38e8-2cce-4ea1-99ce-8b20bbaecbc4",
+          "stop": 1790520031829
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790520031780,
+      "uuid": "17b8e8e9-ebe7-4680-944a-41ee3abe115e",
+      "stop": 1790520031831
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "edb2c2fd-3a4f-4f9f-9d61-ca00afa061ea-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "api" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.users.updateInfoUser.api.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "1418dff79b0953548db7e322816fa12d" },
+    {
+      "name": "titlePath",
+      "value": " > api > api/users/updateInfoUser.api.spec.ts > Update User Info API"
+    },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-89596-worker-0" },
+    { "name": "parentSuite", "value": "api" },
+    { "name": "suite", "value": "api/users/updateInfoUser.api.spec.ts" },
+    { "name": "subSuite", "value": "Update User Info API" }
+  ],
+  "links": [],
+  "start": 1790520031676,
+  "testCaseId": "62dbe37787f0ff52bf6bf7eb05914022",
+  "fullName": "users/updateInfoUser.api.spec.ts:107:7",
+  "titlePath": [
+    "vlearningts",
+    "users",
+    "updateInfoUser.api.spec.ts",
+    "api/users/updateInfoUser.api.spec.ts",
+    "Update User Info API"
+  ],
+  "stop": 1790520031827
+}

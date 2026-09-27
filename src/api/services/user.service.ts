@@ -30,7 +30,6 @@ export class UserService {
     });
   }
 
-
   getUserTypeList(): Promise<APIResponse> {
     return this.apiClient.get(UserEndpoint.getUserTypeList, {
       failOnStatusCode: false
@@ -87,10 +86,7 @@ export class UserService {
     });
   }
 
-  addUser(
-  data: AddUserRequest,
-  accessToken: string
-  ): Promise<APIResponse> {
+  addUser(data: AddUserRequest, accessToken: string): Promise<APIResponse> {
     return this.apiClient.post(UserEndpoint.addUser, {
       headers: {
         Authorization: `bearer ${accessToken}`,
@@ -98,6 +94,6 @@ export class UserService {
       },
       data,
       failOnStatusCode: false
-      });
-    }
+    });
+  }
 }

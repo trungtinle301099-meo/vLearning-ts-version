@@ -12,7 +12,4 @@ export type CourseCategory =
   | 'Lập trình Full Stack'
   | 'Tư duy lập trình';
 
-export type EventCategory =
-  | 'Sự kiện Sale Cuối Năm'
-  | 'Sự kiện Giáng sinh'
-  | 'Sự kiện Noel';
+export type EventCategory = 'Sự kiện Sale Cuối Năm' | 'Sự kiện Giáng sinh' | 'Sự kiện Noel';

@@ -1,0 +1,239 @@
+{
+  "uuid": "5eacecbd-b4bd-4916-9d39-88902fdd72e7",
+  "name": "HOME_PAGE_UI_004 - should navigate to information page after clicking Thông tin link",
+  "historyId": "c05237aafe0e19d4b7b0dc08eb396355:6d2c2bbdaff7c1375d648e416be0df72",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create context",
+              "start": 1790520035849,
+              "uuid": "120aaba4-1a98-4cb5-b16f-59b92abdef06",
+              "stop": 1790520035929
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790520035846,
+          "uuid": "c1ed60d3-9dd1-42a2-bd34-47847841af53",
+          "stop": 1790520035932
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create page",
+              "start": 1790520035934,
+              "uuid": "0a2b3202-a3b5-4ca8-a4dd-fb9d94d587c0",
+              "stop": 1790520035989
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790520035932,
+          "uuid": "83e3a250-5da7-4a23-90c0-f8a72cf4c735",
+          "stop": 1790520035989
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"homeHeaderHomePage\"",
+          "start": 1790520035990,
+          "uuid": "53323cde-90f3-47ca-a702-e7482dd6d88a",
+          "stop": 1790520035990
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790520035840,
+      "uuid": "3089e435-6a0e-4d5a-99d3-a02ae9debcf2",
+      "stop": 1790520035990
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520035990,
+      "name": "Navigate to \"/\"",
+      "uuid": "7515e800-e5f3-4873-abcf-feebed921af3",
+      "stop": 1790520036485
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520036490,
+      "name": "Expect \"toHaveURL\"",
+      "uuid": "416997a6-2c8c-4175-a229-601307108f00",
+      "stop": 1790520036509
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520036511,
+      "name": "Click getByRole('link', { name: 'Thông tin', exact: true })",
+      "uuid": "9ea2e7dc-4ddf-44e9-85bd-cf3ab043af19",
+      "stop": 1790520036628
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790520036631,
+      "name": "Expect \"toHaveURL\"",
+      "uuid": "7ad108a4-19f6-4c86-b519-b5aa133090c7",
+      "stop": 1790520036637
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"homeHeaderHomePage\"",
+          "start": 1790520036639,
+          "uuid": "dbefb8a6-af3e-47a1-a572-2c8576e17dc7",
+          "stop": 1790520036639
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790520036640,
+          "uuid": "53fb5866-a6f8-4b81-9aab-d833677f9735",
+          "stop": 1790520036640
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Close context",
+              "start": 1790520036984,
+              "uuid": "73a0f2f6-74b8-4a0d-9f5f-f7e93581db94",
+              "stop": 1790520036987
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790520036640,
+          "uuid": "d6cde1e9-d97e-4c9b-98ca-a2becd2358a4",
+          "stop": 1790520036987
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"storageState\"",
+          "start": 1790520036989,
+          "uuid": "30cd3001-04d5-4833-a27c-2b9bf9a32a5f",
+          "stop": 1790520036989
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790520036639,
+      "uuid": "4e79d667-0eb8-44ae-adbd-6d49b30522e0",
+      "stop": 1790520036991
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "291e2277-8175-4495-bbb6-8a91c100fafc-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "ui" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.home.homePage.ui.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "40fb06774570dcbdc95d2c1d0b1b933e" },
+    { "name": "titlePath", "value": " > ui > ui/home/homePage.ui.spec.ts > Home Page UI" },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-89596-worker-3" },
+    { "name": "parentSuite", "value": "ui" },
+    { "name": "suite", "value": "ui/home/homePage.ui.spec.ts" },
+    { "name": "subSuite", "value": "Home Page UI" }
+  ],
+  "links": [],
+  "start": 1790520035850,
+  "testCaseId": "c05237aafe0e19d4b7b0dc08eb396355",
+  "fullName": "home/homePage.ui.spec.ts:73:7",
+  "titlePath": [
+    "vlearningts",
+    "home",
+    "homePage.ui.spec.ts",
+    "ui/home/homePage.ui.spec.ts",
+    "Home Page UI"
+  ],
+  "stop": 1790520036990
+}

@@ -1,0 +1,11 @@
+[2026-09-27 07:40:45] [INFO] Precondition login status: 200
+[2026-09-27 07:40:45] [INFO] precondition-register-user status: 200
+[2026-09-27 07:40:45] [INFO] Precondition registered account: taikmujxel19639
+[2026-09-27 07:40:45] [INFO] precondition-create-course status: 200
+[2026-09-27 07:40:45] [INFO] Precondition registered account: taikmujxel19639
+[2026-09-27 07:40:45] [INFO] Precondition created course: MKH1790520045348671
+[2026-09-27 07:40:45] [INFO] Registered course: MKH1790520045348671 for account: taikmujxel19639
+[2026-09-27 07:40:51] [INFO] Cleanup canceled course registration: MKH1790520045348671 - taikmujxel19639
+[2026-09-27 07:40:51] [INFO] Cleanup login status: 200
+[2026-09-27 07:40:51] [INFO] Cleanup deleted account: taikmujxel19639
+[2026-09-27 07:40:51] [INFO] Cleanup deleted course: MKH1790520045348671

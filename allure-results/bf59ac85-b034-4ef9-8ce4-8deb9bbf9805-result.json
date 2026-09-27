@@ -1,1 +1,589 @@
-{"uuid":"bf59ac85-b034-4ef9-8ce4-8deb9bbf9805","name":"REGISTER_UI_001 - should register successfully with valid random input","historyId":"a4fbb85216402bf28e31149c1ebdea6e:6d2c2bbdaff7c1375d648e416be0df72","status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"beforeEach hook","start":1790518271992,"uuid":"1b8fcbc5-0de7-417c-8762-fc74f74f4598","stop":1790518271995},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create context","start":1790518271997,"uuid":"5834071e-574d-4ad1-9c80-5a857f8bd3d2","stop":1790518271998}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518271996,"uuid":"9ba2b509-44b6-4a3c-a00c-4b4cee6b08b6","stop":1790518271999},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create page","start":1790518271999,"uuid":"73ec6d0c-ba1a-4da9-839d-7d703f8e35c2","stop":1790518272039}],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518271999,"uuid":"433a597d-9be0-42b7-b522-ca1986c6d6da","stop":1790518272039},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"registerAuthPage\"","start":1790518272039,"uuid":"c6472df7-071c-40b7-a2b9-15487aead9c7","stop":1790518272039}],"attachments":[],"parameters":[],"name":"Before Hooks","start":1790518271992,"uuid":"0bf317a1-4b87-4cab-8d3e-458d1248c183","stop":1790518272039},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272044,"name":"Navigate to \"/login\"","uuid":"0f0a5d36-4f0c-46d4-9ea6-a821a3c5a857","stop":1790518272389},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272390,"name":"Wait for load state \"domcontentloaded\"","uuid":"e4c1863e-f800-4059-aad3-eb433e74d475","stop":1790518272391},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272391,"name":"Wait for load state \"load\"","uuid":"5923d494-180e-4d36-918b-79d21b91ff1f","stop":1790518272773},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272775,"name":"Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')","uuid":"c7a1fc4c-cc91-400e-afce-b0712100d1cb","stop":1790518272793},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272794,"name":"Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')","uuid":"608b0057-2fae-49e9-9226-2b342a1b38d6","stop":1790518272797},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272798,"name":"Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"hoTen\"][placeholder=\"Họ tên\"]')","uuid":"962e6a22-ec8c-4daa-b061-b2c0f0bdfc02","stop":1790518272801},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272802,"name":"Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"soDT\"][placeholder=\"Số điện thoại\"]')","uuid":"ace5c6e4-17c5-4f4e-a9c3-098d7a3fa56a","stop":1790518272805},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272806,"name":"Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"email\"][placeholder=\"Email\"]')","uuid":"747229a0-b36a-4f77-b1b9-c5617db254c3","stop":1790518272813},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272813,"name":"Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('button[type=\"submit\"]').filter({ hasText: 'Đăng ký' })","uuid":"8140b9a0-f083-4d1a-844d-edc33a500eeb","stop":1790518272816},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272817,"name":"Click locator('#signUp')","uuid":"ca7c2cc9-70c5-4fff-8145-47009824cef4","stop":1790518272866},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272867,"name":"Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')","uuid":"750875c4-a0a3-4f8b-b861-adceef052203","stop":1790518272875},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272876,"name":"Fill \"taikmujwckrs896\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')","uuid":"f40f8a99-df33-479f-8369-1d7de1a10cde","stop":1790518272886},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272887,"name":"Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')","uuid":"226013a9-7305-49d7-88f1-a3938e56b981","stop":1790518272895},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272896,"name":"Fill \"@Ynrli9231\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')","uuid":"b5a600bc-77b9-4db3-a9b0-7b7f6dab7b65","stop":1790518272902},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272903,"name":"Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"hoTen\"][placeholder=\"Họ tên\"]')","uuid":"093a297a-1efb-47e6-ac88-69254495351b","stop":1790518272910},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272911,"name":"Fill \"Auto Test Maure\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"hoTen\"][placeholder=\"Họ tên\"]')","uuid":"f38fb846-db68-4962-80e5-2e6dca731210","stop":1790518272921},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272922,"name":"Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"soDT\"][placeholder=\"Số điện thoại\"]')","uuid":"bb66a13e-14dc-46f3-9ab4-cecbd831b491","stop":1790518272928},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272928,"name":"Fill \"0916290514\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"soDT\"][placeholder=\"Số điện thoại\"]')","uuid":"93e4ffd6-ad51-4e32-b2c5-f29dd8c9dced","stop":1790518272935},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272937,"name":"Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"email\"][placeholder=\"Email\"]')","uuid":"63dc1e31-b4f4-4408-a626-52c82de55f78","stop":1790518272947},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272949,"name":"Fill \"taikmujwckrs896_9071@gmail.com\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"email\"][placeholder=\"Email\"]')","uuid":"87042dc1-1226-4fa5-86c2-cb93a0eab3be","stop":1790518272958},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518272959,"name":"Click locator('div.form-container.sign-up-container').locator('form').locator('button[type=\"submit\"]').filter({ hasText: 'Đăng ký' })","uuid":"9730882c-af42-4069-bf9f-37d73248d6fc","stop":1790518273782},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518273783,"name":"Expect \"toBeVisible\" getByText('Đăng kí thành công', { exact: true })","uuid":"8ea0c4a8-b9d1-4e72-b421-cb2f50e7ff58","stop":1790518273972},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518273973,"name":"Expect \"toHaveURL\"","uuid":"a51f614e-bb9f-40a3-a6e2-341f372216bb","stop":1790518273975},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create request context","start":1790518273976,"uuid":"5bd25197-f4a2-497a-a560-488a69973c80","stop":1790518273976}],"attachments":[],"parameters":[],"name":"Fixture \"apiClient\"","start":1790518273975,"uuid":"86ef2da1-2f5e-4fa9-94dd-6935350b37f8","stop":1790518273977},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"authService\"","start":1790518273977,"uuid":"22428eed-9865-406f-a51b-e42eb6925333","stop":1790518273977},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"userService\"","start":1790518273977,"uuid":"862c5327-8b58-441f-bb05-6ce44dd8db5c","stop":1790518273977},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"POST \"/api/QuanLyNguoiDung/DangNhap\"","start":1790518273982,"uuid":"74cc86c9-39f9-4243-b951-4282e8c4df33","stop":1790518274076},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"DELETE \"/api/QuanLyNguoiDung/XoaNguoiDung\"","start":1790518274079,"uuid":"fa889f34-a9ff-45d9-8424-b41751619c2d","stop":1790518274125}],"attachments":[],"parameters":[],"name":"afterEach hook","start":1790518273975,"uuid":"d568c685-ccc7-4362-bb15-78008bbe1990","stop":1790518274125},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"userService\"","start":1790518274126,"uuid":"72588ae2-c61e-4806-9d90-19223fff6165","stop":1790518274126},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"authService\"","start":1790518274126,"uuid":"9476bda7-3b65-4d71-94d6-bb0837873e8b","stop":1790518274126},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"apiClient\"","start":1790518274126,"uuid":"e7650a56-a77d-4ae2-b892-51f76237aa0e","stop":1790518274127},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"registerAuthPage\"","start":1790518274127,"uuid":"fc92c590-56f1-4cee-b4c7-7e2b7c73f3cc","stop":1790518274127},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518274127,"uuid":"a621f70f-05e1-419d-a303-f4fc02552b28","stop":1790518274127},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Close context","start":1790518274166,"uuid":"192cecab-7991-4b2c-adba-8728a5f7932d","stop":1790518274169}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518274127,"uuid":"13eec3ea-b53b-4606-9a01-d303ad90921a","stop":1790518274169}],"attachments":[],"parameters":[],"name":"After Hooks","start":1790518273975,"uuid":"3adebeea-637b-48db-a5a9-fe5cea106fcb","stop":1790518274173}],"attachments":[{"name":"stdout","source":"7559182c-7201-4eeb-a8ac-56c81fa6130f-attachment.txt","type":"text/plain"}],"parameters":[{"name":"Project","value":"ui"}],"labels":[{"name":"language","value":"javascript"},{"name":"framework","value":"playwright"},{"name":"package","value":"vlearningts.register.register.ui.spec.ts"},{"name":"_fallbackTestCaseId","value":"77745fa8cdbcab895aef880efcdc6b9d"},{"name":"titlePath","value":" > ui > ui/register/register.ui.spec.ts > Register UI"},{"name":"host","value":"MacBookPro.lan"},{"name":"thread","value":"pid-87368-worker-4"},{"name":"parentSuite","value":"ui"},{"name":"suite","value":"ui/register/register.ui.spec.ts"},{"name":"subSuite","value":"Register UI"}],"links":[],"start":1790518271993,"testCaseId":"a4fbb85216402bf28e31149c1ebdea6e","fullName":"register/register.ui.spec.ts:29:7","titlePath":["vlearningts","register","register.ui.spec.ts","ui/register/register.ui.spec.ts","Register UI"],"stop":1790518274165}
+{
+  "uuid": "bf59ac85-b034-4ef9-8ce4-8deb9bbf9805",
+  "name": "REGISTER_UI_001 - should register successfully with valid random input",
+  "historyId": "a4fbb85216402bf28e31149c1ebdea6e:6d2c2bbdaff7c1375d648e416be0df72",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "beforeEach hook",
+          "start": 1790518271992,
+          "uuid": "1b8fcbc5-0de7-417c-8762-fc74f74f4598",
+          "stop": 1790518271995
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create context",
+              "start": 1790518271997,
+              "uuid": "5834071e-574d-4ad1-9c80-5a857f8bd3d2",
+              "stop": 1790518271998
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518271996,
+          "uuid": "9ba2b509-44b6-4a3c-a00c-4b4cee6b08b6",
+          "stop": 1790518271999
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create page",
+              "start": 1790518271999,
+              "uuid": "73ec6d0c-ba1a-4da9-839d-7d703f8e35c2",
+              "stop": 1790518272039
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518271999,
+          "uuid": "433a597d-9be0-42b7-b522-ca1986c6d6da",
+          "stop": 1790518272039
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"registerAuthPage\"",
+          "start": 1790518272039,
+          "uuid": "c6472df7-071c-40b7-a2b9-15487aead9c7",
+          "stop": 1790518272039
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790518271992,
+      "uuid": "0bf317a1-4b87-4cab-8d3e-458d1248c183",
+      "stop": 1790518272039
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272044,
+      "name": "Navigate to \"/login\"",
+      "uuid": "0f0a5d36-4f0c-46d4-9ea6-a821a3c5a857",
+      "stop": 1790518272389
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272390,
+      "name": "Wait for load state \"domcontentloaded\"",
+      "uuid": "e4c1863e-f800-4059-aad3-eb433e74d475",
+      "stop": 1790518272391
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272391,
+      "name": "Wait for load state \"load\"",
+      "uuid": "5923d494-180e-4d36-918b-79d21b91ff1f",
+      "stop": 1790518272773
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272775,
+      "name": "Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')",
+      "uuid": "c7a1fc4c-cc91-400e-afce-b0712100d1cb",
+      "stop": 1790518272793
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272794,
+      "name": "Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')",
+      "uuid": "608b0057-2fae-49e9-9226-2b342a1b38d6",
+      "stop": 1790518272797
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272798,
+      "name": "Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"hoTen\"][placeholder=\"Họ tên\"]')",
+      "uuid": "962e6a22-ec8c-4daa-b061-b2c0f0bdfc02",
+      "stop": 1790518272801
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272802,
+      "name": "Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"soDT\"][placeholder=\"Số điện thoại\"]')",
+      "uuid": "ace5c6e4-17c5-4f4e-a9c3-098d7a3fa56a",
+      "stop": 1790518272805
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272806,
+      "name": "Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"email\"][placeholder=\"Email\"]')",
+      "uuid": "747229a0-b36a-4f77-b1b9-c5617db254c3",
+      "stop": 1790518272813
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272813,
+      "name": "Expect \"toBeVisible\" locator('div.form-container.sign-up-container').locator('form').locator('button[type=\"submit\"]').filter({ hasText: 'Đăng ký' })",
+      "uuid": "8140b9a0-f083-4d1a-844d-edc33a500eeb",
+      "stop": 1790518272816
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272817,
+      "name": "Click locator('#signUp')",
+      "uuid": "ca7c2cc9-70c5-4fff-8145-47009824cef4",
+      "stop": 1790518272866
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272867,
+      "name": "Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')",
+      "uuid": "750875c4-a0a3-4f8b-b861-adceef052203",
+      "stop": 1790518272875
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272876,
+      "name": "Fill \"taikmujwckrs896\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"taiKhoan\"][placeholder=\"Tài khoản\"]')",
+      "uuid": "f40f8a99-df33-479f-8369-1d7de1a10cde",
+      "stop": 1790518272886
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272887,
+      "name": "Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')",
+      "uuid": "226013a9-7305-49d7-88f1-a3938e56b981",
+      "stop": 1790518272895
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272896,
+      "name": "Fill \"@Ynrli9231\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"matKhau\"][placeholder=\"Mật khẩu\"]')",
+      "uuid": "b5a600bc-77b9-4db3-a9b0-7b7f6dab7b65",
+      "stop": 1790518272902
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272903,
+      "name": "Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"hoTen\"][placeholder=\"Họ tên\"]')",
+      "uuid": "093a297a-1efb-47e6-ac88-69254495351b",
+      "stop": 1790518272910
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272911,
+      "name": "Fill \"Auto Test Maure\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"hoTen\"][placeholder=\"Họ tên\"]')",
+      "uuid": "f38fb846-db68-4962-80e5-2e6dca731210",
+      "stop": 1790518272921
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272922,
+      "name": "Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"soDT\"][placeholder=\"Số điện thoại\"]')",
+      "uuid": "bb66a13e-14dc-46f3-9ab4-cecbd831b491",
+      "stop": 1790518272928
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272928,
+      "name": "Fill \"0916290514\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"soDT\"][placeholder=\"Số điện thoại\"]')",
+      "uuid": "93e4ffd6-ad51-4e32-b2c5-f29dd8c9dced",
+      "stop": 1790518272935
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272937,
+      "name": "Clear locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"email\"][placeholder=\"Email\"]')",
+      "uuid": "63dc1e31-b4f4-4408-a626-52c82de55f78",
+      "stop": 1790518272947
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272949,
+      "name": "Fill \"taikmujwckrs896_9071@gmail.com\" locator('div.form-container.sign-up-container').locator('form').locator('input[name=\"email\"][placeholder=\"Email\"]')",
+      "uuid": "87042dc1-1226-4fa5-86c2-cb93a0eab3be",
+      "stop": 1790518272958
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518272959,
+      "name": "Click locator('div.form-container.sign-up-container').locator('form').locator('button[type=\"submit\"]').filter({ hasText: 'Đăng ký' })",
+      "uuid": "9730882c-af42-4069-bf9f-37d73248d6fc",
+      "stop": 1790518273782
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518273783,
+      "name": "Expect \"toBeVisible\" getByText('Đăng kí thành công', { exact: true })",
+      "uuid": "8ea0c4a8-b9d1-4e72-b421-cb2f50e7ff58",
+      "stop": 1790518273972
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518273973,
+      "name": "Expect \"toHaveURL\"",
+      "uuid": "a51f614e-bb9f-40a3-a6e2-341f372216bb",
+      "stop": 1790518273975
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [
+                {
+                  "status": "passed",
+                  "statusDetails": {},
+                  "stage": "finished",
+                  "steps": [],
+                  "attachments": [],
+                  "parameters": [],
+                  "name": "Create request context",
+                  "start": 1790518273976,
+                  "uuid": "5bd25197-f4a2-497a-a560-488a69973c80",
+                  "stop": 1790518273976
+                }
+              ],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"apiClient\"",
+              "start": 1790518273975,
+              "uuid": "86ef2da1-2f5e-4fa9-94dd-6935350b37f8",
+              "stop": 1790518273977
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"authService\"",
+              "start": 1790518273977,
+              "uuid": "22428eed-9865-406f-a51b-e42eb6925333",
+              "stop": 1790518273977
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Fixture \"userService\"",
+              "start": 1790518273977,
+              "uuid": "862c5327-8b58-441f-bb05-6ce44dd8db5c",
+              "stop": 1790518273977
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "POST \"/api/QuanLyNguoiDung/DangNhap\"",
+              "start": 1790518273982,
+              "uuid": "74cc86c9-39f9-4243-b951-4282e8c4df33",
+              "stop": 1790518274076
+            },
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "DELETE \"/api/QuanLyNguoiDung/XoaNguoiDung\"",
+              "start": 1790518274079,
+              "uuid": "fa889f34-a9ff-45d9-8424-b41751619c2d",
+              "stop": 1790518274125
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "afterEach hook",
+          "start": 1790518273975,
+          "uuid": "d568c685-ccc7-4362-bb15-78008bbe1990",
+          "stop": 1790518274125
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"userService\"",
+          "start": 1790518274126,
+          "uuid": "72588ae2-c61e-4806-9d90-19223fff6165",
+          "stop": 1790518274126
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"authService\"",
+          "start": 1790518274126,
+          "uuid": "9476bda7-3b65-4d71-94d6-bb0837873e8b",
+          "stop": 1790518274126
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"apiClient\"",
+          "start": 1790518274126,
+          "uuid": "e7650a56-a77d-4ae2-b892-51f76237aa0e",
+          "stop": 1790518274127
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"registerAuthPage\"",
+          "start": 1790518274127,
+          "uuid": "fc92c590-56f1-4cee-b4c7-7e2b7c73f3cc",
+          "stop": 1790518274127
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518274127,
+          "uuid": "a621f70f-05e1-419d-a303-f4fc02552b28",
+          "stop": 1790518274127
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Close context",
+              "start": 1790518274166,
+              "uuid": "192cecab-7991-4b2c-adba-8728a5f7932d",
+              "stop": 1790518274169
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518274127,
+          "uuid": "13eec3ea-b53b-4606-9a01-d303ad90921a",
+          "stop": 1790518274169
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790518273975,
+      "uuid": "3adebeea-637b-48db-a5a9-fe5cea106fcb",
+      "stop": 1790518274173
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "7559182c-7201-4eeb-a8ac-56c81fa6130f-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "ui" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.register.register.ui.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "77745fa8cdbcab895aef880efcdc6b9d" },
+    { "name": "titlePath", "value": " > ui > ui/register/register.ui.spec.ts > Register UI" },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-87368-worker-4" },
+    { "name": "parentSuite", "value": "ui" },
+    { "name": "suite", "value": "ui/register/register.ui.spec.ts" },
+    { "name": "subSuite", "value": "Register UI" }
+  ],
+  "links": [],
+  "start": 1790518271993,
+  "testCaseId": "a4fbb85216402bf28e31149c1ebdea6e",
+  "fullName": "register/register.ui.spec.ts:29:7",
+  "titlePath": [
+    "vlearningts",
+    "register",
+    "register.ui.spec.ts",
+    "ui/register/register.ui.spec.ts",
+    "Register UI"
+  ],
+  "stop": 1790518274165
+}

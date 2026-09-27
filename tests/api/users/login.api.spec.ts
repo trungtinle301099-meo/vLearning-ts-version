@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { loginResponseSchema } from '../../../src/schemas/auth.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { cleanupRegisteredAccounts } from '../../../src/helpers/cleanup.helper';

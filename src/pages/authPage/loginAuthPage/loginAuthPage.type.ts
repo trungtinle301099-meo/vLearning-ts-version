@@ -8,7 +8,4 @@ export type LoginAuthExpectedUrl = {
   successUrl: string | RegExp;
 };
 
-
-export type Message =
-  | 'Tài khoản hoặc mật khẩu không đúng!'
-  | 'đăng nhập thành công';
+export type Message = 'Tài khoản hoặc mật khẩu không đúng!' | 'đăng nhập thành công';

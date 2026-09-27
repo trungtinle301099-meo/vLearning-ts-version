@@ -8,14 +8,13 @@ import { feature, severity, description } from 'allure-js-commons';
 test.use({ storageState: env.authStatePath });
 
 test.describe('User Information', () => {
-  test('should navigate to User Information page', async ({
-    thongTinCaNhanPage,
-    page,
-  }) => {
+  test('should navigate to User Information page', async ({ thongTinCaNhanPage, page }) => {
     // Allure metadata for the test
     await feature('Search function');
     await severity('critical');
-    await description('This test verifies that a user can navigate to the User Information page from the home page.');
+    await description(
+      'This test verifies that a user can navigate to the User Information page from the home page.'
+    );
 
     // Act: Navigate to home page with authenticated session.
     await thongTinCaNhanPage.gotoHomePage();

@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import {
   cleanupCourseRegistration,
@@ -20,60 +23,62 @@ let isCourseRegistered = false;
 
 test.describe('Register Course API', () => {
   test.beforeEach(async ({ authService, userService, courseService }, testInfo) => {
-  // Setup: Reset cleanup tracking before each test.
-  accountsToCleanup = [];
-  isCourseDeleted = false;
-  isCourseRegistered = false;
+    // Setup: Reset cleanup tracking before each test.
+    accountsToCleanup = [];
+    isCourseDeleted = false;
+    isCourseRegistered = false;
 
-  // Precondition: Prepare registered user and created course for register course API tests.
-  const precondition = await setupCourseRegistrationPreconditionForTest({
-    authService,
-    userService,
-    courseService,
-    testInfo
+    // Precondition: Prepare registered user and created course for register course API tests.
+    const precondition = await setupCourseRegistrationPreconditionForTest({
+      authService,
+      userService,
+      courseService,
+      testInfo
+    });
+
+    accessToken = precondition.accessToken;
+    registeredUser = precondition.registeredUser;
+    createdCourse = precondition.createdCourse;
+    accountsToCleanup = precondition.accountsToCleanup;
   });
-
-  accessToken = precondition.accessToken;
-  registeredUser = precondition.registeredUser;
-  createdCourse = precondition.createdCourse;
-  accountsToCleanup = precondition.accountsToCleanup;
-});
 
   test.afterEach(async ({ authService, userService, courseService }) => {
-  // Cleanup 1: Cancel course registration first if registration was successful.
-  const isCanceled = await cleanupCourseRegistration({
-    courseService,
-    courseId: createdCourse?.maKhoaHoc,
-    username: registeredUser?.taiKhoan,
-    accessToken,
-    shouldCancel: isCourseRegistered
+    // Cleanup 1: Cancel course registration first if registration was successful.
+    const isCanceled = await cleanupCourseRegistration({
+      courseService,
+      courseId: createdCourse?.maKhoaHoc,
+      username: registeredUser?.taiKhoan,
+      accessToken,
+      shouldCancel: isCourseRegistered
+    });
+
+    if (isCanceled) {
+      isCourseRegistered = false;
+    }
+
+    // Cleanup 2: Delete user account registered in beforeEach.
+    await cleanupRegisteredAccounts({
+      authService,
+      userService,
+      usernames: accountsToCleanup
+    });
+
+    // Cleanup 3: Delete course created in beforeEach.
+    const courseDeleted = await cleanupCreatedCourse({
+      courseService,
+      courseId: createdCourse?.maKhoaHoc,
+      accessToken,
+      shouldDelete: !isCourseDeleted
+    });
+
+    if (courseDeleted) {
+      isCourseDeleted = true;
+    }
   });
 
-  if (isCanceled) {
-    isCourseRegistered = false;
-  }
-
-  // Cleanup 2: Delete user account registered in beforeEach.
-  await cleanupRegisteredAccounts({
-    authService,
-    userService,
-    usernames: accountsToCleanup
-  });
-
-  // Cleanup 3: Delete course created in beforeEach.
-  const courseDeleted = await cleanupCreatedCourse({
-    courseService,
-    courseId: createdCourse?.maKhoaHoc,
-    accessToken,
-    shouldDelete: !isCourseDeleted
-  });
-
-  if (courseDeleted) {
-    isCourseDeleted = true;
-  }
-});
-
-  test('REGISTER_COURSE_API_001 - should register course successfully', async ({ courseService }) => {
+  test('REGISTER_COURSE_API_001 - should register course successfully', async ({
+    courseService
+  }) => {
     // Arrange: Build valid register course request body.
     const registerCourseData: RegisterCourseRequest = {
       maKhoaHoc: createdCourse.maKhoaHoc,
@@ -129,7 +134,9 @@ test.describe('Register Course API', () => {
     // Assert: Register course API should reject non-existing account.
     expect(response.status()).not.toBe(200);
 
-    logger.pass(`Register Course API rejected non-existing account: ${registerCourseData.taiKhoan}`);
+    logger.pass(
+      `Register Course API rejected non-existing account: ${registerCourseData.taiKhoan}`
+    );
   });
 
   test('REGISTER_COURSE_API_003 - should not register course with non-existing course id', async ({

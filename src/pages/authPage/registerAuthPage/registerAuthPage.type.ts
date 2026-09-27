@@ -7,6 +7,4 @@ export type RegisterAuthExpectedUrl = {
 };
 
 export type RegisterAuthMessage =
-  | 'Đăng kí thành công'
-  | 'Tài khoản đã tồn tại!'
-  | 'Email đã tồn tại!';
+  'Đăng kí thành công' | 'Tài khoản đã tồn tại!' | 'Email đã tồn tại!';

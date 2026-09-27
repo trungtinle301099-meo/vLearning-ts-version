@@ -14,7 +14,6 @@ import { createCourseResponseSchema } from '../schemas/course.schema';
 import type { CourseService } from '../api/services/course.service';
 import type { CreateCourseRequest, RegisterCourseRequest } from '../types/course.type';
 
-
 type CourseRegistrationPreconditionResult = {
   accessToken: string;
   registeredUser: RegisterUserRequest;
@@ -26,8 +25,6 @@ type CreatedCoursePreconditionResult = {
   accessToken: string;
   createdCourse: CreateCourseRequest;
 };
-
-
 
 export async function setupCreatedCoursePreconditionForTest({
   authService,
@@ -173,27 +170,22 @@ export async function registerCourseForTest({
   courseService,
   courseId,
   username,
-  accessToken,
+  accessToken
 }: {
   courseService: CourseService;
   courseId: string;
   username: string;
   accessToken: string;
 }): Promise<void> {
-  const registerCourseData: RegisterCourseRequest = { 
+  const registerCourseData: RegisterCourseRequest = {
     maKhoaHoc: courseId,
-    taiKhoan: username,
+    taiKhoan: username
   };
 
-  const response = await courseService.dangKyCourse(
-    registerCourseData,
-    accessToken,
-  );
+  const response = await courseService.dangKyCourse(registerCourseData, accessToken);
 
   expectStatus(response, 200);
   expectJsonContentType(response);
 
-  logger.info(
-    `Registered course: ${courseId} for account: ${username}`,
-  );
+  logger.info(`Registered course: ${courseId} for account: ${username}`);
 }

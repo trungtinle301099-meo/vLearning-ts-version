@@ -90,8 +90,8 @@ test.describe('Home Page UI', () => {
   });
 
   test('HOME_PAGE_UI_005 - should navigate to course page after clicking Khoá học link', async ({
-  page,
-  homeHeaderHomePage
+    page,
+    homeHeaderHomePage
   }) => {
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
@@ -109,8 +109,8 @@ test.describe('Home Page UI', () => {
   });
 
   test('HOME_PAGE_UI_006 - should navigate to event page after clicking Sự kiện link', async ({
-  page,
-  homeHeaderHomePage
+    page,
+    homeHeaderHomePage
   }) => {
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
@@ -128,8 +128,8 @@ test.describe('Home Page UI', () => {
   });
 
   test('HOME_PAGE_UI_007 - should display course category links when hovering Danh mục link', async ({
-  page,
-  homeHeaderHomePage
+    page,
+    homeHeaderHomePage
   }) => {
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
@@ -148,15 +148,17 @@ test.describe('Home Page UI', () => {
     await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình Backend')).toBeVisible();
     await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình di động')).toBeVisible();
     await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình Front end')).toBeVisible();
-    await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình Full Stack')).toBeVisible();
+    await expect(
+      homeHeaderHomePage.button.courseCategoryLink('Lập trình Full Stack')
+    ).toBeVisible();
     await expect(homeHeaderHomePage.button.courseCategoryLink('Tư duy lập trình')).toBeVisible();
 
     logger.pass('Course category links are displayed after hovering Danh mục link.');
   });
 
   test('HOME_PAGE_UI_008 - should display event links when hovering Sự kiện link', async ({
-  page,
-  homeHeaderHomePage
+    page,
+    homeHeaderHomePage
   }) => {
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
@@ -171,7 +173,9 @@ test.describe('Home Page UI', () => {
     await homeHeaderHomePage.hoverHeaderLink('Sự kiện');
 
     // Assert: Event links should be displayed.
-    await expect(homeHeaderHomePage.button.eventCategoryLink('Sự kiện Sale Cuối Năm')).toBeVisible();
+    await expect(
+      homeHeaderHomePage.button.eventCategoryLink('Sự kiện Sale Cuối Năm')
+    ).toBeVisible();
     await expect(homeHeaderHomePage.button.eventCategoryLink('Sự kiện Giáng sinh')).toBeVisible();
     await expect(homeHeaderHomePage.button.eventCategoryLink('Sự kiện Noel')).toBeVisible();
 

@@ -7,7 +7,7 @@ export class DanhMucHomePageButton {
   constructor(private readonly page: Page) {
     this.categoryHeading = this.page.getByRole('heading', {
       name: 'Khóa học theo danh mục',
-      exact: true,
+      exact: true
     });
   }
 

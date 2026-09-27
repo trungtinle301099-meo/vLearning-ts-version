@@ -7,5 +7,5 @@ export const CourseEndpoint = {
   registerCourse: '/api/QuanLyKhoaHoc/GhiDanhKhoaHoc',
   cancelCourseRegistration: '/api/QuanLyKhoaHoc/HuyGhiDanh',
   getCourseStudents: '/api/QuanLyKhoaHoc/LayThongTinHocVienKhoaHoc',
-  dangKyCourse: '/api/QuanLyKhoaHoc/DangKyKhoaHoc',
+  dangKyCourse: '/api/QuanLyKhoaHoc/DangKyKhoaHoc'
 } as const;

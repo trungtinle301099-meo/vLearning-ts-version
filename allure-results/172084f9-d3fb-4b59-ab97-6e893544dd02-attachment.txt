@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1790520045299326","biDanh":"bi-danh-mkh1790520045299326","tenKhoaHoc":"Auto Course Practical Marble Bacon","moTa":"Civitas carmen arto vicissitudo similique absum.","luotXem":47,"danhGia":10,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"20/09/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

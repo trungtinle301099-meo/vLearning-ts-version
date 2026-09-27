@@ -26,9 +26,9 @@ test.describe('Register Footer Home Page UI', () => {
     await registerFooterHomePage.registerConsultation(registerData);
 
     // Assert: Success message should be displayed.
-    await expect(
-      registerFooterHomePage.button.getMessageByText('Đăng ký thành công')
-    ).toBeVisible({ timeout: 200 });
+    await expect(registerFooterHomePage.button.getMessageByText('Đăng ký thành công')).toBeVisible({
+      timeout: 200
+    });
 
     logger.pass(`Register consultation successfully with email: ${registerData.email}`);
   });
@@ -98,9 +98,9 @@ test.describe('Register Footer Home Page UI', () => {
     await registerFooterHomePage.registerConsultation(registerData);
 
     // Assert: Invalid email message should be displayed.
-    await expect(
-      registerFooterHomePage.button.getMessageByText('Email không hợp lệ')
-    ).toBeVisible({ timeout: 200 });
+    await expect(registerFooterHomePage.button.getMessageByText('Email không hợp lệ')).toBeVisible({
+      timeout: 200
+    });
 
     logger.pass(`Register consultation rejected invalid email: ${registerData.email}`);
   });

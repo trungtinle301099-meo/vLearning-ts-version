@@ -35,7 +35,7 @@ export const randomHelper = {
 
     return rawFullName
       .replace(/[^a-zA-Z\s]/g, '') // chỉ giữ chữ và khoảng trắng
-      .replace(/\s+/g, ' ')        // gom nhiều khoảng trắng thành 1
+      .replace(/\s+/g, ' ') // gom nhiều khoảng trắng thành 1
       .trim()
       .slice(0, maxLength);
   },

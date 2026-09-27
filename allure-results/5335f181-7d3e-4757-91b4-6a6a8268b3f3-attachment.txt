@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1790520046874227","biDanh":"bi-danh-mkh1790520046874227","tenKhoaHoc":"Auto Course Unbranded Concrete Chips","moTa":"Decens dedico deleo tabula sonitus quaerat arx.","luotXem":52,"danhGia":3,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"30/03/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

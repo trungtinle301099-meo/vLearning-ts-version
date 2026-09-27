@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1790520045348671","biDanh":"bi-danh-mkh1790520045348671","tenKhoaHoc":"Auto Course Luxurious Rubber Towels","moTa":"Tam veritatis quia spes defendo denique varius.","luotXem":74,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"02/07/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

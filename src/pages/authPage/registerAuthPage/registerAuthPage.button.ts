@@ -22,31 +22,23 @@ export class RegisterAuthPageButton {
       'input[name="taiKhoan"][placeholder="Tài khoản"]'
     );
 
-    this.fullNameInput = this.registerForm.locator(
-      'input[name="hoTen"][placeholder="Họ tên"]'
-    );
+    this.fullNameInput = this.registerForm.locator('input[name="hoTen"][placeholder="Họ tên"]');
 
-    this.passwordInput = this.registerForm.locator(
-      'input[name="matKhau"][placeholder="Mật khẩu"]'
-    );
+    this.passwordInput = this.registerForm.locator('input[name="matKhau"][placeholder="Mật khẩu"]');
 
-    this.emailInput = this.registerForm.locator(
-      'input[name="email"][placeholder="Email"]'
-    );
+    this.emailInput = this.registerForm.locator('input[name="email"][placeholder="Email"]');
 
-    this.phoneInput = this.registerForm.locator(
-      'input[name="soDT"][placeholder="Số điện thoại"]'
-    );
+    this.phoneInput = this.registerForm.locator('input[name="soDT"][placeholder="Số điện thoại"]');
 
     this.groupSelect = this.registerForm.locator('select[name="maNhom"]');
 
     this.registerButton = this.registerForm.locator('button[type="submit"]', {
-      hasText: 'Đăng ký',
+      hasText: 'Đăng ký'
     });
     this.switchRegisterButton = this.page.locator('#signUp');
   }
 
-    //locator type 2
+  //locator type 2
   getToastifyByMessage(message: RegisterAuthMessage): Locator {
     return this.page.getByText(message, { exact: true });
   }

@@ -1,1 +1,297 @@
-{"uuid":"6c45e46e-e5c2-448c-ae51-5dfc01e58ac9","name":"DANH_MUC_UI_003 - should navigate to Mobile course category page when clicking Lập trình di động","historyId":"41b9f70b6b06d45e7291e235674e94cf:6d2c2bbdaff7c1375d648e416be0df72","status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Launch browser","start":1790518264545,"uuid":"cc8d7e76-3868-4f93-bc3f-a29304997733","stop":1790518264701}],"attachments":[],"parameters":[],"name":"Fixture \"browser\"","start":1790518264544,"uuid":"ea34967e-0412-45a5-bfbc-016c7c0adb84","stop":1790518264701},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create context","start":1790518264704,"uuid":"46138f2d-bd3c-4077-bdc4-5895ebbef046","stop":1790518264742}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518264703,"uuid":"6cd0b535-3eaf-4cc3-b2ba-53d50d5b1fc0","stop":1790518264747},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create page","start":1790518264749,"uuid":"3760db00-75b2-4e61-b7af-99d5a3b03d97","stop":1790518264808}],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518264748,"uuid":"6910e97d-b9af-4f17-af80-3cf75768e778","stop":1790518264809},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"homeHeaderHomePage\"","start":1790518264809,"uuid":"01407e67-4f29-4da2-8bf0-c26b53fbb769","stop":1790518264809},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"danhMucHomePage\"","start":1790518264809,"uuid":"0cc873bd-4a93-4f91-8756-be250634689b","stop":1790518264809}],"attachments":[],"parameters":[],"name":"Before Hooks","start":1790518264539,"uuid":"b6055300-0d74-40ce-ad95-dbadb68b65c1","stop":1790518264809},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518264811,"name":"Navigate to \"/trangchu\"","uuid":"0423f938-8a40-4775-8589-4b1ecc92ae13","stop":1790518265330},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518265338,"name":"Hover getByRole('link', { name: 'Danh mục', exact: true })","uuid":"2882b8c6-1703-4a39-9b05-c3fa53df59fe","stop":1790518265447},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518265449,"name":"Click getByRole('link', { name: 'Lập trình di động', exact: true })","uuid":"f3155e2a-414d-439f-9fe8-82e8b2a5ef79","stop":1790518265801},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518265804,"name":"Expect \"toHaveURL\"","uuid":"73993520-6772-48da-86a1-755584eb90cc","stop":1790518265809},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518265810,"name":"Expect \"toBeVisible\" getByRole('heading', { name: 'Khóa học theo danh mục', exact: true })","uuid":"b94c6a14-06ce-4305-8515-06e507e7633a","stop":1790518265814},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518265815,"name":"Expect \"toHaveText\" locator('btn').getByText('Lập trình di động', { exact: true })","uuid":"c1e636f8-c19f-436b-ad52-ba745e065d4f","stop":1790518265822},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"danhMucHomePage\"","start":1790518265823,"uuid":"e8a16966-249f-448f-9332-a82d76858406","stop":1790518265823},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"homeHeaderHomePage\"","start":1790518265824,"uuid":"7c096208-15f2-44f8-bd6a-355b550fae7d","stop":1790518265824},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518265824,"uuid":"0a2ebfeb-7fad-496f-be66-196ce34997b6","stop":1790518265824},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Close context","start":1790518265882,"uuid":"8399e340-2ef3-4459-97c4-25b95066dc44","stop":1790518265885}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518265824,"uuid":"5e54dcc6-8113-4f93-bec7-09e07e279f30","stop":1790518265885}],"attachments":[],"parameters":[],"name":"After Hooks","start":1790518265822,"uuid":"1ec52614-8ba5-492e-bbdd-dde4b75b9e5e","stop":1790518265888}],"attachments":[],"parameters":[{"name":"Project","value":"ui"}],"labels":[{"name":"language","value":"javascript"},{"name":"framework","value":"playwright"},{"name":"package","value":"vlearningts.home.danhMuc.ui.spec.ts"},{"name":"_fallbackTestCaseId","value":"11b87d765be9e7f29490270defe37d15"},{"name":"titlePath","value":" > ui > ui/home/danhMuc.ui.spec.ts > Home - Danh mục khóa học"},{"name":"host","value":"MacBookPro.lan"},{"name":"thread","value":"pid-87368-worker-0"},{"name":"parentSuite","value":"ui"},{"name":"suite","value":"ui/home/danhMuc.ui.spec.ts"},{"name":"subSuite","value":"Home - Danh mục khóa học"}],"links":[],"start":1790518264523,"testCaseId":"41b9f70b6b06d45e7291e235674e94cf","fullName":"home/danhMuc.ui.spec.ts:60:9","titlePath":["vlearningts","home","danhMuc.ui.spec.ts","ui/home/danhMuc.ui.spec.ts","Home - Danh mục khóa học"],"stop":1790518265703}
+{
+  "uuid": "6c45e46e-e5c2-448c-ae51-5dfc01e58ac9",
+  "name": "DANH_MUC_UI_003 - should navigate to Mobile course category page when clicking Lập trình di động",
+  "historyId": "41b9f70b6b06d45e7291e235674e94cf:6d2c2bbdaff7c1375d648e416be0df72",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Launch browser",
+              "start": 1790518264545,
+              "uuid": "cc8d7e76-3868-4f93-bc3f-a29304997733",
+              "stop": 1790518264701
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"browser\"",
+          "start": 1790518264544,
+          "uuid": "ea34967e-0412-45a5-bfbc-016c7c0adb84",
+          "stop": 1790518264701
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create context",
+              "start": 1790518264704,
+              "uuid": "46138f2d-bd3c-4077-bdc4-5895ebbef046",
+              "stop": 1790518264742
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518264703,
+          "uuid": "6cd0b535-3eaf-4cc3-b2ba-53d50d5b1fc0",
+          "stop": 1790518264747
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create page",
+              "start": 1790518264749,
+              "uuid": "3760db00-75b2-4e61-b7af-99d5a3b03d97",
+              "stop": 1790518264808
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518264748,
+          "uuid": "6910e97d-b9af-4f17-af80-3cf75768e778",
+          "stop": 1790518264809
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"homeHeaderHomePage\"",
+          "start": 1790518264809,
+          "uuid": "01407e67-4f29-4da2-8bf0-c26b53fbb769",
+          "stop": 1790518264809
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"danhMucHomePage\"",
+          "start": 1790518264809,
+          "uuid": "0cc873bd-4a93-4f91-8756-be250634689b",
+          "stop": 1790518264809
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790518264539,
+      "uuid": "b6055300-0d74-40ce-ad95-dbadb68b65c1",
+      "stop": 1790518264809
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518264811,
+      "name": "Navigate to \"/trangchu\"",
+      "uuid": "0423f938-8a40-4775-8589-4b1ecc92ae13",
+      "stop": 1790518265330
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518265338,
+      "name": "Hover getByRole('link', { name: 'Danh mục', exact: true })",
+      "uuid": "2882b8c6-1703-4a39-9b05-c3fa53df59fe",
+      "stop": 1790518265447
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518265449,
+      "name": "Click getByRole('link', { name: 'Lập trình di động', exact: true })",
+      "uuid": "f3155e2a-414d-439f-9fe8-82e8b2a5ef79",
+      "stop": 1790518265801
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518265804,
+      "name": "Expect \"toHaveURL\"",
+      "uuid": "73993520-6772-48da-86a1-755584eb90cc",
+      "stop": 1790518265809
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518265810,
+      "name": "Expect \"toBeVisible\" getByRole('heading', { name: 'Khóa học theo danh mục', exact: true })",
+      "uuid": "b94c6a14-06ce-4305-8515-06e507e7633a",
+      "stop": 1790518265814
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518265815,
+      "name": "Expect \"toHaveText\" locator('btn').getByText('Lập trình di động', { exact: true })",
+      "uuid": "c1e636f8-c19f-436b-ad52-ba745e065d4f",
+      "stop": 1790518265822
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"danhMucHomePage\"",
+          "start": 1790518265823,
+          "uuid": "e8a16966-249f-448f-9332-a82d76858406",
+          "stop": 1790518265823
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"homeHeaderHomePage\"",
+          "start": 1790518265824,
+          "uuid": "7c096208-15f2-44f8-bd6a-355b550fae7d",
+          "stop": 1790518265824
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518265824,
+          "uuid": "0a2ebfeb-7fad-496f-be66-196ce34997b6",
+          "stop": 1790518265824
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Close context",
+              "start": 1790518265882,
+              "uuid": "8399e340-2ef3-4459-97c4-25b95066dc44",
+              "stop": 1790518265885
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518265824,
+          "uuid": "5e54dcc6-8113-4f93-bec7-09e07e279f30",
+          "stop": 1790518265885
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790518265822,
+      "uuid": "1ec52614-8ba5-492e-bbdd-dde4b75b9e5e",
+      "stop": 1790518265888
+    }
+  ],
+  "attachments": [],
+  "parameters": [{ "name": "Project", "value": "ui" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.home.danhMuc.ui.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "11b87d765be9e7f29490270defe37d15" },
+    {
+      "name": "titlePath",
+      "value": " > ui > ui/home/danhMuc.ui.spec.ts > Home - Danh mục khóa học"
+    },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-87368-worker-0" },
+    { "name": "parentSuite", "value": "ui" },
+    { "name": "suite", "value": "ui/home/danhMuc.ui.spec.ts" },
+    { "name": "subSuite", "value": "Home - Danh mục khóa học" }
+  ],
+  "links": [],
+  "start": 1790518264523,
+  "testCaseId": "41b9f70b6b06d45e7291e235674e94cf",
+  "fullName": "home/danhMuc.ui.spec.ts:60:9",
+  "titlePath": [
+    "vlearningts",
+    "home",
+    "danhMuc.ui.spec.ts",
+    "ui/home/danhMuc.ui.spec.ts",
+    "Home - Danh mục khóa học"
+  ],
+  "stop": 1790518265703
+}

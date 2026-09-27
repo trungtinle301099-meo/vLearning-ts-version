@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1790520031178815","biDanh":"bi-danh-mkh1790520031178815","tenKhoaHoc":"Auto Course Frozen Bamboo Keyboard","moTa":"Cruciamentum vulnero aspicio deorsum amor sodalitas.","luotXem":4,"danhGia":6,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"29/07/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

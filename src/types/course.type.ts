@@ -29,7 +29,6 @@ export interface CourseData {
   taiKhoanNguoiTao: string;
 }
 
-
 // ============================================================
 // 2. COURSE RESPONSE
 // ============================================================
@@ -53,7 +52,6 @@ export type CourseResponse = Pick<
   | 'tenDanhMucKhoaHoc'
 >;
 
-
 // ============================================================
 // 3. CREATE COURSE REQUEST
 // ============================================================
@@ -73,39 +71,25 @@ export type CreateCourseRequest = Pick<
   | 'taiKhoanNguoiTao'
 >;
 
-
 // ============================================================
 // 4. REGISTER COURSE REQUEST
 // ============================================================
 
-export type RegisterCourseRequest = Pick<
-  CourseData,
-  'maKhoaHoc' | 'taiKhoan'
->;
-
+export type RegisterCourseRequest = Pick<CourseData, 'maKhoaHoc' | 'taiKhoan'>;
 
 // ============================================================
 // 5. COURSE DETAIL RESPONSE
 //    Lấy toàn bộ field, bỏ một số field không cần
 // ============================================================
 
-export type CourseDetailResponse = Omit<
-  CourseData,
-  | 'danhGia'
-  | 'taiKhoanNguoiTao'
->;
-
+export type CourseDetailResponse = Omit<CourseData, 'danhGia' | 'taiKhoanNguoiTao'>;
 
 // ============================================================
 // 6. COURSE SUMMARY RESPONSE
 //    Chỉ lấy những field cần thiết
 // ============================================================
 
-export type CourseSummaryResponse = Pick<
-  CourseData,
-  'maKhoaHoc' | 'tenKhoaHoc' | 'hinhAnh'
->;
-
+export type CourseSummaryResponse = Pick<CourseData, 'maKhoaHoc' | 'tenKhoaHoc' | 'hinhAnh'>;
 
 // ============================================================
 // 7. COURSE LIST RESPONSE
@@ -113,13 +97,8 @@ export type CourseSummaryResponse = Pick<
 
 export type CourseListResponse = Pick<
   CourseData,
-  | 'maKhoaHoc'
-  | 'tenKhoaHoc'
-  | 'hinhAnh'
-  | 'luotXem'
-  | 'soLuongHocVien'
+  'maKhoaHoc' | 'tenKhoaHoc' | 'hinhAnh' | 'luotXem' | 'soLuongHocVien'
 >;
-
 
 // ============================================================
 // 8. COURSE CREATOR RESPONSE
@@ -127,20 +106,11 @@ export type CourseListResponse = Pick<
 
 export type CourseCreatorResponse = Pick<
   CourseData,
-  | 'taiKhoan'
-  | 'hoTen'
-  | 'maLoaiNguoiDung'
-  | 'tenLoaiNguoiDung'
+  'taiKhoan' | 'hoTen' | 'maLoaiNguoiDung' | 'tenLoaiNguoiDung'
 >;
-
 
 // ============================================================
 // 9. COURSE CATEGORY RESPONSE
 // ============================================================
 
-export type CourseCategoryResponse = Pick<
-  CourseData,
-  'maDanhMucKhoaHoc' | 'tenDanhMucKhoaHoc'
->;
-
-
+export type CourseCategoryResponse = Pick<CourseData, 'maDanhMucKhoaHoc' | 'tenDanhMucKhoaHoc'>;

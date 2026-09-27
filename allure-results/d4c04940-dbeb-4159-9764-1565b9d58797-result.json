@@ -1,1 +1,438 @@
-{"uuid":"d4c04940-dbeb-4159-9764-1565b9d58797","name":"LOGOUT_UI_001 - should logout successfully after hovering avatar icon","historyId":"7497089dafc6eeaac04389def6c53bc5:6d2c2bbdaff7c1375d648e416be0df72","status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create context","start":1790518268121,"uuid":"7b92ba8d-255e-4f81-acf1-5132c197e62a","stop":1790518268183}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518268119,"uuid":"4a20e0b7-bc9e-4f09-87b4-f50a4a4e37f3","stop":1790518268184},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create page","start":1790518268185,"uuid":"19fd5120-57cb-46f3-85c1-be23874af949","stop":1790518268233}],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518268184,"uuid":"62b40038-d539-4d42-bd49-5c6c7d814447","stop":1790518268233},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"homeHeaderHomePage\"","start":1790518268233,"uuid":"10ce9a85-2135-463b-aaaa-f1cadd492014","stop":1790518268233}],"attachments":[],"parameters":[],"name":"Before Hooks","start":1790518268116,"uuid":"a72edced-e9ae-47e2-b2ae-41d458c5a316","stop":1790518268233},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518268234,"name":"Navigate to \"/trangchu\"","uuid":"0a150ac7-32f0-4eab-8b46-d3b35e27402e","stop":1790518268791},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518268791,"name":"Expect \"toHaveURL\"","uuid":"57146089-1c66-49e2-83eb-16827817a606","stop":1790518268827},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518268832,"name":"Expect \"toBeVisible\" locator('a.infoHeader[href=\"/thongtincanhan\"]')","uuid":"07d3f22f-8832-4bb2-930c-20bf82d7fd73","stop":1790518268847},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518268848,"name":"Expect \"not toBeVisible\" getByRole('button', { name: 'Đăng nhập' })","uuid":"f9d43e0b-0331-4f3a-8d1b-8f5fa5042efa","stop":1790518268873},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518268878,"name":"Hover locator('a.infoHeader[href=\"/thongtincanhan\"]')","uuid":"b969957b-951f-4044-8663-d894cf55701c","stop":1790518269127},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269127,"name":"Expect \"toBeVisible\" locator('i.fas.fa-power-off')","uuid":"88dd4c14-8fc4-42ed-bf3f-eaf63e32c880","stop":1790518269141},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269149,"name":"Bounding box locator('a.infoHeader[href=\"/thongtincanhan\"]')","uuid":"9b891cd5-d648-45b8-9893-0c579cac453a","stop":1790518269211},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269215,"name":"Bounding box locator('i.fas.fa-power-off')","uuid":"c8e4ae10-18dc-4772-992f-e7afe8736271","stop":1790518269247},{"status":"failed","statusDetails":{"message":"Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false","trace":"Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n    at HomeHeaderHomePage.hoverAvatarIcon (/Users/tinle/Documents/vLearning-ts-version/src/pages/homePage/homeHeaderHomePage/homeHeaderHomePage.index.ts:45:3)\n    at /Users/tinle/Documents/vLearning-ts-version/tests/ui/home/logout.ui.spec.ts:27:5"},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269249,"name":"Wait until logout button is not overlapped with avatar icon","uuid":"a0b1ed66-6035-4c33-8a80-576ec8e91055","stop":1790518269251},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269354,"name":"Bounding box locator('a.infoHeader[href=\"/thongtincanhan\"]')","uuid":"eec7f940-2b8a-4bc5-a9ae-1a8944ef69a0","stop":1790518269363},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269363,"name":"Bounding box locator('i.fas.fa-power-off')","uuid":"2f5d51d4-7101-4131-9684-904848acbc71","stop":1790518269367},{"status":"failed","statusDetails":{"message":"Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false","trace":"Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n    at HomeHeaderHomePage.hoverAvatarIcon (/Users/tinle/Documents/vLearning-ts-version/src/pages/homePage/homeHeaderHomePage/homeHeaderHomePage.index.ts:45:3)\n    at /Users/tinle/Documents/vLearning-ts-version/tests/ui/home/logout.ui.spec.ts:27:5"},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269368,"name":"Wait until logout button is not overlapped with avatar icon","uuid":"18836114-9859-4b9c-a21f-56c398f303a2","stop":1790518269369},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269623,"name":"Bounding box locator('a.infoHeader[href=\"/thongtincanhan\"]')","uuid":"fff79d8a-41ff-4b1c-88f0-bdc2cea99630","stop":1790518269638},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269639,"name":"Bounding box locator('i.fas.fa-power-off')","uuid":"e0a78637-76cc-4352-bc11-dc983601975f","stop":1790518269652},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269652,"name":"Wait until logout button is not overlapped with avatar icon","uuid":"5cd8bb33-54c7-4d06-b197-138fb2a81140","stop":1790518269652}],"attachments":[],"parameters":[],"start":1790518269142,"name":"Wait until logout button is not overlapped with avatar icon","uuid":"eabccf0b-6a16-4a67-91f5-8381b1668855","stop":1790518269652},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269652,"name":"Expect \"toBeVisible\" locator('i.fas.fa-power-off')","uuid":"4fb65f94-39a6-4f9b-ad55-bce5af33b5d6","stop":1790518269657},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269657,"name":"Click locator('i.fas.fa-power-off')","uuid":"27b2fdfd-81d7-4f3a-a518-025035c13005","stop":1790518269693},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269694,"name":"Expect \"toBeVisible\" getByRole('button', { name: 'Đăng nhập' })","uuid":"34b9b901-3167-4c73-91cd-b930e4beea12","stop":1790518269699},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518269699,"name":"Expect \"not toBeVisible\" locator('a.infoHeader[href=\"/thongtincanhan\"]')","uuid":"24e96daa-bcc5-460e-ab1e-cb894a2ce31a","stop":1790518269703},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"homeHeaderHomePage\"","start":1790518269703,"uuid":"3fb69f40-e824-46f5-b507-12e5f72231af","stop":1790518269703},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"page\"","start":1790518269704,"uuid":"18143e27-578f-43b5-937e-cc83f3328440","stop":1790518269704},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Close context","start":1790518269749,"uuid":"d502c902-1441-4c23-b470-4d127113ce92","stop":1790518269750}],"attachments":[],"parameters":[],"name":"Fixture \"context\"","start":1790518269704,"uuid":"d5942803-dac1-4e82-a805-1a996cc91791","stop":1790518269750},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"storageState\"","start":1790518269752,"uuid":"1d5d2b93-c114-4e0d-835a-0cc0d18234c0","stop":1790518269752}],"attachments":[],"parameters":[],"name":"After Hooks","start":1790518269703,"uuid":"5eff2398-40f4-4e20-a804-d8f7c2c95fb8","stop":1790518269753}],"attachments":[{"name":"stdout","source":"4b3ee380-5532-4c28-ab5b-21f2904d1c1f-attachment.txt","type":"text/plain"}],"parameters":[{"name":"Project","value":"ui"}],"labels":[{"name":"language","value":"javascript"},{"name":"framework","value":"playwright"},{"name":"package","value":"vlearningts.home.logout.ui.spec.ts"},{"name":"_fallbackTestCaseId","value":"508515098c9236c493dd45cb70dda1d6"},{"name":"titlePath","value":" > ui > ui/home/logout.ui.spec.ts > Logout UI"},{"name":"host","value":"MacBookPro.lan"},{"name":"thread","value":"pid-87368-worker-4"},{"name":"parentSuite","value":"ui"},{"name":"suite","value":"ui/home/logout.ui.spec.ts"},{"name":"subSuite","value":"Logout UI"}],"links":[],"start":1790518268117,"testCaseId":"7497089dafc6eeaac04389def6c53bc5","fullName":"home/logout.ui.spec.ts:10:7","titlePath":["vlearningts","home","logout.ui.spec.ts","ui/home/logout.ui.spec.ts","Logout UI"],"stop":1790518269747}
+{
+  "uuid": "d4c04940-dbeb-4159-9764-1565b9d58797",
+  "name": "LOGOUT_UI_001 - should logout successfully after hovering avatar icon",
+  "historyId": "7497089dafc6eeaac04389def6c53bc5:6d2c2bbdaff7c1375d648e416be0df72",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create context",
+              "start": 1790518268121,
+              "uuid": "7b92ba8d-255e-4f81-acf1-5132c197e62a",
+              "stop": 1790518268183
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518268119,
+          "uuid": "4a20e0b7-bc9e-4f09-87b4-f50a4a4e37f3",
+          "stop": 1790518268184
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create page",
+              "start": 1790518268185,
+              "uuid": "19fd5120-57cb-46f3-85c1-be23874af949",
+              "stop": 1790518268233
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518268184,
+          "uuid": "62b40038-d539-4d42-bd49-5c6c7d814447",
+          "stop": 1790518268233
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"homeHeaderHomePage\"",
+          "start": 1790518268233,
+          "uuid": "10ce9a85-2135-463b-aaaa-f1cadd492014",
+          "stop": 1790518268233
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790518268116,
+      "uuid": "a72edced-e9ae-47e2-b2ae-41d458c5a316",
+      "stop": 1790518268233
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518268234,
+      "name": "Navigate to \"/trangchu\"",
+      "uuid": "0a150ac7-32f0-4eab-8b46-d3b35e27402e",
+      "stop": 1790518268791
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518268791,
+      "name": "Expect \"toHaveURL\"",
+      "uuid": "57146089-1c66-49e2-83eb-16827817a606",
+      "stop": 1790518268827
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518268832,
+      "name": "Expect \"toBeVisible\" locator('a.infoHeader[href=\"/thongtincanhan\"]')",
+      "uuid": "07d3f22f-8832-4bb2-930c-20bf82d7fd73",
+      "stop": 1790518268847
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518268848,
+      "name": "Expect \"not toBeVisible\" getByRole('button', { name: 'Đăng nhập' })",
+      "uuid": "f9d43e0b-0331-4f3a-8d1b-8f5fa5042efa",
+      "stop": 1790518268873
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518268878,
+      "name": "Hover locator('a.infoHeader[href=\"/thongtincanhan\"]')",
+      "uuid": "b969957b-951f-4044-8663-d894cf55701c",
+      "stop": 1790518269127
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518269127,
+      "name": "Expect \"toBeVisible\" locator('i.fas.fa-power-off')",
+      "uuid": "88dd4c14-8fc4-42ed-bf3f-eaf63e32c880",
+      "stop": 1790518269141
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269149,
+          "name": "Bounding box locator('a.infoHeader[href=\"/thongtincanhan\"]')",
+          "uuid": "9b891cd5-d648-45b8-9893-0c579cac453a",
+          "stop": 1790518269211
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269215,
+          "name": "Bounding box locator('i.fas.fa-power-off')",
+          "uuid": "c8e4ae10-18dc-4772-992f-e7afe8736271",
+          "stop": 1790518269247
+        },
+        {
+          "status": "failed",
+          "statusDetails": {
+            "message": "Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+            "trace": "Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n    at HomeHeaderHomePage.hoverAvatarIcon (/Users/tinle/Documents/vLearning-ts-version/src/pages/homePage/homeHeaderHomePage/homeHeaderHomePage.index.ts:45:3)\n    at /Users/tinle/Documents/vLearning-ts-version/tests/ui/home/logout.ui.spec.ts:27:5"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269249,
+          "name": "Wait until logout button is not overlapped with avatar icon",
+          "uuid": "a0b1ed66-6035-4c33-8a80-576ec8e91055",
+          "stop": 1790518269251
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269354,
+          "name": "Bounding box locator('a.infoHeader[href=\"/thongtincanhan\"]')",
+          "uuid": "eec7f940-2b8a-4bc5-a9ae-1a8944ef69a0",
+          "stop": 1790518269363
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269363,
+          "name": "Bounding box locator('i.fas.fa-power-off')",
+          "uuid": "2f5d51d4-7101-4131-9684-904848acbc71",
+          "stop": 1790518269367
+        },
+        {
+          "status": "failed",
+          "statusDetails": {
+            "message": "Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false",
+            "trace": "Error: Wait until logout button is not overlapped with avatar icon\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n    at HomeHeaderHomePage.hoverAvatarIcon (/Users/tinle/Documents/vLearning-ts-version/src/pages/homePage/homeHeaderHomePage/homeHeaderHomePage.index.ts:45:3)\n    at /Users/tinle/Documents/vLearning-ts-version/tests/ui/home/logout.ui.spec.ts:27:5"
+          },
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269368,
+          "name": "Wait until logout button is not overlapped with avatar icon",
+          "uuid": "18836114-9859-4b9c-a21f-56c398f303a2",
+          "stop": 1790518269369
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269623,
+          "name": "Bounding box locator('a.infoHeader[href=\"/thongtincanhan\"]')",
+          "uuid": "fff79d8a-41ff-4b1c-88f0-bdc2cea99630",
+          "stop": 1790518269638
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269639,
+          "name": "Bounding box locator('i.fas.fa-power-off')",
+          "uuid": "e0a78637-76cc-4352-bc11-dc983601975f",
+          "stop": 1790518269652
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "start": 1790518269652,
+          "name": "Wait until logout button is not overlapped with avatar icon",
+          "uuid": "5cd8bb33-54c7-4d06-b197-138fb2a81140",
+          "stop": 1790518269652
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518269142,
+      "name": "Wait until logout button is not overlapped with avatar icon",
+      "uuid": "eabccf0b-6a16-4a67-91f5-8381b1668855",
+      "stop": 1790518269652
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518269652,
+      "name": "Expect \"toBeVisible\" locator('i.fas.fa-power-off')",
+      "uuid": "4fb65f94-39a6-4f9b-ad55-bce5af33b5d6",
+      "stop": 1790518269657
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518269657,
+      "name": "Click locator('i.fas.fa-power-off')",
+      "uuid": "27b2fdfd-81d7-4f3a-a518-025035c13005",
+      "stop": 1790518269693
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518269694,
+      "name": "Expect \"toBeVisible\" getByRole('button', { name: 'Đăng nhập' })",
+      "uuid": "34b9b901-3167-4c73-91cd-b930e4beea12",
+      "stop": 1790518269699
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518269699,
+      "name": "Expect \"not toBeVisible\" locator('a.infoHeader[href=\"/thongtincanhan\"]')",
+      "uuid": "24e96daa-bcc5-460e-ab1e-cb894a2ce31a",
+      "stop": 1790518269703
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"homeHeaderHomePage\"",
+          "start": 1790518269703,
+          "uuid": "3fb69f40-e824-46f5-b507-12e5f72231af",
+          "stop": 1790518269703
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"page\"",
+          "start": 1790518269704,
+          "uuid": "18143e27-578f-43b5-937e-cc83f3328440",
+          "stop": 1790518269704
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Close context",
+              "start": 1790518269749,
+              "uuid": "d502c902-1441-4c23-b470-4d127113ce92",
+              "stop": 1790518269750
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"context\"",
+          "start": 1790518269704,
+          "uuid": "d5942803-dac1-4e82-a805-1a996cc91791",
+          "stop": 1790518269750
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"storageState\"",
+          "start": 1790518269752,
+          "uuid": "1d5d2b93-c114-4e0d-835a-0cc0d18234c0",
+          "stop": 1790518269752
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790518269703,
+      "uuid": "5eff2398-40f4-4e20-a804-d8f7c2c95fb8",
+      "stop": 1790518269753
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "4b3ee380-5532-4c28-ab5b-21f2904d1c1f-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "ui" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.home.logout.ui.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "508515098c9236c493dd45cb70dda1d6" },
+    { "name": "titlePath", "value": " > ui > ui/home/logout.ui.spec.ts > Logout UI" },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-87368-worker-4" },
+    { "name": "parentSuite", "value": "ui" },
+    { "name": "suite", "value": "ui/home/logout.ui.spec.ts" },
+    { "name": "subSuite", "value": "Logout UI" }
+  ],
+  "links": [],
+  "start": 1790518268117,
+  "testCaseId": "7497089dafc6eeaac04389def6c53bc5",
+  "fullName": "home/logout.ui.spec.ts:10:7",
+  "titlePath": [
+    "vlearningts",
+    "home",
+    "logout.ui.spec.ts",
+    "ui/home/logout.ui.spec.ts",
+    "Logout UI"
+  ],
+  "stop": 1790518269747
+}

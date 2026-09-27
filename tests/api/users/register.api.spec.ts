@@ -4,7 +4,10 @@ import {
   createExistingUsernameRegisterTestData,
   createRandomRegisterUserData
 } from '../../../src/data/user.data';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { registerUserResponseSchema } from '../../../src/schemas/user.schema';
 import { logger } from '../../../src/helpers/logger.helper';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
@@ -28,7 +31,6 @@ test.describe('User Register API', () => {
   test('REGISTER_API_001 - should register successfully with valid random input', async ({
     userService
   }) => {
-    
     const registerData = createRandomRegisterUserData();
     const response = await userService.register(registerData);
 

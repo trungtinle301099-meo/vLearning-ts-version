@@ -1,11 +1,16 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { getUserTypeListResponseSchema } from '../../../src/schemas/user.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { logger } from '../../../src/helpers/logger.helper';
 
 test.describe('Get User Type List API', () => {
-  test('getListUserType_API_001 - should get user type list successfully', async ({ userService }) => {
+  test('getListUserType_API_001 - should get user type list successfully', async ({
+    userService
+  }) => {
     const response = await userService.getUserTypeList();
 
     const responseText = await attachApiRequestResponse(

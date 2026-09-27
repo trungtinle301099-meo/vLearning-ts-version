@@ -1,6 +1,9 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { createRandomCourseData } from '../../../src/data/course.data';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { createCourseResponseSchema } from '../../../src/schemas/course.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { loginAsAdminForTest } from '../../../src/helpers/common.helper';
@@ -20,13 +23,13 @@ test.describe('Create Course API', () => {
   });
 
   test.afterEach(async ({ courseService }) => {
-  // Cleanup: Delete all courses that were created during the test.
-  await cleanupCreatedCourses({
-    courseService,
-    courseIds: createdCourseIds,
-    accessToken
+    // Cleanup: Delete all courses that were created during the test.
+    await cleanupCreatedCourses({
+      courseService,
+      courseIds: createdCourseIds,
+      accessToken
+    });
   });
-});
 
   test('CREATE_COURSE_API_001 - should create course successfully', async ({ courseService }) => {
     // Arrange: Generate valid random course data to avoid duplicate maKhoaHoc.
@@ -120,12 +123,7 @@ test.describe('Create Course API', () => {
     }
 
     // Report: Attach HV creator request and response to Playwright report.
-    await attachApiRequestResponse(
-      test.info(),
-      'create-course-hv-creator',
-      courseData,
-      response
-    );
+    await attachApiRequestResponse(test.info(), 'create-course-hv-creator', courseData, response);
 
     // Assert: Create course API should reject HV account as course creator.
     expect(response.status()).not.toBe(200);

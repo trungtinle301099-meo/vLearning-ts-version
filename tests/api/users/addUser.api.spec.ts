@@ -38,10 +38,7 @@ test.describe('User Add API', () => {
   }) => {
     const addUserData = createRandomAddUserData();
 
-    const response = await userService.addUser(
-      addUserData,
-      accessToken
-    );
+    const response = await userService.addUser(addUserData, accessToken);
 
     if (response.status() === 200) {
       accountsToCleanup.push(addUserData.taiKhoan);
@@ -64,27 +61,18 @@ test.describe('User Add API', () => {
     expect(responseBody.taiKhoan).toBe(addUserData.taiKhoan);
     expect(responseBody.email).toBe(addUserData.email);
     expect(responseBody.maNhom).toBe(addUserData.maNhom);
-    expect(responseBody.maLoaiNguoiDung).toBe(
-      addUserData.maLoaiNguoiDung
-    );
+    expect(responseBody.maLoaiNguoiDung).toBe(addUserData.maLoaiNguoiDung);
 
-    logger.pass(
-      `Add User API passed for account: ${responseBody.taiKhoan}`
-    );
+    logger.pass(`Add User API passed for account: ${responseBody.taiKhoan}`);
   });
 
-  test('ADD_USER_API_002 - should not add user with existing username', async ({
-    userService,
-  }) => {
+  test('ADD_USER_API_002 - should not add user with existing username', async ({ userService }) => {
     const existingUserData = createRandomAddUserData();
 
-    const firstResponse = await userService.addUser(
-        existingUserData,
-        accessToken
-    );
+    const firstResponse = await userService.addUser(existingUserData, accessToken);
 
     if (firstResponse.status() === 200) {
-        accountsToCleanup.push(existingUserData.taiKhoan);
+      accountsToCleanup.push(existingUserData.taiKhoan);
     }
 
     expectStatus(firstResponse, 200);
@@ -94,66 +82,51 @@ test.describe('User Add API', () => {
 
     duplicateUserData.taiKhoan = existingUserData.taiKhoan;
 
-    const duplicateResponse = await userService.addUser(
-        duplicateUserData,
-        accessToken
-    );
+    const duplicateResponse = await userService.addUser(duplicateUserData, accessToken);
 
     const responseText = await attachApiRequestResponse(
-        test.info(),
-        'add-user-duplicate-username',
-        duplicateUserData,
-        duplicateResponse
+      test.info(),
+      'add-user-duplicate-username',
+      duplicateUserData,
+      duplicateResponse
     );
 
     expect(duplicateResponse.status()).not.toBe(200);
 
     expect(responseText).toBeTruthy();
 
-    logger.pass(
-        `Duplicate username validation passed for account: ${existingUserData.taiKhoan}`
-    );
+    logger.pass(`Duplicate username validation passed for account: ${existingUserData.taiKhoan}`);
   });
 
-  test('ADD_USER_API_003 - should not add user with existing email', async ({
-  userService,
-}) => {
-  const existingUserData = createRandomAddUserData();
+  test('ADD_USER_API_003 - should not add user with existing email', async ({ userService }) => {
+    const existingUserData = createRandomAddUserData();
 
-  const firstResponse = await userService.addUser(
-    existingUserData,
-    accessToken
-  );
+    const firstResponse = await userService.addUser(existingUserData, accessToken);
 
-  if (firstResponse.status() === 200) {
-    accountsToCleanup.push(existingUserData.taiKhoan);
-  }
+    if (firstResponse.status() === 200) {
+      accountsToCleanup.push(existingUserData.taiKhoan);
+    }
 
-  expectStatus(firstResponse, 200);
-  expectJsonContentType(firstResponse);
+    expectStatus(firstResponse, 200);
+    expectJsonContentType(firstResponse);
 
-  const duplicateUserData = createRandomAddUserData();
+    const duplicateUserData = createRandomAddUserData();
 
-  duplicateUserData.email = existingUserData.email;
+    duplicateUserData.email = existingUserData.email;
 
-  const duplicateResponse = await userService.addUser(
-    duplicateUserData,
-    accessToken
-  );
+    const duplicateResponse = await userService.addUser(duplicateUserData, accessToken);
 
-  const responseText = await attachApiRequestResponse(
-    test.info(),
-    'add-user-duplicate-email',
-    duplicateUserData,
-    duplicateResponse
-  );
+    const responseText = await attachApiRequestResponse(
+      test.info(),
+      'add-user-duplicate-email',
+      duplicateUserData,
+      duplicateResponse
+    );
 
-  expect(duplicateResponse.status()).not.toBe(200);
+    expect(duplicateResponse.status()).not.toBe(200);
 
-  expect(responseText).toBeTruthy();
+    expect(responseText).toBeTruthy();
 
-  logger.pass(
-    `Duplicate email validation passed for email: ${existingUserData.email}`
-  );
- });
+    logger.pass(`Duplicate email validation passed for email: ${existingUserData.email}`);
+  });
 });

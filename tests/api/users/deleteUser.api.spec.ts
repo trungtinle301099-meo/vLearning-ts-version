@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { logger } from '../../../src/helpers/logger.helper';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { loginAsAdminForTest, registerRandomUserForTest } from '../../../src/helpers/common.helper';
@@ -12,14 +15,14 @@ let isDeleted = false;
 
 test.describe('Delete User API', () => {
   test.beforeEach(async ({ authService, userService }, testInfo) => {
-  // Setup: Reset delete flag before each test.
-  isDeleted = false;
+    // Setup: Reset delete flag before each test.
+    isDeleted = false;
 
-  // Precondition: Register a new user account used for delete user API test.
-  registeredUser = await registerRandomUserForTest(userService, testInfo);
+    // Precondition: Register a new user account used for delete user API test.
+    registeredUser = await registerRandomUserForTest(userService, testInfo);
 
-  // Precondition: Login as admin to get accessToken for delete user API.
-  accessToken = await loginAsAdminForTest(authService);
+    // Precondition: Login as admin to get accessToken for delete user API.
+    accessToken = await loginAsAdminForTest(authService);
   });
 
   test.afterEach(async ({ authService, userService }) => {
@@ -29,9 +32,9 @@ test.describe('Delete User API', () => {
     }
 
     await cleanupRegisteredAccounts({
-        authService,
-        userService,
-        usernames: [registeredUser.taiKhoan]
+      authService,
+      userService,
+      usernames: [registeredUser.taiKhoan]
     });
   });
 

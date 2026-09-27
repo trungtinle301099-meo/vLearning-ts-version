@@ -1,1 +1,84 @@
-{"uuid":"bb32792d-36d1-4884-8bf9-622c26783d33","name":"AUTH_API_000 - should have API base URL configured","historyId":"1ec33323973d542f22c6a9dc4c40cc6f:259864bbb84e0941359ea9e4c0db04ac","status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Before Hooks","start":1790518262735,"uuid":"b49bfae5-d9fe-4a82-9bec-f5ad80c32e34","stop":1790518262739},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518262741,"name":"Expect \"toBeTruthy\"","uuid":"3ea1bc24-e9c6-444b-bfdc-eceef3efebd9","stop":1790518262741},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518262741,"name":"Expect \"toMatch\"","uuid":"bf64896a-484a-493f-9bdf-79a95181d18b","stop":1790518262741},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"After Hooks","start":1790518262743,"uuid":"41238033-961c-41b8-8896-8701e50f469e","stop":1790518262746}],"attachments":[{"name":"stdout","source":"b08e9595-b593-4027-9155-346e1c0ac9a4-attachment.txt","type":"text/plain"}],"parameters":[{"name":"Project","value":"api"}],"labels":[{"name":"language","value":"javascript"},{"name":"framework","value":"playwright"},{"name":"package","value":"vlearningts.auth.auth.api.spec.ts"},{"name":"_fallbackTestCaseId","value":"410ddff99f43c814c829c94de8381c0a"},{"name":"titlePath","value":" > api > api/auth/auth.api.spec.ts > Auth API"},{"name":"host","value":"MacBookPro.lan"},{"name":"thread","value":"pid-87368-worker-0"},{"name":"parentSuite","value":"api"},{"name":"suite","value":"api/auth/auth.api.spec.ts"},{"name":"subSuite","value":"Auth API"}],"links":[],"start":1790518262726,"testCaseId":"1ec33323973d542f22c6a9dc4c40cc6f","fullName":"auth/auth.api.spec.ts:12:7","titlePath":["vlearningts","auth","auth.api.spec.ts","api/auth/auth.api.spec.ts","Auth API"],"stop":1790518262730}
+{
+  "uuid": "bb32792d-36d1-4884-8bf9-622c26783d33",
+  "name": "AUTH_API_000 - should have API base URL configured",
+  "historyId": "1ec33323973d542f22c6a9dc4c40cc6f:259864bbb84e0941359ea9e4c0db04ac",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790518262735,
+      "uuid": "b49bfae5-d9fe-4a82-9bec-f5ad80c32e34",
+      "stop": 1790518262739
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518262741,
+      "name": "Expect \"toBeTruthy\"",
+      "uuid": "3ea1bc24-e9c6-444b-bfdc-eceef3efebd9",
+      "stop": 1790518262741
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518262741,
+      "name": "Expect \"toMatch\"",
+      "uuid": "bf64896a-484a-493f-9bdf-79a95181d18b",
+      "stop": 1790518262741
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790518262743,
+      "uuid": "41238033-961c-41b8-8896-8701e50f469e",
+      "stop": 1790518262746
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "b08e9595-b593-4027-9155-346e1c0ac9a4-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "api" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.auth.auth.api.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "410ddff99f43c814c829c94de8381c0a" },
+    { "name": "titlePath", "value": " > api > api/auth/auth.api.spec.ts > Auth API" },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-87368-worker-0" },
+    { "name": "parentSuite", "value": "api" },
+    { "name": "suite", "value": "api/auth/auth.api.spec.ts" },
+    { "name": "subSuite", "value": "Auth API" }
+  ],
+  "links": [],
+  "start": 1790518262726,
+  "testCaseId": "1ec33323973d542f22c6a9dc4c40cc6f",
+  "fullName": "auth/auth.api.spec.ts:12:7",
+  "titlePath": ["vlearningts", "auth", "auth.api.spec.ts", "api/auth/auth.api.spec.ts", "Auth API"],
+  "stop": 1790518262730
+}

@@ -1,1 +1,224 @@
-{"uuid":"b0cbbfad-bab6-486d-aa10-a07117e26e45","name":"getListUserType_API_001 - should get user type list successfully","historyId":"9deff13154ece4189540834084d26da3:259864bbb84e0941359ea9e4c0db04ac","status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Create request context","start":1790518263829,"uuid":"f62eb9c2-8798-45c6-858c-41497fd2f897","stop":1790518263829}],"attachments":[],"parameters":[],"name":"Fixture \"apiClient\"","start":1790518263829,"uuid":"6a809a75-6490-49f5-b9f3-23c24d112522","stop":1790518263830},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"userService\"","start":1790518263830,"uuid":"294efb8b-3a90-4a44-87ae-5bc9e14d1212","stop":1790518263830}],"attachments":[],"parameters":[],"name":"Before Hooks","start":1790518263827,"uuid":"e73ac3bd-cab1-4dfa-a4c5-d4937773873a","stop":1790518263830},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518263831,"name":"GET \"/api/QuanLyNguoiDung/LayDanhSachLoaiNguoiDung\"","uuid":"0f791867-fa45-4f18-a92f-bdceb26b9b52","stop":1790518263846},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518263847,"name":"Expected status 200","uuid":"ba5066bd-80da-4661-a5ef-302d10f97c18","stop":1790518263848},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518263848,"name":"Expect \"toContain\"","uuid":"a2227674-2f51-47d4-8397-2087889a2f18","stop":1790518263848},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518263848,"name":"Expect \"toBeGreaterThan\"","uuid":"95a737a1-c10d-4df9-b226-787db674eb2d","stop":1790518263848},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1790518263848,"name":"Expect \"toEqual\"","uuid":"b92090a8-a1ff-4f7b-813f-244cd361d999","stop":1790518263849},{"statusDetails":{},"stage":"finished","steps":[],"attachments":[{"name":"get-user-type-list-success-request","source":"3ae0c620-ccb8-47ce-8960-7999f5c7d871-attachment.json","type":"application/json"}],"parameters":[],"start":1790518263855,"name":"get-user-type-list-success-request","stop":1790518263855},{"statusDetails":{},"stage":"finished","steps":[],"attachments":[{"name":"get-user-type-list-success-response","source":"ff039b41-9732-47d1-ab55-f442451ccd57-attachment.txt","type":"text/plain"}],"parameters":[],"start":1790518263855,"name":"get-user-type-list-success-response","stop":1790518263855},{"status":"passed","statusDetails":{},"stage":"finished","steps":[{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"userService\"","start":1790518263849,"uuid":"b0137c98-8a69-41f8-ab9f-cb3415b5346a","stop":1790518263849},{"status":"passed","statusDetails":{},"stage":"finished","steps":[],"attachments":[],"parameters":[],"name":"Fixture \"apiClient\"","start":1790518263849,"uuid":"5d9c2698-e2f8-4b59-8446-eb23e13e50db","stop":1790518263850}],"attachments":[],"parameters":[],"name":"After Hooks","start":1790518263849,"uuid":"ca63f83c-9094-4701-a668-95203b10de63","stop":1790518263852}],"attachments":[{"name":"stdout","source":"5de9afbd-4047-4bdb-a4b7-a765d795256e-attachment.txt","type":"text/plain"}],"parameters":[{"name":"Project","value":"api"}],"labels":[{"name":"language","value":"javascript"},{"name":"framework","value":"playwright"},{"name":"package","value":"vlearningts.users.getListUserType.api.spec.ts"},{"name":"_fallbackTestCaseId","value":"a240a00abe7e67ff48c5d289b8e2f2f6"},{"name":"titlePath","value":" > api > api/users/getListUserType.api.spec.ts > Get User Type List API"},{"name":"host","value":"MacBookPro.lan"},{"name":"thread","value":"pid-87368-worker-1"},{"name":"parentSuite","value":"api"},{"name":"suite","value":"api/users/getListUserType.api.spec.ts"},{"name":"subSuite","value":"Get User Type List API"}],"links":[],"start":1790518263829,"testCaseId":"9deff13154ece4189540834084d26da3","fullName":"users/getListUserType.api.spec.ts:8:7","titlePath":["vlearningts","users","getListUserType.api.spec.ts","api/users/getListUserType.api.spec.ts","Get User Type List API"],"stop":1790518263850}
+{
+  "uuid": "b0cbbfad-bab6-486d-aa10-a07117e26e45",
+  "name": "getListUserType_API_001 - should get user type list successfully",
+  "historyId": "9deff13154ece4189540834084d26da3:259864bbb84e0941359ea9e4c0db04ac",
+  "status": "passed",
+  "statusDetails": {},
+  "stage": "finished",
+  "steps": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [
+            {
+              "status": "passed",
+              "statusDetails": {},
+              "stage": "finished",
+              "steps": [],
+              "attachments": [],
+              "parameters": [],
+              "name": "Create request context",
+              "start": 1790518263829,
+              "uuid": "f62eb9c2-8798-45c6-858c-41497fd2f897",
+              "stop": 1790518263829
+            }
+          ],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"apiClient\"",
+          "start": 1790518263829,
+          "uuid": "6a809a75-6490-49f5-b9f3-23c24d112522",
+          "stop": 1790518263830
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"userService\"",
+          "start": 1790518263830,
+          "uuid": "294efb8b-3a90-4a44-87ae-5bc9e14d1212",
+          "stop": 1790518263830
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "Before Hooks",
+      "start": 1790518263827,
+      "uuid": "e73ac3bd-cab1-4dfa-a4c5-d4937773873a",
+      "stop": 1790518263830
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518263831,
+      "name": "GET \"/api/QuanLyNguoiDung/LayDanhSachLoaiNguoiDung\"",
+      "uuid": "0f791867-fa45-4f18-a92f-bdceb26b9b52",
+      "stop": 1790518263846
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518263847,
+      "name": "Expected status 200",
+      "uuid": "ba5066bd-80da-4661-a5ef-302d10f97c18",
+      "stop": 1790518263848
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518263848,
+      "name": "Expect \"toContain\"",
+      "uuid": "a2227674-2f51-47d4-8397-2087889a2f18",
+      "stop": 1790518263848
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518263848,
+      "name": "Expect \"toBeGreaterThan\"",
+      "uuid": "95a737a1-c10d-4df9-b226-787db674eb2d",
+      "stop": 1790518263848
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1790518263848,
+      "name": "Expect \"toEqual\"",
+      "uuid": "b92090a8-a1ff-4f7b-813f-244cd361d999",
+      "stop": 1790518263849
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "get-user-type-list-success-request",
+          "source": "3ae0c620-ccb8-47ce-8960-7999f5c7d871-attachment.json",
+          "type": "application/json"
+        }
+      ],
+      "parameters": [],
+      "start": 1790518263855,
+      "name": "get-user-type-list-success-request",
+      "stop": 1790518263855
+    },
+    {
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "get-user-type-list-success-response",
+          "source": "ff039b41-9732-47d1-ab55-f442451ccd57-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1790518263855,
+      "name": "get-user-type-list-success-response",
+      "stop": 1790518263855
+    },
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"userService\"",
+          "start": 1790518263849,
+          "uuid": "b0137c98-8a69-41f8-ab9f-cb3415b5346a",
+          "stop": 1790518263849
+        },
+        {
+          "status": "passed",
+          "statusDetails": {},
+          "stage": "finished",
+          "steps": [],
+          "attachments": [],
+          "parameters": [],
+          "name": "Fixture \"apiClient\"",
+          "start": 1790518263849,
+          "uuid": "5d9c2698-e2f8-4b59-8446-eb23e13e50db",
+          "stop": 1790518263850
+        }
+      ],
+      "attachments": [],
+      "parameters": [],
+      "name": "After Hooks",
+      "start": 1790518263849,
+      "uuid": "ca63f83c-9094-4701-a668-95203b10de63",
+      "stop": 1790518263852
+    }
+  ],
+  "attachments": [
+    {
+      "name": "stdout",
+      "source": "5de9afbd-4047-4bdb-a4b7-a765d795256e-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [{ "name": "Project", "value": "api" }],
+  "labels": [
+    { "name": "language", "value": "javascript" },
+    { "name": "framework", "value": "playwright" },
+    { "name": "package", "value": "vlearningts.users.getListUserType.api.spec.ts" },
+    { "name": "_fallbackTestCaseId", "value": "a240a00abe7e67ff48c5d289b8e2f2f6" },
+    {
+      "name": "titlePath",
+      "value": " > api > api/users/getListUserType.api.spec.ts > Get User Type List API"
+    },
+    { "name": "host", "value": "MacBookPro.lan" },
+    { "name": "thread", "value": "pid-87368-worker-1" },
+    { "name": "parentSuite", "value": "api" },
+    { "name": "suite", "value": "api/users/getListUserType.api.spec.ts" },
+    { "name": "subSuite", "value": "Get User Type List API" }
+  ],
+  "links": [],
+  "start": 1790518263829,
+  "testCaseId": "9deff13154ece4189540834084d26da3",
+  "fullName": "users/getListUserType.api.spec.ts:8:7",
+  "titlePath": [
+    "vlearningts",
+    "users",
+    "getListUserType.api.spec.ts",
+    "api/users/getListUserType.api.spec.ts",
+    "Get User Type List API"
+  ],
+  "stop": 1790518263850
+}

@@ -27,109 +27,109 @@ Call log:
 
 ```yaml
 - navigation:
-  - link "":
-    - /url: /trangchu
-  - list:
-    - listitem:
-      - link " Quản lý người dùng":
-        - /url: /admin/quanlynguoidung
-    - listitem:
-      - link " Quản lý khóa học":
-        - /url: /admin/quanlykhoahoc
+    - link "":
+        - /url: /trangchu
+    - list:
+        - listitem:
+            - link " Quản lý người dùng":
+                - /url: /admin/quanlynguoidung
+        - listitem:
+            - link " Quản lý khóa học":
+                - /url: /admin/quanlykhoahoc
 - button "Thêm khóa học"
 - textbox "Nhập vào khóa học cần tìm": Auto Course Bespoke Granite Soap
 - text: Chào testadmin1,
 - button
 - table:
-  - rowgroup:
-    - row "STT Mã khóa học Tên khóa học Hình ảnh Lượt xem Người tạo ":
-      - columnheader "STT"
-      - columnheader "Mã khóa học"
-      - columnheader "Tên khóa học"
-      - columnheader "Hình ảnh"
-      - columnheader "Lượt xem"
-      - columnheader "Người tạo"
-      - columnheader "":
-        - emphasis: 
-  - rowgroup:
-    - row "1 Javascripttttt 100 admin Ghi danh Sửa Xóa":
-      - cell "1"
-      - cell
-      - cell "Javascripttttt"
-      - cell
-      - cell "100"
-      - cell "admin"
-      - cell "Ghi danh Sửa Xóa":
-        - button "Ghi danh"
-        - button "Sửa"
-        - button "Xóa"
-    - row "2 .100 Mobile cho ngư 100 Đức Nguyễn Ghi danh Sửa Xóa":
-      - cell "2"
-      - cell ".100"
-      - cell "Mobile cho ngư"
-      - cell
-      - cell "100"
-      - cell "Đức Nguyễn"
-      - cell "Ghi danh Sửa Xóa":
-        - button "Ghi danh"
-        - button "Sửa"
-        - button "Xóa"
-    - row "3 000 C++3333gag 100 Đức Nguyễn Ghi danh Sửa Xóa":
-      - cell "3"
-      - cell "000"
-      - cell "C++3333gag"
-      - cell
-      - cell "100"
-      - cell "Đức Nguyễn"
-      - cell "Ghi danh Sửa Xóa":
-        - button "Ghi danh"
-        - button "Sửa"
-        - button "Xóa"
-    - row "4 000123456 Khóa học mớifđahb 100 Đức Nguyễn Ghi danh Sửa Xóa":
-      - cell "4"
-      - cell "000123456"
-      - cell "Khóa học mớifđahb"
-      - cell
-      - cell "100"
-      - cell "Đức Nguyễn"
-      - cell "Ghi danh Sửa Xóa":
-        - button "Ghi danh"
-        - button "Sửa"
-        - button "Xóa"
-    - row "5 09876788 Python thiếu nhiweraweyuirirnhhjvxuyj 100 Đức Nguyễn Ghi danh Sửa Xóa":
-      - cell "5"
-      - cell "09876788"
-      - cell "Python thiếu nhiweraweyuirirnhhjvxuyj"
-      - cell
-      - cell "100"
-      - cell "Đức Nguyễn"
-      - cell "Ghi danh Sửa Xóa":
-        - button "Ghi danh"
-        - button "Sửa"
-        - button "Xóa"
+    - rowgroup:
+        - row "STT Mã khóa học Tên khóa học Hình ảnh Lượt xem Người tạo ":
+            - columnheader "STT"
+            - columnheader "Mã khóa học"
+            - columnheader "Tên khóa học"
+            - columnheader "Hình ảnh"
+            - columnheader "Lượt xem"
+            - columnheader "Người tạo"
+            - columnheader "":
+                - emphasis: 
+    - rowgroup:
+        - row "1 Javascripttttt 100 admin Ghi danh Sửa Xóa":
+            - cell "1"
+            - cell
+            - cell "Javascripttttt"
+            - cell
+            - cell "100"
+            - cell "admin"
+            - cell "Ghi danh Sửa Xóa":
+                - button "Ghi danh"
+                - button "Sửa"
+                - button "Xóa"
+        - row "2 .100 Mobile cho ngư 100 Đức Nguyễn Ghi danh Sửa Xóa":
+            - cell "2"
+            - cell ".100"
+            - cell "Mobile cho ngư"
+            - cell
+            - cell "100"
+            - cell "Đức Nguyễn"
+            - cell "Ghi danh Sửa Xóa":
+                - button "Ghi danh"
+                - button "Sửa"
+                - button "Xóa"
+        - row "3 000 C++3333gag 100 Đức Nguyễn Ghi danh Sửa Xóa":
+            - cell "3"
+            - cell "000"
+            - cell "C++3333gag"
+            - cell
+            - cell "100"
+            - cell "Đức Nguyễn"
+            - cell "Ghi danh Sửa Xóa":
+                - button "Ghi danh"
+                - button "Sửa"
+                - button "Xóa"
+        - row "4 000123456 Khóa học mớifđahb 100 Đức Nguyễn Ghi danh Sửa Xóa":
+            - cell "4"
+            - cell "000123456"
+            - cell "Khóa học mớifđahb"
+            - cell
+            - cell "100"
+            - cell "Đức Nguyễn"
+            - cell "Ghi danh Sửa Xóa":
+                - button "Ghi danh"
+                - button "Sửa"
+                - button "Xóa"
+        - row "5 09876788 Python thiếu nhiweraweyuirirnhhjvxuyj 100 Đức Nguyễn Ghi danh Sửa Xóa":
+            - cell "5"
+            - cell "09876788"
+            - cell "Python thiếu nhiweraweyuirirnhhjvxuyj"
+            - cell
+            - cell "100"
+            - cell "Đức Nguyễn"
+            - cell "Ghi danh Sửa Xóa":
+                - button "Ghi danh"
+                - button "Sửa"
+                - button "Xóa"
 - list:
-  - listitem:
-    - button "Previous page" [disabled]: < Trước
-  - listitem:
-    - button "Page 1 is your current page": "1"
-  - listitem:
-    - button "Page 2": "2"
-  - listitem:
-    - button "Page 3": "3"
-  - listitem:
-    - button "Page 4": "4"
-  - listitem:
-    - button "Page 5": "5"
-  - listitem:
-    - button "..."
-  - listitem:
-    - button "Page 49": "49"
-  - listitem:
-    - button "Page 50": "50"
-  - listitem:
-    - button "Page 51": "51"
-  - listitem:
-    - button "Next page": Sau >
+    - listitem:
+        - button "Previous page" [disabled]: < Trước
+    - listitem:
+        - button "Page 1 is your current page": '1'
+    - listitem:
+        - button "Page 2": '2'
+    - listitem:
+        - button "Page 3": '3'
+    - listitem:
+        - button "Page 4": '4'
+    - listitem:
+        - button "Page 5": '5'
+    - listitem:
+        - button "..."
+    - listitem:
+        - button "Page 49": '49'
+    - listitem:
+        - button "Page 50": '50'
+    - listitem:
+        - button "Page 51": '51'
+    - listitem:
+        - button "Next page": Sau >
 ```
 
 # Test source
@@ -139,18 +139,18 @@ Call log:
   2   | import { BasePage } from '../basePage/basePage.index';
   3   | import { AdminPageButton } from './adminPage.button';
   4   | import type { AddUserRequest } from '../../types/user.type';
-  5   | 
+  5   |
   6   | import { HomePageUiEndpoint } from '../../endpoints/ui-endpoints/homePage.ui.endpoint';
-  7   | 
+  7   |
   8   | export class AdminPage extends BasePage {
   9   |   readonly button: AdminPageButton;
-  10  | 
+  10  |
   11  |   constructor(page: Page) {
   12  |     super(page);
-  13  | 
+  13  |
   14  |     this.button = new AdminPageButton(page);
   15  |     }
-  16  | 
+  16  |
   17  |     async clickSettingButton(): Promise<void> {
   18  |     await this.button.settingButton.click();
   19  |     }
@@ -169,37 +169,37 @@ Call log:
   32  |     async fillsearchInput(text: string): Promise<void> {
   33  |     await this.button.searchKhoaHocInput.fill(text);
   34  |     }
-  35  | 
+  35  |
   36  |     async searchCourseSuccessfully(
   37  |     courseName: string,
   38  |     courseId: string,
   39  |     ): Promise<void> {
   40  |     // 1. Go to User Management page
   41  |     await this.goto(HomePageUiEndpoint.userManagement);
-  42  | 
+  42  |
   43  |     // 2. Click Course Management
   44  |     await this.clickQuanLyKhoaHocButton();
-  45  | 
+  45  |
   46  |     // 3. Verify Course Management page
   47  |     await expect(this.page).toHaveURL(
   48  |       HomePageUiEndpoint.coursManagement,
   49  |     );
-  50  | 
+  50  |
   51  |     // 4. Search course
   52  |     await this.fillsearchInput(courseName);
-  53  | 
+  53  |
   54  |     // 5. Verify course name
   55  |     await expect(
   56  |       this.button.getCourseInformationByName(courseName),
 > 57  |     ).toBeVisible();
       |       ^ Error: expect(locator).toBeVisible() failed
-  58  | 
+  58  |
   59  |     // 6. Verify course ID
   60  |     await expect(
   61  |       this.button.getCourseInformationByName(courseId),
   62  |     ).toBeVisible();
   63  |     }
-  64  | 
+  64  |
   65  |     async clickGhiDanhButtonByCourseName(
   66  |     courseName: string,
   67  |     ): Promise<void> {
@@ -207,7 +207,7 @@ Call log:
   69  |       .getGhiDanhButtonByCourseName(courseName)
   70  |       .click();
   71  |     }
-  72  | 
+  72  |
   73  |     async clickXacThucButtonByTaiKhoan(
   74  |     taiKhoan: string,
   75  |     ): Promise<void> {
@@ -215,23 +215,23 @@ Call log:
   77  |       .getXacThucButtonByTaiKhoan(taiKhoan)
   78  |       .click();
   79  |     }
-  80  | 
+  80  |
   81  |     async verifyGhiDanhPopupByCourse(
   82  |     courseName: string,
   83  |     courseId: string,
   84  |     taiKhoan: string,
   85  |     ): Promise<void> {
   86  |     await this.searchCourseSuccessfully(courseName, courseId);
-  87  | 
+  87  |
   88  |     await this.clickGhiDanhButtonByCourseName(courseName);
-  89  | 
+  89  |
   90  |     await expect(this.button.ghiDanhPopup).toBeVisible();
-  91  | 
+  91  |
   92  |     await expect(
   93  |       this.button.getUserNameDangKyKhoaHocRowInGhiDanhPopup(taiKhoan),
   94  |     ).toBeVisible();
   95  |     }
-  96  | 
+  96  |
   97  |     async clickXoaButtonByTaiKhoan(
   98  |     taiKhoan: string,
   99  |     ): Promise<void> {
@@ -239,51 +239,51 @@ Call log:
   101 |       .getXoaButtonByTaiKhoan(taiKhoan)
   102 |       .click();
   103 |     }
-  104 | 
+  104 |
   105 |     async clickXoabutton(): Promise<void> {
   106 |     await this.button.xoaButton.click();
   107 |     }
-  108 | 
+  108 |
   109 |     async fillSearchTaiKhoanInput(taiKhoan: string): Promise<void> {
   110 |     await this.button.searchTaiKhoanInput.fill(taiKhoan);
   111 |     }
-  112 | 
+  112 |
   113 |     async addUser(data: AddUserRequest) {
-  114 | 
+  114 |
   115 |     // Step 1: Click button "Thêm người dùng"
   116 |     await this.button.themNguoiDungButton.click();
-  117 | 
+  117 |
   118 |     // Step 2: Verify popup "THÔNG TIN NGƯỜI DÙNG" hiển thị
   119 |     await this.button.thongTinNguoiDungPopup.waitFor({
   120 |       state: 'visible',
   121 |     });
-  122 | 
+  122 |
   123 |     // Step 3: Điền thông tin tài khoản
   124 |     await this.button
   125 |       .taiKhoanInputInThongTinNguoiDungPopup
   126 |       .fill(data.taiKhoan);
-  127 | 
+  127 |
   128 |     // Step 3: Điền họ và tên
   129 |     await this.button
   130 |       .getThongTinNguoiDungInput('Họ và tên')
   131 |       .fill(data.hoTen);
-  132 | 
+  132 |
   133 |     // Step 3: Điền email
   134 |     await this.button
   135 |       .getThongTinNguoiDungInput('Email')
   136 |       .fill(data.email);
-  137 | 
+  137 |
   138 |     // Step 3: Điền số điện thoại
   139 |     await this.button
   140 |       .getThongTinNguoiDungInput('Số điện thoại')
   141 |       .fill(data.soDT);
-  142 | 
+  142 |
   143 |     // Step 4: Click combobox "Loại người dùng"
   144 |     await this.button.chucvuCombobox.click();
-  145 | 
+  145 |
   146 |     // Step 5: Chọn loại người dùng
   147 |     await this.button.getChucVuSelect('HV').click();
-  148 | 
+  148 |
   149 |     // Step 6: Click button "Thêm người dùng" trong popup
   150 |     await this.button.themNguoiDungButtonInPopup.click();
   151 |   }

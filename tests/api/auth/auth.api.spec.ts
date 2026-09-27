@@ -16,7 +16,9 @@ test.describe('Auth API', () => {
     logger.pass(`API base URL is configured: ${env.apiBaseUrl}`);
   });
 
-  test('AUTH_API_001 - should login successfully with valid credential', async ({ authService }) => {
+  test('AUTH_API_001 - should login successfully with valid credential', async ({
+    authService
+  }) => {
     const response = await authService.login(env.username, env.password);
 
     const responseText = await attachApiRequestResponse(

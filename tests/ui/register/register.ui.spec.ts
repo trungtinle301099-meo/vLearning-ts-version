@@ -88,7 +88,9 @@ test.describe('Register UI', () => {
     await registerAuthPage.register(duplicateUsernameUser);
 
     // Assert: Existing username message should be displayed.
-    await expect(registerAuthPage.button.getToastifyByMessage('Tài khoản đã tồn tại!')).toBeVisible();
+    await expect(
+      registerAuthPage.button.getToastifyByMessage('Tài khoản đã tồn tại!')
+    ).toBeVisible();
 
     // Assert: User should still stay on register page.
     await expect(page).toHaveURL(/\/register|\/login/);
