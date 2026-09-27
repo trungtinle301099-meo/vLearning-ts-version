@@ -10,3 +10,7 @@ export type RegisterUserRequest = {
 export type UpdateUserInfoRequest = RegisterUserRequest & {
   maLoaiNguoiDung: string;
 };
+
+export type AddUserRequest = RegisterUserRequest & {
+  maLoaiNguoiDung: string;
+};

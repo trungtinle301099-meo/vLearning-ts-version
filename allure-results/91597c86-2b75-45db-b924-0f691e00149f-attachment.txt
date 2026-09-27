@@ -1,1 +1,0 @@
-[{"maLoaiNguoiDung":"GV","tenLoaiNguoiDung":"Giáo vụ"},{"maLoaiNguoiDung":"HV","tenLoaiNguoiDung":"Học viên"}]

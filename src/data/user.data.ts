@@ -1,6 +1,6 @@
 import { env } from '../config/env.config';
 import { randomHelper } from '../helpers/random.helper';
-import type { RegisterUserRequest, UpdateUserInfoRequest } from '../types/user.type';
+import type { RegisterUserRequest, UpdateUserInfoRequest, AddUserRequest  } from '../types/user.type';
 import type { LoginAuthCredential } from '../pages/authPage/loginAuthPage/loginAuthPage.type';
 
 
@@ -97,5 +97,12 @@ export function createEmptyPasswordLoginAuthCredential(): LoginAuthCredential {
   return {
     username: env.username,
     password: ''
+  };
+}
+
+export function createRandomAddUserData(): AddUserRequest {
+  return {
+    ...createRandomRegisterUserData(),
+    maLoaiNguoiDung: 'HV'
   };
 }

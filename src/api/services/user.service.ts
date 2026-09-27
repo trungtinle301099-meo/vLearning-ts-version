@@ -1,7 +1,11 @@
 import type { APIResponse } from '@playwright/test';
 import { ApiClient } from '../clients/api-client';
 import { UserEndpoint } from '../../endpoints/api-endpoints/user.api.endpoint';
-import type { RegisterUserRequest, UpdateUserInfoRequest } from '../../types/user.type';
+import type {
+  AddUserRequest,
+  RegisterUserRequest,
+  UpdateUserInfoRequest
+} from '../../types/user.type';
 
 export class UserService {
   constructor(private readonly apiClient: ApiClient) {}
@@ -82,4 +86,18 @@ export class UserService {
       failOnStatusCode: false
     });
   }
+
+  addUser(
+  data: AddUserRequest,
+  accessToken: string
+  ): Promise<APIResponse> {
+    return this.apiClient.post(UserEndpoint.addUser, {
+      headers: {
+        Authorization: `bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      },
+      data,
+      failOnStatusCode: false
+      });
+    }
 }

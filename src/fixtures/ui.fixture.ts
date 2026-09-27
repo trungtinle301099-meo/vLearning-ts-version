@@ -5,6 +5,8 @@ import { RegisterAuthPage } from '../pages/authPage/registerAuthPage/registerAut
 import { HomeHeaderHomePage } from '../pages/homePage/homeHeaderHomePage/homeHeaderHomePage.index';
 import { RegisterFooterHomePage } from '../pages/homePage/registerFooterHomePage/registerFooterHomePage.index';
 import { DanhMucHomePage } from '../pages/homePage/danhMucHomePage/danhMucHomePage.index';
+import { ThongTinCaNhanPage } from '../pages/thongTinCaNhanPage/thongTinCaNhanPage.index';
+import { AdminPage } from '../pages/adminPage/adminPage.index';
 
 type UiFixtures = {
   basePage: BasePage;
@@ -13,6 +15,8 @@ type UiFixtures = {
   homeHeaderHomePage: HomeHeaderHomePage;
   registerFooterHomePage: RegisterFooterHomePage;
   danhMucHomePage: DanhMucHomePage;
+  thongTinCaNhanPage: ThongTinCaNhanPage;
+  adminPage: AdminPage;
 };
 
 export const test = apiTest.extend<UiFixtures>({
@@ -39,6 +43,15 @@ export const test = apiTest.extend<UiFixtures>({
   danhMucHomePage: async ({ page }, use) => {
     await use(new DanhMucHomePage(page));
   },
+
+  thongTinCaNhanPage: async ({ page }, use) => {
+    await use(new ThongTinCaNhanPage(page));
+  },
+
+  adminPage: async ({ page }, use) => {
+    await use(new AdminPage(page));
+  }
+
 });
 
 export { expect };

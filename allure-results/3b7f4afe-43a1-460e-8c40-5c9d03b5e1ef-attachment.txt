@@ -1,3 +1,0 @@
-[2026-07-09 14:37:31] [PASS] Register UI passed for account: taikmre12cuk609
-[2026-07-09 14:37:31] [INFO] Cleanup login status: 200
-[2026-07-09 14:37:31] [INFO] Cleanup deleted account: taikmre12cuk609

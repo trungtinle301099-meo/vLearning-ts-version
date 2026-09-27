@@ -62,6 +62,20 @@ export class CourseService {
       failOnStatusCode: false
     });
   }
+
+    dangKyCourse(
+    data: RegisterCourseRequest,
+    accessToken: string
+  ): Promise<APIResponse> {
+    return this.apiClient.post(CourseEndpoint.dangKyCourse, {
+      headers: {
+        Authorization: `bearer ${accessToken}`,
+        'Content-Type': 'application/json-patch+json'
+      },
+      data,
+      failOnStatusCode: false
+    });
+  }
   
   cancelCourseRegistration(data: RegisterCourseRequest, accessToken: string): Promise<APIResponse> {
   return this.apiClient.post(CourseEndpoint.cancelCourseRegistration, {
@@ -86,3 +100,5 @@ export class CourseService {
     });
   }
 }
+
+

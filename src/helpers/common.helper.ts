@@ -12,7 +12,7 @@ import { AuthService } from '../api/services/auth.service';
 import { createRandomCourseData } from '../data/course.data';
 import { createCourseResponseSchema } from '../schemas/course.schema';
 import type { CourseService } from '../api/services/course.service';
-import type { CreateCourseRequest } from '../types/course.type';
+import type { CreateCourseRequest, RegisterCourseRequest } from '../types/course.type';
 
 
 type CourseRegistrationPreconditionResult = {
@@ -167,4 +167,33 @@ export async function loginAsAdminForTest(authService: AuthService): Promise<str
   expect(parsed.accessToken).toBeTruthy();
 
   return parsed.accessToken;
+}
+
+export async function registerCourseForTest({
+  courseService,
+  courseId,
+  username,
+  accessToken,
+}: {
+  courseService: CourseService;
+  courseId: string;
+  username: string;
+  accessToken: string;
+}): Promise<void> {
+  const registerCourseData: RegisterCourseRequest = { 
+    maKhoaHoc: courseId,
+    taiKhoan: username,
+  };
+
+  const response = await courseService.dangKyCourse(
+    registerCourseData,
+    accessToken,
+  );
+
+  expectStatus(response, 200);
+  expectJsonContentType(response);
+
+  logger.info(
+    `Registered course: ${courseId} for account: ${username}`,
+  );
 }
