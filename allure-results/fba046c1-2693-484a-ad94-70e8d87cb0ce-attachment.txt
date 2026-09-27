@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1790518263146708","biDanh":"bi-danh-mkh1790518263146708","tenKhoaHoc":"Auto Course Sleek Silk Computer","moTa":"Viriliter adnuo charisma.","luotXem":38,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"28/08/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

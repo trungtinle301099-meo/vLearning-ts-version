@@ -1,0 +1,12 @@
+[2026-09-27 07:11:03] [INFO] Precondition login status: 200
+[2026-09-27 07:11:03] [INFO] precondition-register-user status: 200
+[2026-09-27 07:11:03] [INFO] Precondition registered account: taikmujwcdzz756
+[2026-09-27 07:11:03] [INFO] precondition-create-course status: 200
+[2026-09-27 07:11:03] [INFO] Precondition registered account: taikmujwcdzz756
+[2026-09-27 07:11:03] [INFO] Precondition created course: MKH1790518263333675
+[2026-09-27 07:11:03] [INFO] dang-ky-course-success status: 200
+[2026-09-27 07:11:03] [PASS] Dang Ky Course API passed for course: MKH1790518263333675, account: taikmujwcdzz756
+[2026-09-27 07:11:03] [INFO] Cleanup canceled course registration: MKH1790518263333675 - taikmujwcdzz756
+[2026-09-27 07:11:03] [INFO] Cleanup login status: 200
+[2026-09-27 07:11:03] [INFO] Cleanup deleted account: taikmujwcdzz756
+[2026-09-27 07:11:03] [INFO] Cleanup deleted course: MKH1790518263333675

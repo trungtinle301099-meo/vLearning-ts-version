@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1790518263374035","biDanh":"bi-danh-mkh1790518263374035","tenKhoaHoc":"Auto Course Bespoke Ceramic Chips","moTa":"Voluptatem absum vallum cum pauci civis spoliatio.","luotXem":16,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"18/06/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

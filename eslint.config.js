@@ -13,7 +13,17 @@ module.exports = [
       'performance/k6/**'
     ]
   },
+
   ...tseslint.configs.recommended,
+
+  // eslint.config.js uses CommonJS
+  {
+    files: ['eslint.config.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off'
+    }
+  },
+
   {
     files: ['**/*.ts'],
     languageOptions: {
@@ -34,6 +44,7 @@ module.exports = [
       ]
     }
   },
+
   {
     files: ['tests/**/*.ts'],
     plugins: {
@@ -45,5 +56,6 @@ module.exports = [
       'playwright/expect-expect': 'warn'
     }
   },
+
   eslintConfigPrettier
 ];

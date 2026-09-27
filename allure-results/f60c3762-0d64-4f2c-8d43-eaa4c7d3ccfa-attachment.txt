@@ -1,0 +1,1 @@
+{"taiKhoan":"taikmujwcell777","matKhau":"@Iljau0011","hoTen":"Auto Test Tara ","soDt":"0927037547","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmujwcell777_0438@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

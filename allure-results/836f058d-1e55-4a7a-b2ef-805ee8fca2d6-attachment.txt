@@ -1,0 +1,1 @@
+[2026-09-27 07:11:07] [PASS] Course page opened successfully after clicking Khoá học link.

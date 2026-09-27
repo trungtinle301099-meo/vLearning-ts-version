@@ -1,0 +1,1 @@
+{"maKhoaHoc":"MKH1790518277810049","biDanh":"bi-danh-mkh1790518277810049","tenKhoaHoc":"Auto Course Generic Bamboo Shirt","moTa":"Tersus coniecto creber.","luotXem":64,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"28/07/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}
