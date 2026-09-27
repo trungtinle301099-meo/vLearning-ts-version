@@ -70,4 +70,5 @@ export class SearchPage extends BasePage {
       expect(title.toLowerCase()).toContain(keyword.toLowerCase());
     }
   }
+
 }

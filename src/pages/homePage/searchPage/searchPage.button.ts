@@ -16,6 +16,7 @@ export class SearchPageButton {
 
   // Tên (h6) của từng khóa học trong danh sách kết quả.
   readonly courseTitle: Locator;
+  
 
   constructor(private readonly page: Page) {
     this.header = this.page.locator('section.header').first();
