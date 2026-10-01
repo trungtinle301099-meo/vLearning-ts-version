@@ -1,1 +1,0 @@
-{"maKhoaHoc":"MKH1790520044502152","biDanh":"bi-danh-mkh1790520044502152","tenKhoaHoc":"Auto Course Recycled Cotton Car","moTa":"Strenuus adeo tamdiu.","luotXem":65,"danhGia":10,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"13/09/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

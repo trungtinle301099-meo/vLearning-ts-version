@@ -1,1 +1,0 @@
-{"maKhoaHoc":"MKH1790518274456827","biDanh":"bi-danh-mkh1790518274456827","tenKhoaHoc":"Auto Course Luxurious Granite Chicken","moTa":"Soleo totus vir iste cura debitis.","luotXem":68,"danhGia":8,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"01/01/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

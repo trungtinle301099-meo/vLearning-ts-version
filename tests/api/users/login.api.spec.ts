@@ -1,14 +1,12 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import {
-  expectJsonContentType,
-  expectStatus
-} from '../../../src/api/assertions/response.assertion';
+import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
 import { loginResponseSchema } from '../../../src/schemas/auth.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { cleanupRegisteredAccounts } from '../../../src/helpers/cleanup.helper';
 import { registerRandomUserForTest } from '../../../src/helpers/common.helper';
 import { logger } from '../../../src/helpers/logger.helper';
 import type { RegisterUserRequest } from '../../../src/types/user.type';
+import { feature, epic, severity, description } from 'allure-js-commons';
 
 let registeredUser: RegisterUserRequest;
 let accountsToCleanup: string[] = [];
@@ -32,6 +30,11 @@ test.describe('Login API', () => {
   test('USER_LOGIN_API_001 - should login successfully with registered account', async ({
     authService
   }) => {
+    await feature('login successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can login successfully with a registered account.');
+
     const response = await authService.login(registeredUser.taiKhoan, registeredUser.matKhau);
 
     const responseText = await attachApiRequestResponse(
@@ -58,6 +61,10 @@ test.describe('Login API', () => {
   });
 
   test('USER_LOGIN_API_002 - should not login with invalid username', async ({ authService }) => {
+    await feature('login with invalid username');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API does not allow login with an invalid username.');
     const invalidUsername = `${registeredUser.taiKhoan}_invalid`;
 
     const response = await authService.login(invalidUsername, registeredUser.matKhau);
@@ -78,6 +85,10 @@ test.describe('Login API', () => {
   });
 
   test('USER_LOGIN_API_003 - should not login with invalid password', async ({ authService }) => {
+    await feature('login with invalid password');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API does not allow login with an invalid password.');
     const invalidPassword = `${registeredUser.matKhau}_invalid`;
 
     const response = await authService.login(registeredUser.taiKhoan, invalidPassword);

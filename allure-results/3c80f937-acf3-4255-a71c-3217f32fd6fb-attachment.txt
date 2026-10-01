@@ -1,1 +1,0 @@
-{"maKhoaHoc":"MKH1790520046311122","biDanh":"bi-danh-mkh1790520046311122","tenKhoaHoc":"Auto Course Small Steel Fish","moTa":"Ut deorsum spectaculum demens civitas appello.","luotXem":43,"danhGia":5,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"26/06/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

@@ -1,0 +1,122 @@
+{
+  "text": "❌ vLearning Automated Test Report — Run #LOCAL",
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "🚀 vLearning — Automated Test Report",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Run #LOCAL*  •  *FAILED*\n📅 Thứ Năm, 01/10/2026\n🕐 20:54:12 GMT+7\n🌿 Branch: `local`\n⚙️ Trigger: `local`\n📦 Repository: `vLearning-ts-version`"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "📊 *OVERALL SUMMARY*"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "```\nType     │ Total    │ Passed   │ Failed   │ Skipped   │ Pass Rate  \n─────────┼──────────┼──────────┼──────────┼───────────┼────────────\nAPI      │       37 │       37 │        0 │         0 │      100.0%\nUI       │       41 │       33 │        8 │         0 │       80.5%\nTOTAL    │       78 │       70 │        8 │         0 │       89.7%\n```"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "📈 *Pass Rate:* 89.7%    •    🧪 *Tests:* 78    •    ⏱️ *Duration:* 00m 24s"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "🔌 *API — FEATURE / EPIC BREAKDOWN*\n37 tests • ✅ 37 passed • ❌ 0 failed • ⏭️ 0 skipped"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "```\nFeature                          │ Epic                         │ Total   │ Passed   │ Failed   │ Skipped   │ Pass Rate  \n─────────────────────────────────┼──────────────────────────────┼─────────┼──────────┼──────────┼───────────┼────────────\ndang ky course                   │ api-course                   │       1 │        1 │        0 │         0 │      100.0%\nupdate matKhau successfully      │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\ndelete user                      │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nregister course                  │ Uncategorized                │       1 │        1 │        0 │         0 │      100.0%\nregister course                  │ api-course                   │       2 │        2 │        0 │         0 │      100.0%\ncreate course with invalid categ │ api-course                   │       1 │        1 │        0 │         0 │      100.0%\nupdate course                    │ api-course                   │       7 │        7 │        0 │         0 │      100.0%\nlogin successful                 │ api-login                    │       2 │        2 │        0 │         0 │      100.0%\nregister with existing email     │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nget course info                  │ api-course                   │       1 │        1 │        0 │         0 │      100.0%\nlogin successfully               │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nregister with existing username  │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nadd user                         │ api-user                     │       3 │        3 │        0 │         0 │      100.0%\nlogin with invalid username      │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nregister successfully            │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nfind user account                │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nupdate maNhom successfully       │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\ncreate course                    │ api-course                   │       1 │        1 │        0 │         0 │      100.0%\nupdate soDT successfully         │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nget user type list               │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\ndelete course                    │ api-course                   │       1 │        1 │        0 │         0 │      100.0%\nupdate email successfully        │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nlogin with invalid password      │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\ncreate course with HV account    │ api-course                   │       1 │        1 │        0 │         0 │      100.0%\nupdate hoTen successfully        │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\nget course list by group         │ api-course                   │       1 │        1 │        0 │         0 │      100.0%\nupdate maLoaiNguoiDung successfu │ api-user                     │       1 │        1 │        0 │         0 │      100.0%\n```"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "🖥️ *UI — FEATURE / EPIC BREAKDOWN*\n41 tests • ✅ 33 passed • ❌ 8 failed • ⏭️ 0 skipped"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "```\nFeature                          │ Epic                         │ Total   │ Passed   │ Failed   │ Skipped   │ Pass Rate  \n─────────────────────────────────┼──────────────────────────────┼─────────┼──────────┼──────────┼───────────┼────────────\nregister consultation rejected i │ ui-registerFooterHomePage    │       1 │        0 │        1 │         0 │        0.0%\nregister with existing username  │ ui-register                  │       1 │        1 │        0 │         0 │      100.0%\nadd user successfully            │ ui-user-management           │       1 │        0 │        1 │         0 │        0.0%\nshow error message when username │ ui-login                     │       1 │        1 │        0 │         0 │      100.0%\nshow error message when email is │ ui-login                     │       1 │        1 │        0 │         0 │      100.0%\nnavigate to course page after cl │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\ncancel course registration succe │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nshow error message when password │ ui-login                     │       1 │        1 │        0 │         0 │      100.0%\nopen user management page        │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nshow error message when username │ ui-login                     │       1 │        1 │        0 │         0 │      100.0%\ndisplay course category links wh │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\nsearch user account successfully │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nsubmit login form with valid cre │ ui-login                     │       1 │        1 │        0 │         0 │      100.0%\nSearch function                  │ Uncategorized                │       1 │        1 │        0 │         0 │      100.0%\ndisplay event links when hoverin │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\nregister successfully            │ ui-register                  │       1 │        1 │        0 │         0 │      100.0%\nnavigate to event page after cli │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\ndisplay course registration popu │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nnavigate to course Information p │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nsearch for a course successfully │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nnavigate to Full Stack course ca │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\nnavigate to Frontend course cate │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\ncancel course registration succe │ ui-user-management           │       1 │        0 │        1 │         0 │        0.0%\nnavigate to Design course catego │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\ndisplay successful registration  │ ui-user-management           │       1 │        0 │        1 │         0 │        0.0%\nnavigate to Backend course categ │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\ndisplay login page successfully  │ ui-login                     │       1 │        1 │        0 │         0 │      100.0%\nnavigate to Thinking course cate │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\ndisplay course registration popu │ ui-user-management           │       1 │        0 │        1 │         0 │        0.0%\nclick them khoa hoc button hiển  │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nregister consultation rejected i │ ui-registerFooterHomePage    │       1 │        0 │        1 │         0 │        0.0%\nregister with existing email     │ ui-register                  │       1 │        1 │        0 │         0 │      100.0%\nnavigate to blog page after clic │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\nnavigate to Admin page after cli │ ui-user-management           │       1 │        1 │        0 │         0 │      100.0%\nlogout successfully after hoveri │ ui-logOut                    │       1 │        1 │        0 │         0 │      100.0%\nnavigate to Mobile course catego │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\nregister consultation rejected i │ ui-registerFooterHomePage    │       1 │        0 │        1 │         0 │        0.0%\nregister consultation successful │ ui-registerFooterHomePage    │       1 │        0 │        1 │         0 │        0.0%\nnavigate to home page after clic │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\nnavigate to information page aft │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\nnavigate to home page after clic │ ui-homePage                  │       1 │        1 │        0 │         0 │      100.0%\n```"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "🚨 *FAILED TEST CASES — 8*"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "```\n#    │ Type     │ Feature                      │ Epic                     │ Test Case                                        │ Status      \n─────┼──────────┼──────────────────────────────┼──────────────────────────┼──────────────────────────────────────────────────┼─────────────\n   1 │ UI       │ register consultation reject │ ui-registerFooterHomePag │ REGISTER_FOOTER_HOME_PAGE_UI_002 - should not re │ ❌ FAILED    \n   2 │ UI       │ add user successfully        │ ui-user-management       │ TC1 - Thêm người dùng thành công                 │ ❌ FAILED    \n   3 │ UI       │ cancel course registration s │ ui-user-management       │ USER_MANAGEMENT_UI_010 - should cancel course re │ ❌ FAILED    \n   4 │ UI       │ display successful registrat │ ui-user-management       │ USER_MANAGEMENT_UI_008 - should display successf │ ❌ FAILED    \n   5 │ UI       │ display course registration  │ ui-user-management       │ USER_MANAGEMENT_UI_007 - should display course r │ ❌ FAILED    \n   6 │ UI       │ register consultation reject │ ui-registerFooterHomePag │ REGISTER_FOOTER_HOME_PAGE_UI_003 - should not re │ ❌ FAILED    \n   7 │ UI       │ register consultation reject │ ui-registerFooterHomePag │ REGISTER_FOOTER_HOME_PAGE_UI_004 - should not re │ ❌ FAILED    \n   8 │ UI       │ register consultation succes │ ui-registerFooterHomePag │ REGISTER_FOOTER_HOME_PAGE_UI_001 - should regist │ ❌ FAILED    \n```"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "📊 Open GitHub Actions",
+            "emoji": true
+          },
+          "url": "https://github.com/vLearning-ts-version/actions",
+          "action_id": "open_github_actions"
+        }
+      ]
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "vLearning Playwright Automation • Run #LOCAL"
+        }
+      ]
+    }
+  ]
+}

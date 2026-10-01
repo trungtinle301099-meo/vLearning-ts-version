@@ -1,6 +1,0 @@
-[2026-09-27 07:11:03] [INFO] Precondition login status: 200
-[2026-09-27 07:11:03] [INFO] add-user-duplicate-email status: 500
-[2026-09-27 07:11:03] [INFO] add-user-duplicate-email error response: Email đã tồn tại!
-[2026-09-27 07:11:03] [PASS] Duplicate email validation passed for email: taikmujwcefr447_9144@gmail.com
-[2026-09-27 07:11:03] [INFO] Cleanup login status: 200
-[2026-09-27 07:11:03] [INFO] Cleanup deleted account: taikmujwcefr447

@@ -1,4 +1,0 @@
-[2026-09-27 07:11:03] [INFO] register-success status: 200
-[2026-09-27 07:11:03] [PASS] Register API passed for account: taikmujwcej1319
-[2026-09-27 07:11:03] [INFO] Cleanup login status: 200
-[2026-09-27 07:11:04] [INFO] Cleanup deleted account: taikmujwcej1319

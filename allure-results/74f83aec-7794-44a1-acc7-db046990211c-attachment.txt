@@ -1,1 +1,0 @@
-{"maKhoaHoc":"MKH1790518275188219","biDanh":"bi-danh-mkh1790518275188219","tenKhoaHoc":"Auto Course Small Silk Pants","moTa":"Credo viduo volaticus comptus sum comparo pariatur.","luotXem":71,"danhGia":9,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"14/11/2026","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

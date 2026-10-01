@@ -1,1 +1,0 @@
-{"taiKhoan":"taikmujwceln884","matKhau":"@Axytl1547","hoTen":"Updated User Du","soDt":"0924498847","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmujwceln884_9486@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

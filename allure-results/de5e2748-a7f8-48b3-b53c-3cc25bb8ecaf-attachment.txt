@@ -1,7 +1,0 @@
-[2026-09-27 07:11:04] [INFO] precondition-register-user status: 200
-[2026-09-27 07:11:04] [INFO] Precondition registered account: taikmujwceln884
-[2026-09-27 07:11:04] [INFO] Precondition login status: 200
-[2026-09-27 07:11:04] [INFO] update-user-fullname-success status: 200
-[2026-09-27 07:11:04] [PASS] Update hoTen passed for account: taikmujwceln884
-[2026-09-27 07:11:04] [INFO] Cleanup login status: 200
-[2026-09-27 07:11:04] [INFO] Cleanup deleted account: taikmujwceln884

@@ -1,1 +1,0 @@
-{"maKhoaHoc":"MKH1790520031235708","biDanh":"bi-danh-mkh1790520031235708","tenKhoaHoc":"Auto Course Electronic Granite Chips","moTa":"Vespillo iste caste commodo vere vereor.","luotXem":64,"danhGia":3,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"07/01/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

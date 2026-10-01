@@ -1,18 +1,17 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { createRandomCourseData } from '../../../src/data/course.data';
-import {
-  expectJsonContentType,
-  expectStatus
-} from '../../../src/api/assertions/response.assertion';
+import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
 import { updateCourseResponseSchema } from '../../../src/schemas/course.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { setupCreatedCoursePreconditionForTest } from '../../../src/helpers/common.helper';
 import { cleanupCreatedCourse } from '../../../src/helpers/cleanup.helper';
 import { logger } from '../../../src/helpers/logger.helper';
 import type { CreateCourseRequest } from '../../../src/types/course.type';
+import { feature, epic, severity, description } from 'allure-js-commons';
 
 let accessToken = '';
 let createdCourse: CreateCourseRequest;
+
 
 test.describe('Update Course API', () => {
   test.beforeEach(async ({ authService, courseService }, testInfo) => {
@@ -38,6 +37,11 @@ test.describe('Update Course API', () => {
   });
 
   test('UPDATE_COURSE_API_001 - should update course successfully', async ({ courseService }) => {
+    await feature('update course');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can update course information successfully when provided with a valid course ID and update data.');
+
     // Arrange: Generate new random update data but keep maKhoaHoc of created course.
     const updateData = createRandomCourseData({
       maKhoaHoc: createdCourse.maKhoaHoc
@@ -70,6 +74,11 @@ test.describe('Update Course API', () => {
   });
 
   test('UPDATE_COURSE_API_002 - should update biDanh successfully', async ({ courseService }) => {
+    await feature('update course');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can update the alias of a course successfully when provided with a valid course ID and update data.');
+
     // Arrange: Generate random data, only use random biDanh for update.
     const randomData = createRandomCourseData();
 
@@ -98,9 +107,12 @@ test.describe('Update Course API', () => {
     logger.pass(`Update biDanh passed for course: ${createdCourse.maKhoaHoc}`);
   });
 
-  test('UPDATE_COURSE_API_003 - should update tenKhoaHoc successfully', async ({
-    courseService
-  }) => {
+  test('UPDATE_COURSE_API_003 - should update tenKhoaHoc successfully', async ({ courseService }) => {
+    await feature('update course');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can update the name of a course successfully when provided with a valid course ID and update data.');
+
     // Arrange: Generate random data, only use random tenKhoaHoc for update.
     const randomData = createRandomCourseData();
 
@@ -130,6 +142,10 @@ test.describe('Update Course API', () => {
   });
 
   test('UPDATE_COURSE_API_004 - should update moTa successfully', async ({ courseService }) => {
+    await feature('update course');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can update the description of a course successfully when provided with a valid course ID and update data.');
     // Arrange: Generate random data, only use random moTa for update.
     const randomData = createRandomCourseData();
 
@@ -159,6 +175,10 @@ test.describe('Update Course API', () => {
   });
 
   test('UPDATE_COURSE_API_005 - should update luotXem successfully', async ({ courseService }) => {
+    await feature('update course');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can update the view count of a course successfully when provided with a valid course ID and update data.');
     // Arrange: Generate random data, only use random luotXem for update.
     const randomData = createRandomCourseData();
 
@@ -188,6 +208,10 @@ test.describe('Update Course API', () => {
   });
 
   test('UPDATE_COURSE_API_006 - should update danhGia successfully', async ({ courseService }) => {
+    await feature('update course');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can update the rating of a course successfully when provided with a valid course ID and update data.');
     // Arrange: Generate random data, only use random danhGia for update.
     const randomData = createRandomCourseData();
 
@@ -217,6 +241,10 @@ test.describe('Update Course API', () => {
   });
 
   test('UPDATE_COURSE_API_007 - should update ngayTao successfully', async ({ courseService }) => {
+    await feature('update course');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can update the creation date of a course successfully when provided with a valid course ID and update data.');
     // Arrange: Generate random data, only use random ngayTao for update.
     const randomData = createRandomCourseData();
 

@@ -1,10 +1,7 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { env } from '../../../src/config/env.config';
 import { createUpdateUserInfoData } from '../../../src/data/user.data';
-import {
-  expectJsonContentType,
-  expectStatus
-} from '../../../src/api/assertions/response.assertion';
+import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
 import { updateUserInfoResponseSchema } from '../../../src/schemas/user.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { cleanupRegisteredAccounts } from '../../../src/helpers/cleanup.helper';
@@ -12,6 +9,8 @@ import { loginAsAdminForTest, registerRandomUserForTest } from '../../../src/hel
 import { logger } from '../../../src/helpers/logger.helper';
 import { randomHelper } from '../../../src/helpers/random.helper';
 import type { RegisterUserRequest } from '../../../src/types/user.type';
+import { feature, epic, severity, description } from 'allure-js-commons';
+
 
 let registeredUser: RegisterUserRequest;
 let accessToken = '';
@@ -36,6 +35,10 @@ test.describe('Update User Info API', () => {
   });
 
   test('UPDATE_API_001 - should update matKhau successfully', async ({ userService }) => {
+    await feature('update matKhau successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can update the password (matKhau) of a registered user successfully.');
     const updateData = createUpdateUserInfoData(registeredUser, {
       matKhau: randomHelper.password()
     });
@@ -60,6 +63,10 @@ test.describe('Update User Info API', () => {
   });
 
   test('UPDATE_API_002 - should update hoTen successfully', async ({ userService }) => {
+    await feature('update hoTen successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can update the full name (hoTen) of a registered user successfully.');
     const updateData = createUpdateUserInfoData(registeredUser, {
       hoTen: randomHelper.fullName('Updated User')
     });
@@ -84,6 +91,10 @@ test.describe('Update User Info API', () => {
   });
 
   test('UPDATE_API_003 - should update soDT successfully', async ({ userService }) => {
+    await feature('update soDT successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can update the phone number (soDT) of a registered user successfully.');
     const updateData = createUpdateUserInfoData(registeredUser, {
       soDT: randomHelper.phoneVN()
     });
@@ -108,6 +119,10 @@ test.describe('Update User Info API', () => {
   });
 
   test('UPDATE_API_004 - should update maLoaiNguoiDung successfully', async ({ userService }) => {
+    await feature('update maLoaiNguoiDung successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can update the user type (maLoaiNguoiDung) of a registered user successfully.');
     const updateData = createUpdateUserInfoData(registeredUser, {
       maLoaiNguoiDung: 'GV'
     });
@@ -132,6 +147,10 @@ test.describe('Update User Info API', () => {
   });
 
   test('UPDATE_API_005 - should update maNhom successfully', async ({ userService }) => {
+    await feature('update maNhom successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can update the group (maNhom) of a registered user successfully.');
     const nextGroup = env.defaultGroup === 'GP01' ? 'GP02' : 'GP01';
 
     const updateData = createUpdateUserInfoData(registeredUser, {
@@ -164,6 +183,10 @@ test.describe('Update User Info API', () => {
   });
 
   test('UPDATE_API_006 - should update email successfully', async ({ userService }) => {
+    await feature('update email successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can update the email of a registered user successfully.');
     const updateData = createUpdateUserInfoData(registeredUser, {
       email: randomHelper.email(registeredUser.taiKhoan)
     });

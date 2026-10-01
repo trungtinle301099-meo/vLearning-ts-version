@@ -1,1 +1,0 @@
-{"taiKhoan":"taikmujwceph094","matKhau":"@Nfrza2266","hoTen":"Auto Test Aryan","soDt":"0912595403","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmujwceph094_5877@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

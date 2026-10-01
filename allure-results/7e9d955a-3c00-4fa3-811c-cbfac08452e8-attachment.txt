@@ -1,1 +1,0 @@
-{"maKhoaHoc":"MKH1790520030932960","biDanh":"bi-danh-mkh1790520030960852","tenKhoaHoc":"Auto Course Small Concrete Hat","moTa":"Eveniet numquam crur.","luotXem":76,"danhGia":2,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"02/09/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

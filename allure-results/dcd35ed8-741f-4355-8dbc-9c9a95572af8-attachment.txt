@@ -1,6 +1,0 @@
-[2026-09-27 07:11:04] [INFO] precondition-existing-username status: 200
-[2026-09-27 07:11:04] [INFO] register-existing-username status: 500
-[2026-09-27 07:11:04] [INFO] register-existing-username error response: Tài khoản đã tồn tại!
-[2026-09-27 07:11:04] [PASS] Register API rejected existing username: taikmujwcejm779
-[2026-09-27 07:11:04] [INFO] Cleanup login status: 200
-[2026-09-27 07:11:04] [INFO] Cleanup deleted account: taikmujwcejm779

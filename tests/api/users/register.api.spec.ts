@@ -4,14 +4,12 @@ import {
   createExistingUsernameRegisterTestData,
   createRandomRegisterUserData
 } from '../../../src/data/user.data';
-import {
-  expectJsonContentType,
-  expectStatus
-} from '../../../src/api/assertions/response.assertion';
+import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
 import { registerUserResponseSchema } from '../../../src/schemas/user.schema';
 import { logger } from '../../../src/helpers/logger.helper';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { cleanupRegisteredAccounts } from '../../../src/helpers/cleanup.helper';
+import { feature, epic, severity, description } from 'allure-js-commons';
 
 let accountsToCleanup: string[] = [];
 
@@ -31,6 +29,10 @@ test.describe('User Register API', () => {
   test('REGISTER_API_001 - should register successfully with valid random input', async ({
     userService
   }) => {
+    await feature('register successfully');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API can register a new user successfully with valid random input.');
     const registerData = createRandomRegisterUserData();
     const response = await userService.register(registerData);
 
@@ -59,6 +61,10 @@ test.describe('User Register API', () => {
   });
 
   test('REGISTER_API_002 - should not register with existing username', async ({ userService }) => {
+    await feature('register with existing username');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API does not allow registration with an existing username.');
     const { existingUser, duplicateUsernameUser } = createExistingUsernameRegisterTestData();
 
     const preconditionResponse = await userService.register(existingUser);
@@ -91,6 +97,10 @@ test.describe('User Register API', () => {
   });
 
   test('REGISTER_API_003 - should not register with existing email', async ({ userService }) => {
+    await feature('register with existing email');
+    await epic('api-user');
+    await severity('critical');
+    await description('This test verifies that the API does not allow registration with an existing email.');
     const { existingUser, duplicateEmailUser } = createExistingEmailRegisterTestData();
 
     const preconditionResponse = await userService.register(existingUser);

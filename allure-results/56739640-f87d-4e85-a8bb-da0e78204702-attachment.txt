@@ -1,1 +1,0 @@
-{"taiKhoan":"taikmujwcen3203","matKhau":"@Oagay4082","hoTen":"Auto Test Desir","soDt":"0993074135","maLoaiNguoiDung":"GV","maNhom":"GP01","email":"taikmujwcen3203_2650@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

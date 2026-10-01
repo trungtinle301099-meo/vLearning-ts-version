@@ -1,1 +1,0 @@
-{"taiKhoan":"taikmujxeak4632","matKhau":"@Byuuw6384","hoTen":"Auto Test Debor","soDt":"0928685485","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmujxeak4632_6875@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

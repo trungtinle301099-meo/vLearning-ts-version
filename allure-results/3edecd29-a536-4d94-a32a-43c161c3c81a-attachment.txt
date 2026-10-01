@@ -1,1 +1,0 @@
-{"taiKhoan":"taikmujxealc849","matKhau":"@Chklp2847","hoTen":"Auto Test Sarai","soDt":"0973740892","maLoaiNguoiDung":"HV","maNhom":"GP01","email":"taikmujxealc849_6346@gmail.com","biDanh":null,"maLoaiNguoiDungNavigation":null,"hocVienKhoaHoc":[],"khoaHoc":[]}

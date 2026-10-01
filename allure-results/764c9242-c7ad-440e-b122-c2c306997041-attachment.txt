@@ -1,1 +1,0 @@
-{"maKhoaHoc":"MKH1790518263566168","biDanh":"bi-danh-mkh1790518263597110","tenKhoaHoc":"Auto Course Electronic Metal Pants","moTa":"Aro compello stillicidium curatio.","luotXem":1,"danhGia":7,"hinhAnh":"https://elearningnew.cybersoft.edu.vn/hinhanh/tai.jpg","maNhom":"GP01","ngayTao":"21/05/2027","maDanhMucKhoaHoc":"BackEnd","taiKhoanNguoiTao":"testadmin1"}

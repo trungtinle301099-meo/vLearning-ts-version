@@ -1,14 +1,12 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import {
-  expectJsonContentType,
-  expectStatus
-} from '../../../src/api/assertions/response.assertion';
+import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { setupCreatedCoursePreconditionForTest } from '../../../src/helpers/common.helper';
 import { logger } from '../../../src/helpers/logger.helper';
 import type { CreateCourseRequest } from '../../../src/types/course.type';
 import { cleanupCreatedCourse } from '../../../src/helpers/cleanup.helper';
 import { courseInfoResponseSchema } from '../../../src/schemas/course.schema';
+import { feature, epic, severity, description } from 'allure-js-commons';
 
 let accessToken = '';
 let createdCourse: CreateCourseRequest;
@@ -47,6 +45,11 @@ test.describe('Get Course Info API', () => {
   test('GET_COURSE_INFO_API_001 - should get course info successfully', async ({
     courseService
   }) => {
+    await feature('get course info');
+    await epic('api-course');
+    await severity('critical');
+    await description('This test verifies that the API can retrieve course information successfully when provided with a valid course ID.');
+
     // Act: Get course info by maKhoaHoc created in beforeEach.
     const response = await courseService.getCourseInfo(createdCourse.maKhoaHoc);
 

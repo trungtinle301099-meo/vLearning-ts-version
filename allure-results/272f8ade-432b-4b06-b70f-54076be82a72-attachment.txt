@@ -1,1 +1,0 @@
-[2026-09-27 07:11:13] [PASS] Login failed correctly when password is empty.

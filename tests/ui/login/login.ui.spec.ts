@@ -8,9 +8,15 @@ import {
   createValidLoginAuthCredential
 } from '../../../src/data/user.data';
 import { logger } from '../../../src/helpers/logger.helper';
+import { feature,epic, severity, description } from 'allure-js-commons';
 
 test.describe('Login UI', () => {
   test('LOGIN_UI_001 - should display login page successfully', async ({ page, loginAuthPage }) => {
+    await feature('display login page successfully');
+    await epic('ui-login');
+    await severity('critical');
+    await description('This test verifies that the UI can display the login page successfully.');
+
     // Act: Navigate to login page.
     await loginAuthPage.gotoLoginPage();
 
@@ -27,6 +33,10 @@ test.describe('Login UI', () => {
     page,
     loginAuthPage
   }) => {
+    await feature('submit login form with valid credentials');
+    await epic('ui-login');
+    await severity('critical');
+    await description('This test verifies that the UI can submit the login form successfully with valid credentials.');
     // Arrange: Prepare valid login credential from user data.
     const authCredential = createValidLoginAuthCredential();
 
@@ -49,6 +59,10 @@ test.describe('Login UI', () => {
     page,
     loginAuthPage
   }) => {
+    await feature('show error message when username does not exist');
+    await epic('ui-login');
+    await severity('critical');
+    await description('This test verifies that the UI shows an error message when the username does not exist in the system.');
     // Arrange: Prepare invalid username credential from user data.
     const invalidUsernameCredential = createInvalidUsernameLoginAuthCredential();
 
@@ -74,10 +88,14 @@ test.describe('Login UI', () => {
     );
   });
 
-  test('LOGIN_UI_004 - should show error message when email is incorrect', async ({
+   test('LOGIN_UI_004 - should show error message when email is incorrect', async ({
     page,
     loginAuthPage
   }) => {
+    await feature('show error message when email is incorrect');
+    await epic('ui-login');
+    await severity('critical');
+    await description('This test verifies that the UI shows an error message when the email is incorrect.');
     // Arrange: Prepare invalid email credential from user data.
     const invalidEmailCredential = createInvalidEmailLoginAuthCredential();
 
@@ -105,6 +123,10 @@ test.describe('Login UI', () => {
     page,
     loginAuthPage
   }) => {
+    await feature('show error message when username is empty');
+    await epic('ui-login');
+    await severity('critical');
+    await description('This test verifies that the UI shows an error message when the username is empty.');
     // Arrange: Prepare empty username credential from user data.
     const emptyUsernameCredential = createEmptyUsernameLoginAuthCredential();
 
@@ -132,6 +154,10 @@ test.describe('Login UI', () => {
     page,
     loginAuthPage
   }) => {
+    await feature('show error message when password is empty');
+    await epic('ui-login');
+    await severity('critical');
+    await description('This test verifies that the UI shows an error message when the password is empty.');
     // Arrange: Prepare empty password credential from user data.
     const emptyPasswordCredential = createEmptyPasswordLoginAuthCredential();
 
