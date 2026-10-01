@@ -108,7 +108,7 @@ jobs:
           GITHUB_SERVER_URL: ${{ github.server_url }}
 
           # Allure URL
-          ALLURE_REPORT_URL:  https://trungtinle301099-meo.github.io/vLearning-ts-version/
+          ALLURE_REPORT_URL: https://trungtinle301099-meo.github.io/vLearning-ts-version/
 
       # ==========================================
       # ARTIFACTS
@@ -141,20 +141,18 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
-
       - name: Debug Slack payload
         if: always()
         run: |
-            echo "===== SLACK PAYLOAD ====="
-            cat slack-payload.json
-            echo ""
-            echo "===== FILE INFO ====="
-            ls -lh slack-payload.json
+          echo "===== SLACK PAYLOAD ====="
+          cat slack-payload.json
+          echo ""
+          echo "===== FILE INFO ====="
+          ls -lh slack-payload.json
 
       # ==========================================
       # SEND SLACK
       # ==========================================
-    
 
       - name: Send Slack test report
         if: always()
