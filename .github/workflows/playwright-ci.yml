@@ -37,6 +37,10 @@ jobs:
       DEFAULT_COURSE_ID: '000'
 
     steps:
+      # ==========================================
+      # SETUP
+      # ==========================================
+
       - name: Checkout source
         uses: actions/checkout@v4
 
@@ -58,8 +62,16 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      # ==========================================
+      # QUALITY
+      # ==========================================
+
       - name: Run quality check
         run: npm run check
+
+      # ==========================================
+      # TEST
+      # ==========================================
 
       - name: Run Playwright tests
         run: npm run test
@@ -80,20 +92,16 @@ jobs:
         if: always() && github.event_name != 'pull_request'
         uses: actions/configure-pages@v5
 
-      - name: Upload Allure report to GitHub Pages
-        if: always() && github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: reports/playwright/allure-report
-
-      - name: Deploy Allure report to GitHub Pages
-        if: always() && github.event_name != 'pull_request'
-        id: deployment
-        uses: actions/deploy-pages@v4
-
       # ==========================================
       # SLACK REPORT
       # ==========================================
+      # IMPORTANT:
+      # This step must run BEFORE uploading/deploying
+      # GitHub Pages because it creates:
+      #
+      # reports/playwright/allure-report/failed-tests.html
+      #
+      # That file must be included in the GitHub Pages artifact.
 
       - name: Generate Slack test report
         if: always()
@@ -107,8 +115,23 @@ jobs:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           GITHUB_SERVER_URL: ${{ github.server_url }}
 
-          # Allure URL
           ALLURE_REPORT_URL: https://trungtinle301099-meo.github.io/vLearning-ts-version/
+          FAILED_TESTS_REPORT_URL: https://trungtinle301099-meo.github.io/vLearning-ts-version/failed-tests.html
+
+      # ==========================================
+      # UPLOAD / DEPLOY GITHUB PAGES
+      # ==========================================
+
+      - name: Upload Allure report to GitHub Pages
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: reports/playwright/allure-report
+
+      - name: Deploy Allure report to GitHub Pages
+        if: always() && github.event_name != 'pull_request'
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       # ==========================================
       # ARTIFACTS
@@ -140,6 +163,10 @@ jobs:
           path: reports/playwright/junit
           retention-days: 14
           if-no-files-found: warn
+
+      # ==========================================
+      # DEBUG SLACK PAYLOAD
+      # ==========================================
 
       - name: Debug Slack payload
         if: always()
