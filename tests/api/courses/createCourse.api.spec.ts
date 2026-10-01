@@ -1,6 +1,9 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { createRandomCourseData } from '../../../src/data/course.data';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { createCourseResponseSchema } from '../../../src/schemas/course.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { loginAsAdminForTest } from '../../../src/helpers/common.helper';
@@ -30,7 +33,6 @@ test.describe('Create Course API', () => {
   });
 
   test('CREATE_COURSE_API_001 - should create course successfully', async ({ courseService }) => {
-
     await feature('create course');
     await epic('api-course');
     await severity('critical');
@@ -81,11 +83,12 @@ test.describe('Create Course API', () => {
   test('CREATE_COURSE_API_002 - should not create course with invalid maDanhMucKhoaHoc', async ({
     courseService
   }) => {
-
     await feature('create course with invalid category');
     await epic('api-course');
     await severity('critical');
-    await description('This test verifies that the API rejects course creation when an invalid maDanhMucKhoaHoc is provided.');
+    await description(
+      'This test verifies that the API rejects course creation when an invalid maDanhMucKhoaHoc is provided.'
+    );
     // Arrange: Generate course data with invalid course category.
     const courseData = createRandomCourseData({
       maDanhMucKhoaHoc: 'INVALID_CATEGORY'
@@ -118,11 +121,12 @@ test.describe('Create Course API', () => {
   test('CREATE_COURSE_API_003 - should not create course with HV creator account', async ({
     courseService
   }) => {
-
     await feature('create course with HV account');
     await epic('api-course');
     await severity('critical');
-    await description('This test verifies that the API rejects course creation when a student (HV) account is used as the creator.');
+    await description(
+      'This test verifies that the API rejects course creation when a student (HV) account is used as the creator.'
+    );
     // Arrange: Generate course data with HV account as creator.
     const courseData = createRandomCourseData({
       taiKhoanNguoiTao: 'hocvien01'
@@ -137,12 +141,7 @@ test.describe('Create Course API', () => {
     }
 
     // Report: Attach HV creator request and response to Playwright report.
-    await attachApiRequestResponse(
-      test.info(),
-      'create-course-hv-creator',
-      courseData,
-      response
-    );
+    await attachApiRequestResponse(test.info(), 'create-course-hv-creator', courseData, response);
 
     // Assert: Create course API should reject HV account as course creator.
     expect(response.status()).not.toBe(200);

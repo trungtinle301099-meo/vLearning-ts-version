@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import {
   cleanupCourseRegistration,
@@ -79,7 +82,9 @@ test.describe('Dang Ky Course API', () => {
     await feature('dang ky course');
     await epic('api-course');
     await severity('critical');
-    await description('This test verifies that a user can register for a course successfully using the API.');
+    await description(
+      'This test verifies that a user can register for a course successfully using the API.'
+    );
     // Arrange
     const registerCourseData: RegisterCourseRequest = {
       maKhoaHoc: createdCourse.maKhoaHoc,

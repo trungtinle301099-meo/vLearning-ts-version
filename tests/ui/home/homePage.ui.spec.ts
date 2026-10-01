@@ -15,7 +15,9 @@ test.describe('Home Page UI', () => {
     await feature('navigate to home page after clicking home icon');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the home page after clicking on the home icon from an authenticated page.');
+    await description(
+      'This test verifies that the UI can navigate to the home page after clicking on the home icon from an authenticated page.'
+    );
     // Act: Navigate to user management page with saved storage state.
     await homeHeaderHomePage.gotoUserManagementPage();
 
@@ -44,7 +46,9 @@ test.describe('Home Page UI', () => {
     await feature('navigate to home page after clicking Danh mục link');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the home page after clicking on the "Danh mục" link from an authenticated page.');
+    await description(
+      'This test verifies that the UI can navigate to the home page after clicking on the "Danh mục" link from an authenticated page.'
+    );
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
 
@@ -67,7 +71,9 @@ test.describe('Home Page UI', () => {
     await feature('navigate to blog page after clicking Blog link');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the blog page after clicking on the "Blog" link from an authenticated page.');
+    await description(
+      'This test verifies that the UI can navigate to the blog page after clicking on the "Blog" link from an authenticated page.'
+    );
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
 
@@ -90,7 +96,9 @@ test.describe('Home Page UI', () => {
     await feature('navigate to information page after clicking Thông tin link');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the information page after clicking on the "Thông tin" link from an authenticated page.');
+    await description(
+      'This test verifies that the UI can navigate to the information page after clicking on the "Thông tin" link from an authenticated page.'
+    );
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
 
@@ -113,7 +121,9 @@ test.describe('Home Page UI', () => {
     await feature('navigate to course page after clicking Khoá học link');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the course page after clicking on the "Khoá học" link from an authenticated page.');
+    await description(
+      'This test verifies that the UI can navigate to the course page after clicking on the "Khoá học" link from an authenticated page.'
+    );
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
 
@@ -136,7 +146,9 @@ test.describe('Home Page UI', () => {
     await feature('navigate to event page after clicking Sự kiện link');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the event page after clicking on the "Sự kiện" link from an authenticated page.');
+    await description(
+      'This test verifies that the UI can navigate to the event page after clicking on the "Sự kiện" link from an authenticated page.'
+    );
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
 
@@ -159,7 +171,9 @@ test.describe('Home Page UI', () => {
     await feature('display course category links when hovering Danh mục link');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI displays course category links when hovering over the "Danh mục" link in the header.');
+    await description(
+      'This test verifies that the UI displays course category links when hovering over the "Danh mục" link in the header.'
+    );
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
 
@@ -177,7 +191,9 @@ test.describe('Home Page UI', () => {
     await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình Backend')).toBeVisible();
     await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình di động')).toBeVisible();
     await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình Front end')).toBeVisible();
-    await expect(homeHeaderHomePage.button.courseCategoryLink('Lập trình Full Stack')).toBeVisible();
+    await expect(
+      homeHeaderHomePage.button.courseCategoryLink('Lập trình Full Stack')
+    ).toBeVisible();
     await expect(homeHeaderHomePage.button.courseCategoryLink('Tư duy lập trình')).toBeVisible();
 
     logger.pass('Course category links are displayed after hovering Danh mục link.');
@@ -190,7 +206,9 @@ test.describe('Home Page UI', () => {
     await feature('display event links when hovering Sự kiện link');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI displays event links when hovering over the "Sự kiện" link in the header.');
+    await description(
+      'This test verifies that the UI displays event links when hovering over the "Sự kiện" link in the header.'
+    );
     // Act: Navigate to base URL.
     await homeHeaderHomePage.gotoBaseUrl();
 
@@ -204,7 +222,9 @@ test.describe('Home Page UI', () => {
     await homeHeaderHomePage.hoverHeaderLink('Sự kiện');
 
     // Assert: Event links should be displayed.
-    await expect(homeHeaderHomePage.button.eventCategoryLink('Sự kiện Sale Cuối Năm')).toBeVisible();
+    await expect(
+      homeHeaderHomePage.button.eventCategoryLink('Sự kiện Sale Cuối Năm')
+    ).toBeVisible();
     await expect(homeHeaderHomePage.button.eventCategoryLink('Sự kiện Giáng sinh')).toBeVisible();
     await expect(homeHeaderHomePage.button.eventCategoryLink('Sự kiện Noel')).toBeVisible();
 

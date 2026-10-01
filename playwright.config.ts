@@ -30,9 +30,9 @@ export default defineConfig({
     [
       'allure-playwright',
       {
-        resultsDir: 'reports/playwright/allure-results',
-      },
-    ],
+        resultsDir: 'reports/playwright/allure-results'
+      }
+    ]
   ],
 
   use: {

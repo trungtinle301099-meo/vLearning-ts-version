@@ -14,19 +14,24 @@ test.describe('Auth API', () => {
     await allure.feature('login successful');
     await allure.epic('api-login');
     await allure.severity('critical');
-    await allure.description('This test verifies that the API base URL is configured correctly in the environment.');
+    await allure.description(
+      'This test verifies that the API base URL is configured correctly in the environment.'
+    );
     expect(isConfigured(env.apiBaseUrl)).toBeTruthy();
     expect(env.apiBaseUrl).toMatch(/^https?:\/\//);
 
     logger.pass(`API base URL is configured: ${env.apiBaseUrl}`);
   });
 
-  test('AUTH_API_001 - should login successfully with valid credential', async ({ authService }) => {
-
+  test('AUTH_API_001 - should login successfully with valid credential', async ({
+    authService
+  }) => {
     await allure.feature('login successful');
     await allure.epic('api-login');
     await allure.severity('critical');
-    await allure.description('This test verifies that a user can login successfully with valid credentials and receive an access token.');
+    await allure.description(
+      'This test verifies that a user can login successfully with valid credentials and receive an access token.'
+    );
     const response = await authService.login(env.username, env.password);
 
     const responseText = await attachApiRequestResponse(
@@ -59,4 +64,3 @@ test.describe('Auth API', () => {
     logger.pass('Login API returned accessToken successfully.');
   });
 });
-

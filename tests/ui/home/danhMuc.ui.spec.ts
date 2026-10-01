@@ -7,12 +7,14 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_001 - should navigate to Backend course category page when clicking Lập trình Backend', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     await feature('navigate to Backend course category page');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the Backend course category page when clicking on the "Lập trình Backend" link in the "Danh mục" dropdown.');
+    await description(
+      'This test verifies that the UI can navigate to the Backend course category page when clicking on the "Lập trình Backend" link in the "Danh mục" dropdown.'
+    );
     // Define the target course category.
     const category: CourseCategory = 'Lập trình Backend';
 
@@ -38,12 +40,14 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_002 - should navigate to Design course category page when clicking Thiết kế web', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     await feature('navigate to Design course category page');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the Design course category page when clicking on the "Thiết kế Web" link in the "Danh mục" dropdown.');
+    await description(
+      'This test verifies that the UI can navigate to the Design course category page when clicking on the "Thiết kế Web" link in the "Danh mục" dropdown.'
+    );
     // Define the target course category.
     const category: CourseCategory = 'Thiết kế Web';
 
@@ -69,12 +73,14 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_003 - should navigate to Mobile course category page when clicking Lập trình di động', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     await feature('navigate to Mobile course category page');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the Mobile course category page when clicking on the "Lập trình di động" link in the "Danh mục" dropdown.');
+    await description(
+      'This test verifies that the UI can navigate to the Mobile course category page when clicking on the "Lập trình di động" link in the "Danh mục" dropdown.'
+    );
     // Define the target course category.
     const category: CourseCategory = 'Lập trình di động';
 
@@ -100,12 +106,14 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_004 - should navigate to Frontend course category page when clicking Lập trình Front end', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     await feature('navigate to Frontend course category page');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the Frontend course category page when clicking on the "Lập trình Front end" link in the "Danh mục" dropdown.');
+    await description(
+      'This test verifies that the UI can navigate to the Frontend course category page when clicking on the "Lập trình Front end" link in the "Danh mục" dropdown.'
+    );
     // Define the target course category.
     const category: CourseCategory = 'Lập trình Front end';
 
@@ -131,12 +139,14 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_005 - should navigate to Full Stack course category page when clicking Lập trình Full Stack', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     await feature('navigate to Full Stack course category page');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the Full Stack course category page when clicking on the "Lập trình Full Stack" link in the "Danh mục" dropdown.');
+    await description(
+      'This test verifies that the UI can navigate to the Full Stack course category page when clicking on the "Lập trình Full Stack" link in the "Danh mục" dropdown.'
+    );
     // Define the target course category.
     const category: CourseCategory = 'Lập trình Full Stack';
 
@@ -162,12 +172,14 @@ test.describe('Home - Danh mục khóa học', () => {
   test('DANH_MUC_UI_006 - should navigate to Thinking course category page when clicking Tư duy lập trình', async ({
     page,
     homeHeaderHomePage,
-    danhMucHomePage,
+    danhMucHomePage
   }) => {
     await feature('navigate to Thinking course category page');
     await epic('ui-homePage');
     await severity('critical');
-    await description('This test verifies that the UI can navigate to the Thinking course category page when clicking on the "Tư duy lập trình" link in the "Danh mục" dropdown.');
+    await description(
+      'This test verifies that the UI can navigate to the Thinking course category page when clicking on the "Tư duy lập trình" link in the "Danh mục" dropdown.'
+    );
     // Define the target course category.
     const category: CourseCategory = 'Tư duy lập trình';
 

@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import {
   cleanupCourseRegistration,
@@ -74,11 +77,15 @@ test.describe('Register Course API', () => {
     }
   });
 
-  test('REGISTER_COURSE_API_001 - should register course successfully', async ({ courseService }) => {
+  test('REGISTER_COURSE_API_001 - should register course successfully', async ({
+    courseService
+  }) => {
     await feature('register course');
     await epic('api-course');
     await severity('critical');
-    await description('This test verifies that a user can register for a course successfully using the API.');
+    await description(
+      'This test verifies that a user can register for a course successfully using the API.'
+    );
 
     // Arrange: Build valid register course request body.
     const registerCourseData: RegisterCourseRequest = {
@@ -118,7 +125,9 @@ test.describe('Register Course API', () => {
     await feature('register course');
     await epic('api-course');
     await severity('critical');
-    await description('This test verifies that the API rejects registration for a course with a non-existing account.');
+    await description(
+      'This test verifies that the API rejects registration for a course with a non-existing account.'
+    );
 
     // Arrange: Build register course request body with non-existing account.
     const registerCourseData: RegisterCourseRequest = {
@@ -140,13 +149,14 @@ test.describe('Register Course API', () => {
     // Assert: Register course API should reject non-existing account.
     expect(response.status()).not.toBe(200);
 
-    logger.pass(`Register Course API rejected non-existing account: ${registerCourseData.taiKhoan}`);
+    logger.pass(
+      `Register Course API rejected non-existing account: ${registerCourseData.taiKhoan}`
+    );
   });
 
   test('REGISTER_COURSE_API_003 - should not register course with non-existing course id', async ({
     courseService
   }) => {
-
     await feature('register course');
     // Arrange: Build register course request body with non-existing maKhoaHoc.
     const registerCourseData: RegisterCourseRequest = {

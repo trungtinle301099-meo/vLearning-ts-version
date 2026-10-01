@@ -15,7 +15,9 @@ test.describe('Logout UI', () => {
     await feature('logout successfully after hovering avatar icon');
     await epic('ui-logOut');
     await severity('critical');
-    await description('This test verifies that the UI can logout successfully after hovering over the avatar icon and clicking the logout button.');
+    await description(
+      'This test verifies that the UI can logout successfully after hovering over the avatar icon and clicking the logout button.'
+    );
     // Act: Navigate to home page with authenticated session.
     await homeHeaderHomePage.gotoHomePage();
 

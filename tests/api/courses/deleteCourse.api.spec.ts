@@ -1,13 +1,15 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
 import { createRandomCourseData } from '../../../src/data/course.data';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { setupCreatedCoursePreconditionForTest } from '../../../src/helpers/common.helper';
 import { logger } from '../../../src/helpers/logger.helper';
 import type { CreateCourseRequest } from '../../../src/types/course.type';
 import { cleanupCreatedCourse } from '../../../src/helpers/cleanup.helper';
 import { feature, epic, severity, description } from 'allure-js-commons';
-
 
 let accessToken = '';
 let createdCourse: CreateCourseRequest;
@@ -47,7 +49,9 @@ test.describe('Delete Course API', () => {
     await feature('delete course');
     await epic('api-course');
     await severity('critical');
-    await description('This test verifies that the API can delete a course successfully when provided with a valid course ID and access token.');
+    await description(
+      'This test verifies that the API can delete a course successfully when provided with a valid course ID and access token.'
+    );
     // Act: Delete the course created in beforeEach.
     const response = await courseService.deleteCourse(createdCourse.maKhoaHoc, accessToken);
 

@@ -34,7 +34,9 @@ test.describe('Register UI', () => {
     await feature('register successfully');
     await epic('ui-register');
     await severity('critical');
-    await description('This test verifies that the UI can register a new user successfully with valid random input.');
+    await description(
+      'This test verifies that the UI can register a new user successfully with valid random input.'
+    );
     // Arrange: Prepare valid random register data.
     const registerData = createRandomRegisterUserData();
 
@@ -67,7 +69,9 @@ test.describe('Register UI', () => {
     await feature('register with existing username');
     await epic('ui-register');
     await severity('critical');
-    await description('This test verifies that the UI rejects registration of a new user with an existing username.');
+    await description(
+      'This test verifies that the UI rejects registration of a new user with an existing username.'
+    );
     // Arrange: Prepare existing username test data.
     const { existingUser, duplicateUsernameUser } = createExistingUsernameRegisterTestData();
 
@@ -97,7 +101,9 @@ test.describe('Register UI', () => {
     await registerAuthPage.register(duplicateUsernameUser);
 
     // Assert: Existing username message should be displayed.
-    await expect(registerAuthPage.button.getToastifyByMessage('Tài khoản đã tồn tại!')).toBeVisible();
+    await expect(
+      registerAuthPage.button.getToastifyByMessage('Tài khoản đã tồn tại!')
+    ).toBeVisible();
 
     // Assert: User should still stay on register page.
     await expect(page).toHaveURL(/\/register|\/login/);
@@ -113,7 +119,9 @@ test.describe('Register UI', () => {
     await feature('register with existing email');
     await epic('ui-register');
     await severity('critical');
-    await description('This test verifies that the UI rejects registration of a new user with an existing email.');
+    await description(
+      'This test verifies that the UI rejects registration of a new user with an existing email.'
+    );
     // Arrange: Prepare existing email test data.
     const { existingUser, duplicateEmailUser } = createExistingEmailRegisterTestData();
 

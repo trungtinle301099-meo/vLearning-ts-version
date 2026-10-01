@@ -1,5 +1,8 @@
 import { test, expect } from '../../../src/fixtures/api.fixture';
-import { expectJsonContentType, expectStatus } from '../../../src/api/assertions/response.assertion';
+import {
+  expectJsonContentType,
+  expectStatus
+} from '../../../src/api/assertions/response.assertion';
 import { loginResponseSchema } from '../../../src/schemas/auth.schema';
 import { attachApiRequestResponse } from '../../../src/helpers/api-report.helper';
 import { cleanupRegisteredAccounts } from '../../../src/helpers/cleanup.helper';
@@ -33,7 +36,9 @@ test.describe('Login API', () => {
     await feature('login successfully');
     await epic('api-user');
     await severity('critical');
-    await description('This test verifies that the API can login successfully with a registered account.');
+    await description(
+      'This test verifies that the API can login successfully with a registered account.'
+    );
 
     const response = await authService.login(registeredUser.taiKhoan, registeredUser.matKhau);
 
@@ -64,7 +69,9 @@ test.describe('Login API', () => {
     await feature('login with invalid username');
     await epic('api-user');
     await severity('critical');
-    await description('This test verifies that the API does not allow login with an invalid username.');
+    await description(
+      'This test verifies that the API does not allow login with an invalid username.'
+    );
     const invalidUsername = `${registeredUser.taiKhoan}_invalid`;
 
     const response = await authService.login(invalidUsername, registeredUser.matKhau);
@@ -88,7 +95,9 @@ test.describe('Login API', () => {
     await feature('login with invalid password');
     await epic('api-user');
     await severity('critical');
-    await description('This test verifies that the API does not allow login with an invalid password.');
+    await description(
+      'This test verifies that the API does not allow login with an invalid password.'
+    );
     const invalidPassword = `${registeredUser.matKhau}_invalid`;
 
     const response = await authService.login(registeredUser.taiKhoan, invalidPassword);
