@@ -21,6 +21,8 @@ const SERVER_URL = process.env.GITHUB_SERVER_URL || 'https://github.com';
 
 const ALLURE_REPORT_URL = process.env.ALLURE_REPORT_URL || '';
 
+const FAILED_TESTS_REPORT_URL = process.env.FAILED_TESTS_REPORT_URL || '';
+
 /**
  * -------------------------------------------------------
  * Helpers
@@ -28,229 +30,228 @@ const ALLURE_REPORT_URL = process.env.ALLURE_REPORT_URL || '';
  */
 
 function getTriggerName(eventName) {
-  switch (eventName) {
-    case 'schedule':
-      return 'Scheduled';
+    switch (eventName) {
+        case 'schedule':
+            return 'Scheduled';
 
-    case 'push':
-      return 'Push';
+        case 'push':
+            return 'Push';
 
-    case 'pull_request':
-      return 'Pull Request';
+        case 'pull_request':
+            return 'Pull Request';
 
-    case 'workflow_dispatch':
-      return 'Manual';
+        case 'workflow_dispatch':
+            return 'Manual';
 
-    default:
-      return eventName || 'Local';
-  }
+        default:
+            return eventName || 'Local';
+    }
 }
 
 function getVietnamDateTime() {
-  const now = new Date();
+    const now = new Date();
 
-  const dateFormatter = new Intl.DateTimeFormat('vi-VN', {
-    timeZone: 'Asia/Ho_Chi_Minh',
-    weekday: 'long',
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  });
+    const dateFormatter = new Intl.DateTimeFormat('vi-VN', {
+        timeZone: 'Asia/Ho_Chi_Minh',
+        weekday: 'long',
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    });
 
-  const timeFormatter = new Intl.DateTimeFormat('vi-VN', {
-    timeZone: 'Asia/Ho_Chi_Minh',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: false
-  });
+    const timeFormatter = new Intl.DateTimeFormat('vi-VN', {
+        timeZone: 'Asia/Ho_Chi_Minh',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
 
-  return {
-    date: dateFormatter.format(now),
-    time: timeFormatter.format(now)
-  };
+    return {
+        date: dateFormatter.format(now),
+        time: timeFormatter.format(now)
+    };
 }
 
 function getDuration(results) {
-  if (!results.length) {
-    return '00m 00s';
-  }
+    if (!results.length) {
+        return '00m 00s';
+    }
 
-  const starts = results.map((result) => result.start).filter(Boolean);
+    const starts = results.map((result) => result.start).filter(Boolean);
 
-  const stops = results.map((result) => result.stop).filter(Boolean);
+    const stops = results.map((result) => result.stop).filter(Boolean);
 
-  if (!starts.length || !stops.length) {
-    return '00m 00s';
-  }
+    if (!starts.length || !stops.length) {
+        return '00m 00s';
+    }
 
-  const start = Math.min(...starts);
-  const stop = Math.max(...stops);
+    const start = Math.min(...starts);
+    const stop = Math.max(...stops);
 
-  const durationMs = Math.max(0, stop - start);
+    const durationMs = Math.max(0, stop - start);
 
-  const totalSeconds = Math.floor(durationMs / 1000);
+    const totalSeconds = Math.floor(durationMs / 1000);
 
-  const hours = Math.floor(totalSeconds / 3600);
+    const hours = Math.floor(totalSeconds / 3600);
 
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
 
-  const seconds = totalSeconds % 60;
+    const seconds = totalSeconds % 60;
 
-  if (hours > 0) {
-    return `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(
-      seconds
-    ).padStart(2, '0')}s`;
-  }
+    if (hours > 0) {
+        return `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(
+            2,
+            '0'
+        )}m ${String(seconds).padStart(2, '0')}s`;
+    }
 
-  return `${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+    return `${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(
+        2,
+        '0'
+    )}s`;
 }
 
 function getLabel(result, labelName, fallback = 'N/A') {
-  const label = result.labels?.find((item) => item.name === labelName);
+    const label = result.labels?.find((item) => item.name === labelName);
 
-  return label?.value || fallback;
+    return label?.value || fallback;
 }
 
 function getProject(result) {
-  /**
-   * 1. Playwright Allure stores project
-   *    information in parameters:
-   *
-   *    [
-   *      {
-   *        name: "Project",
-   *        value: "api"
-   *      }
-   *    ]
-   */
-  const projectParameter = result.parameters?.find(
-    (parameter) => parameter.name?.toLowerCase() === 'project'
-  );
+    /**
+     * 1. Playwright Allure stores project
+     *    information in parameters.
+     */
+    const projectParameter = result.parameters?.find(
+        (parameter) => parameter.name?.toLowerCase() === 'project'
+    );
 
-  if (projectParameter?.value) {
-    return String(projectParameter.value).toLowerCase();
-  }
-
-  /**
-   * 2. Fallback: parentSuite
-   */
-  const parentSuite = getLabel(result, 'parentSuite', '').toLowerCase();
-
-  if (parentSuite === 'api' || parentSuite === 'ui') {
-    return parentSuite;
-  }
-
-  /**
-   * 3. Fallback: titlePath
-   */
-  if (Array.isArray(result.titlePath)) {
-    const titlePath = result.titlePath.map((item) => String(item).toLowerCase());
-
-    if (titlePath.includes('api')) {
-      return 'api';
+    if (projectParameter?.value) {
+        return String(projectParameter.value).toLowerCase();
     }
 
-    if (titlePath.includes('ui')) {
-      return 'ui';
+    /**
+     * 2. Fallback: parentSuite
+     */
+    const parentSuite = getLabel(result, 'parentSuite', '').toLowerCase();
+
+    if (parentSuite === 'api' || parentSuite === 'ui') {
+        return parentSuite;
     }
-  }
 
-  /**
-   * 4. Fallback: package name
-   */
-  const packageLabel = getLabel(result, 'package', '').toLowerCase();
+    /**
+     * 3. Fallback: titlePath
+     */
+    if (Array.isArray(result.titlePath)) {
+        const titlePath = result.titlePath.map((item) =>
+            String(item).toLowerCase()
+        );
 
-  if (packageLabel.includes('.api.') || packageLabel.includes('/api/')) {
-    return 'api';
-  }
+        if (titlePath.includes('api')) {
+            return 'api';
+        }
 
-  if (packageLabel.includes('.ui.') || packageLabel.includes('/ui/')) {
-    return 'ui';
-  }
+        if (titlePath.includes('ui')) {
+            return 'ui';
+        }
+    }
 
-  return 'unknown';
+    /**
+     * 4. Fallback: package name
+     */
+    const packageLabel = getLabel(result, 'package', '').toLowerCase();
+
+    if (packageLabel.includes('.api.') || packageLabel.includes('/api/')) {
+        return 'api';
+    }
+
+    if (packageLabel.includes('.ui.') || packageLabel.includes('/ui/')) {
+        return 'ui';
+    }
+
+    return 'unknown';
 }
 
 function getFeature(result) {
-  return getLabel(result, 'feature', 'Uncategorized');
+    return getLabel(result, 'feature', 'Uncategorized');
 }
 
 function getEpic(result) {
-  return getLabel(result, 'epic', 'Uncategorized');
+    return getLabel(result, 'epic', 'Uncategorized');
 }
 
 function normalizeStatus(status) {
-  switch (status) {
-    case 'passed':
-      return 'passed';
+    switch (status) {
+        case 'passed':
+            return 'passed';
 
-    case 'skipped':
-      return 'skipped';
+        case 'skipped':
+            return 'skipped';
 
-    case 'failed':
-    case 'broken':
-    case 'unknown':
-      return 'failed';
+        case 'failed':
+        case 'broken':
+        case 'unknown':
+            return 'failed';
 
-    default:
-      return 'failed';
-  }
+        default:
+            return 'failed';
+    }
 }
 
 function createStats() {
-  return {
-    total: 0,
-    passed: 0,
-    failed: 0,
-    skipped: 0
-  };
+    return {
+        total: 0,
+        passed: 0,
+        failed: 0,
+        skipped: 0
+    };
 }
 
 function addToStats(stats, status) {
-  stats.total += 1;
+    stats.total += 1;
 
-  if (status === 'passed') {
-    stats.passed += 1;
-  } else if (status === 'skipped') {
-    stats.skipped += 1;
-  } else {
-    stats.failed += 1;
-  }
+    if (status === 'passed') {
+        stats.passed += 1;
+    } else if (status === 'skipped') {
+        stats.skipped += 1;
+    } else {
+        stats.failed += 1;
+    }
 }
 
 function getPassRate(stats) {
-  if (!stats.total) {
-    return '0.0%';
-  }
+    if (!stats.total) {
+        return '0.0%';
+    }
 
-  return `${((stats.passed / stats.total) * 100).toFixed(1)}%`;
+    return `${((stats.passed / stats.total) * 100).toFixed(1)}%`;
 }
 
 function sanitizeTableValue(value) {
-  return String(value ?? 'N/A')
-    .replace(/\|/g, '/')
-    .replace(/\r?\n/g, ' ');
+    return String(value ?? 'N/A')
+        .replace(/\|/g, '/')
+        .replace(/\r?\n/g, ' ');
 }
 
 function padRight(value, length) {
-  const text = sanitizeTableValue(value);
+    const text = sanitizeTableValue(value);
 
-  if (text.length >= length) {
-    return text.substring(0, length);
-  }
+    if (text.length >= length) {
+        return text.substring(0, length);
+    }
 
-  return text + ' '.repeat(length - text.length);
+    return text + ' '.repeat(length - text.length);
 }
 
 function padLeft(value, length) {
-  const text = sanitizeTableValue(value);
+    const text = sanitizeTableValue(value);
 
-  if (text.length >= length) {
-    return text.substring(0, length);
-  }
+    if (text.length >= length) {
+        return text.substring(0, length);
+    }
 
-  return ' '.repeat(length - text.length) + text;
+    return ' '.repeat(length - text.length) + text;
 }
 
 /**
@@ -260,61 +261,61 @@ function padLeft(value, length) {
  */
 
 function loadAllureResults() {
-  if (!fs.existsSync(RESULTS_DIR)) {
-    throw new Error(`Allure results directory not found: ${RESULTS_DIR}`);
-  }
-
-  const files = fs
-    .readdirSync(RESULTS_DIR)
-    .filter((file) => file.endsWith('-result.json') && !file.endsWith('-container.json'));
-
-  const rawResults = [];
-
-  for (const file of files) {
-    const filePath = path.join(RESULTS_DIR, file);
-
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-
-      const result = JSON.parse(content);
-
-      rawResults.push(result);
-    } catch {
-      console.warn(`Unable to parse Allure result: ${file}`);
-    }
-  }
-
-  /**
-   * Playwright retries can generate
-   * more than one result for the
-   * same logical test.
-   *
-   * historyId is used to keep
-   * the latest result.
-   */
-  const resultMap = new Map();
-
-  for (const result of rawResults) {
-    const key = result.historyId || result.fullName || result.uuid;
-
-    const existing = resultMap.get(key);
-
-    if (!existing) {
-      resultMap.set(key, result);
-
-      continue;
+    if (!fs.existsSync(RESULTS_DIR)) {
+        throw new Error(`Allure results directory not found: ${RESULTS_DIR}`);
     }
 
-    const existingStop = existing.stop || 0;
+    const files = fs
+        .readdirSync(RESULTS_DIR)
+        .filter(
+            (file) =>
+                file.endsWith('-result.json') && !file.endsWith('-container.json')
+        );
 
-    const currentStop = result.stop || 0;
+    const rawResults = [];
 
-    if (currentStop >= existingStop) {
-      resultMap.set(key, result);
+    for (const file of files) {
+        const filePath = path.join(RESULTS_DIR, file);
+
+        try {
+            const content = fs.readFileSync(filePath, 'utf8');
+
+            const result = JSON.parse(content);
+
+            rawResults.push(result);
+        } catch {
+            console.warn(`Unable to parse Allure result: ${file}`);
+        }
     }
-  }
 
-  return Array.from(resultMap.values());
+    /**
+     * Playwright retries can generate
+     * more than one result for the
+     * same logical test.
+     */
+    const resultMap = new Map();
+
+    for (const result of rawResults) {
+        const key = result.historyId || result.fullName || result.uuid;
+
+        const existing = resultMap.get(key);
+
+        if (!existing) {
+            resultMap.set(key, result);
+
+            continue;
+        }
+
+        const existingStop = existing.stop || 0;
+
+        const currentStop = result.stop || 0;
+
+        if (currentStop >= existingStop) {
+            resultMap.set(key, result);
+        }
+    }
+
+    return Array.from(resultMap.values());
 }
 
 /**
@@ -324,90 +325,75 @@ function loadAllureResults() {
  */
 
 function buildReport(results) {
-  const overall = createStats();
+    const overall = createStats();
 
-  const byProject = {
-    api: {
-      stats: createStats(),
-      features: new Map()
-    },
+    const byProject = {
+        api: {
+            stats: createStats(),
+            features: new Map()
+        },
 
-    ui: {
-      stats: createStats(),
-      features: new Map()
+        ui: {
+            stats: createStats(),
+            features: new Map()
+        }
+    };
+
+    const failedTests = [];
+
+    for (const result of results) {
+        const project = getProject(result);
+
+        if (project !== 'api' && project !== 'ui') {
+            continue;
+        }
+
+        const status = normalizeStatus(result.status);
+
+        const feature = getFeature(result);
+
+        const epic = getEpic(result);
+
+        addToStats(overall, status);
+
+        addToStats(byProject[project].stats, status);
+
+        if (!byProject[project].features.has(feature)) {
+            byProject[project].features.set(feature, {
+                stats: createStats(),
+                epics: new Map()
+            });
+        }
+
+        const featureData = byProject[project].features.get(feature);
+
+        addToStats(featureData.stats, status);
+
+        if (!featureData.epics.has(epic)) {
+            featureData.epics.set(epic, {
+                stats: createStats()
+            });
+        }
+
+        const epicData = featureData.epics.get(epic);
+
+        addToStats(epicData.stats, status);
+
+        if (status === 'failed') {
+            failedTests.push({
+                project,
+                feature,
+                epic,
+                name: result.name || result.fullName || 'Unnamed test'
+            });
+        }
     }
-  };
 
-  const failedTests = [];
-
-  for (const result of results) {
-    const project = getProject(result);
-
-    if (project !== 'api' && project !== 'ui') {
-      continue;
-    }
-
-    const status = normalizeStatus(result.status);
-
-    const feature = getFeature(result);
-
-    const epic = getEpic(result);
-
-    /**
-     * Overall
-     */
-    addToStats(overall, status);
-
-    /**
-     * API / UI
-     */
-    addToStats(byProject[project].stats, status);
-
-    /**
-     * Feature
-     */
-    if (!byProject[project].features.has(feature)) {
-      byProject[project].features.set(feature, {
-        stats: createStats(),
-        epics: new Map()
-      });
-    }
-
-    const featureData = byProject[project].features.get(feature);
-
-    addToStats(featureData.stats, status);
-
-    /**
-     * Epic
-     */
-    if (!featureData.epics.has(epic)) {
-      featureData.epics.set(epic, {
-        stats: createStats()
-      });
-    }
-
-    const epicData = featureData.epics.get(epic);
-
-    addToStats(epicData.stats, status);
-
-    /**
-     * Failed test
-     */
-    if (status === 'failed') {
-      failedTests.push({
-        project,
-        feature,
-        epic,
-        name: result.name || result.fullName || 'Unnamed test'
-      });
-    }
-  }
-
-  return {
-    overall,
-    byProject,
-    failedTests
-  };
+    return {
+        overall,
+        byProject,
+        failedTests
+    };
 }
 
 /**
@@ -417,40 +403,65 @@ function buildReport(results) {
  */
 
 function buildSummaryTable(apiStats, uiStats, overall) {
-  const headers = ['Type', 'Total', 'Passed', 'Failed', 'Skipped', 'Pass Rate'];
+    const headers = [
+        'Type',
+        'Total',
+        'Passed',
+        'Failed',
+        'Skipped',
+        'Pass Rate'
+    ];
 
-  const rows = [
-    [
-      'API',
-      apiStats.total,
-      apiStats.passed,
-      apiStats.failed,
-      apiStats.skipped,
-      getPassRate(apiStats)
-    ],
+    const rows = [
+        [
+            'API',
+            apiStats.total,
+            apiStats.passed,
+            apiStats.failed,
+            apiStats.skipped,
+            getPassRate(apiStats)
+        ],
 
-    ['UI', uiStats.total, uiStats.passed, uiStats.failed, uiStats.skipped, getPassRate(uiStats)],
+        [
+            'UI',
+            uiStats.total,
+            uiStats.passed,
+            uiStats.failed,
+            uiStats.skipped,
+            getPassRate(uiStats)
+        ],
 
-    ['TOTAL', overall.total, overall.passed, overall.failed, overall.skipped, getPassRate(overall)]
-  ];
+        [
+            'TOTAL',
+            overall.total,
+            overall.passed,
+            overall.failed,
+            overall.skipped,
+            getPassRate(overall)
+        ]
+    ];
 
-  const widths = [8, 8, 8, 8, 9, 11];
+    const widths = [8, 8, 8, 8, 9, 11];
 
-  const header = headers.map((value, index) => padRight(value, widths[index])).join(' │ ');
+    const header = headers
+        .map((value, index) => padRight(value, widths[index]))
+        .join(' │ ');
 
-  const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
+    const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
 
-  const body = rows
-    .map((row) =>
-      row
-        .map((value, index) =>
-          index === 0 ? padRight(value, widths[index]) : padLeft(value, widths[index])
+    const body = rows
+        .map((row) =>
+            row
+                .map((value, index) =>
+                    index === 0
+                        ? padRight(value, widths[index])
+                        : padLeft(value, widths[index])
+                )
+                .join(' │ ')
         )
-        .join(' │ ')
-    )
-    .join('\n');
+        .join('\n');
 
-  return `${header}\n${separator}\n${body}`;
+    return `${header}\n${separator}\n${body}`;
 }
 
 /**
@@ -460,86 +471,111 @@ function buildSummaryTable(apiStats, uiStats, overall) {
  */
 
 function buildBreakdownTable(projectData) {
-  const headers = ['Feature', 'Epic', 'Total', 'Passed', 'Failed', 'Skipped', 'Pass Rate'];
+    const headers = [
+        'Feature',
+        'Epic',
+        'Total',
+        'Passed',
+        'Failed',
+        'Skipped',
+        'Pass Rate'
+    ];
 
-  const rows = [];
+    const rows = [];
 
-  for (const [feature, featureData] of projectData.features) {
-    for (const [epic, epicData] of featureData.epics) {
-      rows.push([
-        feature,
-        epic,
-        epicData.stats.total,
-        epicData.stats.passed,
-        epicData.stats.failed,
-        epicData.stats.skipped,
-        getPassRate(epicData.stats)
-      ]);
+    for (const [feature, featureData] of projectData.features) {
+        for (const [epic, epicData] of featureData.epics) {
+            rows.push([
+                feature,
+                epic,
+                epicData.stats.total,
+                epicData.stats.passed,
+                epicData.stats.failed,
+                epicData.stats.skipped,
+                getPassRate(epicData.stats)
+            ]);
+        }
     }
-  }
 
-  if (!rows.length) {
-    return 'No feature / epic data';
-  }
+    if (!rows.length) {
+        return 'No feature / epic data';
+    }
 
-  const widths = [32, 28, 7, 8, 8, 9, 11];
+    const widths = [32, 28, 7, 8, 8, 9, 11];
 
-  const header = headers.map((value, index) => padRight(value, widths[index])).join(' │ ');
+    const header = headers
+        .map((value, index) => padRight(value, widths[index]))
+        .join(' │ ');
 
-  const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
+    const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
 
-  const body = rows
-    .map((row) =>
-      row
-        .map((value, index) =>
-          index >= 2 ? padLeft(value, widths[index]) : padRight(value, widths[index])
+    const body = rows
+        .map((row) =>
+            row
+                .map((value, index) =>
+                    index >= 2
+                        ? padLeft(value, widths[index])
+                        : padRight(value, widths[index])
+                )
+                .join(' │ ')
         )
-        .join(' │ ')
-    )
-    .join('\n');
+        .join('\n');
 
-  return `${header}\n${separator}\n${body}`;
+    return `${header}\n${separator}\n${body}`;
 }
 
 /**
  * -------------------------------------------------------
  * Failed tests table
  * -------------------------------------------------------
+ *
+ * Slack chỉ hiển thị 10 failed test đầu tiên.
  */
 
-function buildFailedTestsTable(failedTests) {
-  if (!failedTests.length) {
-    return 'No failed test cases 🎉';
-  }
+function buildFailedTestsTable(failedTests, limit = 10) {
+    if (!failedTests.length) {
+        return 'No failed test cases 🎉';
+    }
 
-  const headers = ['#', 'Type', 'Feature', 'Epic', 'Test Case', 'Status'];
+    const headers = [
+        '#',
+        'Type',
+        'Feature',
+        'Epic',
+        'Test Case',
+        'Status'
+    ];
 
-  const rows = failedTests.map((test, index) => [
-    index + 1,
-    test.project.toUpperCase(),
-    test.feature,
-    test.epic,
-    test.name,
-    '❌ FAILED'
-  ]);
+    const rows = failedTests.slice(0, limit).map((test, index) => [
+        index + 1,
+        test.project.toUpperCase(),
+        test.feature,
+        test.epic,
+        test.name,
+        '❌ FAILED'
+    ]);
 
-  const widths = [4, 8, 28, 24, 48, 12];
+    const widths = [4, 8, 28, 24, 48, 12];
 
-  const header = headers.map((value, index) => padRight(value, widths[index])).join(' │ ');
+    const header = headers
+        .map((value, index) => padRight(value, widths[index]))
+        .join(' │ ');
 
-  const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
+    const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
 
-  const body = rows
-    .map((row) =>
-      row
-        .map((value, index) =>
-          index === 0 ? padLeft(value, widths[index]) : padRight(value, widths[index])
+    const body = rows
+        .map((row) =>
+            row
+                .map((value, index) =>
+                    index === 0
+                        ? padLeft(value, widths[index])
+                        : padRight(value, widths[index])
+                )
+                .join(' │ ')
         )
-        .join(' │ ')
-    )
-    .join('\n');
+        .join('\n');
 
-  return `${header}\n${separator}\n${body}`;
+    return `${header}\n${separator}\n${body}`;
 }
 
 /**
@@ -549,272 +585,825 @@ function buildFailedTestsTable(failedTests) {
  */
 
 function buildSlackPayload(results, report) {
-  const { overall, byProject, failedTests } = report;
+    const { overall, byProject, failedTests } = report;
 
-  const { date, time } = getVietnamDateTime();
+    const { date, time } = getVietnamDateTime();
 
-  const trigger = getTriggerName(EVENT_NAME);
+    const trigger = getTriggerName(EVENT_NAME);
 
-  const duration = getDuration(results);
+    const duration = getDuration(results);
 
-  const statusEmoji = overall.failed > 0 ? '❌' : '✅';
+    const statusEmoji = overall.failed > 0 ? '❌' : '✅';
 
-  const statusText = overall.failed > 0 ? 'FAILED' : 'PASSED';
+    const statusText = overall.failed > 0 ? 'FAILED' : 'PASSED';
 
-  const runUrl = RUN_ID
-    ? `${SERVER_URL}/${REPOSITORY}/actions/runs/${RUN_ID}`
-    : `${SERVER_URL}/${REPOSITORY}/actions`;
+    const runUrl = RUN_ID
+        ? `${SERVER_URL}/${REPOSITORY}/actions/runs/${RUN_ID}`
+        : `${SERVER_URL}/${REPOSITORY}/actions`;
 
-  const blocks = [];
+    const blocks = [];
 
-  /**
-   * Header
-   */
-  blocks.push({
-    type: 'header',
+    /**
+     * Header
+     */
 
-    text: {
-      type: 'plain_text',
-
-      text: '🚀 vLearning — Automated Test Report',
-
-      emoji: true
-    }
-  });
-
-  /**
-   * Run information
-   */
-  blocks.push({
-    type: 'section',
-
-    text: {
-      type: 'mrkdwn',
-
-      text:
-        `*Run #${RUN_NUMBER}*  •  *${statusText}*\n` +
-        `📅 ${date}\n` +
-        `🕐 ${time} GMT+7\n` +
-        `🌿 Branch: \`${BRANCH}\`\n` +
-        `⚙️ Trigger: \`${trigger}\`\n` +
-        `📦 Repository: \`${REPOSITORY}\``
-    }
-  });
-
-  blocks.push({
-    type: 'divider'
-  });
-
-  /**
-   * Overall summary
-   */
-  blocks.push({
-    type: 'section',
-
-    text: {
-      type: 'mrkdwn',
-
-      text: '📊 *OVERALL SUMMARY*'
-    }
-  });
-
-  blocks.push({
-    type: 'section',
-
-    text: {
-      type: 'mrkdwn',
-
-      text: `\`\`\`\n${buildSummaryTable(byProject.api.stats, byProject.ui.stats, overall)}\n\`\`\``
-    }
-  });
-
-  blocks.push({
-    type: 'section',
-
-    text: {
-      type: 'mrkdwn',
-
-      text:
-        `📈 *Pass Rate:* ${getPassRate(overall)}    •    ` +
-        `🧪 *Tests:* ${overall.total}    •    ` +
-        `⏱️ *Duration:* ${duration}`
-    }
-  });
-
-  /**
-   * API
-   */
-  if (byProject.api.stats.total > 0) {
     blocks.push({
-      type: 'divider'
+        type: 'header',
+
+        text: {
+            type: 'plain_text',
+
+            text: '🚀 vLearning — Automated Test Report',
+
+            emoji: true
+        }
+    });
+
+    /**
+     * Run information
+     */
+
+    blocks.push({
+        type: 'section',
+
+        text: {
+            type: 'mrkdwn',
+
+            text:
+                `*Run #${RUN_NUMBER}*  •  *${statusText}*\n` +
+                `📅 ${date}\n` +
+                `🕐 ${time} GMT+7\n` +
+                `🌿 Branch: \`${BRANCH}\`\n` +
+                `⚙️ Trigger: \`${trigger}\`\n` +
+                `📦 Repository: \`${REPOSITORY}\``
+        }
     });
 
     blocks.push({
-      type: 'section',
+        type: 'divider'
+    });
 
-      text: {
-        type: 'mrkdwn',
+    /**
+     * Overall summary
+     */
 
+    blocks.push({
+        type: 'section',
+
+        text: {
+            type: 'mrkdwn',
+
+            text: '📊 *OVERALL SUMMARY*'
+        }
+    });
+
+    blocks.push({
+        type: 'section',
+
+        text: {
+            type: 'mrkdwn',
+
+            text: `\`\`\`\n${buildSummaryTable(
+                byProject.api.stats,
+                byProject.ui.stats,
+                overall
+            )}\n\`\`\``
+        }
+    });
+
+    blocks.push({
+        type: 'section',
+
+        text: {
+            type: 'mrkdwn',
+
+            text:
+                `📈 *Pass Rate:* ${getPassRate(overall)}    •    ` +
+                `🧪 *Tests:* ${overall.total}    •    ` +
+                `⏱️ *Duration:* ${duration}`
+        }
+    });
+
+    /**
+     * API
+     */
+
+    if (byProject.api.stats.total > 0) {
+        blocks.push({
+            type: 'divider'
+        });
+
+        blocks.push({
+            type: 'section',
+
+            text: {
+                type: 'mrkdwn',
+
+                text:
+                    `🔌 *API — FEATURE / EPIC BREAKDOWN*\n` +
+                    `${byProject.api.stats.total} tests • ` +
+                    `✅ ${byProject.api.stats.passed} passed • ` +
+                    `❌ ${byProject.api.stats.failed} failed • ` +
+                    `⏭️ ${byProject.api.stats.skipped} skipped`
+            }
+        });
+
+        blocks.push({
+            type: 'section',
+
+            text: {
+                type: 'mrkdwn',
+
+                text: `\`\`\`\n${buildBreakdownTable(
+                    byProject.api
+                )}\n\`\`\``
+            }
+        });
+    }
+
+    /**
+     * UI
+     */
+
+    if (byProject.ui.stats.total > 0) {
+        blocks.push({
+            type: 'divider'
+        });
+
+        blocks.push({
+            type: 'section',
+
+            text: {
+                type: 'mrkdwn',
+
+                text:
+                    `🖥️ *UI — FEATURE / EPIC BREAKDOWN*\n` +
+                    `${byProject.ui.stats.total} tests • ` +
+                    `✅ ${byProject.ui.stats.passed} passed • ` +
+                    `❌ ${byProject.ui.stats.failed} failed • ` +
+                    `⏭️ ${byProject.ui.stats.skipped} skipped`
+            }
+        });
+
+        blocks.push({
+            type: 'section',
+
+            text: {
+                type: 'mrkdwn',
+
+                text: `\`\`\`\n${buildBreakdownTable(
+                    byProject.ui
+                )}\n\`\`\``
+            }
+        });
+    }
+
+    /**
+     * Failed tests
+     */
+
+    blocks.push({
+        type: 'divider'
+    });
+
+    blocks.push({
+        type: 'section',
+
+        text: {
+            type: 'mrkdwn',
+
+            text:
+                failedTests.length > 0
+                    ? `🚨 *FAILED TEST CASES — ${failedTests.length}*`
+                    : '🎉 *FAILED TEST CASES — 0*'
+        }
+    });
+
+    /**
+     * Chỉ hiển thị 10 failed test đầu tiên
+     */
+
+    blocks.push({
+        type: 'section',
+
+        text: {
+            type: 'mrkdwn',
+
+            text: `\`\`\`\n${buildFailedTestsTable(
+                failedTests,
+                10
+            )}\n\`\`\``
+        }
+    });
+
+    /**
+     * Nếu > 10 failed test:
+     *
+     * ... +46 more failed test cases
+     *
+     * 👉 Click to view View All Failed Tests
+     */
+
+    if (failedTests.length > 10) {
+        const remaining = failedTests.length - 10;
+
+        blocks.push({
+            type: 'section',
+
+            text: {
+                type: 'mrkdwn',
+
+                text:
+                    `... +${remaining} more failed test cases\n\n` +
+                    (FAILED_TESTS_REPORT_URL
+                        ? `👉 <${FAILED_TESTS_REPORT_URL}|Click to view View All Failed Tests>`
+                        : '👉 View All Failed Tests (URL not configured)')
+            }
+        });
+    }
+
+    /**
+     * Report links
+     */
+
+    blocks.push({
+        type: 'divider'
+    });
+
+    const reportActions = [
+        {
+            type: 'button',
+
+            text: {
+                type: 'plain_text',
+
+                text: '📊 Open GitHub Actions',
+
+                emoji: true
+            },
+
+            url: runUrl,
+
+            action_id: 'open_github_actions'
+        }
+    ];
+
+    /**
+     * Add Allure button only when
+     * ALLURE_REPORT_URL exists.
+     */
+
+    if (ALLURE_REPORT_URL) {
+        reportActions.push({
+            type: 'button',
+
+            text: {
+                type: 'plain_text',
+
+                text: '📋 Open Allure Report',
+
+                emoji: true
+            },
+
+            url: ALLURE_REPORT_URL,
+
+            action_id: 'open_allure_report'
+        });
+    }
+
+    blocks.push({
+        type: 'actions',
+
+        elements: reportActions
+    });
+
+    /**
+     * Footer
+     */
+
+    blocks.push({
+        type: 'context',
+
+        elements: [
+            {
+                type: 'mrkdwn',
+
+                text:
+                    `vLearning Playwright Automation • ` +
+                    `Run #${RUN_NUMBER}` +
+                    (COMMIT
+                        ? ` • Commit \`${COMMIT.substring(0, 7)}\``
+                        : '')
+            }
+        ]
+    });
+
+    return {
         text:
-          `🔌 *API — FEATURE / EPIC BREAKDOWN*\n` +
-          `${byProject.api.stats.total} tests • ` +
-          `✅ ${byProject.api.stats.passed} passed • ` +
-          `❌ ${byProject.api.stats.failed} failed • ` +
-          `⏭️ ${byProject.api.stats.skipped} skipped`
-      }
+            `${statusEmoji} vLearning Automated Test Report — ` +
+            `Run #${RUN_NUMBER}`,
+
+        blocks
+    };
+}
+
+/**
+ * -------------------------------------------------------
+ * Generate Failed Tests HTML
+ * -------------------------------------------------------
+ */
+
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
+function generateFailedTestsHtml(results, report) {
+    const failedTests = report.failedTests;
+
+    const { date, time } = getVietnamDateTime();
+
+    const outputDir = path.resolve('reports/playwright/allure-report');
+
+    const outputFile = path.join(
+        outputDir,
+        'failed-tests.html'
+    );
+
+    const apiFailed = report.byProject.api.stats.failed;
+
+    const uiFailed = report.byProject.ui.stats.failed;
+
+    fs.mkdirSync(outputDir, {
+        recursive: true
     });
 
-    blocks.push({
-      type: 'section',
+    const rows = failedTests.length
+        ? failedTests
+            .map(
+                (test, index) => `
+            <tr>
+              <td>${index + 1}</td>
 
-      text: {
-        type: 'mrkdwn',
+              <td>
+                <span class="badge ${escapeHtml(test.project)}">
+                  ${escapeHtml(test.project.toUpperCase())}
+                </span>
+              </td>
 
-        text: `\`\`\`\n${buildBreakdownTable(byProject.api)}\n\`\`\``
-      }
-    });
-  }
+              <td>${escapeHtml(test.feature)}</td>
 
-  /**
-   * UI
-   */
-  if (byProject.ui.stats.total > 0) {
-    blocks.push({
-      type: 'divider'
-    });
+              <td>${escapeHtml(test.epic)}</td>
 
-    blocks.push({
-      type: 'section',
+              <td>${escapeHtml(test.name)}</td>
 
-      text: {
-        type: 'mrkdwn',
+              <td class="failed">
+                FAILED
+              </td>
+            </tr>`
+            )
+            .join('')
+        : `
+      <tr>
+        <td colspan="6" class="empty">
+          🎉 No failed test cases
+        </td>
+      </tr>`;
 
-        text:
-          `🖥️ *UI — FEATURE / EPIC BREAKDOWN*\n` +
-          `${byProject.ui.stats.total} tests • ` +
-          `✅ ${byProject.ui.stats.passed} passed • ` +
-          `❌ ${byProject.ui.stats.failed} failed • ` +
-          `⏭️ ${byProject.ui.stats.skipped} skipped`
-      }
-    });
+    const allTests = results.length;
 
-    blocks.push({
-      type: 'section',
+    const actionsUrl = RUN_ID
+        ? `${SERVER_URL}/${REPOSITORY}/actions/runs/${RUN_ID}`
+        : `${SERVER_URL}/${REPOSITORY}/actions`;
 
-      text: {
-        type: 'mrkdwn',
+    const html = `<!doctype html>
 
-        text: `\`\`\`\n${buildBreakdownTable(byProject.ui)}\n\`\`\``
-      }
-    });
-  }
+<html lang="en">
 
-  /**
-   * Failed tests
-   */
-  blocks.push({
-    type: 'divider'
-  });
+<head>
 
-  blocks.push({
-    type: 'section',
+  <meta charset="UTF-8">
 
-    text: {
-      type: 'mrkdwn',
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-      text:
-        failedTests.length > 0
-          ? `🚨 *FAILED TEST CASES — ${failedTests.length}*`
-          : '🎉 *FAILED TEST CASES — 0*'
+  <title>
+    vLearning — Failed Test Cases
+  </title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
     }
-  });
 
-  blocks.push({
-    type: 'section',
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
-    text: {
-      type: 'mrkdwn',
-
-      text: `\`\`\`\n${buildFailedTestsTable(failedTests)}\n\`\`\``
+      background: #f5f7fb;
+      color: #172033;
     }
-  });
 
-  /**
-   * Report links
-   */
-  blocks.push({
-    type: 'divider'
-  });
-
-  const reportActions = [
-    {
-      type: 'button',
-
-      text: {
-        type: 'plain_text',
-
-        text: '📊 Open GitHub Actions',
-
-        emoji: true
-      },
-
-      url: runUrl,
-
-      action_id: 'open_github_actions'
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 32px;
     }
-  ];
 
-  /**
-   * Add Allure button only when
-   * ALLURE_REPORT_URL exists.
-   */
-  if (ALLURE_REPORT_URL) {
-    reportActions.push({
-      type: 'button',
+    .header {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
 
-      text: {
-        type: 'plain_text',
+      box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.05);
+    }
 
-        text: '📋 Open Allure Report',
+    h1 {
+      margin: 0 0 10px;
+      font-size: 28px;
+    }
 
-        emoji: true
-      },
+    .meta {
+      color: #667085;
+      line-height: 1.8;
+    }
 
-      url: ALLURE_REPORT_URL,
+    .status {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
 
-      action_id: 'open_allure_report'
-    });
-  }
+      background: #fee4e2;
+      color: #b42318;
 
-  blocks.push({
-    type: 'actions',
+      font-weight: 700;
+      font-size: 12px;
+    }
 
-    elements: reportActions
-  });
+    .cards {
+      display: grid;
 
-  /**
-   * Footer
-   */
-  blocks.push({
-    type: 'context',
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
 
-    elements: [
-      {
-        type: 'mrkdwn',
+      gap: 16px;
+      margin-bottom: 24px;
+    }
 
-        text:
-          `vLearning Playwright Automation • ` +
-          `Run #${RUN_NUMBER}` +
-          (COMMIT ? ` • Commit \`${COMMIT.substring(0, 7)}\`` : '')
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .label {
+      color: #667085;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      font-size: 28px;
+      font-weight: 750;
+    }
+
+    .table-wrap {
+      background: #fff;
+
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+
+      overflow: auto;
+
+      box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1000px;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+
+      border-bottom:
+        1px solid #eaecf0;
+
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f9fafb;
+
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+
+      color: #475467;
+
+      position: sticky;
+      top: 0;
+    }
+
+    td {
+      font-size: 14px;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .failed {
+      color: #b42318;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-block;
+
+      padding: 4px 9px;
+
+      border-radius: 999px;
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .badge.api {
+      background: #e0f2fe;
+      color: #075985;
+    }
+
+    .badge.ui {
+      background: #ede9fe;
+      color: #5b21b6;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 40px;
+      color: #667085;
+    }
+
+    .links {
+      margin-top: 20px;
+
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      text-decoration: none;
+
+      padding: 10px 14px;
+
+      border-radius: 10px;
+
+      border:
+        1px solid #d0d5dd;
+
+      background: #fff;
+
+      color: #344054;
+
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 20px;
+
+      color: #98a2b3;
+
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+
+      .cards {
+        grid-template-columns:
+          repeat(2, 1fr);
       }
-    ]
-  });
 
-  return {
-    text: `${statusEmoji} vLearning Automated Test Report — ` + `Run #${RUN_NUMBER}`,
+      .container {
+        padding: 16px;
+      }
+    }
 
-    blocks
-  };
+    @media (max-width: 560px) {
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section class="header">
+
+      <h1>
+        🚨 vLearning — Failed Test Cases
+
+        <span class="status">
+          FAILED
+        </span>
+      </h1>
+
+      <div class="meta">
+
+        Run #${escapeHtml(RUN_NUMBER)}
+        · ${escapeHtml(date)}
+        · ${escapeHtml(time)} GMT+7
+
+        <br>
+
+        Branch:
+        <strong>
+          ${escapeHtml(BRANCH)}
+        </strong>
+
+        · Trigger:
+
+        <strong>
+          ${escapeHtml(
+        getTriggerName(EVENT_NAME)
+    )}
+        </strong>
+
+        <br>
+
+        Repository:
+
+        <strong>
+          ${escapeHtml(REPOSITORY)}
+        </strong>
+
+      </div>
+
+      <div class="links">
+
+        ${ALLURE_REPORT_URL
+            ? `
+              <a
+                href="${escapeHtml(ALLURE_REPORT_URL)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📋 Open Allure Report
+              </a>
+            `
+            : ''
+        }
+
+        <a
+          href="${escapeHtml(actionsUrl)}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📊 Open GitHub Actions
+        </a>
+
+      </div>
+
+    </section>
+
+    <section class="cards">
+
+      <div class="card">
+
+        <div class="label">
+          Total tests
+        </div>
+
+        <div class="value">
+          ${allTests}
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="label">
+          Failed tests
+        </div>
+
+        <div class="value">
+          ${failedTests.length}
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="label">
+          API failed
+        </div>
+
+        <div class="value">
+          ${apiFailed}
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="label">
+          UI failed
+        </div>
+
+        <div class="value">
+          ${uiFailed}
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="table-wrap">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>#</th>
+
+            <th>Type</th>
+
+            <th>Feature</th>
+
+            <th>Epic</th>
+
+            <th>Test Case</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          ${rows}
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+    <div class="footer">
+
+      Generated by
+      vLearning Playwright Automation
+
+      · Run #${escapeHtml(RUN_NUMBER)}
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>`;
+
+    fs.writeFileSync(
+        outputFile,
+        html,
+        'utf8'
+    );
+
+    console.log(
+        `Failed tests HTML created: ${outputFile}`
+    );
 }
 
 /**
@@ -824,49 +1413,109 @@ function buildSlackPayload(results, report) {
  */
 
 function main() {
-  console.log('========================================');
+    console.log(
+        '========================================'
+    );
 
-  console.log('vLearning Slack Report Generator');
+    console.log(
+        'vLearning Slack Report Generator'
+    );
 
-  console.log('========================================');
+    console.log(
+        '========================================'
+    );
 
-  console.log(`Allure results: ${RESULTS_DIR}`);
+    console.log(
+        `Allure results: ${RESULTS_DIR}`
+    );
 
-  const results = loadAllureResults();
+    const results = loadAllureResults();
 
-  console.log(`Allure result files loaded: ${results.length}`);
+    console.log(
+        `Allure result files loaded: ${results.length}`
+    );
 
-  if (!results.length) {
-    throw new Error('No Allure result files found.');
-  }
+    if (!results.length) {
+        throw new Error(
+            'No Allure result files found.'
+        );
+    }
 
-  const report = buildReport(results);
+    const report = buildReport(results);
 
-  console.log(`Total tests: ${report.overall.total}`);
+    console.log(
+        `Total tests: ${report.overall.total}`
+    );
 
-  console.log(`Passed: ${report.overall.passed}`);
+    console.log(
+        `Passed: ${report.overall.passed}`
+    );
 
-  console.log(`Failed: ${report.overall.failed}`);
+    console.log(
+        `Failed: ${report.overall.failed}`
+    );
 
-  console.log(`Skipped: ${report.overall.skipped}`);
+    console.log(
+        `Skipped: ${report.overall.skipped}`
+    );
 
-  console.log(`Failed test cases: ${report.failedTests.length}`);
+    console.log(
+        `Failed test cases: ${report.failedTests.length}`
+    );
 
-  const payload = buildSlackPayload(results, report);
+    if (FAILED_TESTS_REPORT_URL) {
+        console.log(
+            `Failed tests report URL: ${FAILED_TESTS_REPORT_URL}`
+        );
+    }
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(payload, null, 2), 'utf8');
+    /**
+     * Generate:
+     *
+     * reports/playwright/allure-report/
+     * └── failed-tests.html
+     */
+    generateFailedTestsHtml(
+        results,
+        report
+    );
 
-  console.log(`Slack payload created: ${OUTPUT_FILE}`);
+    /**
+     * Generate Slack payload
+     */
+    const payload =
+        buildSlackPayload(
+            results,
+            report
+        );
 
-  console.log('========================================');
+    fs.writeFileSync(
+        OUTPUT_FILE,
+        JSON.stringify(
+            payload,
+            null,
+            2
+        ),
+        'utf8'
+    );
+
+    console.log(
+        `Slack payload created: ${OUTPUT_FILE}`
+    );
+
+    console.log(
+        '========================================'
+    );
 }
 
 try {
-  main();
+    main();
 } catch (error) {
-  console.error('Failed to generate Slack report:');
+    console.error(
+        'Failed to generate Slack report:'
+    );
 
-  console.error(error);
+    console.error(error);
 
-  process.exit(1);
+    process.exit(1);
 }

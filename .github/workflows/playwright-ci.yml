@@ -147,8 +147,8 @@ jobs:
           echo "===== SLACK PAYLOAD ====="
           cat slack-payload.json
           echo ""
-          echo "===== FILE INFO ====="
-          ls -lh slack-payload.json
+          echo "===== JSON VALIDATION ====="
+          node -e "JSON.parse(require('fs').readFileSync('slack-payload.json', 'utf8')); console.log('VALID JSON')"
 
       # ==========================================
       # SEND SLACK
