@@ -5,11 +5,22 @@ on:
     branches:
       - main
       - master
+
   pull_request:
     branches:
       - main
       - master
+
+  schedule:
+    - cron: '0 16 * * *'
+      timezone: 'Asia/Ho_Chi_Minh'
+
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   playwright-test:
@@ -53,9 +64,55 @@ jobs:
       - name: Run Playwright tests
         run: npm run test
 
+      # ==========================================
+      # ALLURE
+      # ==========================================
+
       - name: Generate Allure report
         if: always()
         run: npm run allure:generate
+
+      # ==========================================
+      # GITHUB PAGES
+      # ==========================================
+
+      - name: Configure GitHub Pages
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Allure report to GitHub Pages
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: reports/playwright/allure-report
+
+      - name: Deploy Allure report to GitHub Pages
+        if: always() && github.event_name != 'pull_request'
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # ==========================================
+      # SLACK REPORT
+      # ==========================================
+
+      - name: Generate Slack test report
+        if: always()
+        run: node scripts/generate-slack-report.js
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
+
+          # Allure URL
+          ALLURE_REPORT_URL: ${{ steps.deployment.outputs.page_url }}
+
+      # ==========================================
+      # ARTIFACTS
+      # ==========================================
 
       - name: Upload Playwright HTML report
         if: always()
@@ -64,6 +121,7 @@ jobs:
           name: playwright-html-report
           path: reports/playwright/html
           retention-days: 14
+          if-no-files-found: warn
 
       - name: Upload Allure report
         if: always()
@@ -72,6 +130,7 @@ jobs:
           name: allure-report
           path: reports/playwright/allure-report
           retention-days: 14
+          if-no-files-found: warn
 
       - name: Upload JUnit report
         if: always()
@@ -80,59 +139,16 @@ jobs:
           name: junit-report
           path: reports/playwright/junit
           retention-days: 14
+          if-no-files-found: warn
 
-          
-      - name: Test Slack notification
+      # ==========================================
+      # SEND SLACK
+      # ==========================================
+
+      - name: Send Slack test report
         if: always()
         uses: slackapi/slack-github-action@v4.0.0
         with:
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
-          payload: |
-            text: "🚀 Slack connection test from vLearning Playwright CI"
-      
-      - name: Generate Allure report
-        if: always()
-        run: npm run allure:generate
-
-      - name: Upload Playwright HTML report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-html-report
-          path: reports/playwright/html
-          retention-days: 14
-
-      - name: Upload Allure report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: reports/playwright/allure-report
-          retention-days: 14
-
-      - name: Upload JUnit report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: junit-report
-          path: reports/playwright/junit
-          retention-days: 14
-
-      - name: Send Slack notification
-        if: always()
-        uses: slackapi/slack-github-action@v4.0.0
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          webhook-type: incoming-webhook
-          payload: |
-            text: |
-              🚀 vLearning Playwright CI
-
-              Status: ${{ job.status }}
-              Repository: ${{ github.repository }}
-              Branch: ${{ github.ref_name }}
-              Commit: ${{ github.sha }}
-
-              Playwright tests have completed.
-              Allure report has been generated.
+          payload-file-path: ./slack-payload.json
