@@ -6,7 +6,7 @@
       "localStorage": [
         {
           "name": "credentials",
-          "value": "{\"taiKhoan\":\"testadmin1\",\"email\":\"testadmin@com\",\"soDT\":\"099999999\",\"maNhom\":\"GP01\",\"maLoaiNguoiDung\":\"GV\",\"hoTen\":\"testadmin\",\"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdGFkbWluMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkdWIiwibmJmIjoxNzkwODY1MTgwLCJleHAiOjE3OTA4Njg3ODB9.PgbeSg8DHzP_UoeD1qwksiW3H303JK4H6ilQW4EeSE8\",\"hinhAnh\":\"https://cdn.dribbble.com/users/2364329/screenshots/6676961/02.jpg?compress=1&resize=800x600\"}"
+          "value": "{\"taiKhoan\":\"testadmin1\",\"email\":\"testadmin@com\",\"soDT\":\"099999999\",\"maNhom\":\"GP01\",\"maLoaiNguoiDung\":\"GV\",\"hoTen\":\"testadmin\",\"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdGFkbWluMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkdWIiwibmJmIjoxNzkwODgxMDk3LCJleHAiOjE3OTA4ODQ2OTd9.zxe7oYPWvN1vS7nq4-ONZgRa4cr4sieaQrx29rnKQsg\",\"hinhAnh\":\"https://cdn.dribbble.com/users/2364329/screenshots/6676961/02.jpg?compress=1&resize=800x600\"}"
         }
       ]
     }

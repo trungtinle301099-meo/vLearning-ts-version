@@ -28,8 +28,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      BASE_URL: ${{ secrets.BASE_URL || 'https://demo2.cybersoft.edu.vn' }}
-      API_BASE_URL: ${{ secrets.API_BASE_URL || 'https://demo2.cybersoft.edu.vn' }}
+      BASE_URL: https://demo2.cybersoft.edu.vn
+      API_BASE_URL: ${{ secrets.API_BASE_URL || 'https://elearningnew.cybersoft.edu.vn' }}
       TOKEN_CYBERSOFT: ${{ secrets.TOKEN_CYBERSOFT }}
       USERNAME: ${{ secrets.USERNAME }}
       PASSWORD: ${{ secrets.PASSWORD }}
