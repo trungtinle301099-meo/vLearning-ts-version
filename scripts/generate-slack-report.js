@@ -21,8 +21,6 @@ const SERVER_URL = process.env.GITHUB_SERVER_URL || 'https://github.com';
 
 const ALLURE_REPORT_URL = process.env.ALLURE_REPORT_URL || '';
 
-const FAILED_TESTS_REPORT_URL = process.env.FAILED_TESTS_REPORT_URL || '';
-
 /**
  * -------------------------------------------------------
  * Helpers
@@ -30,223 +28,203 @@ const FAILED_TESTS_REPORT_URL = process.env.FAILED_TESTS_REPORT_URL || '';
  */
 
 function getTriggerName(eventName) {
-    switch (eventName) {
-        case 'schedule':
-            return 'Scheduled';
+  switch (eventName) {
+    case 'schedule':
+      return 'Scheduled';
 
-        case 'push':
-            return 'Push';
+    case 'push':
+      return 'Push';
 
-        case 'pull_request':
-            return 'Pull Request';
+    case 'pull_request':
+      return 'Pull Request';
 
-        case 'workflow_dispatch':
-            return 'Manual';
+    case 'workflow_dispatch':
+      return 'Manual';
 
-        default:
-            return eventName || 'Local';
-    }
+    default:
+      return eventName || 'Local';
+  }
 }
 
 function getVietnamDateTime() {
-    const now = new Date();
+  const now = new Date();
 
-    const dateFormatter = new Intl.DateTimeFormat('vi-VN', {
-        timeZone: 'Asia/Ho_Chi_Minh',
-        weekday: 'long',
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
+  const dateFormatter = new Intl.DateTimeFormat('vi-VN', {
+    timeZone: 'Asia/Ho_Chi_Minh',
+    weekday: 'long',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
 
-    const timeFormatter = new Intl.DateTimeFormat('vi-VN', {
-        timeZone: 'Asia/Ho_Chi_Minh',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    });
+  const timeFormatter = new Intl.DateTimeFormat('vi-VN', {
+    timeZone: 'Asia/Ho_Chi_Minh',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  });
 
-    return {
-        date: dateFormatter.format(now),
-        time: timeFormatter.format(now)
-    };
+  return {
+    date: dateFormatter.format(now),
+    time: timeFormatter.format(now)
+  };
 }
 
 function getDuration(results) {
-    if (!results.length) {
-        return '00m 00s';
-    }
+  if (!results.length) {
+    return '00m 00s';
+  }
 
-    const starts = results.map((result) => result.start).filter(Boolean);
+  const starts = results.map((result) => result.start).filter(Boolean);
 
-    const stops = results.map((result) => result.stop).filter(Boolean);
+  const stops = results.map((result) => result.stop).filter(Boolean);
 
-    if (!starts.length || !stops.length) {
-        return '00m 00s';
-    }
+  if (!starts.length || !stops.length) {
+    return '00m 00s';
+  }
 
-    const start = Math.min(...starts);
-    const stop = Math.max(...stops);
+  const start = Math.min(...starts);
+  const stop = Math.max(...stops);
 
-    const durationMs = Math.max(0, stop - start);
+  const durationMs = Math.max(0, stop - start);
 
-    const totalSeconds = Math.floor(durationMs / 1000);
+  const totalSeconds = Math.floor(durationMs / 1000);
 
-    const hours = Math.floor(totalSeconds / 3600);
+  const hours = Math.floor(totalSeconds / 3600);
 
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
 
-    const seconds = totalSeconds % 60;
+  const seconds = totalSeconds % 60;
 
-    if (hours > 0) {
-        return `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(
-            2,
-            '0'
-        )}m ${String(seconds).padStart(2, '0')}s`;
-    }
+  if (hours > 0) {
+    return `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(
+      seconds
+    ).padStart(2, '0')}s`;
+  }
 
-    return `${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
-}
-
-function getLabel(result, labelName, fallback = 'N/A') {
-    const label = result.labels?.find((item) => item.name === labelName);
-
-    return label?.value || fallback;
+  return `${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
 }
 
 function getProject(result) {
-    /**
-     * 1. Playwright Allure stores project
-     *    information in parameters.
-     */
-    const projectParameter = result.parameters?.find(
-        (parameter) => parameter.name?.toLowerCase() === 'project'
-    );
+  /**
+   * Playwright Allure stores project
+   * information in parameters:
+   *
+   * [
+   *   {
+   *     name: "Project",
+   *     value: "api"
+   *   }
+   * ]
+   */
 
-    if (projectParameter?.value) {
-        return String(projectParameter.value).toLowerCase();
-    }
+  const projectParameter = result.parameters?.find(
+    (parameter) => parameter.name?.toLowerCase() === 'project'
+  );
 
-    /**
-     * 2. Fallback: parentSuite
-     */
-    const parentSuite = getLabel(result, 'parentSuite', '').toLowerCase();
+  if (projectParameter?.value) {
+    return projectParameter.value.toLowerCase();
+  }
 
-    if (parentSuite === 'api' || parentSuite === 'ui') {
-        return parentSuite;
-    }
+  /**
+   * Fallback:
+   * Try to get project from labels.
+   */
 
-    /**
-     * 3. Fallback: titlePath
-     */
-    if (Array.isArray(result.titlePath)) {
-        const titlePath = result.titlePath.map((item) => String(item).toLowerCase());
+  const projectLabel = result.labels?.find((label) => label.name?.toLowerCase() === 'project');
 
-        if (titlePath.includes('api')) {
-            return 'api';
-        }
+  if (projectLabel?.value) {
+    return projectLabel.value.toLowerCase();
+  }
 
-        if (titlePath.includes('ui')) {
-            return 'ui';
-        }
-    }
+  /**
+   * Final fallback:
+   * Use test result historyId / fullName.
+   */
 
-    /**
-     * 4. Fallback: package name
-     */
-    const packageLabel = getLabel(result, 'package', '').toLowerCase();
+  const fullName = result.fullName?.toLowerCase() || '';
 
-    if (packageLabel.includes('.api.') || packageLabel.includes('/api/')) {
-        return 'api';
-    }
+  if (fullName.includes('api') || fullName.includes('/api/')) {
+    return 'api';
+  }
 
-    if (packageLabel.includes('.ui.') || packageLabel.includes('/ui/')) {
-        return 'ui';
-    }
+  if (fullName.includes('ui') || fullName.includes('/ui/')) {
+    return 'ui';
+  }
 
-    return 'unknown';
+  return 'uncategorized';
 }
 
-function getFeature(result) {
-    return getLabel(result, 'feature', 'Uncategorized');
+function normalizeProject(project) {
+  if (project === 'api') {
+    return 'api';
+  }
+
+  if (project === 'ui') {
+    return 'ui';
+  }
+
+  return 'uncategorized';
 }
 
-function getEpic(result) {
-    return getLabel(result, 'epic', 'Uncategorized');
-}
+function getStatus(result) {
+  const status = result.status?.toLowerCase();
 
-function normalizeStatus(status) {
-    switch (status) {
-        case 'passed':
-            return 'passed';
+  if (status === 'passed') {
+    return 'passed';
+  }
 
-        case 'skipped':
-            return 'skipped';
+  if (status === 'failed' || status === 'broken') {
+    return 'failed';
+  }
 
-        case 'failed':
-        case 'broken':
-        case 'unknown':
-            return 'failed';
+  if (status === 'skipped' || status === 'unknown') {
+    return 'skipped';
+  }
 
-        default:
-            return 'failed';
-    }
+  return 'skipped';
 }
 
 function createStats() {
-    return {
-        total: 0,
-        passed: 0,
-        failed: 0,
-        skipped: 0
-    };
+  return {
+    total: 0,
+    passed: 0,
+    failed: 0,
+    skipped: 0
+  };
 }
 
-function addToStats(stats, status) {
-    stats.total += 1;
+function addResultToStats(stats, result) {
+  stats.total += 1;
 
-    if (status === 'passed') {
-        stats.passed += 1;
-    } else if (status === 'skipped') {
-        stats.skipped += 1;
-    } else {
-        stats.failed += 1;
-    }
+  const status = getStatus(result);
+
+  stats[status] += 1;
 }
 
 function getPassRate(stats) {
-    if (!stats.total) {
-        return '0.0%';
-    }
+  if (!stats.total) {
+    return '0.0%';
+  }
 
-    return `${((stats.passed / stats.total) * 100).toFixed(1)}%`;
+  return `${((stats.passed / stats.total) * 100).toFixed(1)}%`;
 }
 
-function sanitizeTableValue(value) {
-    return String(value ?? 'N/A')
-        .replace(/\|/g, '/')
-        .replace(/\r?\n/g, ' ');
+function getDisplayProject(project) {
+  if (project === 'api') {
+    return 'API';
+  }
+
+  if (project === 'ui') {
+    return 'UI';
+  }
+
+  return 'Uncategorized';
 }
 
-function padRight(value, length) {
-    const text = sanitizeTableValue(value);
-
-    if (text.length >= length) {
-        return text.substring(0, length);
-    }
-
-    return text + ' '.repeat(length - text.length);
-}
-
-function padLeft(value, length) {
-    const text = sanitizeTableValue(value);
-
-    if (text.length >= length) {
-        return text.substring(0, length);
-    }
-
-    return ' '.repeat(length - text.length) + text;
+function pad(value, length) {
+  return String(value).padStart(length, ' ');
 }
 
 /**
@@ -256,1074 +234,502 @@ function padLeft(value, length) {
  */
 
 function loadAllureResults() {
-    if (!fs.existsSync(RESULTS_DIR)) {
-        throw new Error(`Allure results directory not found: ${RESULTS_DIR}`);
+  if (!fs.existsSync(RESULTS_DIR)) {
+    throw new Error(`Allure results directory not found: ${RESULTS_DIR}`);
+  }
+
+  const files = fs.readdirSync(RESULTS_DIR).filter((file) => file.endsWith('-result.json'));
+
+  if (!files.length) {
+    throw new Error('No Allure result files found.');
+  }
+
+  const results = [];
+
+  for (const file of files) {
+    const filePath = path.join(RESULTS_DIR, file);
+
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+
+      const result = JSON.parse(content);
+
+      results.push(result);
+    } catch (error) {
+      console.warn(`Unable to read Allure result: ${file}`, error);
     }
+  }
 
-    const files = fs
-        .readdirSync(RESULTS_DIR)
-        .filter((file) => file.endsWith('-result.json') && !file.endsWith('-container.json'));
-
-    const rawResults = [];
-
-    for (const file of files) {
-        const filePath = path.join(RESULTS_DIR, file);
-
-        try {
-            const content = fs.readFileSync(filePath, 'utf8');
-
-            const result = JSON.parse(content);
-
-            rawResults.push(result);
-        } catch {
-            console.warn(`Unable to parse Allure result: ${file}`);
-        }
-    }
-
-    /**
-     * Playwright retries can generate
-     * more than one result for the
-     * same logical test.
-     */
-    const resultMap = new Map();
-
-    for (const result of rawResults) {
-        const key = result.historyId || result.fullName || result.uuid;
-
-        const existing = resultMap.get(key);
-
-        if (!existing) {
-            resultMap.set(key, result);
-
-            continue;
-        }
-
-        const existingStop = existing.stop || 0;
-
-        const currentStop = result.stop || 0;
-
-        if (currentStop >= existingStop) {
-            resultMap.set(key, result);
-        }
-    }
-
-    return Array.from(resultMap.values());
+  return results;
 }
 
 /**
  * -------------------------------------------------------
- * Build statistics
+ * Statistics
  * -------------------------------------------------------
  */
 
 function buildReport(results) {
-    const overall = createStats();
+  const overall = createStats();
 
-    const byProject = {
-        api: {
-            stats: createStats(),
-            features: new Map()
-        },
+  const byProject = {
+    api: {
+      stats: createStats(),
+      results: []
+    },
 
-        ui: {
-            stats: createStats(),
-            features: new Map()
-        }
-    };
+    ui: {
+      stats: createStats(),
+      results: []
+    },
 
-    const failedTests = [];
-
-    for (const result of results) {
-        const project = getProject(result);
-
-        if (project !== 'api' && project !== 'ui') {
-            continue;
-        }
-
-        const status = normalizeStatus(result.status);
-
-        const feature = getFeature(result);
-
-        const epic = getEpic(result);
-
-        addToStats(overall, status);
-
-        addToStats(byProject[project].stats, status);
-
-        if (!byProject[project].features.has(feature)) {
-            byProject[project].features.set(feature, {
-                stats: createStats(),
-                epics: new Map()
-            });
-        }
-
-        const featureData = byProject[project].features.get(feature);
-
-        addToStats(featureData.stats, status);
-
-        if (!featureData.epics.has(epic)) {
-            featureData.epics.set(epic, {
-                stats: createStats()
-            });
-        }
-
-        const epicData = featureData.epics.get(epic);
-
-        addToStats(epicData.stats, status);
-
-        if (status === 'failed') {
-            failedTests.push({
-                project,
-                feature,
-                epic,
-                name: result.name || result.fullName || 'Unnamed test'
-            });
-        }
+    uncategorized: {
+      stats: createStats(),
+      results: []
     }
+  };
 
-    return {
-        overall,
-        byProject,
-        failedTests
-    };
+  for (const result of results) {
+    const project = normalizeProject(getProject(result));
+
+    addResultToStats(overall, result);
+
+    addResultToStats(byProject[project].stats, result);
+
+    byProject[project].results.push(result);
+  }
+
+  return {
+    overall,
+    byProject
+  };
 }
 
 /**
  * -------------------------------------------------------
- * Summary table
+ * Slack table
  * -------------------------------------------------------
  */
 
 function buildSummaryTable(apiStats, uiStats, overall) {
-    const headers = ['Type', 'Total', 'Passed', 'Failed', 'Skipped', 'Pass Rate'];
+  const header = 'Type     │ Total    │ Passed   │ Failed   │ Skipped   │ Pass Rate  ';
 
-    const rows = [
-        [
-            'API',
-            apiStats.total,
-            apiStats.passed,
-            apiStats.failed,
-            apiStats.skipped,
-            getPassRate(apiStats)
-        ],
+  const separator = '─────────┼──────────┼──────────┼──────────┼───────────┼────────────';
 
-        ['UI', uiStats.total, uiStats.passed, uiStats.failed, uiStats.skipped, getPassRate(uiStats)],
+  const apiRow =
+    `API      │ ${pad(apiStats.total, 8)} │ ` +
+    `${pad(apiStats.passed, 8)} │ ` +
+    `${pad(apiStats.failed, 8)} │ ` +
+    `${pad(apiStats.skipped, 9)} │ ` +
+    `${pad(getPassRate(apiStats), 10)}`;
 
-        ['TOTAL', overall.total, overall.passed, overall.failed, overall.skipped, getPassRate(overall)]
-    ];
+  const uiRow =
+    `UI       │ ${pad(uiStats.total, 8)} │ ` +
+    `${pad(uiStats.passed, 8)} │ ` +
+    `${pad(uiStats.failed, 8)} │ ` +
+    `${pad(uiStats.skipped, 9)} │ ` +
+    `${pad(getPassRate(uiStats), 10)}`;
 
-    const widths = [8, 8, 8, 8, 9, 11];
+  const totalRow =
+    `TOTAL    │ ${pad(overall.total, 8)} │ ` +
+    `${pad(overall.passed, 8)} │ ` +
+    `${pad(overall.failed, 8)} │ ` +
+    `${pad(overall.skipped, 9)} │ ` +
+    `${pad(getPassRate(overall), 10)}`;
 
-    const header = headers.map((value, index) => padRight(value, widths[index])).join(' │ ');
-
-    const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
-
-    const body = rows
-        .map((row) =>
-            row
-                .map((value, index) =>
-                    index === 0 ? padRight(value, widths[index]) : padLeft(value, widths[index])
-                )
-                .join(' │ ')
-        )
-        .join('\n');
-
-    return `${header}\n${separator}\n${body}`;
+  return [header, separator, apiRow, uiRow, separator, totalRow].join('\n');
 }
 
 /**
  * -------------------------------------------------------
- * Feature / Epic table
- * -------------------------------------------------------
- */
-
-function buildBreakdownTable(projectData) {
-    const headers = ['Feature', 'Epic', 'Total', 'Passed', 'Failed', 'Skipped', 'Pass Rate'];
-
-    const rows = [];
-
-    for (const [feature, featureData] of projectData.features) {
-        for (const [epic, epicData] of featureData.epics) {
-            rows.push([
-                feature,
-                epic,
-                epicData.stats.total,
-                epicData.stats.passed,
-                epicData.stats.failed,
-                epicData.stats.skipped,
-                getPassRate(epicData.stats)
-            ]);
-        }
-    }
-
-    if (!rows.length) {
-        return 'No feature / epic data';
-    }
-
-    const widths = [32, 28, 7, 8, 8, 9, 11];
-
-    const header = headers.map((value, index) => padRight(value, widths[index])).join(' │ ');
-
-    const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
-
-    const body = rows
-        .map((row) =>
-            row
-                .map((value, index) =>
-                    index >= 2 ? padLeft(value, widths[index]) : padRight(value, widths[index])
-                )
-                .join(' │ ')
-        )
-        .join('\n');
-
-    return `${header}\n${separator}\n${body}`;
-}
-
-/**
- * -------------------------------------------------------
- * Failed tests table
- * -------------------------------------------------------
- *
- * Slack chỉ hiển thị 10 failed test đầu tiên.
- */
-
-function buildFailedTestsTable(failedTests, limit = 10) {
-    if (!failedTests.length) {
-        return 'No failed test cases 🎉';
-    }
-
-    const headers = ['#', 'Type', 'Feature', 'Epic', 'Test Case', 'Status'];
-
-    const rows = failedTests
-        .slice(0, limit)
-        .map((test, index) => [
-            index + 1,
-            test.project.toUpperCase(),
-            test.feature,
-            test.epic,
-            test.name,
-            '❌ FAILED'
-        ]);
-
-    const widths = [4, 8, 28, 24, 48, 12];
-
-    const header = headers.map((value, index) => padRight(value, widths[index])).join(' │ ');
-
-    const separator = widths.map((width) => '─'.repeat(width)).join('─┼─');
-
-    const body = rows
-        .map((row) =>
-            row
-                .map((value, index) =>
-                    index === 0 ? padLeft(value, widths[index]) : padRight(value, widths[index])
-                )
-                .join(' │ ')
-        )
-        .join('\n');
-
-    return `${header}\n${separator}\n${body}`;
-}
-
-/**
- * -------------------------------------------------------
- * Slack blocks
+ * Slack payload
  * -------------------------------------------------------
  */
 
 function buildSlackPayload(results, report) {
-    const { overall, byProject, failedTests } = report;
+  const { overall, byProject } = report;
 
-    const { date, time } = getVietnamDateTime();
+  const { date, time } = getVietnamDateTime();
 
-    const trigger = getTriggerName(EVENT_NAME);
+  const trigger = getTriggerName(EVENT_NAME);
 
-    const duration = getDuration(results);
+  const duration = getDuration(results);
 
-    const statusEmoji = overall.failed > 0 ? '❌' : '✅';
+  const statusEmoji = overall.failed > 0 ? '❌' : '✅';
 
-    const statusText = overall.failed > 0 ? 'FAILED' : 'PASSED';
+  const statusText = overall.failed > 0 ? 'FAILED' : 'PASSED';
 
-    const runUrl = RUN_ID
-        ? `${SERVER_URL}/${REPOSITORY}/actions/runs/${RUN_ID}`
-        : `${SERVER_URL}/${REPOSITORY}/actions`;
+  const runUrl = RUN_ID
+    ? `${SERVER_URL}/${REPOSITORY}/actions/runs/${RUN_ID}`
+    : `${SERVER_URL}/${REPOSITORY}/actions`;
 
-    const blocks = [];
+  /**
+   * Always keep the Allure button.
+   *
+   * GitHub Actions overrides
+   * ALLURE_REPORT_URL through env.
+   */
 
-    /**
-     * Header
-     */
+  const allureReportUrl =
+    ALLURE_REPORT_URL || 'https://trungtinle301099-meo.github.io/vLearning-ts-version/';
 
-    blocks.push({
-        type: 'header',
+  const blocks = [];
 
-        text: {
-            type: 'plain_text',
+  /**
+   * ---------------------------------------------------
+   * Header
+   * ---------------------------------------------------
+   */
 
-            text: '🚀 vLearning — Automated Test Report',
+  blocks.push({
+    type: 'header',
 
-            emoji: true
-        }
-    });
+    text: {
+      type: 'plain_text',
 
-    /**
-     * Run information
-     */
+      text: '🧪 vLearning — Playwright Test Report',
 
-    blocks.push({
-        type: 'section',
-
-        text: {
-            type: 'mrkdwn',
-
-            text:
-                `*Run #${RUN_NUMBER}*  •  *${statusText}*\n` +
-                `📅 ${date}\n` +
-                `🕐 ${time} GMT+7\n` +
-                `🌿 Branch: \`${BRANCH}\`\n` +
-                `⚙️ Trigger: \`${trigger}\`\n` +
-                `📦 Repository: \`${REPOSITORY}\``
-        }
-    });
-
-    blocks.push({
-        type: 'divider'
-    });
-
-    /**
-     * Overall summary
-     */
-
-    blocks.push({
-        type: 'section',
-
-        text: {
-            type: 'mrkdwn',
-
-            text: '📊 *OVERALL SUMMARY*'
-        }
-    });
-
-    blocks.push({
-        type: 'section',
-
-        text: {
-            type: 'mrkdwn',
-
-            text: `\`\`\`\n${buildSummaryTable(byProject.api.stats, byProject.ui.stats, overall)}\n\`\`\``
-        }
-    });
-
-    blocks.push({
-        type: 'section',
-
-        text: {
-            type: 'mrkdwn',
-
-            text:
-                `📈 *Pass Rate:* ${getPassRate(overall)}    •    ` +
-                `🧪 *Tests:* ${overall.total}    •    ` +
-                `⏱️ *Duration:* ${duration}`
-        }
-    });
-
-    /**
-     * API
-     */
-
-    if (byProject.api.stats.total > 0) {
-        blocks.push({
-            type: 'divider'
-        });
-
-        blocks.push({
-            type: 'section',
-
-            text: {
-                type: 'mrkdwn',
-
-                text:
-                    `🔌 *API — FEATURE / EPIC BREAKDOWN*\n` +
-                    `${byProject.api.stats.total} tests • ` +
-                    `✅ ${byProject.api.stats.passed} passed • ` +
-                    `❌ ${byProject.api.stats.failed} failed • ` +
-                    `⏭️ ${byProject.api.stats.skipped} skipped`
-            }
-        });
-
-        blocks.push({
-            type: 'section',
-
-            text: {
-                type: 'mrkdwn',
-
-                text: `\`\`\`\n${buildBreakdownTable(byProject.api)}\n\`\`\``
-            }
-        });
+      emoji: true
     }
+  });
 
-    /**
-     * UI
-     */
+  /**
+   * ---------------------------------------------------
+   * Execution information
+   * ---------------------------------------------------
+   */
 
-    if (byProject.ui.stats.total > 0) {
-        blocks.push({
-            type: 'divider'
-        });
+  blocks.push({
+    type: 'section',
 
-        blocks.push({
-            type: 'section',
+    text: {
+      type: 'mrkdwn',
 
-            text: {
-                type: 'mrkdwn',
-
-                text:
-                    `🖥️ *UI — FEATURE / EPIC BREAKDOWN*\n` +
-                    `${byProject.ui.stats.total} tests • ` +
-                    `✅ ${byProject.ui.stats.passed} passed • ` +
-                    `❌ ${byProject.ui.stats.failed} failed • ` +
-                    `⏭️ ${byProject.ui.stats.skipped} skipped`
-            }
-        });
-
-        blocks.push({
-            type: 'section',
-
-            text: {
-                type: 'mrkdwn',
-
-                text: `\`\`\`\n${buildBreakdownTable(byProject.ui)}\n\`\`\``
-            }
-        });
+      text:
+        `*${statusEmoji} ${statusText}*  •  ` +
+        `*Run #${RUN_NUMBER}*\n` +
+        `📅 ${date}    ` +
+        `🕐 ${time} GMT+7\n` +
+        `🌿 Branch: \`${BRANCH}\`    ` +
+        `⚡ Trigger: \`${trigger}\`\n` +
+        `📦 Repository: \`${REPOSITORY}\``
     }
+  });
 
-    /**
-     * Failed tests
-     */
+  blocks.push({
+    type: 'divider'
+  });
 
-    blocks.push({
-        type: 'divider'
-    });
+  /**
+   * ---------------------------------------------------
+   * Test summary
+   * ---------------------------------------------------
+   */
 
-    blocks.push({
-        type: 'section',
+  blocks.push({
+    type: 'section',
+
+    text: {
+      type: 'mrkdwn',
+
+      text: '📊 *TEST SUMMARY*'
+    }
+  });
+
+  blocks.push({
+    type: 'section',
+
+    text: {
+      type: 'mrkdwn',
+
+      text:
+        `\`\`\`\n` +
+        `${buildSummaryTable(byProject.api.stats, byProject.ui.stats, overall)}\n` +
+        `\`\`\``
+    }
+  });
+
+  /**
+   * ---------------------------------------------------
+   * Pass rate / duration
+   * ---------------------------------------------------
+   */
+
+  blocks.push({
+    type: 'section',
+
+    text: {
+      type: 'mrkdwn',
+
+      text:
+        `🎯 *Pass Rate:* ` +
+        `${getPassRate(overall)}` +
+        `    •    ` +
+        `🧪 *Total:* ` +
+        `${overall.total}` +
+        `    •    ` +
+        `⏱️ *Duration:* ` +
+        `${duration}`
+    }
+  });
+
+  /**
+   * ---------------------------------------------------
+   * Execution status
+   * ---------------------------------------------------
+   */
+
+  blocks.push({
+    type: 'section',
+
+    text: {
+      type: 'mrkdwn',
+
+      text:
+        `📈 *Execution Status*\n` +
+        `✅ ${overall.passed} Passed    ` +
+        `❌ ${overall.failed} Failed    ` +
+        `⏭️ ${overall.skipped} Skipped`
+    }
+  });
+
+  blocks.push({
+    type: 'divider'
+  });
+
+  /**
+   * ---------------------------------------------------
+   * Exactly TWO buttons
+   * ---------------------------------------------------
+   */
+
+  blocks.push({
+    type: 'actions',
+
+    elements: [
+      {
+        type: 'button',
 
         text: {
-            type: 'mrkdwn',
+          type: 'plain_text',
 
-            text:
-                failedTests.length > 0
-                    ? `🚨 *FAILED TEST CASES — ${failedTests.length}*`
-                    : '🎉 *FAILED TEST CASES — 0*'
-        }
-    });
+          text: '🔗 Open GitHub Actions',
 
-    /**
-     * Chỉ hiển thị 10 failed test đầu tiên
-     */
+          emoji: true
+        },
 
-    blocks.push({
-        type: 'section',
+        url: runUrl,
+
+        action_id: 'open_github_actions'
+      },
+
+      {
+        type: 'button',
 
         text: {
-            type: 'mrkdwn',
+          type: 'plain_text',
 
-            text: `\`\`\`\n${buildFailedTestsTable(failedTests, 10)}\n\`\`\``
-        }
-    });
+          text: '📋 Open Allure Report',
 
-    /**
-     * Nếu > 10 failed test:
-     *
-     * ... +46 more failed test cases
-     *
-     * 👉 Click to view View All Failed Tests
-     */
+          emoji: true
+        },
 
-    if (failedTests.length > 10) {
-        const remaining = failedTests.length - 10;
+        url: allureReportUrl,
 
-        blocks.push({
-            type: 'section',
+        action_id: 'open_allure_report'
+      }
+    ]
+  });
 
-            text: {
-                type: 'mrkdwn',
+  /**
+   * ---------------------------------------------------
+   * Footer
+   * ---------------------------------------------------
+   */
 
-                text:
-                    `... +${remaining} more failed test cases\n\n` +
-                    (FAILED_TESTS_REPORT_URL
-                        ? `👉 <${FAILED_TESTS_REPORT_URL}|Click to view View All Failed Tests>`
-                        : '👉 View All Failed Tests (URL not configured)')
-            }
-        });
-    }
+  blocks.push({
+    type: 'context',
 
-    /**
-     * Report links
-     */
+    elements: [
+      {
+        type: 'mrkdwn',
 
-    blocks.push({
-        type: 'divider'
-    });
+        text:
+          `🤖 vLearning Playwright Automation • ` +
+          `Run #${RUN_NUMBER}` +
+          (COMMIT ? ` • Commit \`${COMMIT.substring(0, 7)}\`` : '')
+      }
+    ]
+  });
 
-    const reportActions = [
-        {
-            type: 'button',
+  return {
+    text: `${statusEmoji} ` + `vLearning Playwright Test Report — ` + `Run #${RUN_NUMBER}`,
 
-            text: {
-                type: 'plain_text',
-
-                text: '📊 Open GitHub Actions',
-
-                emoji: true
-            },
-
-            url: runUrl,
-
-            action_id: 'open_github_actions'
-        }
-    ];
-
-    /**
-     * Add Allure button only when
-     * ALLURE_REPORT_URL exists.
-     */
-
-    if (ALLURE_REPORT_URL) {
-        reportActions.push({
-            type: 'button',
-
-            text: {
-                type: 'plain_text',
-
-                text: '📋 Open Allure Report',
-
-                emoji: true
-            },
-
-            url: ALLURE_REPORT_URL,
-
-            action_id: 'open_allure_report'
-        });
-    }
-
-    blocks.push({
-        type: 'actions',
-
-        elements: reportActions
-    });
-
-    /**
-     * Footer
-     */
-
-    blocks.push({
-        type: 'context',
-
-        elements: [
-            {
-                type: 'mrkdwn',
-
-                text:
-                    `vLearning Playwright Automation • ` +
-                    `Run #${RUN_NUMBER}` +
-                    (COMMIT ? ` • Commit \`${COMMIT.substring(0, 7)}\`` : '')
-            }
-        ]
-    });
-
-    return {
-        text: `${statusEmoji} vLearning Automated Test Report — ` + `Run #${RUN_NUMBER}`,
-
-        blocks
-    };
+    blocks
+  };
 }
 
 /**
  * -------------------------------------------------------
- * Generate Failed Tests HTML
+ * Failed tests HTML
  * -------------------------------------------------------
  */
 
-function escapeHtml(value) {
-    return String(value ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-}
+function generateFailedTestsHtml(results) {
+  const failedTests = results.filter((result) => getStatus(result) === 'failed');
 
-function generateFailedTestsHtml(results, report) {
-    const failedTests = report.failedTests;
+  const htmlPath = path.resolve('reports/playwright/allure-report/failed-tests.html');
 
-    const { date, time } = getVietnamDateTime();
+  const outputDir = path.dirname(htmlPath);
 
-    const outputDir = path.resolve('reports/playwright/allure-report');
+  fs.mkdirSync(outputDir, {
+    recursive: true
+  });
 
-    const outputFile = path.join(outputDir, 'failed-tests.html');
+  const rows = failedTests
+    .map((result, index) => {
+      const project = getDisplayProject(normalizeProject(getProject(result)));
 
-    const apiFailed = report.byProject.api.stats.failed;
+      const name = result.name || 'Unnamed test';
 
-    const uiFailed = report.byProject.ui.stats.failed;
+      const fullName = result.fullName || '';
 
-    fs.mkdirSync(outputDir, {
-        recursive: true
-    });
+      return `
+<tr>
+    <td>${index + 1}</td>
+    <td>${escapeHtml(project)}</td>
+    <td>${escapeHtml(name)}</td>
+    <td>${escapeHtml(fullName)}</td>
+    <td>❌ FAILED</td>
+</tr>`;
+    })
+    .join('');
 
-    const rows = failedTests.length
-        ? failedTests
-            .map(
-                (test, index) => `
-            <tr>
-              <td>${index + 1}</td>
-
-              <td>
-                <span class="badge ${escapeHtml(test.project)}">
-                  ${escapeHtml(test.project.toUpperCase())}
-                </span>
-              </td>
-
-              <td>${escapeHtml(test.feature)}</td>
-
-              <td>${escapeHtml(test.epic)}</td>
-
-              <td>${escapeHtml(test.name)}</td>
-
-              <td class="failed">
-                FAILED
-              </td>
-            </tr>`
-            )
-            .join('')
-        : `
-      <tr>
-        <td colspan="6" class="empty">
-          🎉 No failed test cases
-        </td>
-      </tr>`;
-
-    const allTests = results.length;
-
-    const actionsUrl = RUN_ID
-        ? `${SERVER_URL}/${REPOSITORY}/actions/runs/${RUN_ID}`
-        : `${SERVER_URL}/${REPOSITORY}/actions`;
-
-    const html = `<!doctype html>
-
+  const html = `
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
 
-  <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <title>
+        vLearning - Failed Tests
+    </title>
 
-  <title>
-    vLearning — Failed Test Cases
-  </title>
+    <style>
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-  <style>
+            margin: 0;
+            padding: 40px;
 
-    * {
-      box-sizing: border-box;
-    }
+            background: #f5f7fa;
+            color: #1f2937;
+        }
 
-    body {
-      margin: 0;
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-      background: #f5f7fb;
-      color: #172033;
-    }
+        h1 {
+            margin-bottom: 8px;
+        }
 
-    .container {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 32px;
-    }
+        .summary {
+            margin-bottom: 24px;
+            color: #6b7280;
+        }
 
-    .header {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 24px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
 
-      box-shadow:
-        0 4px 16px rgba(0, 0, 0, 0.05);
-    }
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #e5e7eb;
+            text-align: left;
+        }
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: 28px;
-    }
+        th {
+            background: #111827;
+            color: white;
+        }
 
-    .meta {
-      color: #667085;
-      line-height: 1.8;
-    }
-
-    .status {
-      display: inline-block;
-      margin-left: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-
-      background: #fee4e2;
-      color: #b42318;
-
-      font-weight: 700;
-      font-size: 12px;
-    }
-
-    .cards {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      padding: 20px;
-    }
-
-    .label {
-      color: #667085;
-      font-size: 13px;
-      margin-bottom: 8px;
-    }
-
-    .value {
-      font-size: 28px;
-      font-weight: 750;
-    }
-
-    .table-wrap {
-      background: #fff;
-
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-
-      overflow: auto;
-
-      box-shadow:
-        0 4px 16px rgba(0, 0, 0, 0.05);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 1000px;
-    }
-
-    th,
-    td {
-      padding: 14px 16px;
-
-      border-bottom:
-        1px solid #eaecf0;
-
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f9fafb;
-
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-
-      color: #475467;
-
-      position: sticky;
-      top: 0;
-    }
-
-    td {
-      font-size: 14px;
-    }
-
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .failed {
-      color: #b42318;
-      font-weight: 700;
-    }
-
-    .badge {
-      display: inline-block;
-
-      padding: 4px 9px;
-
-      border-radius: 999px;
-
-      font-size: 11px;
-      font-weight: 700;
-    }
-
-    .badge.api {
-      background: #e0f2fe;
-      color: #075985;
-    }
-
-    .badge.ui {
-      background: #ede9fe;
-      color: #5b21b6;
-    }
-
-    .empty {
-      text-align: center;
-      padding: 40px;
-      color: #667085;
-    }
-
-    .links {
-      margin-top: 20px;
-
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .links a {
-      text-decoration: none;
-
-      padding: 10px 14px;
-
-      border-radius: 10px;
-
-      border:
-        1px solid #d0d5dd;
-
-      background: #fff;
-
-      color: #344054;
-
-      font-weight: 600;
-    }
-
-    .footer {
-      margin-top: 20px;
-
-      color: #98a2b3;
-
-      font-size: 12px;
-    }
-
-    @media (max-width: 900px) {
-
-      .cards {
-        grid-template-columns:
-          repeat(2, 1fr);
-      }
-
-      .container {
-        padding: 16px;
-      }
-    }
-
-    @media (max-width: 560px) {
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-  </style>
-
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+    </style>
 </head>
 
 <body>
 
-  <main class="container">
+<div class="container">
 
-    <section class="header">
+    <h1>
+        ❌ vLearning - Failed Tests
+    </h1>
 
-      <h1>
-        🚨 vLearning — Failed Test Cases
+    <div class="summary">
+        Total failed tests:
+        <strong>${failedTests.length}</strong>
+    </div>
 
-        <span class="status">
-          FAILED
-        </span>
-      </h1>
-
-      <div class="meta">
-
-        Run #${escapeHtml(RUN_NUMBER)}
-        · ${escapeHtml(date)}
-        · ${escapeHtml(time)} GMT+7
-
-        <br>
-
-        Branch:
-        <strong>
-          ${escapeHtml(BRANCH)}
-        </strong>
-
-        · Trigger:
-
-        <strong>
-          ${escapeHtml(getTriggerName(EVENT_NAME))}
-        </strong>
-
-        <br>
-
-        Repository:
-
-        <strong>
-          ${escapeHtml(REPOSITORY)}
-        </strong>
-
-      </div>
-
-      <div class="links">
-
-        ${ALLURE_REPORT_URL
-            ? `
-              <a
-                href="${escapeHtml(ALLURE_REPORT_URL)}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                📋 Open Allure Report
-              </a>
-            `
-            : ''
-        }
-
-        <a
-          href="${escapeHtml(actionsUrl)}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📊 Open GitHub Actions
-        </a>
-
-      </div>
-
-    </section>
-
-    <section class="cards">
-
-      <div class="card">
-
-        <div class="label">
-          Total tests
-        </div>
-
-        <div class="value">
-          ${allTests}
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="label">
-          Failed tests
-        </div>
-
-        <div class="value">
-          ${failedTests.length}
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="label">
-          API failed
-        </div>
-
-        <div class="value">
-          ${apiFailed}
-        </div>
-
-      </div>
-
-      <div class="card">
-
-        <div class="label">
-          UI failed
-        </div>
-
-        <div class="value">
-          ${uiFailed}
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="table-wrap">
-
-      <table>
+    <table>
 
         <thead>
-
-          <tr>
-
-            <th>#</th>
-
-            <th>Type</th>
-
-            <th>Feature</th>
-
-            <th>Epic</th>
-
-            <th>Test Case</th>
-
-            <th>Status</th>
-
-          </tr>
-
+            <tr>
+                <th>#</th>
+                <th>Project</th>
+                <th>Test Name</th>
+                <th>Full Name</th>
+                <th>Status</th>
+            </tr>
         </thead>
 
         <tbody>
-
-          ${rows}
-
+            ${
+              rows ||
+              `
+<tr>
+    <td colspan="5">
+        No failed tests.
+    </td>
+</tr>
+`
+            }
         </tbody>
 
-      </table>
+    </table>
 
-    </section>
-
-    <div class="footer">
-
-      Generated by
-      vLearning Playwright Automation
-
-      · Run #${escapeHtml(RUN_NUMBER)}
-
-    </div>
-
-  </main>
+</div>
 
 </body>
+</html>
+`;
 
-</html>`;
+  fs.writeFileSync(htmlPath, html, 'utf8');
 
-    fs.writeFileSync(outputFile, html, 'utf8');
+  return htmlPath;
+}
 
-    console.log(`Failed tests HTML created: ${outputFile}`);
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
 }
 
 /**
@@ -1333,64 +739,98 @@ function generateFailedTestsHtml(results, report) {
  */
 
 function main() {
-    console.log('========================================');
+  console.log('========================================');
 
-    console.log('vLearning Slack Report Generator');
+  console.log('Generate Slack Test Report');
 
-    console.log('========================================');
+  console.log('========================================');
 
-    console.log(`Allure results: ${RESULTS_DIR}`);
+  console.log(`Allure results: ${RESULTS_DIR}`);
 
-    const results = loadAllureResults();
+  console.log(`Output file: ${OUTPUT_FILE}`);
 
-    console.log(`Allure result files loaded: ${results.length}`);
+  console.log(`Run: #${RUN_NUMBER}`);
 
-    if (!results.length) {
-        throw new Error('No Allure result files found.');
-    }
+  console.log(`Branch: ${BRANCH}`);
 
-    const report = buildReport(results);
+  console.log(`Trigger: ${getTriggerName(EVENT_NAME)}`);
 
-    console.log(`Total tests: ${report.overall.total}`);
+  console.log('');
 
-    console.log(`Passed: ${report.overall.passed}`);
+  /**
+   * Load Allure results
+   */
 
-    console.log(`Failed: ${report.overall.failed}`);
+  const results = loadAllureResults();
 
-    console.log(`Skipped: ${report.overall.skipped}`);
+  console.log(`Loaded ${results.length} Allure results.`);
 
-    console.log(`Failed test cases: ${report.failedTests.length}`);
+  /**
+   * Build statistics
+   */
 
-    if (FAILED_TESTS_REPORT_URL) {
-        console.log(`Failed tests report URL: ${FAILED_TESTS_REPORT_URL}`);
-    }
+  const report = buildReport(results);
 
-    /**
-     * Generate:
-     *
-     * reports/playwright/allure-report/
-     * └── failed-tests.html
-     */
-    generateFailedTestsHtml(results, report);
+  console.log('');
 
-    /**
-     * Generate Slack payload
-     */
-    const payload = buildSlackPayload(results, report);
+  console.log('===== TEST SUMMARY =====');
 
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(payload, null, 2), 'utf8');
+  console.log(`Total   : ${report.overall.total}`);
 
-    console.log(`Slack payload created: ${OUTPUT_FILE}`);
+  console.log(`Passed  : ${report.overall.passed}`);
 
-    console.log('========================================');
+  console.log(`Failed  : ${report.overall.failed}`);
+
+  console.log(`Skipped : ${report.overall.skipped}`);
+
+  console.log(`PassRate: ${getPassRate(report.overall)}`);
+
+  console.log('');
+
+  console.log(`API: ${report.byProject.api.stats.total}`);
+
+  console.log(`UI : ${report.byProject.ui.stats.total}`);
+
+  /**
+   * Generate failed-tests.html
+   *
+   * This is kept for GitHub Pages.
+   * It is NOT displayed inside Slack.
+   */
+
+  const failedTestsHtml = generateFailedTestsHtml(results);
+
+  console.log('');
+
+  console.log(`Failed tests page: ${failedTestsHtml}`);
+
+  /**
+   * Build Slack payload
+   */
+
+  const payload = buildSlackPayload(results, report);
+
+  /**
+   * Write payload
+   */
+
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(payload, null, 2), 'utf8');
+
+  console.log('');
+
+  console.log(`Slack payload written to: ${OUTPUT_FILE}`);
+
+  console.log(
+    `Slack buttons: ${
+      payload.blocks.filter((block) => block.type === 'actions')[0]?.elements.length || 0
+    }`
+  );
+
+  console.log('');
+
+  console.log('Slack payload generated successfully.');
+
+  console.log('========================================');
 }
 
-try {
-    main();
-} catch (error) {
-    console.error('Failed to generate Slack report:');
-
-    console.error(error);
-
-    process.exit(1);
-}
+main();
