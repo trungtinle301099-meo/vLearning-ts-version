@@ -141,16 +141,27 @@ jobs:
           retention-days: 14
           if-no-files-found: warn
 
+
+      - name: Debug Slack payload
+        if: always()
+        run: |
+            echo "===== SLACK PAYLOAD ====="
+            cat slack-payload.json
+            echo ""
+            echo "===== FILE INFO ====="
+            ls -lh slack-payload.json
+
       # ==========================================
       # SEND SLACK
       # ==========================================
+    
 
       - name: Send Slack test report
         if: always()
         uses: slackapi/slack-github-action@v4.0.0
         with:
-        webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-        webhook-type: incoming-webhook
-        payload-file-path: ./slack-payload.json
-        errors: true
-        retries: 5
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload-file-path: ./slack-payload.json
+          errors: true
+          retries: 5
