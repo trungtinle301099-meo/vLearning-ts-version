@@ -108,7 +108,7 @@ jobs:
           GITHUB_SERVER_URL: ${{ github.server_url }}
 
           # Allure URL
-          ALLURE_REPORT_URL: ${{ steps.deployment.outputs.page_url }}
+          ALLURE_REPORT_URL:  https://trungtinle301099-meo.github.io/vLearning-ts-version/
 
       # ==========================================
       # ARTIFACTS
@@ -149,6 +149,8 @@ jobs:
         if: always()
         uses: slackapi/slack-github-action@v4.0.0
         with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          webhook-type: incoming-webhook
-          payload-file-path: ./slack-payload.json
+        webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+        webhook-type: incoming-webhook
+        payload-file-path: ./slack-payload.json
+        errors: true
+        retries: 5
