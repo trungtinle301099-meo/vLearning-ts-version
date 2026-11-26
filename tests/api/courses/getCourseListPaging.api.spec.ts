@@ -115,9 +115,7 @@ test.describe('Get Course List Paging API', () => {
       );
       expect(mismatchedItems).toEqual([]);
 
-      logger.pass(
-        `PAGINATE_COURSE_API_001 passed for isolated course: ${targetCourse.maKhoaHoc}`
-      );
+      logger.pass(`PAGINATE_COURSE_API_001 passed for isolated course: ${targetCourse.maKhoaHoc}`);
     });
 
     test('PAGINATE_COURSE_API_003 - should return first page with page=1 and pageSize=1 boundary', async ({

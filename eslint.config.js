@@ -10,7 +10,9 @@ module.exports = [
       'public-report/**',
       'logs/**',
       'dist/**',
-      'performance/k6/**'
+      'performance/k6/**',
+      '.agents/**',
+      'ai-engine/**'
     ]
   },
 

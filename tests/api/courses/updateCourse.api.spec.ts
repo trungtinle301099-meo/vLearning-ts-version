@@ -12,10 +12,7 @@ import { logger } from '../../../src/helpers/logger.helper';
 import type { CreateCourseRequest } from '../../../src/types/course.type';
 import { feature, epic, severity, description } from 'allure-js-commons';
 
-
-
 test.describe('Update Course API', () => {
-
   let accessToken = '';
   let createdCourse: CreateCourseRequest;
 

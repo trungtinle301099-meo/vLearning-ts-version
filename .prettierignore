@@ -7,4 +7,5 @@ dist/
 performance/k6/
 playwright/.auth/
 slack-payload.json
-slack-payload.json
+.agents/
+ai-engine/

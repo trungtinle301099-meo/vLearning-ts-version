@@ -8,5 +8,5 @@ export const UserEndpoint = {
   cancelCourseRegistration: '/api/QuanLyKhoaHoc/HuyGhiDanh',
   register: '/api/QuanLyNguoiDung/DangKy',
   addUser: '/api/QuanLyNguoiDung/ThemNguoiDung',
-  getPendingCourses: '/api/QuanLyNguoiDung/LayDanhSachKhoaHocChoXetDuyet',
+  getPendingCourses: '/api/QuanLyNguoiDung/LayDanhSachKhoaHocChoXetDuyet'
 } as const;

@@ -97,7 +97,7 @@ export class UserService {
     });
   }
 
-    getPendingCourses(username: string, accessToken: string): Promise<APIResponse> {
+  getPendingCourses(username: string, accessToken: string): Promise<APIResponse> {
     return this.apiClient.post(UserEndpoint.getPendingCourses, {
       headers: {
         Authorization: `bearer ${accessToken}`,
