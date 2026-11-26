@@ -1,5 +1,7 @@
 export const CourseEndpoint = {
   getCourseList: '/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc',
+  // Endpoint phân trang danh sách khóa học
+  getCourseListPaging: '/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc_PhanTrang',
   getCourseInfo: '/api/QuanLyKhoaHoc/LayThongTinKhoaHoc',
   createCourse: '/api/QuanLyKhoaHoc/ThemKhoaHoc',
   deleteCourse: '/api/QuanLyKhoaHoc/XoaKhoaHoc',

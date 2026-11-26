@@ -31,6 +31,15 @@ export const courseSchema = z.object({
 
 export const courseListResponseSchema = z.array(courseSchema);
 
+// Schema hợp đồng response 200 của API LayDanhSachKhoaHoc_PhanTrang (tái sử dụng courseSchema)
+export const courseListPagingResponseSchema = z.object({
+  currentPage: z.number().int().nonnegative(),
+  count: z.number().int().nonnegative(),
+  totalPages: z.number().int().nonnegative(),
+  totalCount: z.number().int().nonnegative(),
+  items: z.array(courseSchema)
+});
+
 export const createCourseResponseSchema = z.object({
   maKhoaHoc: z.string(),
   biDanh: z.string(),

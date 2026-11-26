@@ -44,3 +44,10 @@ export const findUserAccountItemSchema = z
   .passthrough();
 
 export const findUserAccountResponseSchema = z.array(findUserAccountItemSchema);
+
+export const pendingCoursesResponseSchema = z.array(
+  z.object({
+    maKhoaHoc: z.string(),
+    tenKhoaHoc: z.string()
+  })
+);

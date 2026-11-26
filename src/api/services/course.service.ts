@@ -1,7 +1,11 @@
 import type { APIResponse } from '@playwright/test';
 import { ApiClient } from '../clients/api-client';
 import { CourseEndpoint } from '../../endpoints/api-endpoints/course.api.endpoint';
-import type { CreateCourseRequest, RegisterCourseRequest } from '../../types/course.type';
+import type {
+  CourseListPagingParams,
+  CreateCourseRequest,
+  RegisterCourseRequest
+} from '../../types/course.type';
 
 export class CourseService {
   constructor(private readonly apiClient: ApiClient) {}
@@ -17,6 +21,32 @@ export class CourseService {
 
     return this.apiClient.get(CourseEndpoint.getCourseList, {
       params,
+      failOnStatusCode: false
+    });
+  }
+
+  // Lấy danh sách khóa học phân trang; chỉ truyền query param có giá trị xác định để hỗ trợ test mặc định
+  getCourseListPaging(query: CourseListPagingParams = {}): Promise<APIResponse> {
+    const params: Record<string, string | number> = {};
+
+    if (query.tenKhoaHoc !== undefined) {
+      params.tenKhoaHoc = query.tenKhoaHoc;
+    }
+
+    if (query.page !== undefined) {
+      params.page = query.page;
+    }
+
+    if (query.pageSize !== undefined) {
+      params.pageSize = query.pageSize;
+    }
+
+    if (query.MaNhom !== undefined) {
+      params.MaNhom = query.MaNhom;
+    }
+
+    return this.apiClient.get(CourseEndpoint.getCourseListPaging, {
+      ...(Object.keys(params).length > 0 ? { params } : {}),
       failOnStatusCode: false
     });
   }

@@ -1,0 +1,16 @@
+{
+  "vlearning-workflow-guard": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ./hooks/workflow_guard.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

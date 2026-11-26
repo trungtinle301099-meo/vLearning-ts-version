@@ -4,6 +4,7 @@ import {
   createEmptyPasswordLoginAuthCredential,
   createEmptyUsernameLoginAuthCredential,
   createInvalidEmailLoginAuthCredential,
+  createInvalidPasswordLoginAuthCredential,
   createInvalidUsernameLoginAuthCredential,
   createValidLoginAuthCredential
 } from '../../../src/data/user.data';
@@ -189,5 +190,43 @@ test.describe('Login UI', () => {
     await expect(page).toHaveURL(/\/login/);
 
     logger.pass('Login failed correctly when password is empty.');
+  });
+
+  test('LOGIN_UI_007 - should show error message when password is incorrect', async ({
+    page,
+    loginAuthPage
+  }) => {
+    await feature('show error message when password is incorrect');
+    await epic('ui-login');
+    await severity('critical');
+    await description(
+      'This test verifies that the UI shows an error message when the password is incorrect.'
+    );
+
+    // Chuẩn bị dữ liệu tài khoản hợp lệ nhưng sai mật khẩu (khác rỗng).
+    const invalidPasswordCredential = createInvalidPasswordLoginAuthCredential();
+
+    // Điều hướng đến trang đăng nhập và chờ form đăng nhập hiển thị đầy đủ.
+    await loginAuthPage.gotoLoginPage();
+    await loginAuthPage.expectLoginPageLoaded();
+
+    // Thực hiện đăng nhập qua UI với tài khoản hợp lệ và mật khẩu sai.
+    logger.step(
+      `Submit login form with invalid password for account: ${invalidPasswordCredential.username}`
+    );
+    await loginAuthPage.login(invalidPasswordCredential);
+
+    // Chứng minh giao diện hiển thị đúng toast báo lỗi sai thông tin đăng nhập.
+    await expect(
+      loginAuthPage.button.getToastifyByMessage('Tài khoản hoặc mật khẩu không đúng!')
+    ).toBeVisible();
+
+    // Chứng minh người dùng vẫn giữ nguyên tại trang đăng nhập, không chuyển hướng.
+    await expect(page).toHaveURL(/\/login/);
+
+    // Ghi nhận log đạt sau khi các assertion kiểm tra lỗi đăng nhập đã pass.
+    logger.pass(
+      `Login failed correctly with incorrect password for account: ${invalidPasswordCredential.username}`
+    );
   });
 });

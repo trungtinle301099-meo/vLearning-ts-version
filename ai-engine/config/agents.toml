@@ -1,0 +1,30 @@
+[workflow]
+runtime = "antigravity"
+store_dir = "agy-tasks"
+
+[prompts]
+directory = "vlearning_agent/agents/prompts"
+shared = ["project-rules.md"]
+
+[agents.analyst]
+prompt = "analyze.md"
+
+[agents.planner]
+prompt = "plan.md"
+uses_test_guides = true
+
+[agents.plan_reviewer]
+prompt = "review-plan.md"
+uses_test_guides = true
+
+[agents.generator]
+prompt = "generate.md"
+uses_test_guides = true
+
+[agents.code_reviewer]
+prompt = "review-code.md"
+uses_test_guides = true
+
+[test_guides]
+api = "generate-api.md"
+ui = "generate-ui.md"

@@ -20,3 +20,8 @@ logs/
 
 package-lock.json.backup*
 package.json.backup*
+ai-engine/tasks/
+ai-engine/.venv/
+__pycache__/
+*.pyc
+

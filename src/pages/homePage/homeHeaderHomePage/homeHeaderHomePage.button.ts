@@ -6,14 +6,19 @@ export class HomeHeaderHomePageButton {
   readonly loginButton: Locator;
   readonly avatarIcon: Locator;
   readonly logoutButton: Locator;
+  readonly searchInput: Locator;
 
+  //locator type 1
   constructor(private readonly page: Page) {
     this.homeIcon = this.page.locator('#sidebarCollapse');
     this.loginButton = this.page.getByRole('button', { name: 'Đăng nhập' });
     this.avatarIcon = this.page.locator('a.infoHeader[href="/thongtincanhan"]');
     this.logoutButton = this.page.locator('i.fas.fa-power-off');
+    // Ô tìm kiếm khóa học trên thanh header phiên bản desktop
+    this.searchInput = this.page.locator('input.searchForm[placeholder="Tìm kiếm"]');
   }
 
+  //locator type 2
   headerLink(header: Header): Locator {
     return this.page.getByRole('link', { name: header, exact: true });
   }

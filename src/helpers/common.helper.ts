@@ -26,6 +26,83 @@ type CreatedCoursePreconditionResult = {
   createdCourse: CreateCourseRequest;
 };
 
+type IsolatedCoursesPreconditionResult = {
+  accessToken: string;
+  createdCourses: CreateCourseRequest[];
+  createdCourseIds: string[];
+};
+
+// Tạo 1 hoặc nhiều khóa học cô lập theo danh sách tenKhoaHoc; cập nhật ngay accessToken và từng maKhoaHoc vào mảng tracking để afterEach luôn dọn được nếu lỗi giữa chừng
+export async function setupIsolatedCoursesPreconditionForTest({
+  authService,
+  courseService,
+  testInfo,
+  courseNames,
+  groupCode = env.defaultGroup,
+  createdCourseIds = [],
+  onAccessTokenReady
+}: {
+  authService: AuthService;
+  courseService: CourseService;
+  testInfo: TestInfo;
+  courseNames: string[];
+  groupCode?: string;
+  createdCourseIds?: string[];
+  onAccessTokenReady?: (accessToken: string) => void;
+}): Promise<IsolatedCoursesPreconditionResult> {
+  // Precondition: Đăng nhập admin để lấy accessToken tạo và xóa khóa học.
+  const accessToken = await loginAsAdminForTest(authService);
+  onAccessTokenReady?.(accessToken);
+
+  const createdCourses: CreateCourseRequest[] = [];
+
+  for (let index = 0; index < courseNames.length; index += 1) {
+    // Arrange: Tạo dữ liệu khóa học ngẫu nhiên với tenKhoaHoc cô lập và mã nhóm chỉ định.
+    const courseData = createRandomCourseData({
+      tenKhoaHoc: courseNames[index],
+      maNhom: groupCode
+    });
+
+    // Precondition: Gửi API tạo khóa học trên server.
+    const createResponse = await courseService.createCourse(courseData, accessToken);
+
+    // Cleanup tracking: Ghi nhận maKhoaHoc ngay khi status === 200 trước expectStatus để afterEach vẫn cleanup được nếu bước sau thất bại.
+    if (createResponse.status() === 200) {
+      createdCourseIds.push(courseData.maKhoaHoc);
+    }
+
+    // Report: Đính kèm request và response tạo khóa học precondition.
+    const createResponseText = await attachApiRequestResponse(
+      testInfo,
+      `precondition-create-course-${index + 1}`,
+      courseData,
+      createResponse
+    );
+
+    // Assert: Khóa học precondition phải được tạo thành công trước khi chạy test.
+    expectStatus(createResponse, 200);
+    expectJsonContentType(createResponse);
+
+    // Schema: Kiểm tra hợp đồng response tạo khóa học.
+    const parsed = createCourseResponseSchema.parse(JSON.parse(createResponseText));
+
+    // Assert: Khóa học đã tạo phải khớp dữ liệu test.
+    expect(parsed.maKhoaHoc).toBe(courseData.maKhoaHoc);
+    expect(parsed.tenKhoaHoc).toBe(courseData.tenKhoaHoc);
+
+    logger.info(
+      `Precondition created isolated course: ${courseData.maKhoaHoc} (${courseData.tenKhoaHoc})`
+    );
+    createdCourses.push(courseData);
+  }
+
+  return {
+    accessToken,
+    createdCourses,
+    createdCourseIds
+  };
+}
+
 export async function setupCreatedCoursePreconditionForTest({
   authService,
   courseService,

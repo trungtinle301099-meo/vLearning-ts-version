@@ -17,10 +17,11 @@ import { logger } from '../../../src/helpers/logger.helper';
 
 import { feature, epic, severity, description } from 'allure-js-commons';
 
-let accountsToCleanup: string[] = [];
-let accessToken = '';
+
 
 test.describe('User Add API', () => {
+  let accountsToCleanup: string[] = [];
+  let accessToken = '';
   test.beforeEach(async ({ authService }) => {
     accountsToCleanup = [];
 

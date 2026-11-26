@@ -96,4 +96,15 @@ export class UserService {
       failOnStatusCode: false
     });
   }
+
+    getPendingCourses(username: string, accessToken: string): Promise<APIResponse> {
+    return this.apiClient.post(UserEndpoint.getPendingCourses, {
+      headers: {
+        Authorization: `bearer ${accessToken}`,
+        'Content-Type': 'application/json-patch+json'
+      },
+      data: { taiKhoan: username },
+      failOnStatusCode: false
+    });
+  }
 }

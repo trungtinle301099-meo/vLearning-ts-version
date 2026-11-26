@@ -103,6 +103,14 @@ export function createEmptyPasswordLoginAuthCredential(): LoginAuthCredential {
   };
 }
 
+// Tạo dữ liệu đăng nhập có tài khoản hợp lệ nhưng sai mật khẩu (khác rỗng).
+export function createInvalidPasswordLoginAuthCredential(): LoginAuthCredential {
+  return {
+    username: env.username,
+    password: `${env.password}_invalid`
+  };
+}
+
 export function createRandomAddUserData(): AddUserRequest {
   return {
     ...createRandomRegisterUserData(),

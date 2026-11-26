@@ -12,5 +12,9 @@ export const HomePageUiEndpoint = {
   frontendCourseCategory: '/danhmuckhoahoc/FrontEnd',
   fullStackCourseCategory: '/danhmuckhoahoc/FullStack',
   thinkingCourseCategory: '/danhmuckhoahoc/TuDuy',
-  thongTinCaNhan: '/thongtincanhan'
+  thongTinCaNhan: '/thongtincanhan',
+  // Đường dẫn gốc trang kết quả tìm kiếm khóa học
+  searchCourse: '/timkiem',
+  // Đường dẫn gốc trang chi tiết khóa học
+  courseDetail: '/chitiet'
 } as const;

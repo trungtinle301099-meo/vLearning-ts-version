@@ -76,6 +76,13 @@ export class HomeHeaderHomePage extends BasePage {
     await this.click(this.button.courseCategoryLink(category));
   }
 
+  // Nhập tên khóa học vào thanh tìm kiếm trên header và nhấn Enter để điều hướng tới trang kết quả
+  async searchCourseByName(courseName: string): Promise<void> {
+    await this.waitForVisible(this.button.searchInput);
+    await this.fill(this.button.searchInput, courseName);
+    await this.press(this.button.searchInput, 'Enter');
+  }
+
   async expectHomePageLoaded(
     expected: HomeHeaderExpectedUrl = {
       homePageUrl: HomePageUiEndpoint.homePage

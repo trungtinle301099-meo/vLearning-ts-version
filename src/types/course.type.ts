@@ -1,3 +1,5 @@
+import type { PaginationQuery } from './common.type';
+
 // ============================================================
 // 1. INTERFACE GỐC - CHỨA TOÀN BỘ FIELD
 // ============================================================
@@ -114,3 +116,12 @@ export type CourseCreatorResponse = Pick<
 // ============================================================
 
 export type CourseCategoryResponse = Pick<CourseData, 'maDanhMucKhoaHoc' | 'tenDanhMucKhoaHoc'>;
+
+// ============================================================
+// 10. COURSE LIST PAGING REQUEST
+// ============================================================
+
+// Tham số query tùy chọn cho API GET /api/QuanLyKhoaHoc/LayDanhSachKhoaHoc_PhanTrang
+export type CourseListPagingParams = Partial<
+  Pick<CourseData, 'tenKhoaHoc'> & PaginationQuery & { MaNhom: string }
+>;

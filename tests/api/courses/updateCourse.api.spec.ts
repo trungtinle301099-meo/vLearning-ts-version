@@ -12,10 +12,13 @@ import { logger } from '../../../src/helpers/logger.helper';
 import type { CreateCourseRequest } from '../../../src/types/course.type';
 import { feature, epic, severity, description } from 'allure-js-commons';
 
-let accessToken = '';
-let createdCourse: CreateCourseRequest;
+
 
 test.describe('Update Course API', () => {
+
+  let accessToken = '';
+  let createdCourse: CreateCourseRequest;
+
   test.beforeEach(async ({ authService, courseService }, testInfo) => {
     // Precondition: Prepare created course for update course API test.
     const precondition = await setupCreatedCoursePreconditionForTest({

@@ -7,5 +7,6 @@ export const UserEndpoint = {
   findUserAccount: '/api/QuanLyNguoiDung/TimKiemNguoiDung',
   cancelCourseRegistration: '/api/QuanLyKhoaHoc/HuyGhiDanh',
   register: '/api/QuanLyNguoiDung/DangKy',
-  addUser: '/api/QuanLyNguoiDung/ThemNguoiDung'
+  addUser: '/api/QuanLyNguoiDung/ThemNguoiDung',
+  getPendingCourses: '/api/QuanLyNguoiDung/LayDanhSachKhoaHocChoXetDuyet',
 } as const;
